@@ -2,7 +2,7 @@
 
 This section displays subpages in a flexible table.
 
-![subtitler-screenshot](https://user-images.githubusercontent.com/14079751/47035774-1ea34800-d17b-11e8-8463-cc4d959d8b29.jpg)
+![screenshot](https://user-images.githubusercontent.com/14079751/50537598-15aef980-0b62-11e9-8d82-e5b22584c9c5.jpg)
 
 <br/>
 
@@ -14,13 +14,13 @@ This section displays subpages in a flexible table.
   * [3.1. Inherited options](#31-inherited-options)
   * [3.2. Limit options](#32-limit-options)
 - [4. Column options](#4-column-options)
-  * [4.1. `label`](#41-label)
-  * [4.2. `text`](#42-text)
-  * [4.3. `type`](#43-type)
-  * [4.4. `width`](#44-width)
-  * [4.5. `class`](#45-class)
-  * [4.6. `sortable`](#46-sortable)
-  * [4.7. `searchable`](#47-searchable)
+  * [4.1. label](#41-label)
+  * [4.2. text](#42-text)
+  * [4.3. type](#43-type)
+  * [4.4. width](#44-width)
+  * [4.5. class](#45-class)
+  * [4.6. sortable](#46-sortable)
+  * [4.7. searchable](#47-searchable)
 - [5. Example cookbook](#5-example-cookbook)
 - [6. License](#6-license)
 - [7. Credits](#7-credits)
@@ -203,10 +203,10 @@ columns:
 
 #### 4.4. `width`
 
-> type: `string`, default: `width`
+> type: `string`, default: `auto`
 
 The width of the column in the table. 
-Available widths: 1/1, 1/2, 1/3, 1/4, 2/3, 3/4
+Available widths: 1/6, 1/4, 1/3, 1/2, 2/3, 3/4
 
 ```yaml
 columns:
