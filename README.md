@@ -359,6 +359,14 @@ return array(
 );
 ```
 
+Last step is changing the column's text in our blueprint, and append our new `toLabel` method:
+
+```yaml
+category:
+  label: Category
+  text: '{{ page.category.toLabel }}'
+```
+
 You should now end up with the exact same setup than illustrated in the above screenshot.
 
 <br/>
