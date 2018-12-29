@@ -1,6 +1,6 @@
 # Kirby 3 - PageTable
 
-This section displays subpages in a flexible table.
+Display subpages in a flexible (data)table.
 
 ![screenshot](https://user-images.githubusercontent.com/14079751/50537598-15aef980-0b62-11e9-8d82-e5b22584c9c5.jpg)
 
@@ -39,17 +39,13 @@ Alternatively, you can install it with composer: ```composer require sylvainjule
 
 ## 2. Blueprint usage
 
-The `pagetable` section can replace any `pages` section you have already set, with the addition of explicit column informations (see below for a complete overview of column options):
+The `pagetable` section can replace any `pages` section you have already set:
 
 ```yaml
 sections:
   mypagetable:
     headline: My PageTable
     type: pagetable
-    columns:
-      title:
-        label: Title
-        text: '{{ page.title }}'
 ```
 
 <br/>
@@ -58,7 +54,7 @@ sections:
 
 ### 3.1. Inherited options
 
-These options work exactly the same way they do for the `pages` section, please refer to its documentation:
+These options work exactly the same way they do for the `pages` section, please refer to [its documentation](https://nnnnext.getkirby.com/docs/cheatsheet/sections/pages):
 
 ```yaml
 - create 
@@ -73,7 +69,7 @@ These options work exactly the same way they do for the `pages` section, please 
 
 ### 3.2. Limit options
 
-You can limit the initial numner of displayed pages the same way you could with the usal `pages` section, only pagination will happen on the front-end.
+You can limit the initial number of displayed pages the same way you could with the usal `pages` section, only pagination will happen on the front-end.
 Default is `25`.
 
 ```yaml
@@ -101,7 +97,7 @@ sections:
 
 ## 4. Column options
 
-The plugin allows you to chosse the columns you want to display, and fine-tune their behaviour. A column with all options explicitely set will look like:
+The plugin allows you to choose the columns you want to display, and fine-tune their behaviour. A column with all options explicitely set will look like:
 
 ```yaml
 columns:
@@ -156,7 +152,7 @@ Note that the only limitation here is to always return a string. This string can
 Kirby::plugin('your/plugin', [
     'fieldMethods' => [
         'toBlue' => function($field) {
-            return '<span style="color: #567896">' . $field->value . '</span>';
+            return '<span style="color: #384d9d">' . $field->value . '</span>';
         }
     ]
 ]);
@@ -172,7 +168,7 @@ columns:
 
 Will display blue titles in the table:
 
-![subtitler-debug](https://user-images.githubusercontent.com/14079751/47035578-ad639500-d17a-11e8-8d4a-c61a72fbf584.jpg)
+![screenshot-blue](https://user-images.githubusercontent.com/14079751/50537762-6889b080-0b64-11e9-869e-5083831acfac.jpg)
 
 #### 4.3. `type`
 
@@ -253,33 +249,111 @@ columns:
 
 <br/>
 
-## 4. Example cookbook
+## 4. Complete example
 
-We'll see how to add the section to [the starterkit](https://github.com/k-next/starterkit)'s project page, and display:
+Here's how to reproduce the screenshot on top of this README.
 
-First things first, remember to correctly [install the plugin](#1-installation).
-
-Now let's edit our blueprint:
+First, we need to have a few fields available in our children's blueprint (photographer's name, category, project's date):
 
 ```yaml
-# site/blueprints/pages/projects.yml
 ...
-
+fields:
+  photographer:
+    type: text
+  category:
+    type: select
+    options:
+      architecture: Architecture
+      culture: Culture
+      environment: Environment
+      gastronomy: Gastronomy
+      science: Science
+  date:
+    type: date
 ```
 
-We're calling a bunch of methods here, that we need to register in a custom plugin. We'll create a `site/plugins/my-methods/index.php` and write:
+We then create our pagetable section, and set the associated columns:
+
+```yaml
+sections:
+  mypagetable:
+    headline: Projects index
+    type: pagetable
+    status: all
+    image:
+      cover: true
+    columns:
+      title:
+        label: Title
+        text: '{{ page.title }}'
+        width: 1/3
+      photographer:
+        label: Photographer
+        text: '{{ page.photographer }}'
+      category:
+        label: Category
+        text: '{{ page.category }}'
+      date:
+        label: Date
+        type: date
+        text: '{{ page.date.toDate("Y-m-d") }}'
+        dateInputFormat: 'YYYY-MM-DD'
+        dateOutputFormat: 'MMMM YYYY'
+        width: 1/6
+```
+
+At this point, every information should be displayed but categories still lack any kind of styling. We need to call a [field method](https://nnnnext.getkirby.com/docs/cheatsheet/extensions/field-methods) here, that we need to register in a custom plugin. We'll create a `site/plugins/my-methods/index.php` and write:
 
 ```php
+Kirby::plugin('your/plugin', [
+    'fieldMethods' => [
+        'toLabel' => function($field) {
+          $value = $field->value;
+          return '<span class="category-label" data-category="'. $value .'">' . $value . '</span>';
+        },
+    ]
+]);
 ```
 
-At this point, every information should be displayed but lack any kind of styling. Let's create a `assets/css/panel.css` stylesheet, if you have none yet, and add some rules there:
+Now every label will be rendered as: 
+
+```html
+<span class="category-label" data-category="architecture">architecture</span>
+```
+
+We're on our way but there is still no styling. Let's create an `assets/css/panel.css` stylesheet (if you have none yet), and add some rules there:
+
+```css
+.k-pagetable-section .category-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  padding: 5px 7px;
+  border-radius: 3px;
+}
+.k-pagetable-section .category-label[data-category="architecture"] {
+  background: #d7e1e9;
+}
+.k-pagetable-section .category-label[data-category="culture"] {
+  background: #f5e6bf;
+}
+.k-pagetable-section .category-label[data-category="environment"] {
+  background: #cae5dd;
+}
+.k-pagetable-section .category-label[data-category="gastronomy"] {
+  background: #e0d7dd;
+}
+.k-pagetable-section .category-label[data-category="science"] {
+  background: #f9e9e0;
+}
+```
 
 Don't forget to tell the panel that you want to load the stylesheet by adding it in your `site/config/config.php`:
 
-```
+```php
 <?php
 
 return array(
+  'panel' => array('css' => 'assets/css/panel.css'),
 );
 ```
 
