@@ -1,0 +1,35 @@
+.k-pagetable-section {
+	.k-button-group {
+		display: flex;
+		align-items: flex-end;
+		.pagetable-search-input {
+			// Reset
+			margin: 0;
+		    border: 0;
+		    padding: 0;
+		    display: inline-block;
+		    vertical-align: middle;
+		    white-space: normal;
+		    background: none;
+		    line-height: 1;
+		    border-bottom: 1px solid darken(#eaeaea, 8%);
+		    font-size: $font-size-small;
+		    padding-bottom: .35rem;
+		    margin-bottom: .65rem;
+		    padding: .35rem .75rem .35rem .5rem;
+		    min-width: 150px;
+		    &::placeholder {
+		    	color: $color-light-grey;
+		    }
+		    &:focus {
+		    	outline: none;
+		    	border-color: $color-white;
+		    	background: $color-white;
+		    }
+		}
+		.k-button {
+			margin-left: .25rem;
+		}
+	}
+	
+}
