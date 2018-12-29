@@ -21,7 +21,7 @@ Display subpages in a flexible (data)table.
   * [4.5. class](#45-class)
   * [4.6. sortable](#46-sortable)
   * [4.7. searchable](#47-searchable)
-- [5. Example cookbook](#5-example-cookbook)
+- [5. Complete example](#5-complete-example)
 - [6. License](#6-license)
 - [7. Credits](#7-credits)
 
@@ -249,9 +249,11 @@ columns:
 
 <br/>
 
-## 4. Complete example
+## 5. Complete example
 
-Here's how to reproduce the screenshot on top of this README.
+Here's how to reproduce the screenshot on top of this README:
+
+![screenshot](https://user-images.githubusercontent.com/14079751/50537598-15aef980-0b62-11e9-8d82-e5b22584c9c5.jpg)
 
 First, we need to have a few fields available in our children's blueprint (photographer's name, category, project's date):
 
@@ -361,13 +363,13 @@ You should now end up with the exact same setup that illustrated in the above sc
 
 <br/>
 
-## 5. License
+## 6. License
 
 MIT
 
 <br/>
 
-## 6. Credits
+## 7. Credits
 
 - This section is built on top of [vue-good-table](https://xaksis.github.io/vue-good-table/).
 - Please have a look at [https://github.com/jongacnik/kirby-index-field](kirby-index-field) for a K2 version.
