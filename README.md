@@ -1,4 +1,4 @@
-# Kirby 3 - PageTable
+# Kirby 3 - Pagetable
 
 Display subpages in a flexible (data)table.
 
@@ -359,7 +359,7 @@ return array(
 );
 ```
 
-You should now end up with the exact same setup that illustrated in the above screenshot.
+You should now end up with the exact same setup than illustrated in the above screenshot.
 
 <br/>
 
