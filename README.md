@@ -1,6 +1,6 @@
 # Kirby 3 - Pagetable
 
-Display subpages in a flexible (data)table.
+Display subpages in a flexible, sortable and searchable table.
 
 ![screenshot](https://user-images.githubusercontent.com/14079751/50537598-15aef980-0b62-11e9-8d82-e5b22584c9c5.jpg)
 
@@ -137,7 +137,7 @@ columns:
 
 > type: `string`
 
-Defines the information dispplayed in each row of the column. You will need to inject information from the current page there, with the help of template placeholders:
+Defines the information displayed in each row of the column. You will need to inject information from the current page there, with the help of template placeholders:
 
 ```yaml
 columns:
