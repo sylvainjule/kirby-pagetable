@@ -14,6 +14,8 @@
             :search-options="searchOptions"
             :pagination-options="paginationOptions">
             
+            <div slot="emptystate" style="text-align: center" v-html="$t('pages.empty')"></div>
+
             <template slot="table-row" slot-scope="props">
                 <span v-if="props.column.field == 'p-cover-image'">
                     <k-link :to="props.row.link">
