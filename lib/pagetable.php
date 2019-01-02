@@ -18,7 +18,10 @@ $options = A::merge($options, [
 		},
 		'limitOptions' => function($limitOptions = [5, 10, 25, 50]) {
 			return $limitOptions;
-		}
+		},
+		'search' => function($search = true) {
+			return $search;
+		},
 	),
 	'computed' => array(
 		'pages' => function () {
@@ -168,7 +171,8 @@ $options = A::merge($options, [
                 'size'         => $this->size,
                 'sortable'     => $this->sortable,
                 'limit'        => $this->limit,
-                'limitOptions' => $this->limitOptions
+                'limitOptions' => $this->limitOptions,
+                'search'       => $this->search
             ],
             'pagination' => $this->pagination,
         ];

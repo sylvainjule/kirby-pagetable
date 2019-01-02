@@ -80,7 +80,8 @@ export default {
                 size: null,
                 sortable: null,
                 limit: 10,
-                limitOptions: []
+                limitOptions: [],
+                search: true,
             },
         }
     },
@@ -109,7 +110,7 @@ export default {
             }
         },
         showSearch() {
-            return this.columns.filter(el => el.globalSearchDisabled == false).length > 0
+            return this.columns.filter(el => el.globalSearchDisabled == false).length > 0 && this.options.search
         }
     },
     watch: {
