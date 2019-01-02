@@ -2,6 +2,19 @@
 	.k-button-group {
 		display: flex;
 		align-items: flex-end;
+		.pagetable-reset-button {
+			padding: .35rem .6rem;
+			background: rgba($color-dark, .05);
+			border-radius: 2px;
+			margin-bottom: .65rem;
+			margin-right: .75rem;
+			font-size: $font-size-small;
+			color: $color-dark-grey;
+			transition: color 0.2s ease-out;
+			&:hover {
+				color: $color-black;
+			}
+		}
 		.pagetable-search-input {
 			// Reset
 			margin: 0;
@@ -29,6 +42,19 @@
 		}
 		.k-button {
 			margin-left: .25rem;
+		}
+		@media screen and (max-width: $breakpoint-hide-reset) {
+			.pagetable-reset-button {
+				display: none;
+			}
+			.pagetable-search-input {
+				width: 150px;
+			}
+		}
+		@media screen and (max-width: $breakpoint-hide-search) {
+			.pagetable-search-input {
+				display: none;
+			}
 		}
 	}
 	

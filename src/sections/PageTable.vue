@@ -3,16 +3,21 @@
         <header class="k-section-header">
             <k-headline :link="options.link">{{ headline }}</k-headline>
             <k-button-group>
+                <button v-if="showReset" class="pagetable-reset-button" @click="resetTable" v-html="$t('pagetable.reset')"></button>
                 <input v-if="showSearch" class="pagetable-search-input" type="text" v-model="searchTerm" :placeholder="$t('pagetable.filter-pages')">
                 <k-button v-if="add" icon="add" @click="action(null, 'create')">{{ $t("add") }}</k-button>
             </k-button-group>
         </header>
 
         <vue-good-table 
+            ref="table"
             :columns="columns" 
             :rows="rows"
             :search-options="searchOptions"
-            :pagination-options="paginationOptions">
+            :pagination-options="paginationOptions"
+            @on-search="checkReset"
+            @on-sort-change="checkReset"
+            @on-page-change="checkReset">
             
             <div slot="emptystate" style="text-align: center" v-html="$t('pages.empty')"></div>
 
@@ -68,6 +73,7 @@ export default {
             columns: [],
             rows: [],
             searchTerm: '',
+            showReset: false,
             error: null,
             isLoading: false,
             options: {
@@ -111,7 +117,7 @@ export default {
         },
         showSearch() {
             return this.columns.filter(el => el.globalSearchDisabled == false).length > 0 && this.options.search
-        }
+        },
     },
     watch: {
         language() {
@@ -146,6 +152,29 @@ export default {
         },
         openRef(id) {
             this.$refs[id].toggle()
+        },
+        checkReset() {
+            this.showReset = this.searchTerm.length > 0 ||                                 // if table is searched
+                             (this.$refs['table'] && this.$refs['table'].sorts.length) ||  // if table is sorted
+                             (this.$refs['table'] && this.$refs['table'].currentPage != 1) // if pages have been browsed
+        },
+        resetTable() {
+            // reset sorting
+            this.$refs['table'].changeSort([])
+
+            // remove sorting classes
+            let sorted = document.querySelectorAll('.sorting')
+            sorted.forEach(el => {
+                if(el.tagName == 'TH') {
+                    el.classList.remove('sorting', 'sorting-asc', 'sorting-desc')
+                }
+            })
+
+            // reset search
+            this.searchTerm = ''
+
+            // go to first page
+            this.$refs['table'].changePage(1)
         },
     }
 };
