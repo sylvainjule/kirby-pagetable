@@ -3,7 +3,7 @@
 use Kirby\Toolkit\A;
 use Kirby\Toolkit\I18n;
 
-$options = require kirby()->root('kirby') . '/config/sections/pages.php';
+$options = require __DIR__ . '/../../../../kirby/config/sections/pages.php';
 
 /* Replace existing properties
 --------------------------------*/
