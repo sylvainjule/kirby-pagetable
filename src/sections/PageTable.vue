@@ -13,11 +13,13 @@
             ref="table"
             :columns="columns" 
             :rows="rows"
+            :sort-options="sortOptions"
             :search-options="searchOptions"
             :pagination-options="paginationOptions"
-            @on-search="checkReset"
-            @on-sort-change="checkReset"
-            @on-page-change="checkReset">
+            @on-search="onSearch"
+            @on-sort-change="onSortChange"
+            @on-page-change="onPageChange"
+            @on-per-page-change="onPerPageChange">
             
             <div slot="emptystate" style="text-align: center" v-html="$t('pages.empty')"></div>
 
@@ -76,6 +78,11 @@ export default {
             showReset: false,
             error: null,
             isLoading: false,
+            storedState: {
+                searchTerm: undefined,
+                sort: undefined,
+                page: undefined,
+            },
             options: {
                 empty: null,
                 headline: null,
@@ -103,10 +110,23 @@ export default {
                 externalQuery: this.searchTerm,
             }
         },
+        sortOptions() {
+            return {
+                enabled: true,
+                initialSortBy: this.storedState.sort || false,
+            }
+        },
+        storedPerPage() {
+            return this.storedState.page ? this.storedState.page.currentPerPage || this.options.limit : this.options.limit
+        },
+        storedPage() {
+            return this.storedState.page ? this.storedState.page.currentPage || false : false
+        },
         paginationOptions() {
             return {
                 enabled: true,
-                perPage: this.options.limit,
+                perPage: this.storedPerPage,
+                setCurrentPage: this.storedPage,
                 perPageDropdown: this.options.limitOptions,
                 nextLabel: this.$t('next'),
                 prevLabel: this.$t('prev'),
@@ -118,6 +138,9 @@ export default {
         showSearch() {
             return this.columns.filter(el => el.globalSearchDisabled == false).length > 0 && this.options.search
         },
+        storeName() {
+            return 'kirby$plugin$pagetable' + this.parent + '-' + this.name
+        }
     },
     watch: {
         language() {
@@ -126,11 +149,9 @@ export default {
     },
     created() {
         this.load()
+        this.loadStoredState()
     },
     methods: {
-        log(props) {
-            console.log(props)
-        },
         replaceInvalidDate(str) {
             return str.replace('Invalid Date', '-')
         },
@@ -153,10 +174,56 @@ export default {
         openRef(id) {
             this.$refs[id].toggle()
         },
+        onSearch(params) {
+            this.storeCurrentState()
+            this.checkReset()
+        },
+        onPerPageChange(params) {
+            if(this.$refs['table']) {
+                this.$refs['table'].changePage(1)
+            }
+        },
+        onPageChange(params) {
+            this.storeCurrentState()
+            this.checkReset()
+        },
+        onSortChange(params) {
+            this.storeCurrentState()
+            this.checkReset()
+        },
         checkReset() {
+            // console.log(this.currentState)
             this.showReset = this.searchTerm.length > 0 ||                                 // if table is searched
                              (this.$refs['table'] && this.$refs['table'].sorts.length) ||  // if table is sorted
                              (this.$refs['table'] && this.$refs['table'].currentPage != 1) // if pages have been browsed
+        },
+        loadStoredState() {
+            let storedState = JSON.parse(sessionStorage.getItem(this.storeName))
+            if(storedState !== null) {
+                this.storedState = storedState
+                if(storedState.searchTerm && storedState.searchTerm.length > 0) {
+                    this.searchTerm = storedState.searchTerm
+                }
+            }
+        },
+        storeCurrentState() {
+            if(this.$refs['table']) {
+                let currentState = {}
+
+                currentState.page = {
+                    currentPage: this.$refs['table'].currentPage,
+                    currentPerPage: this.$refs['table'].currentPerPage,
+                }
+                if(this.$refs['table'].sorts[0]) {
+                    currentState.sort = {
+                        field: this.$refs['table'].sorts[0].field,
+                        type: this.$refs['table'].sorts[0].type
+                    }
+                }
+                currentState.searchTerm = this.searchTerm
+
+                sessionStorage.setItem(this.storeName, JSON.stringify(currentState))
+            }
         },
         resetTable() {
             // reset sorting
@@ -173,8 +240,15 @@ export default {
             // reset search
             this.searchTerm = ''
 
+            // reset currentPerPage
+            this.$refs['table'].currentPerPage = this.options.limit
+            this.$refs['table'].perPage        = this.options.limit
+
             // go to first page
             this.$refs['table'].changePage(1)
+
+            // store current state
+            this.storeCurrentState()
         },
     }
 };
