@@ -56,7 +56,7 @@ sections:
 
 ### 3.1. Inherited options
 
-These options work exactly the same way they do for the `pages` section, please refer to [its documentation](https://nnnnext.getkirby.com/docs/cheatsheet/sections/pages):
+These options work exactly the same way they do for the `pages` section, please refer to [its documentation](https://getkirby.com/docs/reference/panel/sections/pages):
 
 ```yaml
 - create 
@@ -147,7 +147,7 @@ columns:
     text: '{{ page.title }}'
 ```
 
-Note that the only limitation here is to always return a string. This string can either contain plain text or html markup, it will be rendered accordingly. Which means, for example, that your can format the returned string with a [field method](https://nnnnext.getkirby.com/docs/cheatsheet/extensions/field-methods):
+Note that the only limitation here is to always return a string. This string can either contain plain text or html markup, it will be rendered accordingly. Which means, for example, that your can format the returned string with a [field method](https://getkirby.com/docs/reference/plugins/extensions/field-methods):
 
 ```php
 // site/plugins/my-methods/index.php
@@ -306,7 +306,7 @@ sections:
         width: 1/6
 ```
 
-At this point, every information should be displayed but categories still lack any kind of styling. We need to call a [field method](https://nnnnext.getkirby.com/docs/cheatsheet/extensions/field-methods) here, that we need to register in a custom plugin. We'll create a `site/plugins/my-methods/index.php` and write:
+At this point, every information should be displayed but categories still lack any kind of styling. We need to call a [field method](https://getkirby.com/docs/reference/plugins/extensions/field-methods) here, that we need to register in a custom plugin. We'll create a `site/plugins/my-methods/index.php` and write:
 
 ```php
 Kirby::plugin('your/plugin', [
