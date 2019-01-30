@@ -51,7 +51,7 @@
                         </slot>
                     </div>
                 </span>
-                <k-link v-else :to="props.row.link" v-html="replaceInvalidDate(props.formattedRow[props.column.field])" @click="log(props)"/>
+                <k-link v-else :to="props.row.link" v-html="replaceInvalidDate(props.formattedRow[props.column.field])"/>
             </template>
         </vue-good-table>
 
@@ -192,7 +192,6 @@ export default {
             this.checkReset()
         },
         checkReset() {
-            // console.log(this.currentState)
             this.showReset = this.searchTerm.length > 0 ||                                 // if table is searched
                              (this.$refs['table'] && this.$refs['table'].sorts.length) ||  // if table is sorted
                              (this.$refs['table'] && this.$refs['table'].currentPage != 1) // if pages have been browsed
