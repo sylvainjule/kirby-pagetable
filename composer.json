@@ -3,9 +3,6 @@
     "description": "Display subpages in a flexible table",
     "type": "kirby-plugin",
     "license": "MIT",
-    "autoload": {
-        "files": ["config.php"]
-    },
     "authors": [
         {
             "name": "Sylvain Julé",

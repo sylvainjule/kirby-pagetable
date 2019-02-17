@@ -3,7 +3,7 @@
 use Kirby\Toolkit\A;
 use Kirby\Toolkit\I18n;
 
-$options = require __DIR__ . '/../../../../kirby/config/sections/pages.php';
+$options = require kirby()->root('kirby') . '/config/sections/pages.php';
 
 /* Replace existing properties
 --------------------------------*/
@@ -67,61 +67,33 @@ $options = A::merge($options, [
         'data' => function () {
             $data = array();
 
-            // first column is always the image
-            $data['columns'][] = array(
-            	'label' => '',
-            	'field' => 'p-cover-image',
-            	'sortable' => false,
-            	'globalSearchDisabled' => true,
-            );
+            // first column is always the cover image
+            $data['columns'][] = [
+            	'label'  => '',
+            	'field'  => 'image',
+            	'sort'   => false,
+                'search' => false,
+                'width'  => '1fr'
+            ];
 
             // loop through the user display choices
             foreach($this->columns as $key => $column) {
-            	$sortable   = $column['sortable'] ?? true;
-            	$searchable = $column['searchable'] ?? true;
-            	$type       = $column['type'] ?? 'text';
+                $type       = $column['type'] ?? 'text';
             	$label      = $column['label'] ?? ucfirst($key);
             	$label      = I18n::translate($label, $label);
-            	$thClass    = '';
-            	$tdClass    = '';
 
-            	$columnData = array(
-            		'label'                => $label,
-            		'field'                => $key,
-            		'type'                 => $type,
-            		'sortable'             => $sortable,
-            		'globalSearchDisabled' => !$searchable,
-            	);
-
-            	if($type == 'date') {
-            		$dateInputFormat  = $column['dateInputFormat'] ?? 'YYYY-MM-DD';
-            		$dateOutputFormat = $column['dateOutputFormat'] ?? 'YYYY-MM-DD';
-            		$columnData['dateInputFormat']  = $dateInputFormat;
-            		$columnData['dateOutputFormat'] = $dateOutputFormat;
-            	}
-            	if(array_key_exists('width', $column)) {
-            		$width   = 'col-width-'. str_replace('/', '-', $column['width']) .' ';
-            		$thClass = $width;
-            		$tdClass = $width;
-            	}
-            	if(array_key_exists('class', $column)) {
-            		$thClass .= 'head-'. $column['class'];
-            		$tdClass .= 'row-'. $column['class'];
-            	}
-
-            	$columnData['thClass'] = $thClass;
-            	$columnData['tdClass'] = $tdClass;
-            	$data['columns'][]     = $columnData;
+            	$data['columns'][] = [
+            		'label'  => $label,
+            		'field'  => $key,
+            		'type'   => $type,
+            		'sort'   => $column['sortable'] ?? true,
+                    'search' => $column['searchable'] ?? true,
+                    'width'  => $column['width'] ?? null
+                ];
             }
             
-            // last column is always the options
-            $data['columns'][] = array(
-            	'label' => '',
-            	'field' => 'p-options',
-            	'sortable' => false,
-            );
 
-            $data['rows'] = array();
+            $data['rows'] = [];
             $thumb = ['width'  => 100, 'height' => 100];
 
             foreach ($this->pages as $item) {
