@@ -16,6 +16,9 @@
       "vueify"
     ]
   },
+  "dependencies": {
+    "tbl-for-kirby": "github:distantnative/tbl-for-kirby"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-transform-runtime": "^6.23.0",
