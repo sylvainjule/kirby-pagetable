@@ -4,6 +4,7 @@
     :columns="columns"
     v-bind="table"
     :isLoading="isLoading"
+     @add="action(null, 'create')"
   >
     <template slot="column-image" slot-scope="props">
       <k-link :to="props.row.link">
@@ -105,7 +106,7 @@ export default {
           name: this.parent + '-' + this.name
         },
         options: {
-          add: false
+          add: this.add
         }
       }
     },
