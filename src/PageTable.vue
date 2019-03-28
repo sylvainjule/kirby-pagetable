@@ -110,6 +110,9 @@ export default {
         }
       }
     },
+    language() {
+      return this.$store.state.languages.current;
+    }
   },
   watch: {
     language() {
