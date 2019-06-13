@@ -18,34 +18,12 @@
     "not ie <= 11"
   ],
   "dependencies": {
-    "tbl-for-kirby": "github:distantnative/tbl-for-kirby",
-    "vue": "^2.6.10",
-    "vue-hot-reload-api": "^2.3.3"
+    "tbl-for-kirby": "github:distantnative/tbl-for-kirby"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@vue/component-compiler-utils": "^3.0.0",
     "cssnano": "^4.1.10",
     "sass": "^1.21.0",
     "vue-template-compiler": "^2.6.10"
-=======
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "^8.0.0",
-    "browserify": "^16.2.3",
-    "browserify-hmr": "^0.3.6",
-    "bundle-collapser": "^1.3.0",
-    "cross-env": "^5.2.0",
-    "envify": "^4.1.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "node-sass": "^4.9.3",
-    "uglify-js": "^3.4.7",
-    "vue": "^2.5.17",
-    "vue-good-table": "^2.16.0",
-    "vueify": "^9.4.1",
-    "watchify": "^3.11.0"
->>>>>>> master
   }
 }
