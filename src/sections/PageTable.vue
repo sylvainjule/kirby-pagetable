@@ -5,7 +5,7 @@
             <k-button-group>
                 <button v-if="showReset" class="pagetable-reset-button" @click="resetTable" v-html="$t('pagetable.reset')"></button>
                 <input v-if="showSearch" class="pagetable-search-input" type="text" v-model="searchTerm" :placeholder="$t('pagetable.filter-pages')">
-                <k-button v-if="add" icon="add" @click="action(null, 'create')">{{ $t("add") }}</k-button>
+                <k-button v-if="add" icon="add" @click="addWrapper">{{ $t("add") }}</k-button>
             </k-button-group>
         </header>
 
@@ -152,6 +152,13 @@ export default {
         this.loadStoredState()
     },
     methods: {
+        addWrapper(){
+            try {
+                this.create();
+            } catch(e){
+                this.action(null, 'create')
+            }
+        },
         replaceInvalidDate(str) {
             return str.replace('Invalid Date', '-')
         },
