@@ -2,9 +2,10 @@
   <tbl
     :rows="rows"
     :columns="columns"
+    type="pagetable"
     v-bind="table"
     :isLoading="isLoading"
-     @add="action(null, 'create')"
+    @add="addWrapper"
   >
     <template slot="column-image" slot-scope="props">
       <k-link :to="props.row.link">
@@ -20,29 +21,30 @@
     </template>
 
     <template slot="column-$actions" slot-scope="props">
-      <k-button 
-        v-if="props.row.flag" 
-        v-bind="props.row.flag" 
+      <k-button
+        v-if="props.row.flag"
+        v-bind="props.row.flag"
         @click="props.row.flag.click"
       />
-      <k-button 
-        v-if="props.row.options" 
-        :tooltip="$t('options')" 
-        icon="dots" 
-        alt="Options" 
-        class="k-list-item-toggle" 
+      <k-button
+        v-if="props.row.options"
+        :tooltip="$t('options')"
+        icon="dots"
+        alt="Options"
+        class="k-list-item-toggle"
         @click.stop="$refs['options-' + props.index].toggle()"
       />
-      <k-dropdown-content 
+      <k-dropdown-content
         :ref="'options-' + props.index"
-        :options="props.row.options" 
-        align="right" 
+        :options="props.row.options"
+        align="right"
         @action="action(props.row, $event)"
       />
     </template>
 
     <template slot="dialogs">
       <k-page-create-dialog ref="create" />
+      <k-page-duplicate-dialog ref="duplicate" />
       <k-page-rename-dialog ref="rename" @success="update" />
       <k-page-url-dialog ref="url" @success="update" />
       <k-page-status-dialog ref="status" @success="update" />
@@ -138,6 +140,13 @@ export default {
           this.isLoading = false
           this.error = error.message
         })
+    },
+    addWrapper() {
+        try {
+            this.create();
+        } catch(e){
+            this.action(null, 'create')
+        }
     }
   }
 };
@@ -145,7 +154,15 @@ export default {
 
 <style lang="scss">
     @import '../node_modules/tbl-for-kirby/index';
-    .k-tbl[type="pagetable"] table th {
-        background: #eaeaea;
+    .tbl[type="pagetable"] table {
+        th {
+            background: #eaeaea;
+        }
+        .tbl-options {
+            display: flex;
+            justify-content: space-between;
+            overflow: visible;
+            padding: .5rem .95rem;
+        }
     }
 </style>
