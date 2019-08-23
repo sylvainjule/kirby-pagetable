@@ -59,7 +59,7 @@ sections:
 These options work exactly the same way they do for the `pages` section, please refer to [its documentation](https://getkirby.com/docs/reference/panel/sections/pages):
 
 ```yaml
-- create 
+- create
 - headline
 - image
 - max
@@ -130,7 +130,7 @@ columns:
 # Multi-language
 columns:
   title:
-    label: 
+    label:
       en: Page title
       fr: Titre de la page
 ```
@@ -203,7 +203,7 @@ columns:
 
 > type: `string`, default: `auto`
 
-The width of the column in the table. 
+The width of the column in the table.
 Available widths: 1/6, 1/4, 1/3, 1/2, 2/3, 3/4
 
 ```yaml
@@ -216,7 +216,7 @@ columns:
 
 > type: `string`, default: `null`
 
-Allows you to add a custom class to the column. 
+Allows you to add a custom class to the column.
 A class `myClass` will be added as `.head-myClass` to its th, and `.row-myClass` to its td.
 
 ```yaml
@@ -319,7 +319,7 @@ Kirby::plugin('your/plugin', [
 ]);
 ```
 
-Now every label will be rendered as: 
+Now every label will be rendered as:
 
 ```html
 <span class="category-label" data-category="architecture">architecture</span>
@@ -328,25 +328,25 @@ Now every label will be rendered as:
 We're on our way but there is still no styling. Let's create an `assets/css/panel.css` stylesheet (if you have none yet), and add some rules there:
 
 ```css
-.k-pagetable-section .category-label {
+.k-section[type="pagetable"] .category-label {
   font-size: 0.65rem;
   text-transform: uppercase;
   padding: 5px 7px;
   border-radius: 3px;
 }
-.k-pagetable-section .category-label[data-category="architecture"] {
+.k-section[type="pagetable"] .category-label[data-category="architecture"] {
   background: #d7e1e9;
 }
-.k-pagetable-section .category-label[data-category="culture"] {
+.k-section[type="pagetable"] .category-label[data-category="culture"] {
   background: #f5e6bf;
 }
-.k-pagetable-section .category-label[data-category="environment"] {
+.k-section[type="pagetable"] .category-label[data-category="environment"] {
   background: #cae5dd;
 }
-.k-pagetable-section .category-label[data-category="gastronomy"] {
+.k-section[type="pagetable"] .category-label[data-category="gastronomy"] {
   background: #e0d7dd;
 }
-.k-pagetable-section .category-label[data-category="science"] {
+.k-section[type="pagetable"] .category-label[data-category="science"] {
   background: #f9e9e0;
 }
 ```
