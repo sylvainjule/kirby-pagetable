@@ -17,7 +17,7 @@
     </template>
 
     <template slot="column-$default" slot-scope="props">
-      <p><k-link :to="props.row.link" v-html="props.value"/></p>
+        <k-link :to="props.row.link" v-html="props.value"/>
     </template>
 
     <template slot="column-$actions" slot-scope="props">
@@ -158,6 +158,11 @@ export default {
     .tbl[type="pagetable"] table {
         th {
             background: #eaeaea;
+        }
+        td:not(:first-child) > a {
+            display: block;
+            width: 100%;
+            padding: .5rem .75rem;
         }
         .tbl-options {
             display: flex;
