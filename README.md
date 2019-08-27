@@ -69,7 +69,22 @@ These options work exactly the same way they do for the `pages` section, please 
 - status
 ```
 
-### 3.2. Limit options
+### 3.2. Empty placeholder
+
+By default, an empty pagetable will display the Pages' field placeholder text. You can, however, change it to whatever you'd like in your blueprint:
+
+```yaml
+sections:
+  mypagetable:
+    type: pagetable
+    empty: You have not added any products yet
+    # or
+    empty:
+      en: You have not added any projects yet
+      fr: Vous n'avez actuellement aucun projet à afficher
+```
+
+### 3.3. Limit options
 
 You can limit the initial number of displayed pages the same way you could with the usal `pages` section, only pagination will happen on the front-end.
 Default is `25`.
@@ -77,7 +92,6 @@ Default is `25`.
 ```yaml
 sections:
   mypagetable:
-    headline: My PageTable
     type: pagetable
     limit: 25
 ```
@@ -87,7 +101,6 @@ You can also set the limit options displayed in the select input at the bottom o
 ```yaml
 sections:
   mypagetable:
-    headline: My PageTable
     type: pagetable
     limitOptions:
       - 10

@@ -22,9 +22,15 @@ $options = A::merge($options, [
         'search' => function($search = true) {
             return $search;
         },
+        'empty' => function($empty = null) {
+            return $empty;
+        },
     ),
     'computed' => array(
-        'pages' => function () {
+        'empty' => function() {
+            return I18n::translate($this->empty, t('pages.empty'));
+        },
+        'pages' => function() {
             switch ($this->status) {
                 case 'draft':
                     $pages = $this->parent->drafts();
@@ -88,7 +94,7 @@ $options = A::merge($options, [
                     'width'  => $column['width'] ?? null
                 ];
             }
-            
+
             $data['rows'] = [];
             $thumb = ['width'  => 100, 'height' => 100];
             foreach ($this->pages as $item) {

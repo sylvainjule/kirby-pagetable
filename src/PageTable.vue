@@ -99,7 +99,7 @@ export default {
           perPage: this.$t('pagetable.rowsPerPage'),
           of: this.$t('pagetable.of'),
           all: this.$t('pagetable.all'),
-          empty: this.$t('pages.empty'),
+          empty: this.options.empty,
           filter: this.$t('pagetable.filter-pages'),
           reset: this.$t('pagetable.reset')
         },
