@@ -15,6 +15,7 @@ Display subpages in a flexible, sortable and searchable table.
 - [3. Global options](#3-options)
   * [3.1. Inherited options](#31-inherited-options)
   * [3.2. Limit options](#32-limit-options)
+  * [3.2. Custom strings](#32-custom-strings)
 - [4. Column options](#4-column-options)
   * [4.1. label](#41-label)
   * [4.2. text](#42-text)
@@ -69,22 +70,7 @@ These options work exactly the same way they do for the `pages` section, please 
 - status
 ```
 
-### 3.2. Empty placeholder
-
-By default, an empty pagetable will display the Pages' field placeholder text. You can, however, change it to whatever you'd like in your blueprint:
-
-```yaml
-sections:
-  mypagetable:
-    type: pagetable
-    empty: You have not added any products yet
-    # or
-    empty:
-      en: You have not added any projects yet
-      fr: Vous n'avez actuellement aucun projet à afficher
-```
-
-### 3.3. Limit options
+### 3.2. Limit options
 
 You can limit the initial number of displayed pages the same way you could with the usal `pages` section, only pagination will happen on the front-end.
 Default is `25`.
@@ -106,6 +92,30 @@ sections:
       - 10
       - 25
       - 50
+```
+
+### 3.3. Custom strings
+
+Pagetable ships with translated strings for its placeholders / buttons / etc.
+You can change any of them to whatever you'd like in your blueprint:
+
+```yaml
+sections:
+  mypagetable:
+    type: pagetable
+    translations:
+      # single language
+      empty: You have not added any products yet
+      # or translated
+      empty:
+        en: You have not added any projects yet
+        fr: Vous n'avez actuellement aucun projet à afficher
+      # All available keys and their default english strings
+      empty: No pages yet
+      rowsPerPage: Pages displayed
+      all: All
+      filterPages: Filter pages…
+      reset: Reset
 ```
 
 <br/>

@@ -76,6 +76,14 @@ export default {
         sortable: null,
         limit: 10,
         limitOptions: [],
+        translations: {
+          perPage: this.$t('pagetable.rowsPerPage'),
+          of: this.$t('pagetable.of'),
+          all: this.$t('pagetable.all'),
+          empty: this.$t('pages.empty'),
+          filter: this.$t('pagetable.filter-pages'),
+          reset: this.$t('pagetable.reset')
+        },
         search: true,
       },
     }
@@ -95,14 +103,7 @@ export default {
           perPage: this.options.limit,
           perPageOptions: this.options.limitOptions
         },
-        labels: {
-          perPage: this.$t('pagetable.rowsPerPage'),
-          of: this.$t('pagetable.of'),
-          all: this.$t('pagetable.all'),
-          empty: this.options.empty,
-          filter: this.$t('pagetable.filter-pages'),
-          reset: this.$t('pagetable.reset')
-        },
+        labels: this.options.translations,
         store: {
           enabled: true,
           name: this.parent + '-' + this.name
