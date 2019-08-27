@@ -2,6 +2,7 @@
   <tbl
     :rows="rows"
     :columns="columns"
+    :headline="options.headline"
     type="pagetable"
     v-bind="table"
     :isLoading="isLoading"
