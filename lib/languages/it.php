@@ -5,5 +5,5 @@ return array(
 	'pagetable.of'           => 'di',
 	'pagetable.all'          => 'Tutte',
 	'pagetable.filter-pages' => 'Filtra le pagine…',
-	'pagetable.reset'        => 'Reset',
+	'pagetable.reset'        => 'Rimuovi filtro',
 );
