@@ -156,6 +156,12 @@ export default {
 
 <style lang="scss">
     @import '../node_modules/tbl-for-kirby/index';
+    .tbl[type="pagetable"] {
+        .tbl-search {
+            margin-top: .25rem;
+        }
+    }
+
     .tbl[type="pagetable"] table {
         th {
             background: #eaeaea;
