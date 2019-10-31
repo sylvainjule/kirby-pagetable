@@ -11,7 +11,7 @@
     <template slot="column-image" slot-scope="props">
       <k-link :to="props.row.link">
         <figure class="k-list-item-image">
-          <k-image v-if="props.row.image && props.row.image.url" :src="props.row.image.url" :back="props.row.image.back || 'pattern'" :cover="props.row.image.cover" />
+          <k-image v-if="toImageOptions(props.row.image)" v-bind="toImageOptions(props.row.image)" />
           <k-icon v-else v-bind="props.row.icon" />
         </figure>
       </k-link>
@@ -156,6 +156,28 @@ export default {
         } catch(e){
             this.action(null, 'create')
         }
+    },
+    toImageOptions(image) {
+        if (!image) return false;
+        let src    = null;
+        let srcset = null;
+        if(image.list) {
+            src    = image.list.url;
+            srcset = image.list.srcset;
+        } else {
+            src    = image.url;
+            srcset = image.srcset;
+        }
+        if (!src) {
+            return false;
+        }
+
+        return {
+            src: src,
+            srcset: srcset,
+            back: image.back || 'pattern',
+            cover: image.cover
+        };
     }
   }
 };
