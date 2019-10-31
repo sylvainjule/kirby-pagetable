@@ -96,6 +96,7 @@ $options = A::merge($options, [
                 'field'  => 'image',
                 'sort'   => false,
                 'search' => false,
+                'class'  => 'pagetable-image',
                 'width'  => '1fr'
             ];
             // loop through the user display choices
@@ -109,6 +110,7 @@ $options = A::merge($options, [
                     'type'   => $type,
                     'sort'   => $column['sortable'] ?? true,
                     'search' => $column['searchable'] ?? true,
+                    'class'  => $column['class'] ?? 'pagetable-column',
                     'width'  => $column['width'] ?? null
                 ];
             }
