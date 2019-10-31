@@ -31,12 +31,12 @@ $options = A::merge($options, [
             $translations = $this->translations;
             $keys         = array_keys($translations);
 
-            $rowsPerPage = in_array('rowsPerPage', $keys) ? I18n::translate($translations['rowsPerPage'], $translations['rowsPerPage']) : t('pagetable.rowsPerPage');
-            $filterPages = in_array('filterPages', $keys) ? I18n::translate($translations['filterPages'], $translations['filterPages']) : t('pagetable.filter-pages');
-            $of          = in_array('of', $keys)    ? I18n::translate($translations['of'], $translations['of']) : t('pagetable.of');
-            $all         = in_array('all', $keys)   ? I18n::translate($translations['all'], $translations['all']) : t('pagetable.all');
-            $reset       = in_array('reset', $keys) ? I18n::translate($translations['reset'], $translations['reset']) : t('pagetable.reset');
-            $empty       = in_array('empty', $keys) ? I18n::translate($translations['empty'], $translations['empty']) : t('pagetable.empty');
+            $rowsPerPage = in_array('rowsPerPage', $keys) ? I18n::translate($translations['rowsPerPage'], $translations['rowsPerPage']) : null;
+            $filterPages = in_array('filterPages', $keys) ? I18n::translate($translations['filterPages'], $translations['filterPages']) : null;
+            $of          = in_array('of', $keys)    ? I18n::translate($translations['of'], $translations['of']) : null;
+            $all         = in_array('all', $keys)   ? I18n::translate($translations['all'], $translations['all']) : null;
+            $reset       = in_array('reset', $keys) ? I18n::translate($translations['reset'], $translations['reset']) : null;
+            $empty       = in_array('empty', $keys) ? I18n::translate($translations['empty'], $translations['empty']) : null;
 
 
             return array(
@@ -161,10 +161,10 @@ $options = A::merge($options, [
                 'sortable'     => $this->sortable,
                 'limit'        => $this->limit,
                 'limitOptions' => $this->limitOptions,
-                'translations' => $this->translations,
                 'search'       => $this->search
             ],
-            'pagination' => $this->pagination,
+            'translations' => $this->translations,
+            'pagination'   => $this->pagination,
         ];
     }
 ]);

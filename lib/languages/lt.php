@@ -1,4 +1,5 @@
 <?php
+
 return array(
 	'pagetable.rowsPerPage'  => 'Rodomi puslapiai',
 	'pagetable.of'           => 'iš',

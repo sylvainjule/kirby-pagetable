@@ -77,15 +77,15 @@ export default {
         sortable: null,
         limit: 10,
         limitOptions: [],
-        translations: {
-          perPage: this.$t('pagetable.rowsPerPage'),
-          of: this.$t('pagetable.of'),
-          all: this.$t('pagetable.all'),
-          empty: this.$t('pages.empty'),
-          filter: this.$t('pagetable.filter-pages'),
-          reset: this.$t('pagetable.reset')
-        },
         search: true,
+      },
+      translations: {
+        perPage: this.$t('pagetable.rowsPerPage'),
+        of: this.$t('pagetable.of'),
+        all: this.$t('pagetable.all'),
+        empty: this.$t('pages.empty'),
+        filter: this.$t('pagetable.filter-pages'),
+        reset: this.$t('pagetable.reset')
       },
     }
   },
@@ -104,7 +104,7 @@ export default {
           perPage: this.options.limit,
           perPageOptions: this.options.limitOptions
         },
-        labels: this.options.translations,
+        labels: this.translations,
         store: {
           enabled: true,
           name: this.parent + '-' + this.name
@@ -137,6 +137,13 @@ export default {
           this.options = response.options
           this.columns = response.data.columns
           this.rows    = this.items(response.data.rows)
+
+          // replace default translations if needed
+          let translations = response.translations
+          Object.keys(translations).forEach(k => {
+              if (translations[k] == null) delete translations[k]
+          })
+          this.translations = Object.assign({}, this.translations, translations)
         })
         .catch(error => {
           this.isLoading = false
