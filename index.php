@@ -9,6 +9,7 @@ Kirby::plugin('sylvainjule/pagetable', array(
         'es' => require_once __DIR__ . '/lib/languages/es.php',
         'de' => require_once __DIR__ . '/lib/languages/de.php',
         'fr' => require_once __DIR__ . '/lib/languages/fr.php',
+        'lt' => require_once __DIR__ . '/lib/languages/lt.php',
         'tr' => require_once __DIR__ . '/lib/languages/tr.php',
         'it' => require_once __DIR__ . '/lib/languages/it.php',
     ),
