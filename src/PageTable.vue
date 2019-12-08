@@ -186,7 +186,7 @@ export default {
 <style lang="scss">
     @import '../node_modules/tbl-for-kirby/index';
 
-    .tbl[type="pagetable"] table {
+    div[type="pagetable"] section.tbl table {
         th {
             background: #eaeaea;
         }
