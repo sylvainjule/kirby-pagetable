@@ -1,9 +1,9 @@
 <?php
 
 return array(
-	'pagetable.rowsPerPage'  => 'Productos por página',
-	'pagetable.of'           => 'de',
-	'pagetable.all'          => 'Todos',
-	'pagetable.filter-pages' => 'Filtrar páginas…',
-	'pagetable.reset'        => 'Reiniciar',
+  'pagetable.rowsPerPage'  => 'Página mostradas',
+  'pagetable.of'           => 'de',
+  'pagetable.all'          => 'Todas',
+  'pagetable.filter-pages' => 'Filtrar páginas…',
+  'pagetable.reset'        => 'Restablecer',
 );
