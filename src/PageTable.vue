@@ -8,7 +8,7 @@
     :isLoading="isLoading"
     @add="addWrapper"
   >
-    <template slot="column-image" slot-scope="props">
+    <template slot="column-image" slot-scope="props" v-if="options.showImage">
       <k-link :to="props.row.link">
         <figure class="k-list-item-image">
           <k-image v-if="toImageOptions(props.row.image)" v-bind="toImageOptions(props.row.image)" />
@@ -23,12 +23,12 @@
 
     <template slot="column-$actions" slot-scope="props">
       <k-button
-        v-if="props.row.flag"
+        v-if="props.row.flag && options.showStatus"
         v-bind="props.row.flag"
         @click="props.row.flag.click"
       />
       <k-button
-        v-if="props.row.options"
+        v-if="props.row.options && options.showActions"
         :tooltip="$t('options')"
         icon="dots"
         alt="Options"
@@ -36,6 +36,7 @@
         @click.stop="$refs['options-' + props.index].toggle()"
       />
       <k-dropdown-content
+        v-if="options.showActions"
         :ref="'options-' + props.index"
         :options="props.row.options"
         align="right"
@@ -78,6 +79,9 @@ export default {
         limit: 10,
         limitOptions: [],
         search: true,
+        showImage: true,
+        showStatus: true,
+        showActions: true
       },
       translations: {
         perPage: this.$t('pagetable.rowsPerPage'),
@@ -98,7 +102,7 @@ export default {
     table() {
       return {
         actions: {
-          width: "2fr"
+          width: this.options.showActions && this.options.showStatus ? '2fr' : '1fr'
         },
         pagination: {
           perPage: this.options.limit,
@@ -201,5 +205,9 @@ export default {
             overflow: visible;
             padding: .5rem .95rem;
         }
+    }
+
+    .tbl[data-version="1.2.0"] table tr td.row-pagetable-column {
+      padding: 0 0.5rem;
     }
 </style>

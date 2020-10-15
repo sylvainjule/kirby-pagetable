@@ -24,6 +24,15 @@ $options = A::merge($options, [
         },
         'translations' => function($translations = []) {
             return $translations;
+        },
+        'showImage' => function($showImage = true) {
+            return $showImage;
+        },
+        'showStatus' => function($showStatus = true) {
+            return $showStatus;
+        },
+        'showActions' => function($showActions = true) {
+            return $showActions;
         }
     ),
     'computed' => array(
@@ -90,15 +99,19 @@ $options = A::merge($options, [
         },
         'data' => function () {
             $data = array();
-            // first column is always the cover image
-            $data['columns'][] = [
-                'label'  => '',
-                'field'  => 'image',
-                'sort'   => false,
-                'search' => false,
-                'class'  => 'pagetable-image',
-                'width'  => '1fr'
-            ];
+
+            if($this->showImage) {
+                // first column is always the cover image
+                $data['columns'][] = [
+                    'label'  => '',
+                    'field'  => 'image',
+                    'sort'   => false,
+                    'search' => false,
+                    'class'  => 'pagetable-image',
+                    'width'  => '1fr'
+                ];
+            }
+
             // loop through the user display choices
             foreach($this->columns as $key => $column) {
                 $type       = $column['type'] ?? 'text';
@@ -161,7 +174,10 @@ $options = A::merge($options, [
                 'sortable'     => $this->sortable,
                 'limit'        => $this->limit,
                 'limitOptions' => $this->limitOptions,
-                'search'       => $this->search
+                'search'       => $this->search,
+                'showImage'    => $this->showImage,
+                'showStatus'   => $this->showStatus,
+                'showActions'  => $this->showActions
             ],
             'translations' => $this->translations,
             'pagination'   => $this->pagination,

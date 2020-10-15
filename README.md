@@ -94,7 +94,20 @@ sections:
       - 50
 ```
 
-### 3.3. Custom strings
+### 3.3. Visibility options
+
+You can toggle the visibility of the image column, status button and action button
+
+```yaml
+sections:
+  mypagetable:
+    type: pagetable
+    showImage: false
+    showStatus: false
+    showActions: false
+```
+
+### 3.4. Custom strings
 
 Pagetable ships with translated strings for its placeholders / buttons / etc.
 You can change any of them to whatever you'd like in your blueprint:
