@@ -114,6 +114,7 @@ sections:
       empty: No pages yet
       rowsPerPage: Pages displayed
       all: All
+      loading: Loading pages…
       filterPages: Filter pages…
       reset: Reset
 ```
@@ -351,25 +352,25 @@ Now every label will be rendered as:
 We're on our way but there is still no styling. Let's create an `assets/css/panel.css` stylesheet (if you have none yet), and add some rules there:
 
 ```css
-.k-section[type="pagetable"] .category-label {
+.k-pagetable-section .category-label {
   font-size: 0.65rem;
   text-transform: uppercase;
   padding: 5px 7px;
   border-radius: 3px;
 }
-.k-section[type="pagetable"] .category-label[data-category="architecture"] {
+.k-pagetable-section .category-label[data-category="architecture"] {
   background: #d7e1e9;
 }
-.k-section[type="pagetable"] .category-label[data-category="culture"] {
+.k-pagetable-section .category-label[data-category="culture"] {
   background: #f5e6bf;
 }
-.k-section[type="pagetable"] .category-label[data-category="environment"] {
+.k-pagetable-section .category-label[data-category="environment"] {
   background: #cae5dd;
 }
-.k-section[type="pagetable"] .category-label[data-category="gastronomy"] {
+.k-pagetable-section .category-label[data-category="gastronomy"] {
   background: #e0d7dd;
 }
-.k-section[type="pagetable"] .category-label[data-category="science"] {
+.k-pagetable-section .category-label[data-category="science"] {
   background: #f9e9e0;
 }
 ```

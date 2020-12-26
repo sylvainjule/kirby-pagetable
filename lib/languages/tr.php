@@ -6,4 +6,5 @@ return array(
 	'pagetable.all'          => 'Tümü',
 	'pagetable.filter-pages' => 'Sayfaları filtrele..',
 	'pagetable.reset'        => 'Sıfırla',
+    'pagetable.loading'      => 'Sayfaları yükleme…',
 );

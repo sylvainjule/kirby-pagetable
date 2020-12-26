@@ -1,0 +1,61 @@
+.k-pagetable-section {
+	.k-button-group {
+		display: flex;
+		align-items: flex-end;
+		.pagetable-reset-button {
+			padding: .35rem .6rem;
+			background: rgba($color-dark, .05);
+			border-radius: 2px;
+			margin-bottom: .65rem;
+			margin-right: .75rem;
+			font-size: $font-size-small;
+			color: $color-dark-grey;
+			transition: color 0.2s ease-out;
+			&:hover {
+				color: $color-black;
+			}
+		}
+		.pagetable-search-input {
+			// Reset
+			margin: 0;
+		    border: 0;
+		    padding: 0;
+		    display: inline-block;
+		    vertical-align: middle;
+		    white-space: normal;
+		    background: none;
+		    line-height: 1;
+		    border-bottom: 1px solid darken(#eaeaea, 8%);
+		    font-size: $font-size-small;
+		    padding-bottom: .35rem;
+		    margin-bottom: .65rem;
+		    padding: .35rem .75rem .35rem .5rem;
+		    min-width: 150px;
+		    &::placeholder {
+		    	color: $color-light-grey;
+		    }
+		    &:focus {
+		    	outline: none;
+		    	border-color: $color-white;
+		    	background: $color-white;
+		    }
+		}
+		.k-button {
+			margin-left: .25rem;
+		}
+		@media screen and (max-width: $breakpoint-hide-reset) {
+			.pagetable-reset-button {
+				display: none;
+			}
+			.pagetable-search-input {
+				width: 150px;
+			}
+		}
+		@media screen and (max-width: $breakpoint-hide-search) {
+			.pagetable-search-input {
+				display: none;
+			}
+		}
+	}
+	
+}

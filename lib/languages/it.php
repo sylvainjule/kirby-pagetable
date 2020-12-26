@@ -6,4 +6,5 @@ return array(
 	'pagetable.all'          => 'Tutte',
 	'pagetable.filter-pages' => 'Filtra le pagine…',
 	'pagetable.reset'        => 'Rimuovi filtro',
+    'pagetable.loading'      => 'Caricamento pagina…',
 );

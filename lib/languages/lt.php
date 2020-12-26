@@ -6,4 +6,5 @@ return array(
 	'pagetable.all'          => 'Visi',
 	'pagetable.filter-pages' => 'Filtruoti puslapius…',
 	'pagetable.reset'        => 'Atšaukti',
+    'pagetable.loading'      => 'Įkeliami puslapiai…',
 );

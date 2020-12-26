@@ -16,7 +16,7 @@ $options = A::merge($options, [
         'limit' => function($limit = 10) {
             return $limit;
         },
-        'limitOptions' => function($limitOptions = [10, 25, 50]) {
+        'limitOptions' => function($limitOptions = [5, 10, 25, 50]) {
             return $limitOptions;
         },
         'search' => function($search = true) {
@@ -37,19 +37,18 @@ $options = A::merge($options, [
             $all         = in_array('all', $keys)   ? I18n::translate($translations['all'], $translations['all']) : null;
             $reset       = in_array('reset', $keys) ? I18n::translate($translations['reset'], $translations['reset']) : null;
             $empty       = in_array('empty', $keys) ? I18n::translate($translations['empty'], $translations['empty']) : null;
-            $loading     = in_array('loading', $keys) ? I18n::translate($translations['loading'], $translations['loading']) : null;
+
 
             return array(
-                'perPage' => $rowsPerPage,
-                'of'      => $of,
-                'all'     => $all,
-                'filter'  => $filterPages,
-                'reset'   => $reset,
-                'empty'   => $empty,
-                'loading' => $loading,
+                'perPage'      => $rowsPerPage,
+                'of'           => $of,
+                'all'          => $all,
+                'filter'       => $filterPages,
+                'reset'        => $reset,
+                'empty'        => $empty,
             );
         },
-        'pages' => function () {
+        'pages' => function() {
             switch ($this->status) {
                 case 'draft':
                     $pages = $this->parent->drafts();
@@ -81,7 +80,7 @@ $options = A::merge($options, [
             }
             // sort
             if ($this->sortBy) {
-                $pages = $pages->sortBy(...Str::split($this->sortBy, ' '));
+                $pages = $pages->sortBy(...$pages::sortArgs($this->sortBy));
             }
 
             return $pages;
@@ -91,75 +90,37 @@ $options = A::merge($options, [
         },
         'data' => function () {
             $data = array();
-
-            // first column is always the image
-            $data['columns'][] = array(
-                'label' => '',
-                'field' => 'p-cover-image',
-                'sortable' => false,
-                'globalSearchDisabled' => true,
-            );
-
+            // first column is always the cover image
+            $data['columns'][] = [
+                'label'  => '',
+                'field'  => 'image',
+                'sort'   => false,
+                'search' => false,
+                'class'  => 'pagetable-image',
+                'width'  => '1fr'
+            ];
             // loop through the user display choices
             foreach($this->columns as $key => $column) {
-                $sortable   = $column['sortable'] ?? true;
-                $searchable = $column['searchable'] ?? true;
                 $type       = $column['type'] ?? 'text';
                 $label      = $column['label'] ?? ucfirst($key);
                 $label      = I18n::translate($label, $label);
-                $thClass    = '';
-                $tdClass    = '';
-
-                $columnData = array(
-                    'label'                => $label,
-                    'field'                => $key,
-                    'type'                 => $type,
-                    'sortable'             => $sortable,
-                    'globalSearchDisabled' => !$searchable,
-                );
-
-                if($type == 'date') {
-                    $dateInputFormat  = $column['dateInputFormat'] ?? 'YYYY-MM-DD';
-                    $dateInputFormat  = str_replace('YYYY', 'yyyy', $dateInputFormat);
-                    $dateInputFormat  = str_replace('DD', 'dd', $dateInputFormat);
-
-                    $dateOutputFormat = $column['dateOutputFormat'] ?? 'YYYY-MM-DD';
-                    $dateOutputFormat  = str_replace('YYYY', 'yyyy', $dateOutputFormat);
-                    $dateOutputFormat  = str_replace('DD', 'dd', $dateOutputFormat);
-
-                    $columnData['dateInputFormat'] = $dateInputFormat;
-                    $columnData['dateOutputFormat'] = $dateOutputFormat;
-                }
-                if(array_key_exists('width', $column)) {
-                    $width   = 'col-width-'. str_replace('/', '-', $column['width']) .' ';
-                    $thClass = $width;
-                    $tdClass = $width;
-                }
-                if(array_key_exists('class', $column)) {
-                    $thClass .= 'head-'. $column['class'];
-                    $tdClass .= 'row-'. $column['class'];
-                }
-
-                $columnData['thClass'] = $thClass;
-                $columnData['tdClass'] = $tdClass;
-                $data['columns'][]     = $columnData;
+                $data['columns'][] = [
+                    'label'  => $label,
+                    'field'  => $key,
+                    'type'   => $type,
+                    'sort'   => $column['sortable'] ?? true,
+                    'search' => $column['searchable'] ?? true,
+                    'class'  => $column['class'] ?? 'pagetable-column',
+                    'width'  => $column['width'] ?? null
+                ];
             }
 
-            // last column is always the options
-            $data['columns'][] = array(
-                'label' => '',
-                'field' => 'p-options',
-                'sortable' => false,
-            );
-
-            $data['rows'] = array();
+            $data['rows'] = [];
             $thumb = ['width'  => 100, 'height' => 100];
-
             foreach ($this->pages as $item) {
                 $permissions = $item->permissions();
                 $blueprint   = $item->blueprint();
                 $image       = $item->panelImage($this->image, $thumb);
-
                 $baseOptions = [
                     'id'          => $item->id(),
                     'dragText'    => $item->dragText('auto', $this->dragTextType),
@@ -175,15 +136,12 @@ $options = A::merge($options, [
                         'changeStatus' => $permissions->can('changeStatus')
                     ],
                 ];
-
                 $userOptions = [];
                 // loop through the user display choices
                 foreach($this->columns as $key => $column) {
                     $userOptions[$key] = $item->toString($column['text']);
                 }
-
                 $options = array_merge_recursive($baseOptions, $userOptions);
-
                 $data['rows'][] = $options;
             }
             return $data;
@@ -206,11 +164,10 @@ $options = A::merge($options, [
                 'search'       => $this->search
             ],
             'translations' => $this->translations,
-            'pagination' => $this->pagination,
+            'pagination'   => $this->pagination,
         ];
     }
 ]);
-
 
 // return the updated options
 return $options;
