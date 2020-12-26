@@ -129,7 +129,7 @@ $structure-item-height: 40px;
       	}
 		&:last-child {
 			overflow: visible;
-			height: calc($structure-item-height - 2px);
+			height: calc(#{$structure-item-height} - 2px);
 		}
 		.k-list-item-options {
             display: flex;
