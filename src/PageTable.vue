@@ -22,11 +22,11 @@
     </template>
 
     <template slot="column-$actions" slot-scope="props">
-      <k-button
-        v-if="props.row.flag"
-        v-bind="props.row.flag"
-        @click="props.row.flag.click"
-      />
+      <k-status-icon
+          v-if="props.row.flag"
+          v-bind="props.row.flag"
+          class="k-list-item-status"
+        />
       <k-button
         v-if="props.row.options"
         :tooltip="$t('options')"

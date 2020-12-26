@@ -18,7 +18,9 @@
     "not ie <= 11"
   ],
   "dependencies": {
-    "tbl-for-kirby": "github:distantnative/tbl-for-kirby"
+    "tbl-for-kirby": "github:distantnative/tbl-for-kirby",
+    "vue": "^2.6.12",
+    "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.0.0",
