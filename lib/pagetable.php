@@ -24,6 +24,15 @@ $options = A::merge($options, [
         },
         'translations' => function($translations = []) {
             return $translations;
+        },
+        'showImage' => function($showImage = true) {
+            return $showImage;
+        },
+        'showStatus' => function($showStatus = true) {
+            return $showStatus;
+        },
+        'showActions' => function($showActions = true) {
+            return $showActions;
         }
     ),
     'computed' => array(
@@ -92,13 +101,16 @@ $options = A::merge($options, [
         'data' => function () {
             $data = array();
 
-            // first column is always the image
-            $data['columns'][] = array(
-                'label' => '',
-                'field' => 'p-cover-image',
-                'sortable' => false,
-                'globalSearchDisabled' => true,
-            );
+            if($this->showImage) {
+                $data['columns'][] = array(
+                    'label' => '',
+                    'field' => 'p-cover-image',
+                    'sortable' => false,
+                    'globalSearchDisabled' => true,
+                    'thClass' => 'cover-image',
+                    'tdClass' => 'cover-image',
+                );
+            }
 
             // loop through the user display choices
             foreach($this->columns as $key => $column) {
@@ -145,11 +157,21 @@ $options = A::merge($options, [
                 $data['columns'][]     = $columnData;
             }
 
+            $optionsClass = 'pagetable-options-none';
+            if ($this->showStatus && $this->showActions) {
+                $optionsClass = 'pagetable-options-two';
+            }
+            elseif ($this->showStatus || $this->showActions) {
+                $optionsClass = 'pagetable-options-one';
+            }
+
             // last column is always the options
             $data['columns'][] = array(
                 'label' => '',
                 'field' => 'p-options',
                 'sortable' => false,
+                'thClass' => 'pagetable-options-container '. $optionsClass,
+                'tdClass' => 'pagetable-options-container '. $optionsClass
             );
 
             $data['rows'] = array();
@@ -203,7 +225,10 @@ $options = A::merge($options, [
                 'sortable'     => $this->sortable,
                 'limit'        => $this->limit,
                 'limitOptions' => $this->limitOptions,
-                'search'       => $this->search
+                'search'       => $this->search,
+                'showImage'    => $this->showImage,
+                'showStatus'   => $this->showStatus,
+                'showActions'  => $this->showActions
             ],
             'translations' => $this->translations,
             'pagination' => $this->pagination,

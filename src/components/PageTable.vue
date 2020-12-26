@@ -25,10 +25,8 @@
             @on-page-change="onPageChange"
             @on-per-page-change="onPerPageChange">
 
-            <div slot="emptystate" style="text-align: center" v-html="translations.empty"></div>
-
             <template slot="table-row" slot-scope="props">
-                <span v-if="props.column.field == 'p-cover-image'">
+                <span v-if="props.column.field == 'p-cover-image' && options.showImage">
                     <k-link :to="props.row.link">
                         <figure class="k-list-item-image">
                             <k-image v-if="props.row.image && props.row.image.url" :src="props.row.image.url" :back="props.row.image.back || 'pattern'" :cover="props.row.image.cover" />
@@ -36,20 +34,21 @@
                         </figure>
                     </k-link>
                 </span>
-                <span v-else-if="props.column.field == 'p-options'">
+                <span v-else-if="props.column.field == 'p-options' && showOptions">
                     <div class="k-list-item-options">
                         <slot name="options">
-                            <k-status-icon v-if="props.row.flag"
+                            <k-status-icon v-if="props.row.flag && options.showStatus"
                                            v-bind="props.row.flag"
                                            class="k-list-item-status" />
 
-                            <k-button v-if="props.row.options"
+                            <k-button v-if="props.row.options && options.showActions"
                                       :tooltip="$t('options')"
                                       icon="dots"
                                       alt="Options"
                                       class="k-list-item-toggle"
                                       @click.stop="openRef('dropdown-'+ props.row.originalIndex)"/>
-                            <k-dropdown-content :ref="'dropdown-'+ props.row.originalIndex"
+                            <k-dropdown-content v-if="options.showActions"
+                                                :ref="'dropdown-'+ props.row.originalIndex"
                                                 :options="props.row.options"
                                                 align="right"
                                                 @action="action(props.row, $event)"/>
@@ -124,6 +123,9 @@ export default {
                 limit: 10,
                 limitOptions: [],
                 search: true,
+                showImage: true,
+                showStatus: true,
+                showActions: true
             },
             translations: {
                 perPage: this.$t('pagetable.rowsPerPage'),
@@ -178,7 +180,10 @@ export default {
         },
         storeName() {
             return 'kirby$plugin$pagetable' + this.parent + '-' + this.name
-        }
+        },
+        showOptions() {
+            return this.options.showStatus || this.options.showActions
+        },
     },
     watch: {
         language() {
