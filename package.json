@@ -1,6 +1,6 @@
 {
   "name": "kirby-pagetable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Display subpages in a flexible table",
   "main": "index.js",
   "author": "Sylvain Julé",
