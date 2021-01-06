@@ -16,7 +16,8 @@ Display subpages in a flexible, sortable and searchable table.
   * [3.1. Inherited options](#31-inherited-options)
   * [3.2. Limit options](#32-limit-options)
   * [3.3. Visibility options](#33-visibility-options)
-  * [3.4. Custom strings](#34-custom-strings)
+  * [3.4. Query](#34-query)
+  * [3.5. Custom strings](#35-custom-strings)
 - [4. Column options](#4-column-options)
   * [4.1. label](#41-label)
   * [4.2. text](#42-text)
@@ -108,7 +109,21 @@ sections:
     showActions: false
 ```
 
-### 3.4. Custom strings
+### 3.4. Query
+
+You can query any set of pages you'd like with the `query` option. Queries can start with either `kirby`, `site`, `pages` or (current) `page`.
+This, for example, will query pages that have *"Foo"* in their title.
+
+```yaml
+sections:
+  mypagetable:
+    type: pagetable
+    query: site.index.filterBy('title', '*=', 'Foo')
+```
+
+Learn more about Kirby's blueprints query language [here](https://getkirby.com/docs/guide/blueprints/query-language).
+
+### 3.5. Custom strings
 
 Pagetable ships with translated strings for its placeholders / buttons / etc.
 You can change any of them to whatever you'd like in your blueprint:
@@ -419,5 +434,6 @@ MIT
 
 ## 7. Credits
 
+- Many thanks to @stevenworldplay for the `query` option, from [k3-pagesdisplay-section](https://github.com/rasteiner/k3-pagesdisplay-section)
 - This section is built on top of [vue-good-table](https://xaksis.github.io/vue-good-table/).
 - Please have a look at [https://github.com/jongacnik/kirby-index-field](kirby-index-field) for a K2 version.
