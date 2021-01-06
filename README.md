@@ -434,6 +434,6 @@ MIT
 
 ## 7. Credits
 
-- Many thanks to @stevenworldplay for the `query` option, from [k3-pagesdisplay-section](https://github.com/rasteiner/k3-pagesdisplay-section)
+- Many thanks to [stevenworldplay](https://github.com/stevenworldplay) for the `query` option, from [k3-pagesdisplay-section](https://github.com/rasteiner/k3-pagesdisplay-section)
 - This section is built on top of [vue-good-table](https://xaksis.github.io/vue-good-table/).
 - Please have a look at [https://github.com/jongacnik/kirby-index-field](kirby-index-field) for a K2 version.
