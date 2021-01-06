@@ -1,5 +1,7 @@
 <?php
 
+use Kirby\Toolkit\Query;
+use Kirby\Toolkit\Str;
 use Kirby\Toolkit\A;
 use Kirby\Toolkit\I18n;
 
@@ -33,6 +35,9 @@ $options = A::merge($options, [
         },
         'showActions' => function($showActions = true) {
             return $showActions;
+        },
+        'query' => function(string $query = '') {
+            return $query;
         }
     ),
     'computed' => array(
@@ -59,22 +64,34 @@ $options = A::merge($options, [
             );
         },
         'pages' => function () {
-            switch ($this->status) {
-                case 'draft':
-                    $pages = $this->parent->drafts();
-                    break;
-                case 'listed':
-                    $pages = $this->parent->children()->listed();
-                    break;
-                case 'published':
-                    $pages = $this->parent->children();
-                    break;
-                case 'unlisted':
-                    $pages = $this->parent->children()->unlisted();
-                    break;
-                default:
-                    $pages = $this->parent->childrenAndDrafts();
+            if (Str::length($this->query) == 0) {
+                switch ($this->status) {
+                    case 'draft':
+                        $pages = $this->parent->drafts();
+                        break;
+                    case 'listed':
+                        $pages = $this->parent->children()->listed();
+                        break;
+                    case 'published':
+                        $pages = $this->parent->children();
+                        break;
+                    case 'unlisted':
+                        $pages = $this->parent->children()->unlisted();
+                        break;
+                    default:
+                        $pages = $this->parent->childrenAndDrafts();
+                }
+            } else {
+                // added to support query
+                $q = new Query($this->query, [
+                    'site' => site(),
+                    'page' => $this->model(),
+                    'pages' => site()->pages(),
+                    'kirby' => kirby()
+                ]);
+                $pages = $q->result();
             }
+
             // loop for the best performance
             foreach ($pages->data as $id => $page) {
                 // remove all protected pages
