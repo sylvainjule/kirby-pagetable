@@ -128,7 +128,7 @@ export default {
                 showActions: true
             },
             translations: {
-                perPage: this.$t('pagetable.rowsPerPage'),
+                rowsPerPage: this.$t('pagetable.rowsPerPage'),
                 of: this.$t('pagetable.of'),
                 all: this.$t('pagetable.all'),
                 empty: this.$t('pages.empty'),
