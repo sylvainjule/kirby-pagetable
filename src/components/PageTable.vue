@@ -78,7 +78,7 @@
 
         <div class="loading" v-else-if="isLoading">
             <k-empty :layout="options.layout"
-                     icon="backupsLoader">
+                     icon="pagetableLoader">
                 {{ translations.loading }}
             </k-empty>
         </div>
