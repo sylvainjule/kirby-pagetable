@@ -37,8 +37,8 @@
                 <span v-else-if="props.column.field == 'p-options' && showOptions">
                     <div class="k-list-item-options">
                         <slot name="options">
-                            <k-status-icon v-if="props.row.flag && options.showStatus"
-                                           v-bind="props.row.flag"
+                            <k-status-icon v-if="props.row.statusIcon && options.showStatus"
+                                           v-bind="props.row.statusIcon"
                                            class="k-list-item-status" />
 
                             <k-button v-if="props.row.options && options.showActions"
