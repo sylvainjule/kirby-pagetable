@@ -197,7 +197,7 @@ $options = A::merge($options, [
             foreach ($this->pages as $item) {
                 $permissions = $item->permissions();
                 $blueprint   = $item->blueprint();
-                $image       = $item->panelImage($this->image, $thumb);
+                $image       = $item->panelImage($this->image ?? []);
 
                 $baseOptions = [
                     'id'          => $item->id(),
