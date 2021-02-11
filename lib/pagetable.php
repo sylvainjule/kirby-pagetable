@@ -192,7 +192,6 @@ $options = A::merge($options, [
             );
 
             $data['rows'] = array();
-            $thumb = ['width'  => 100, 'height' => 100];
 
             foreach ($this->pages as $item) {
                 $permissions = $item->permissions();

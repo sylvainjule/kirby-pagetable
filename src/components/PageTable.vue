@@ -29,7 +29,7 @@
                 <span v-if="props.column.field == 'p-cover-image' && options.showImage">
                     <k-link :to="props.row.link">
                         <figure class="k-list-item-image">
-                            <k-image v-if="props.row.image" v-bind="imageOptions(props.row.image)" />
+                            <k-image v-if="imageOptions(props.row.image)" v-bind="imageOptions(props.row.image)" />
                             <k-icon v-else v-bind="props.row.icon" />
                         </figure>
                     </k-link>
@@ -293,6 +293,10 @@ export default {
             this.storeCurrentState()
         },
         imageOptions(image) {
+            if (!image || image.length === 0 || !image.url) {
+                return false;
+            }
+
             let src    = image.list.url;
             let srcset = image.list.srcset;
             if (!src) {
