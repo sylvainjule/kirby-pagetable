@@ -6,11 +6,8 @@
   "author": "Sylvain Julé",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel watch src/index.js --no-source-maps -d ./",
-    "build": "parcel build src/index.js --no-source-maps --experimental-scope-hoisting -d ./"
-  },
-  "posthtml": {
-    "recognizeSelfClosing": true
+    "dev": "npx -y kirbyup src/index.js --watch",
+    "build": "npx -y kirbyup src/index.js"
   },
   "browserslist": [
     "> 1%",
@@ -18,14 +15,6 @@
     "not ie <= 11"
   ],
   "dependencies": {
-    "vue": "^2.6.12",
-    "vue-good-table": "2.21.1",
-    "vue-hot-reload-api": "^2.3.4"
-  },
-  "devDependencies": {
-    "@vue/component-compiler-utils": "^3.2.0",
-    "cssnano": "^4.1.10",
-    "sass": "^1.32.5",
-    "vue-template-compiler": "^2.6.12"
+    "vue-good-table": "2.21.1"
   }
 }
