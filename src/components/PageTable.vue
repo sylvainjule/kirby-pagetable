@@ -28,30 +28,21 @@
             <template slot="table-row" slot-scope="props">
                 <span v-if="props.column.field == 'p-cover-image' && options.showImage">
                     <k-link :to="props.row.link">
-                        <figure class="k-list-item-image">
-                            <k-image v-if="imageOptions(props.row.image)" v-bind="imageOptions(props.row.image)" />
-                            <k-icon v-else v-bind="props.row.icon" />
-                        </figure>
+                        <k-item-image v-if="props.row.image" :image="props.row.image" />
                     </k-link>
                 </span>
                 <span v-else-if="props.column.field == 'p-options' && showOptions">
                     <div class="k-list-item-options">
                         <slot name="options">
-                            <k-status-icon v-if="props.row.statusIcon && options.showStatus"
-                                           v-bind="props.row.statusIcon"
-                                           class="k-list-item-status" />
-
-                            <k-button v-if="props.row.options && options.showActions"
-                                      :tooltip="$t('options')"
-                                      icon="dots"
-                                      alt="Options"
-                                      class="k-list-item-toggle"
-                                      @click.stop="openRef('dropdown-'+ props.row.originalIndex)"/>
-                            <k-dropdown-content v-if="options.showActions"
-                                                :ref="'dropdown-'+ props.row.originalIndex"
-                                                :options="props.row.options"
-                                                align="right"
-                                                @action="action(props.row, $event)"/>
+                            <k-status-icon
+                                v-if="props.row.flag && options.showStatus"
+                                v-bind="props.row.flag"
+                            />
+                            <k-options-dropdown
+                                v-if="props.row.options && options.showActions"
+                                :options="props.row.options"
+                                class="k-item-options-dropdown"
+                            />
                         </slot>
                     </div>
                 </span>
@@ -82,14 +73,6 @@
                 {{ translations.loading }}
             </k-empty>
         </div>
-
-        <k-page-create-dialog ref="create" />
-        <k-page-duplicate-dialog ref="duplicate" />
-        <k-page-rename-dialog ref="rename" @success="update" />
-        <k-page-sort-dialog ref="sort" @success="update" />
-        <k-page-status-dialog ref="status" @success="update" />
-        <k-page-template-dialog ref="template" @success="update" />
-        <k-page-remove-dialog ref="remove" @success="update" />
     </section>
 </template>
 
@@ -291,29 +274,11 @@ export default {
             this.$refs['table'].changePage(1)
             // store current state
             this.storeCurrentState()
-        },
-        imageOptions(image) {
-            if (!image || image.length === 0 || !image.url) {
-                return false;
-            }
-
-            let src    = image.list.url;
-            let srcset = image.list.srcset;
-            if (!src) {
-                return false;
-            }
-            let result = {
-                src: src,
-                srcset: srcset,
-                back: image.back || "black",
-                cover: image.cover
-            };
-            return result;
-        },
+        }
     }
 };
 </script>
 
 <style lang="scss">
-    @import '../assets/css/styles.scss'
+    @import '../assets/css/styles.scss';
 </style>
