@@ -210,7 +210,7 @@ $options = A::merge($options, [
                     'status'      => $item->status(),
                     'permissions' => [
                         'sort'         => $permissions->can('sort'),
-                        'changeStatus' => $permissions->can('changeStatus')
+                        'changeStatus' => $permissions->can('changeStatus'),
                     ],
                 ];
 
@@ -244,7 +244,8 @@ $options = A::merge($options, [
                 'search'       => $this->search,
                 'showImage'    => $this->showImage,
                 'showStatus'   => $this->showStatus,
-                'showActions'  => $this->showActions
+                'showActions'  => $this->showActions,
+                'min'          => $this->min
             ],
             'translations' => $this->translations,
             'pagination' => $this->pagination,
