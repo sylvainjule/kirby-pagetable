@@ -6,14 +6,19 @@
   "author": "Sylvain Julé",
   "license": "MIT",
   "scripts": {
-    "dev": "npx -y kirbyup src/index.js --watch",
-    "build": "npx -y kirbyup src/index.js"
+    "dev": "kirbyup src/index.js --watch",
+    "build": "kirbyup src/index.js",
+    "lint": "eslint \"src/**/*.{js,vue}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.{css,js,vue}\""
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 11"
-  ],
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "kirbyup": "^0.21.0",
+    "prettier": "^2.4.1"
+  },
   "dependencies": {
     "vue-good-table": "2.21.1"
   }

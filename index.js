@@ -1,3 +1,8196 @@
-!function(){"use strict";function t(e){return(t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(e)}function e(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){var n=[],r=!0,a=!1,o=void 0;try{for(var i,s=t[Symbol.iterator]();!(r=(i=s.next()).done)&&(n.push(i.value),!e||n.length!==e);r=!0);}catch(u){a=!0,o=u}finally{try{r||null==s.return||s.return()}finally{if(a)throw o}}return n}(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}()}function n(t){return function(t){if(Array.isArray(t)){for(var e=0,n=new Array(t.length);e<t.length;e++)n[e]=t[e];return n}}(t)||function(t){if(Symbol.iterator in Object(t)||"[object Arguments]"===Object.prototype.toString.call(t))return Array.from(t)}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance")}()}var r=9007199254740991,a="[object Arguments]",o="[object Function]",i="[object GeneratorFunction]",s=/^(?:0|[1-9]\d*)$/;function u(t,e){for(var n=-1,r=t?t.length:0;++n<r&&!1!==e(t[n],n,t););return t}var l,c,d=Object.prototype,f=d.hasOwnProperty,h=d.toString,p=d.propertyIsEnumerable,g=(l=Object.keys,c=Object,function(t){return l(c(t))});function m(t,e){var n=P(t)||function(t){return function(t){return function(t){return!!t&&"object"==typeof t}(t)&&C(t)}(t)&&f.call(t,"callee")&&(!p.call(t,"callee")||h.call(t)==a)}(t)?function(t,e){for(var n=-1,r=Array(t);++n<t;)r[n]=e(n);return r}(t.length,String):[],r=n.length,o=!!r;for(var i in t)!e&&!f.call(t,i)||o&&("length"==i||T(i,r))||n.push(i);return n}var v,w,b=(v=function(t,e){return t&&y(t,e,x)},function(t,e){if(null==t)return t;if(!C(t))return v(t,e);for(var n=t.length,r=w?n:-1,a=Object(t);(w?r--:++r<n)&&!1!==e(a[r],r,a););return t}),y=function(t){return function(e,n,r){for(var a=-1,o=Object(e),i=r(e),s=i.length;s--;){var u=i[t?s:++a];if(!1===n(o[u],u,o))break}return e}}();function _(t){if(n=(e=t)&&e.constructor,r="function"==typeof n&&n.prototype||d,e!==r)return g(t);var e,n,r,a=[];for(var o in Object(t))f.call(t,o)&&"constructor"!=o&&a.push(o);return a}function T(t,e){return!!(e=null==e?r:e)&&("number"==typeof t||s.test(t))&&t>-1&&t%1==0&&t<e}var P=Array.isArray;function C(t){return null!=t&&function(t){return"number"==typeof t&&t>-1&&t%1==0&&t<=r}(t.length)&&!function(t){var e=function(t){var e=typeof t;return!!t&&("object"==e||"function"==e)}(t)?h.call(t):"";return e==o||e==i}(t)}function x(t){return C(t)?m(t):_(t)}function S(t){return t}var k=function(t,e){return(P(t)?u:b)(t,"function"==typeof e?e:S)},O=9007199254740991,R="[object Arguments]",j="[object Function]",E="[object GeneratorFunction]",D=/^(?:0|[1-9]\d*)$/;function A(t,e,n){switch(n.length){case 0:return t.call(e);case 1:return t.call(e,n[0]);case 2:return t.call(e,n[0],n[1]);case 3:return t.call(e,n[0],n[1],n[2])}return t.apply(e,n)}var F=Object.prototype,M=F.hasOwnProperty,$=F.toString,I=F.propertyIsEnumerable,U=function(t,e){return function(n){return t(e(n))}}(Object.keys,Object),N=Math.max,L=!I.call({valueOf:1},"valueOf");function q(t,e){var n=Q(t)||function(t){return function(t){return function(t){return!!t&&"object"==typeof t}(t)&&G(t)}(t)&&M.call(t,"callee")&&(!I.call(t,"callee")||$.call(t)==R)}(t)?function(t,e){for(var n=-1,r=Array(t);++n<t;)r[n]=e(n);return r}(t.length,String):[],r=n.length,a=!!r;for(var o in t)!e&&!M.call(t,o)||a&&("length"==o||H(o,r))||n.push(o);return n}function B(t,e,n){var r=t[e];M.call(t,e)&&z(r,n)&&(void 0!==n||e in t)||(t[e]=n)}function H(t,e){return!!(e=null==e?O:e)&&("number"==typeof t||D.test(t))&&t>-1&&t%1==0&&t<e}function Y(t){var e=t&&t.constructor;return t===("function"==typeof e&&e.prototype||F)}function z(t,e){return t===e||t!=t&&e!=e}var W,Q=Array.isArray;function G(t){return null!=t&&function(t){return"number"==typeof t&&t>-1&&t%1==0&&t<=O}(t.length)&&!function(t){var e=X(t)?$.call(t):"";return e==j||e==E}(t)}function X(t){var e=typeof t;return!!t&&("object"==e||"function"==e)}var K=(W=function(t,e){if(L||Y(e)||G(e))!function(t,e,n,r){n||(n={});for(var a=-1,o=e.length;++a<o;){var i=e[a],s=r?r(n[i],t[i],i,n,t):void 0;B(n,i,void 0===s?t[i]:s)}}(e,function(t){return G(t)?q(t):function(t){if(!Y(t))return U(t);var e=[];for(var n in Object(t))M.call(t,n)&&"constructor"!=n&&e.push(n);return e}(t)}(e),t);else for(var n in e)M.call(e,n)&&B(t,n,e[n])},function(t,e){return e=N(void 0===e?t.length-1:e,0),function(){for(var n=arguments,r=-1,a=N(n.length-e,0),o=Array(a);++r<a;)o[r]=n[e+r];r=-1;for(var i=Array(e+1);++r<e;)i[r]=n[r];return i[e]=o,A(t,this,i)}}((function(t,e){var n=-1,r=e.length,a=r>1?e[r-1]:void 0,o=r>2?e[2]:void 0;for(a=W.length>3&&"function"==typeof a?(r--,a):void 0,o&&function(t,e,n){if(!X(n))return!1;var r=typeof e;return!!("number"==r?G(n)&&H(e,n.length):"string"==r&&e in n)&&z(n[e],t)}(e[0],e[1],o)&&(a=r<3?void 0:a,r=1),t=Object(t);++n<r;){var i=e[n];i&&W(t,i,n,a)}return t}))),V="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{};function J(t,e){return t(e={exports:{}},e.exports),e.exports}var Z=J((function(t,e){var n="__lodash_hash_undefined__",r=9007199254740991,a="[object Arguments]",o="[object Boolean]",i="[object Date]",s="[object Function]",u="[object GeneratorFunction]",l="[object Map]",c="[object Number]",d="[object Object]",f="[object Promise]",h="[object RegExp]",p="[object Set]",g="[object String]",m="[object Symbol]",v="[object WeakMap]",w="[object ArrayBuffer]",b="[object DataView]",y="[object Float32Array]",_="[object Float64Array]",T="[object Int8Array]",P="[object Int16Array]",C="[object Int32Array]",x="[object Uint8Array]",S="[object Uint8ClampedArray]",k="[object Uint16Array]",O="[object Uint32Array]",R=/\w*$/,j=/^\[object .+?Constructor\]$/,E=/^(?:0|[1-9]\d*)$/,D={};D[a]=D["[object Array]"]=D[w]=D[b]=D[o]=D[i]=D[y]=D[_]=D[T]=D[P]=D[C]=D[l]=D[c]=D[d]=D[h]=D[p]=D[g]=D[m]=D[x]=D[S]=D[k]=D[O]=!0,D["[object Error]"]=D[s]=D[v]=!1;var A="object"==typeof V&&V&&V.Object===Object&&V,F="object"==typeof self&&self&&self.Object===Object&&self,M=A||F||Function("return this")(),$=e&&!e.nodeType&&e,I=$&&t&&!t.nodeType&&t,U=I&&I.exports===$;function N(t,e){return t.set(e[0],e[1]),t}function L(t,e){return t.add(e),t}function q(t,e,n,r){var a=-1,o=t?t.length:0;for(r&&o&&(n=t[++a]);++a<o;)n=e(n,t[a],a,t);return n}function B(t){var e=!1;if(null!=t&&"function"!=typeof t.toString)try{e=!!(t+"")}catch(n){}return e}function H(t){var e=-1,n=Array(t.size);return t.forEach((function(t,r){n[++e]=[r,t]})),n}function Y(t,e){return function(n){return t(e(n))}}function z(t){var e=-1,n=Array(t.size);return t.forEach((function(t){n[++e]=t})),n}var W,Q=Array.prototype,G=Function.prototype,X=Object.prototype,K=M["__core-js_shared__"],J=(W=/[^.]+$/.exec(K&&K.keys&&K.keys.IE_PROTO||""))?"Symbol(src)_1."+W:"",Z=G.toString,tt=X.hasOwnProperty,et=X.toString,nt=RegExp("^"+Z.call(tt).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$"),rt=U?M.Buffer:void 0,at=M.Symbol,ot=M.Uint8Array,it=Y(Object.getPrototypeOf,Object),st=Object.create,ut=X.propertyIsEnumerable,lt=Q.splice,ct=Object.getOwnPropertySymbols,dt=rt?rt.isBuffer:void 0,ft=Y(Object.keys,Object),ht=Ut(M,"DataView"),pt=Ut(M,"Map"),gt=Ut(M,"Promise"),mt=Ut(M,"Set"),vt=Ut(M,"WeakMap"),wt=Ut(Object,"create"),bt=Ht(ht),yt=Ht(pt),_t=Ht(gt),Tt=Ht(mt),Pt=Ht(vt),Ct=at?at.prototype:void 0,xt=Ct?Ct.valueOf:void 0;function St(t){var e=-1,n=t?t.length:0;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function kt(t){var e=-1,n=t?t.length:0;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function Ot(t){var e=-1,n=t?t.length:0;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function Rt(t){this.__data__=new kt(t)}function jt(t,e){var n=zt(t)||function(t){return function(t){return function(t){return!!t&&"object"==typeof t}(t)&&Wt(t)}(t)&&tt.call(t,"callee")&&(!ut.call(t,"callee")||et.call(t)==a)}(t)?function(t,e){for(var n=-1,r=Array(t);++n<t;)r[n]=e(n);return r}(t.length,String):[],r=n.length,o=!!r;for(var i in t)!e&&!tt.call(t,i)||o&&("length"==i||qt(i,r))||n.push(i);return n}function Et(t,e,n){var r=t[e];tt.call(t,e)&&Yt(r,n)&&(void 0!==n||e in t)||(t[e]=n)}function Dt(t,e){for(var n=t.length;n--;)if(Yt(t[n][0],e))return n;return-1}function At(t,e,n,r,f,v,j){var E;if(r&&(E=v?r(t,f,v,j):r(t)),void 0!==E)return E;if(!Xt(t))return t;var A=zt(t);if(A){if(E=function(t){var e=t.length,n=t.constructor(e);e&&"string"==typeof t[0]&&tt.call(t,"index")&&(n.index=t.index,n.input=t.input);return n}(t),!e)return function(t,e){var n=-1,r=t.length;e||(e=Array(r));for(;++n<r;)e[n]=t[n];return e}(t,E)}else{var F=Lt(t),M=F==s||F==u;if(Qt(t))return function(t,e){if(e)return t.slice();var n=new t.constructor(t.length);return t.copy(n),n}(t,e);if(F==d||F==a||M&&!v){if(B(t))return v?t:{};if(E=function(t){return"function"!=typeof t.constructor||Bt(t)?{}:(e=it(t),Xt(e)?st(e):{});var e}(M?{}:t),!e)return function(t,e){return $t(t,Nt(t),e)}(t,function(t,e){return t&&$t(e,Kt(e),t)}(E,t))}else{if(!D[F])return v?t:{};E=function(t,e,n,r){var a=t.constructor;switch(e){case w:return Mt(t);case o:case i:return new a(+t);case b:return function(t,e){var n=e?Mt(t.buffer):t.buffer;return new t.constructor(n,t.byteOffset,t.byteLength)}(t,r);case y:case _:case T:case P:case C:case x:case S:case k:case O:return function(t,e){var n=e?Mt(t.buffer):t.buffer;return new t.constructor(n,t.byteOffset,t.length)}(t,r);case l:return function(t,e,n){return q(e?n(H(t),!0):H(t),N,new t.constructor)}(t,r,n);case c:case g:return new a(t);case h:return function(t){var e=new t.constructor(t.source,R.exec(t));return e.lastIndex=t.lastIndex,e}(t);case p:return function(t,e,n){return q(e?n(z(t),!0):z(t),L,new t.constructor)}(t,r,n);case m:return s=t,xt?Object(xt.call(s)):{}}var s}(t,F,At,e)}}j||(j=new Rt);var $=j.get(t);if($)return $;if(j.set(t,E),!A)var I=n?function(t){return function(t,e,n){var r=e(t);return zt(t)?r:function(t,e){for(var n=-1,r=e.length,a=t.length;++n<r;)t[a+n]=e[n];return t}(r,n(t))}(t,Kt,Nt)}(t):Kt(t);return function(t,e){for(var n=-1,r=t?t.length:0;++n<r&&!1!==e(t[n],n,t););}(I||t,(function(a,o){I&&(a=t[o=a]),Et(E,o,At(a,e,n,r,o,t,j))})),E}function Ft(t){return!(!Xt(t)||function(t){return!!J&&J in t}(t))&&(Gt(t)||B(t)?nt:j).test(Ht(t))}function Mt(t){var e=new t.constructor(t.byteLength);return new ot(e).set(new ot(t)),e}function $t(t,e,n,r){n||(n={});for(var a=-1,o=e.length;++a<o;){var i=e[a],s=r?r(n[i],t[i],i,n,t):void 0;Et(n,i,void 0===s?t[i]:s)}return n}function It(t,e){var n,r,a=t.__data__;return("string"==(r=typeof(n=e))||"number"==r||"symbol"==r||"boolean"==r?"__proto__"!==n:null===n)?a["string"==typeof e?"string":"hash"]:a.map}function Ut(t,e){var n=function(t,e){return null==t?void 0:t[e]}(t,e);return Ft(n)?n:void 0}St.prototype.clear=function(){this.__data__=wt?wt(null):{}},St.prototype.delete=function(t){return this.has(t)&&delete this.__data__[t]},St.prototype.get=function(t){var e=this.__data__;if(wt){var r=e[t];return r===n?void 0:r}return tt.call(e,t)?e[t]:void 0},St.prototype.has=function(t){var e=this.__data__;return wt?void 0!==e[t]:tt.call(e,t)},St.prototype.set=function(t,e){return this.__data__[t]=wt&&void 0===e?n:e,this},kt.prototype.clear=function(){this.__data__=[]},kt.prototype.delete=function(t){var e=this.__data__,n=Dt(e,t);return!(n<0)&&(n==e.length-1?e.pop():lt.call(e,n,1),!0)},kt.prototype.get=function(t){var e=this.__data__,n=Dt(e,t);return n<0?void 0:e[n][1]},kt.prototype.has=function(t){return Dt(this.__data__,t)>-1},kt.prototype.set=function(t,e){var n=this.__data__,r=Dt(n,t);return r<0?n.push([t,e]):n[r][1]=e,this},Ot.prototype.clear=function(){this.__data__={hash:new St,map:new(pt||kt),string:new St}},Ot.prototype.delete=function(t){return It(this,t).delete(t)},Ot.prototype.get=function(t){return It(this,t).get(t)},Ot.prototype.has=function(t){return It(this,t).has(t)},Ot.prototype.set=function(t,e){return It(this,t).set(t,e),this},Rt.prototype.clear=function(){this.__data__=new kt},Rt.prototype.delete=function(t){return this.__data__.delete(t)},Rt.prototype.get=function(t){return this.__data__.get(t)},Rt.prototype.has=function(t){return this.__data__.has(t)},Rt.prototype.set=function(t,e){var n=this.__data__;if(n instanceof kt){var r=n.__data__;if(!pt||r.length<199)return r.push([t,e]),this;n=this.__data__=new Ot(r)}return n.set(t,e),this};var Nt=ct?Y(ct,Object):function(){return[]},Lt=function(t){return et.call(t)};function qt(t,e){return!!(e=null==e?r:e)&&("number"==typeof t||E.test(t))&&t>-1&&t%1==0&&t<e}function Bt(t){var e=t&&t.constructor;return t===("function"==typeof e&&e.prototype||X)}function Ht(t){if(null!=t){try{return Z.call(t)}catch(e){}try{return t+""}catch(e){}}return""}function Yt(t,e){return t===e||t!=t&&e!=e}(ht&&Lt(new ht(new ArrayBuffer(1)))!=b||pt&&Lt(new pt)!=l||gt&&Lt(gt.resolve())!=f||mt&&Lt(new mt)!=p||vt&&Lt(new vt)!=v)&&(Lt=function(t){var e=et.call(t),n=e==d?t.constructor:void 0,r=n?Ht(n):void 0;if(r)switch(r){case bt:return b;case yt:return l;case _t:return f;case Tt:return p;case Pt:return v}return e});var zt=Array.isArray;function Wt(t){return null!=t&&function(t){return"number"==typeof t&&t>-1&&t%1==0&&t<=r}(t.length)&&!Gt(t)}var Qt=dt||function(){return!1};function Gt(t){var e=Xt(t)?et.call(t):"";return e==s||e==u}function Xt(t){var e=typeof t;return!!t&&("object"==e||"function"==e)}function Kt(t){return Wt(t)?jt(t):function(t){if(!Bt(t))return ft(t);var e=[];for(var n in Object(t))tt.call(t,n)&&"constructor"!=n&&e.push(n);return e}(t)}t.exports=function(t){return At(t,!0,!0)}})),tt=J((function(t,e){var n="__lodash_hash_undefined__",r=9007199254740991,a="[object Arguments]",o="[object Array]",i="[object Boolean]",s="[object Date]",u="[object Error]",l="[object Function]",c="[object Map]",d="[object Number]",f="[object Object]",h="[object Promise]",p="[object RegExp]",g="[object Set]",m="[object String]",v="[object Symbol]",w="[object WeakMap]",b="[object ArrayBuffer]",y="[object DataView]",_=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,T=/^\w*$/,P=/^\./,C=/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,x=/\\(\\)?/g,S=/^\[object .+?Constructor\]$/,k=/^(?:0|[1-9]\d*)$/,O={};O["[object Float32Array]"]=O["[object Float64Array]"]=O["[object Int8Array]"]=O["[object Int16Array]"]=O["[object Int32Array]"]=O["[object Uint8Array]"]=O["[object Uint8ClampedArray]"]=O["[object Uint16Array]"]=O["[object Uint32Array]"]=!0,O[a]=O[o]=O[b]=O[i]=O[y]=O[s]=O[u]=O[l]=O[c]=O[d]=O[f]=O[p]=O[g]=O[m]=O[w]=!1;var R="object"==typeof V&&V&&V.Object===Object&&V,j="object"==typeof self&&self&&self.Object===Object&&self,E=R||j||Function("return this")(),D=e&&!e.nodeType&&e,A=D&&t&&!t.nodeType&&t,F=A&&A.exports===D&&R.process,M=function(){try{return F&&F.binding("util")}catch(t){}}(),$=M&&M.isTypedArray;function I(t,e){for(var n=-1,r=t?t.length:0,a=0,o=[];++n<r;){var i=t[n];e(i,n,t)&&(o[a++]=i)}return o}function U(t,e){for(var n=-1,r=t?t.length:0;++n<r;)if(e(t[n],n,t))return!0;return!1}function N(t){var e=!1;if(null!=t&&"function"!=typeof t.toString)try{e=!!(t+"")}catch(n){}return e}function L(t){var e=-1,n=Array(t.size);return t.forEach((function(t,r){n[++e]=[r,t]})),n}function q(t){var e=-1,n=Array(t.size);return t.forEach((function(t){n[++e]=t})),n}var B,H=Array.prototype,Y=Function.prototype,z=Object.prototype,W=E["__core-js_shared__"],Q=(B=/[^.]+$/.exec(W&&W.keys&&W.keys.IE_PROTO||""))?"Symbol(src)_1."+B:"",G=Y.toString,X=z.hasOwnProperty,K=z.toString,J=RegExp("^"+G.call(X).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$"),Z=E.Symbol,tt=E.Uint8Array,et=z.propertyIsEnumerable,nt=H.splice,rt=function(t,e){return function(n){return t(e(n))}}(Object.keys,Object),at=It(E,"DataView"),ot=It(E,"Map"),it=It(E,"Promise"),st=It(E,"Set"),ut=It(E,"WeakMap"),lt=It(Object,"create"),ct=zt(at),dt=zt(ot),ft=zt(it),ht=zt(st),pt=zt(ut),gt=Z?Z.prototype:void 0,mt=gt?gt.valueOf:void 0,vt=gt?gt.toString:void 0;function wt(t){var e=-1,n=t?t.length:0;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function bt(t){var e=-1,n=t?t.length:0;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function yt(t){var e=-1,n=t?t.length:0;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function _t(t){var e=-1,n=t?t.length:0;for(this.__data__=new yt;++e<n;)this.add(t[e])}function Tt(t){this.__data__=new bt(t)}function Pt(t,e){var n=Xt(t)||Gt(t)?function(t,e){for(var n=-1,r=Array(t);++n<t;)r[n]=e(n);return r}(t.length,String):[],r=n.length,a=!!r;for(var o in t)!e&&!X.call(t,o)||a&&("length"==o||Nt(o,r))||n.push(o);return n}function Ct(t,e){for(var n=t.length;n--;)if(Qt(t[n][0],e))return n;return-1}wt.prototype.clear=function(){this.__data__=lt?lt(null):{}},wt.prototype.delete=function(t){return this.has(t)&&delete this.__data__[t]},wt.prototype.get=function(t){var e=this.__data__;if(lt){var r=e[t];return r===n?void 0:r}return X.call(e,t)?e[t]:void 0},wt.prototype.has=function(t){var e=this.__data__;return lt?void 0!==e[t]:X.call(e,t)},wt.prototype.set=function(t,e){return this.__data__[t]=lt&&void 0===e?n:e,this},bt.prototype.clear=function(){this.__data__=[]},bt.prototype.delete=function(t){var e=this.__data__,n=Ct(e,t);return!(n<0)&&(n==e.length-1?e.pop():nt.call(e,n,1),!0)},bt.prototype.get=function(t){var e=this.__data__,n=Ct(e,t);return n<0?void 0:e[n][1]},bt.prototype.has=function(t){return Ct(this.__data__,t)>-1},bt.prototype.set=function(t,e){var n=this.__data__,r=Ct(n,t);return r<0?n.push([t,e]):n[r][1]=e,this},yt.prototype.clear=function(){this.__data__={hash:new wt,map:new(ot||bt),string:new wt}},yt.prototype.delete=function(t){return $t(this,t).delete(t)},yt.prototype.get=function(t){return $t(this,t).get(t)},yt.prototype.has=function(t){return $t(this,t).has(t)},yt.prototype.set=function(t,e){return $t(this,t).set(t,e),this},_t.prototype.add=_t.prototype.push=function(t){return this.__data__.set(t,n),this},_t.prototype.has=function(t){return this.__data__.has(t)},Tt.prototype.clear=function(){this.__data__=new bt},Tt.prototype.delete=function(t){return this.__data__.delete(t)},Tt.prototype.get=function(t){return this.__data__.get(t)},Tt.prototype.has=function(t){return this.__data__.has(t)},Tt.prototype.set=function(t,e){var n=this.__data__;if(n instanceof bt){var r=n.__data__;if(!ot||r.length<199)return r.push([t,e]),this;n=this.__data__=new yt(r)}return n.set(t,e),this};var xt=function(t,e){return function(n,r){if(null==n)return n;if(!Kt(n))return t(n,r);for(var a=n.length,o=e?a:-1,i=Object(n);(e?o--:++o<a)&&!1!==r(i[o],o,i););return n}}((function(t,e){return t&&kt(t,e,re)}));function St(t,e){var n=[];return xt(t,(function(t,r,a){e(t,r,a)&&n.push(t)})),n}var kt=function(t){return function(e,n,r){for(var a=-1,o=Object(e),i=r(e),s=i.length;s--;){var u=i[t?s:++a];if(!1===n(o[u],u,o))break}return e}}();function Ot(t,e){for(var n=0,r=(e=Lt(e,t)?[e]:Ft(e)).length;null!=t&&n<r;)t=t[Yt(e[n++])];return n&&n==r?t:void 0}function Rt(t,e){return null!=t&&e in Object(t)}function jt(t,e,n,r,l){return t===e||(null==t||null==e||!Zt(t)&&!te(e)?t!=t&&e!=e:function(t,e,n,r,l,h){var w=Xt(t),_=Xt(e),T=o,P=o;w||(T=(T=Ut(t))==a?f:T);_||(P=(P=Ut(e))==a?f:P);var C=T==f&&!N(t),x=P==f&&!N(e),S=T==P;if(S&&!C)return h||(h=new Tt),w||ne(t)?Mt(t,e,n,r,l,h):function(t,e,n,r,a,o,l){switch(n){case y:if(t.byteLength!=e.byteLength||t.byteOffset!=e.byteOffset)return!1;t=t.buffer,e=e.buffer;case b:return!(t.byteLength!=e.byteLength||!r(new tt(t),new tt(e)));case i:case s:case d:return Qt(+t,+e);case u:return t.name==e.name&&t.message==e.message;case p:case m:return t==e+"";case c:var f=L;case g:var h=2&o;if(f||(f=q),t.size!=e.size&&!h)return!1;var w=l.get(t);if(w)return w==e;o|=1,l.set(t,e);var _=Mt(f(t),f(e),r,a,o,l);return l.delete(t),_;case v:if(mt)return mt.call(t)==mt.call(e)}return!1}(t,e,T,n,r,l,h);if(!(2&l)){var k=C&&X.call(t,"__wrapped__"),O=x&&X.call(e,"__wrapped__");if(k||O){var R=k?t.value():t,j=O?e.value():e;return h||(h=new Tt),n(R,j,r,l,h)}}if(!S)return!1;return h||(h=new Tt),function(t,e,n,r,a,o){var i=2&a,s=re(t),u=s.length,l=re(e).length;if(u!=l&&!i)return!1;var c=u;for(;c--;){var d=s[c];if(!(i?d in e:X.call(e,d)))return!1}var f=o.get(t);if(f&&o.get(e))return f==e;var h=!0;o.set(t,e),o.set(e,t);var p=i;for(;++c<u;){var g=t[d=s[c]],m=e[d];if(r)var v=i?r(m,g,d,e,t,o):r(g,m,d,t,e,o);if(!(void 0===v?g===m||n(g,m,r,a,o):v)){h=!1;break}p||(p="constructor"==d)}if(h&&!p){var w=t.constructor,b=e.constructor;w==b||!("constructor"in t)||!("constructor"in e)||"function"==typeof w&&w instanceof w&&"function"==typeof b&&b instanceof b||(h=!1)}return o.delete(t),o.delete(e),h}(t,e,n,r,l,h)}(t,e,jt,n,r,l))}function Et(t){return!(!Zt(t)||function(t){return!!Q&&Q in t}(t))&&(Vt(t)||N(t)?J:S).test(zt(t))}function Dt(t){return"function"==typeof t?t:null==t?ae:"object"==typeof t?Xt(t)?function(t,e){if(Lt(t)&&qt(e))return Bt(Yt(t),e);return function(n){var r=function(t,e,n){var r=null==t?void 0:Ot(t,e);return void 0===r?n:r}(n,t);return void 0===r&&r===e?function(t,e){return null!=t&&function(t,e,n){e=Lt(e,t)?[e]:Ft(e);var r,a=-1,o=e.length;for(;++a<o;){var i=Yt(e[a]);if(!(r=null!=t&&n(t,i)))break;t=t[i]}if(r)return r;return!!(o=t?t.length:0)&&Jt(o)&&Nt(i,o)&&(Xt(t)||Gt(t))}(t,e,Rt)}(n,t):jt(e,r,void 0,3)}}(t[0],t[1]):function(t){var e=function(t){var e=re(t),n=e.length;for(;n--;){var r=e[n],a=t[r];e[n]=[r,a,qt(a)]}return e}(t);if(1==e.length&&e[0][2])return Bt(e[0][0],e[0][1]);return function(n){return n===t||function(t,e,n,r){var a=n.length,o=a,i=!r;if(null==t)return!o;for(t=Object(t);a--;){var s=n[a];if(i&&s[2]?s[1]!==t[s[0]]:!(s[0]in t))return!1}for(;++a<o;){var u=(s=n[a])[0],l=t[u],c=s[1];if(i&&s[2]){if(void 0===l&&!(u in t))return!1}else{var d=new Tt;if(r)var f=r(l,c,u,t,e,d);if(!(void 0===f?jt(c,l,r,3,d):f))return!1}}return!0}(n,t,e)}}(t):Lt(e=t)?(n=Yt(e),function(t){return null==t?void 0:t[n]}):function(t){return function(e){return Ot(e,t)}}(e);var e,n}function At(t){if(n=(e=t)&&e.constructor,r="function"==typeof n&&n.prototype||z,e!==r)return rt(t);var e,n,r,a=[];for(var o in Object(t))X.call(t,o)&&"constructor"!=o&&a.push(o);return a}function Ft(t){return Xt(t)?t:Ht(t)}function Mt(t,e,n,r,a,o){var i=2&a,s=t.length,u=e.length;if(s!=u&&!(i&&u>s))return!1;var l=o.get(t);if(l&&o.get(e))return l==e;var c=-1,d=!0,f=1&a?new _t:void 0;for(o.set(t,e),o.set(e,t);++c<s;){var h=t[c],p=e[c];if(r)var g=i?r(p,h,c,e,t,o):r(h,p,c,t,e,o);if(void 0!==g){if(g)continue;d=!1;break}if(f){if(!U(e,(function(t,e){if(!f.has(e)&&(h===t||n(h,t,r,a,o)))return f.add(e)}))){d=!1;break}}else if(h!==p&&!n(h,p,r,a,o)){d=!1;break}}return o.delete(t),o.delete(e),d}function $t(t,e){var n,r,a=t.__data__;return("string"==(r=typeof(n=e))||"number"==r||"symbol"==r||"boolean"==r?"__proto__"!==n:null===n)?a["string"==typeof e?"string":"hash"]:a.map}function It(t,e){var n=function(t,e){return null==t?void 0:t[e]}(t,e);return Et(n)?n:void 0}var Ut=function(t){return K.call(t)};function Nt(t,e){return!!(e=null==e?r:e)&&("number"==typeof t||k.test(t))&&t>-1&&t%1==0&&t<e}function Lt(t,e){if(Xt(t))return!1;var n=typeof t;return!("number"!=n&&"symbol"!=n&&"boolean"!=n&&null!=t&&!ee(t))||(T.test(t)||!_.test(t)||null!=e&&t in Object(e))}function qt(t){return t==t&&!Zt(t)}function Bt(t,e){return function(n){return null!=n&&(n[t]===e&&(void 0!==e||t in Object(n)))}}(at&&Ut(new at(new ArrayBuffer(1)))!=y||ot&&Ut(new ot)!=c||it&&Ut(it.resolve())!=h||st&&Ut(new st)!=g||ut&&Ut(new ut)!=w)&&(Ut=function(t){var e=K.call(t),n=e==f?t.constructor:void 0,r=n?zt(n):void 0;if(r)switch(r){case ct:return y;case dt:return c;case ft:return h;case ht:return g;case pt:return w}return e});var Ht=Wt((function(t){var e;t=null==(e=t)?"":function(t){if("string"==typeof t)return t;if(ee(t))return vt?vt.call(t):"";var e=t+"";return"0"==e&&1/t==-1/0?"-0":e}(e);var n=[];return P.test(t)&&n.push(""),t.replace(C,(function(t,e,r,a){n.push(r?a.replace(x,"$1"):e||t)})),n}));function Yt(t){if("string"==typeof t||ee(t))return t;var e=t+"";return"0"==e&&1/t==-1/0?"-0":e}function zt(t){if(null!=t){try{return G.call(t)}catch(e){}try{return t+""}catch(e){}}return""}function Wt(t,e){if("function"!=typeof t||e&&"function"!=typeof e)throw new TypeError("Expected a function");var n=function(){var r=arguments,a=e?e.apply(this,r):r[0],o=n.cache;if(o.has(a))return o.get(a);var i=t.apply(this,r);return n.cache=o.set(a,i),i};return n.cache=new(Wt.Cache||yt),n}function Qt(t,e){return t===e||t!=t&&e!=e}function Gt(t){return function(t){return te(t)&&Kt(t)}(t)&&X.call(t,"callee")&&(!et.call(t,"callee")||K.call(t)==a)}Wt.Cache=yt;var Xt=Array.isArray;function Kt(t){return null!=t&&Jt(t.length)&&!Vt(t)}function Vt(t){var e=Zt(t)?K.call(t):"";return e==l||"[object GeneratorFunction]"==e}function Jt(t){return"number"==typeof t&&t>-1&&t%1==0&&t<=r}function Zt(t){var e=typeof t;return!!t&&("object"==e||"function"==e)}function te(t){return!!t&&"object"==typeof t}function ee(t){return"symbol"==typeof t||te(t)&&K.call(t)==v}var ne=$?function(t){return function(e){return t(e)}}($):function(t){return te(t)&&Jt(t.length)&&!!O[K.call(t)]};function re(t){return Kt(t)?Pt(t):At(t)}function ae(t){return t}t.exports=function(t,e){return(Xt(t)?I:St)(t,Dt(e))}})),et=J((function(t,e){var n="__lodash_hash_undefined__",r=9007199254740991,a="[object Arguments]",o="[object Array]",i="[object Boolean]",s="[object Date]",u="[object Error]",l="[object Function]",c="[object Map]",d="[object Number]",f="[object Object]",h="[object Promise]",p="[object RegExp]",g="[object Set]",m="[object String]",v="[object Symbol]",w="[object WeakMap]",b="[object ArrayBuffer]",y="[object DataView]",_=/^\[object .+?Constructor\]$/,T=/^(?:0|[1-9]\d*)$/,P={};P["[object Float32Array]"]=P["[object Float64Array]"]=P["[object Int8Array]"]=P["[object Int16Array]"]=P["[object Int32Array]"]=P["[object Uint8Array]"]=P["[object Uint8ClampedArray]"]=P["[object Uint16Array]"]=P["[object Uint32Array]"]=!0,P[a]=P[o]=P[b]=P[i]=P[y]=P[s]=P[u]=P[l]=P[c]=P[d]=P[f]=P[p]=P[g]=P[m]=P[w]=!1;var C="object"==typeof V&&V&&V.Object===Object&&V,x="object"==typeof self&&self&&self.Object===Object&&self,S=C||x||Function("return this")(),k=e&&!e.nodeType&&e,O=k&&t&&!t.nodeType&&t,R=O&&O.exports===k,j=R&&C.process,E=function(){try{return j&&j.binding&&j.binding("util")}catch(t){}}(),D=E&&E.isTypedArray;function A(t,e){for(var n=-1,r=null==t?0:t.length;++n<r;)if(e(t[n],n,t))return!0;return!1}function F(t){var e=-1,n=Array(t.size);return t.forEach((function(t,r){n[++e]=[r,t]})),n}function M(t){var e=-1,n=Array(t.size);return t.forEach((function(t){n[++e]=t})),n}var $,I=Array.prototype,U=Function.prototype,N=Object.prototype,L=S["__core-js_shared__"],q=U.toString,B=N.hasOwnProperty,H=($=/[^.]+$/.exec(L&&L.keys&&L.keys.IE_PROTO||""))?"Symbol(src)_1."+$:"",Y=N.toString,z=RegExp("^"+q.call(B).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$"),W=R?S.Buffer:void 0,Q=S.Symbol,G=S.Uint8Array,X=N.propertyIsEnumerable,K=I.splice,J=Q?Q.toStringTag:void 0,Z=Object.getOwnPropertySymbols,tt=W?W.isBuffer:void 0,et=function(t,e){return function(n){return t(e(n))}}(Object.keys,Object),nt=jt(S,"DataView"),rt=jt(S,"Map"),at=jt(S,"Promise"),ot=jt(S,"Set"),it=jt(S,"WeakMap"),st=jt(Object,"create"),ut=Ft(nt),lt=Ft(rt),ct=Ft(at),dt=Ft(ot),ft=Ft(it),ht=Q?Q.prototype:void 0,pt=ht?ht.valueOf:void 0;function gt(t){var e=-1,n=null==t?0:t.length;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function mt(t){var e=-1,n=null==t?0:t.length;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function vt(t){var e=-1,n=null==t?0:t.length;for(this.clear();++e<n;){var r=t[e];this.set(r[0],r[1])}}function wt(t){var e=-1,n=null==t?0:t.length;for(this.__data__=new vt;++e<n;)this.add(t[e])}function bt(t){var e=this.__data__=new mt(t);this.size=e.size}function yt(t,e){var n=It(t),r=!n&&$t(t),a=!n&&!r&&Ut(t),o=!n&&!r&&!a&&Ht(t),i=n||r||a||o,s=i?function(t,e){for(var n=-1,r=Array(t);++n<t;)r[n]=e(n);return r}(t.length,String):[],u=s.length;for(var l in t)!e&&!B.call(t,l)||i&&("length"==l||a&&("offset"==l||"parent"==l)||o&&("buffer"==l||"byteLength"==l||"byteOffset"==l)||At(l,u))||s.push(l);return s}function _t(t,e){for(var n=t.length;n--;)if(Mt(t[n][0],e))return n;return-1}function Tt(t){return null==t?void 0===t?"[object Undefined]":"[object Null]":J&&J in Object(t)?function(t){var e=B.call(t,J),n=t[J];try{t[J]=void 0;var r=!0}catch(o){}var a=Y.call(t);r&&(e?t[J]=n:delete t[J]);return a}(t):function(t){return Y.call(t)}(t)}function Pt(t){return Bt(t)&&Tt(t)==a}function Ct(t,e,n,r,l){return t===e||(null==t||null==e||!Bt(t)&&!Bt(e)?t!=t&&e!=e:function(t,e,n,r,l,h){var w=It(t),_=It(e),T=w?o:Dt(t),P=_?o:Dt(e),C=(T=T==a?f:T)==f,x=(P=P==a?f:P)==f,S=T==P;if(S&&Ut(t)){if(!Ut(e))return!1;w=!0,C=!1}if(S&&!C)return h||(h=new bt),w||Ht(t)?kt(t,e,n,r,l,h):function(t,e,n,r,a,o,l){switch(n){case y:if(t.byteLength!=e.byteLength||t.byteOffset!=e.byteOffset)return!1;t=t.buffer,e=e.buffer;case b:return!(t.byteLength!=e.byteLength||!o(new G(t),new G(e)));case i:case s:case d:return Mt(+t,+e);case u:return t.name==e.name&&t.message==e.message;case p:case m:return t==e+"";case c:var f=F;case g:var h=1&r;if(f||(f=M),t.size!=e.size&&!h)return!1;var w=l.get(t);if(w)return w==e;r|=2,l.set(t,e);var _=kt(f(t),f(e),r,a,o,l);return l.delete(t),_;case v:if(pt)return pt.call(t)==pt.call(e)}return!1}(t,e,T,n,r,l,h);if(!(1&n)){var k=C&&B.call(t,"__wrapped__"),O=x&&B.call(e,"__wrapped__");if(k||O){var R=k?t.value():t,j=O?e.value():e;return h||(h=new bt),l(R,j,n,r,h)}}if(!S)return!1;return h||(h=new bt),function(t,e,n,r,a,o){var i=1&n,s=Ot(t),u=s.length,l=Ot(e).length;if(u!=l&&!i)return!1;var c=u;for(;c--;){var d=s[c];if(!(i?d in e:B.call(e,d)))return!1}var f=o.get(t);if(f&&o.get(e))return f==e;var h=!0;o.set(t,e),o.set(e,t);var p=i;for(;++c<u;){var g=t[d=s[c]],m=e[d];if(r)var v=i?r(m,g,d,e,t,o):r(g,m,d,t,e,o);if(!(void 0===v?g===m||a(g,m,n,r,o):v)){h=!1;break}p||(p="constructor"==d)}if(h&&!p){var w=t.constructor,b=e.constructor;w==b||!("constructor"in t)||!("constructor"in e)||"function"==typeof w&&w instanceof w&&"function"==typeof b&&b instanceof b||(h=!1)}return o.delete(t),o.delete(e),h}(t,e,n,r,l,h)}(t,e,n,r,Ct,l))}function xt(t){return!(!qt(t)||function(t){return!!H&&H in t}(t))&&(Nt(t)?z:_).test(Ft(t))}function St(t){if(n=(e=t)&&e.constructor,r="function"==typeof n&&n.prototype||N,e!==r)return et(t);var e,n,r,a=[];for(var o in Object(t))B.call(t,o)&&"constructor"!=o&&a.push(o);return a}function kt(t,e,n,r,a,o){var i=1&n,s=t.length,u=e.length;if(s!=u&&!(i&&u>s))return!1;var l=o.get(t);if(l&&o.get(e))return l==e;var c=-1,d=!0,f=2&n?new wt:void 0;for(o.set(t,e),o.set(e,t);++c<s;){var h=t[c],p=e[c];if(r)var g=i?r(p,h,c,e,t,o):r(h,p,c,t,e,o);if(void 0!==g){if(g)continue;d=!1;break}if(f){if(!A(e,(function(t,e){if(i=e,!f.has(i)&&(h===t||a(h,t,n,r,o)))return f.push(e);var i}))){d=!1;break}}else if(h!==p&&!a(h,p,n,r,o)){d=!1;break}}return o.delete(t),o.delete(e),d}function Ot(t){return function(t,e,n){var r=e(t);return It(t)?r:function(t,e){for(var n=-1,r=e.length,a=t.length;++n<r;)t[a+n]=e[n];return t}(r,n(t))}(t,Yt,Et)}function Rt(t,e){var n,r,a=t.__data__;return("string"==(r=typeof(n=e))||"number"==r||"symbol"==r||"boolean"==r?"__proto__"!==n:null===n)?a["string"==typeof e?"string":"hash"]:a.map}function jt(t,e){var n=function(t,e){return null==t?void 0:t[e]}(t,e);return xt(n)?n:void 0}gt.prototype.clear=function(){this.__data__=st?st(null):{},this.size=0},gt.prototype.delete=function(t){var e=this.has(t)&&delete this.__data__[t];return this.size-=e?1:0,e},gt.prototype.get=function(t){var e=this.__data__;if(st){var r=e[t];return r===n?void 0:r}return B.call(e,t)?e[t]:void 0},gt.prototype.has=function(t){var e=this.__data__;return st?void 0!==e[t]:B.call(e,t)},gt.prototype.set=function(t,e){var r=this.__data__;return this.size+=this.has(t)?0:1,r[t]=st&&void 0===e?n:e,this},mt.prototype.clear=function(){this.__data__=[],this.size=0},mt.prototype.delete=function(t){var e=this.__data__,n=_t(e,t);return!(n<0)&&(n==e.length-1?e.pop():K.call(e,n,1),--this.size,!0)},mt.prototype.get=function(t){var e=this.__data__,n=_t(e,t);return n<0?void 0:e[n][1]},mt.prototype.has=function(t){return _t(this.__data__,t)>-1},mt.prototype.set=function(t,e){var n=this.__data__,r=_t(n,t);return r<0?(++this.size,n.push([t,e])):n[r][1]=e,this},vt.prototype.clear=function(){this.size=0,this.__data__={hash:new gt,map:new(rt||mt),string:new gt}},vt.prototype.delete=function(t){var e=Rt(this,t).delete(t);return this.size-=e?1:0,e},vt.prototype.get=function(t){return Rt(this,t).get(t)},vt.prototype.has=function(t){return Rt(this,t).has(t)},vt.prototype.set=function(t,e){var n=Rt(this,t),r=n.size;return n.set(t,e),this.size+=n.size==r?0:1,this},wt.prototype.add=wt.prototype.push=function(t){return this.__data__.set(t,n),this},wt.prototype.has=function(t){return this.__data__.has(t)},bt.prototype.clear=function(){this.__data__=new mt,this.size=0},bt.prototype.delete=function(t){var e=this.__data__,n=e.delete(t);return this.size=e.size,n},bt.prototype.get=function(t){return this.__data__.get(t)},bt.prototype.has=function(t){return this.__data__.has(t)},bt.prototype.set=function(t,e){var n=this.__data__;if(n instanceof mt){var r=n.__data__;if(!rt||r.length<199)return r.push([t,e]),this.size=++n.size,this;n=this.__data__=new vt(r)}return n.set(t,e),this.size=n.size,this};var Et=Z?function(t){return null==t?[]:(t=Object(t),function(t,e){for(var n=-1,r=null==t?0:t.length,a=0,o=[];++n<r;){var i=t[n];e(i,n,t)&&(o[a++]=i)}return o}(Z(t),(function(e){return X.call(t,e)})))}:function(){return[]},Dt=Tt;function At(t,e){return!!(e=null==e?r:e)&&("number"==typeof t||T.test(t))&&t>-1&&t%1==0&&t<e}function Ft(t){if(null!=t){try{return q.call(t)}catch(e){}try{return t+""}catch(e){}}return""}function Mt(t,e){return t===e||t!=t&&e!=e}(nt&&Dt(new nt(new ArrayBuffer(1)))!=y||rt&&Dt(new rt)!=c||at&&Dt(at.resolve())!=h||ot&&Dt(new ot)!=g||it&&Dt(new it)!=w)&&(Dt=function(t){var e=Tt(t),n=e==f?t.constructor:void 0,r=n?Ft(n):"";if(r)switch(r){case ut:return y;case lt:return c;case ct:return h;case dt:return g;case ft:return w}return e});var $t=Pt(function(){return arguments}())?Pt:function(t){return Bt(t)&&B.call(t,"callee")&&!X.call(t,"callee")},It=Array.isArray;var Ut=tt||function(){return!1};function Nt(t){if(!qt(t))return!1;var e=Tt(t);return e==l||"[object GeneratorFunction]"==e||"[object AsyncFunction]"==e||"[object Proxy]"==e}function Lt(t){return"number"==typeof t&&t>-1&&t%1==0&&t<=r}function qt(t){var e=typeof t;return null!=t&&("object"==e||"function"==e)}function Bt(t){return null!=t&&"object"==typeof t}var Ht=D?function(t){return function(e){return t(e)}}(D):function(t){return Bt(t)&&Lt(t.length)&&!!P[Tt(t)]};function Yt(t){return null!=(e=t)&&Lt(e.length)&&!Nt(e)?yt(t):St(t);var e}t.exports=function(t,e){return Ct(t,e)}})),nt={a:["a","à","á","â","ã","ä","å","æ","ā","ă","ą","ǎ","ǟ","ǡ","ǻ","ȁ","ȃ","ȧ","ɐ","ɑ","ɒ","ͣ","а","ӑ","ӓ","ᵃ","ᵄ","ᶏ","ḁ","ẚ","ạ","ả","ấ","ầ","ẩ","ẫ","ậ","ắ","ằ","ẳ","ẵ","ặ","ₐ","ⱥ","ａ"],A:["A","À","Á","Â","Ã","Ä","Å","Ā","Ă","Ą","Ǎ","Ǟ","Ǡ","Ǻ","Ȁ","Ȃ","Ȧ","Ⱥ","А","Ӑ","Ӓ","ᴀ","ᴬ","Ḁ","Ạ","Ả","Ấ","Ầ","Ẩ","Ẫ","Ậ","Ắ","Ằ","Ẳ","Ẵ","Ặ","Ａ"],b:["b","ƀ","ƃ","ɓ","ᖯ","ᵇ","ᵬ","ᶀ","ḃ","ḅ","ḇ","ｂ"],B:["B","Ɓ","Ƃ","Ƀ","ʙ","ᛒ","ᴃ","ᴮ","ᴯ","Ḃ","Ḅ","Ḇ","Ｂ"],c:["c","ç","ć","ĉ","ċ","č","ƈ","ȼ","ɕ","ͨ","ᴄ","ᶜ","ḉ","ↄ","ｃ"],C:["C","Ç","Ć","Ĉ","Ċ","Č","Ƈ","Ȼ","ʗ","Ḉ","Ｃ"],d:["d","ď","đ","Ƌ","ƌ","ȡ","ɖ","ɗ","ͩ","ᵈ","ᵭ","ᶁ","ᶑ","ḋ","ḍ","ḏ","ḑ","ḓ","ｄ"],D:["D","Ď","Đ","Ɖ","Ɗ","ᴰ","Ḋ","Ḍ","Ḏ","Ḑ","Ḓ","Ｄ"],e:["e","è","é","ê","ë","ē","ĕ","ė","ę","ě","ǝ","ȅ","ȇ","ȩ","ɇ","ɘ","ͤ","ᵉ","ᶒ","ḕ","ḗ","ḙ","ḛ","ḝ","ẹ","ẻ","ẽ","ế","ề","ể","ễ","ệ","ₑ","ｅ"],E:["E","È","É","Ê","Ë","Ē","Ĕ","Ė","Ę","Ě","Œ","Ǝ","Ɛ","Ȅ","Ȇ","Ȩ","Ɇ","ɛ","ɜ","ɶ","Є","Э","э","є","Ӭ","ӭ","ᴇ","ᴈ","ᴱ","ᴲ","ᵋ","ᵌ","ᶓ","ᶔ","ᶟ","Ḕ","Ḗ","Ḙ","Ḛ","Ḝ","Ẹ","Ẻ","Ẽ","Ế","Ề","Ể","Ễ","Ệ","Ｅ","𐐁","𐐩"],f:["f","ƒ","ᵮ","ᶂ","ᶠ","ḟ","ｆ"],F:["F","Ƒ","Ḟ","ⅎ","Ｆ"],g:["g","ĝ","ğ","ġ","ģ","ǥ","ǧ","ǵ","ɠ","ɡ","ᵍ","ᵷ","ᵹ","ᶃ","ᶢ","ḡ","ｇ"],G:["G","Ĝ","Ğ","Ġ","Ģ","Ɠ","Ǥ","Ǧ","Ǵ","ɢ","ʛ","ᴳ","Ḡ","Ｇ"],h:["h","ĥ","ħ","ƕ","ȟ","ɥ","ɦ","ʮ","ʯ","ʰ","ʱ","ͪ","Һ","һ","ᑋ","ᶣ","ḣ","ḥ","ḧ","ḩ","ḫ","ⱨ","ｈ"],H:["H","Ĥ","Ħ","Ȟ","ʜ","ᕼ","ᚺ","ᚻ","ᴴ","Ḣ","Ḥ","Ḧ","Ḩ","Ḫ","Ⱨ","Ｈ"],i:["i","ì","í","î","ï","ĩ","ī","ĭ","į","ǐ","ȉ","ȋ","ɨ","ͥ","ᴉ","ᵎ","ᵢ","ᶖ","ᶤ","ḭ","ḯ","ỉ","ị","ｉ"],I:["I","Ì","Í","Î","Ï","Ĩ","Ī","Ĭ","Į","İ","Ǐ","Ȉ","Ȋ","ɪ","І","ᴵ","ᵻ","ᶦ","ᶧ","Ḭ","Ḯ","Ỉ","Ị","Ｉ"],j:["j","ĵ","ǰ","ɉ","ʝ","ʲ","ᶡ","ᶨ","ｊ"],J:["J","Ĵ","ᴊ","ᴶ","Ｊ"],k:["k","ķ","ƙ","ǩ","ʞ","ᵏ","ᶄ","ḱ","ḳ","ḵ","ⱪ","ｋ"],K:["K","Ķ","Ƙ","Ǩ","ᴷ","Ḱ","Ḳ","Ḵ","Ⱪ","Ｋ"],l:["l","ĺ","ļ","ľ","ŀ","ł","ƚ","ȴ","ɫ","ɬ","ɭ","ˡ","ᶅ","ᶩ","ᶪ","ḷ","ḹ","ḻ","ḽ","ℓ","ⱡ"],L:["L","Ĺ","Ļ","Ľ","Ŀ","Ł","Ƚ","ʟ","ᴌ","ᴸ","ᶫ","Ḷ","Ḹ","Ḻ","Ḽ","Ⱡ","Ɫ"],m:["m","ɯ","ɰ","ɱ","ͫ","ᴟ","ᵐ","ᵚ","ᵯ","ᶆ","ᶬ","ᶭ","ḿ","ṁ","ṃ","㎡","㎥","ｍ"],M:["M","Ɯ","ᴍ","ᴹ","Ḿ","Ṁ","Ṃ","Ｍ"],n:["n","ñ","ń","ņ","ň","ŉ","ƞ","ǹ","ȵ","ɲ","ɳ","ᵰ","ᶇ","ᶮ","ᶯ","ṅ","ṇ","ṉ","ṋ","ⁿ","ｎ"],N:["N","Ñ","Ń","Ņ","Ň","Ɲ","Ǹ","Ƞ","ɴ","ᴎ","ᴺ","ᴻ","ᶰ","Ṅ","Ṇ","Ṉ","Ṋ","Ｎ"],o:["o","ò","ó","ô","õ","ö","ø","ō","ŏ","ő","ơ","ǒ","ǫ","ǭ","ǿ","ȍ","ȏ","ȫ","ȭ","ȯ","ȱ","ɵ","ͦ","о","ӧ","ө","ᴏ","ᴑ","ᴓ","ᴼ","ᵒ","ᶱ","ṍ","ṏ","ṑ","ṓ","ọ","ỏ","ố","ồ","ổ","ỗ","ộ","ớ","ờ","ở","ỡ","ợ","ₒ","ｏ","𐐬"],O:["O","Ò","Ó","Ô","Õ","Ö","Ø","Ō","Ŏ","Ő","Ɵ","Ơ","Ǒ","Ǫ","Ǭ","Ǿ","Ȍ","Ȏ","Ȫ","Ȭ","Ȯ","Ȱ","О","Ӧ","Ө","Ṍ","Ṏ","Ṑ","Ṓ","Ọ","Ỏ","Ố","Ồ","Ổ","Ỗ","Ộ","Ớ","Ờ","Ở","Ỡ","Ợ","Ｏ","𐐄"],p:["p","ᵖ","ᵱ","ᵽ","ᶈ","ṕ","ṗ","ｐ"],P:["P","Ƥ","ᴘ","ᴾ","Ṕ","Ṗ","Ᵽ","Ｐ"],q:["q","ɋ","ʠ","ᛩ","ｑ"],Q:["Q","Ɋ","Ｑ"],r:["r","ŕ","ŗ","ř","ȑ","ȓ","ɍ","ɹ","ɻ","ʳ","ʴ","ʵ","ͬ","ᵣ","ᵲ","ᶉ","ṙ","ṛ","ṝ","ṟ"],R:["R","Ŕ","Ŗ","Ř","Ʀ","Ȑ","Ȓ","Ɍ","ʀ","ʁ","ʶ","ᚱ","ᴙ","ᴚ","ᴿ","Ṙ","Ṛ","Ṝ","Ṟ","Ɽ"],s:["s","ś","ŝ","ş","š","ș","ʂ","ᔆ","ᶊ","ṡ","ṣ","ṥ","ṧ","ṩ","ｓ"],S:["S","Ś","Ŝ","Ş","Š","Ș","ȿ","ˢ","ᵴ","Ṡ","Ṣ","Ṥ","Ṧ","Ṩ","Ｓ"],t:["t","ţ","ť","ŧ","ƫ","ƭ","ț","ʇ","ͭ","ᵀ","ᵗ","ᵵ","ᶵ","ṫ","ṭ","ṯ","ṱ","ẗ","ｔ"],T:["T","Ţ","Ť","Ƭ","Ʈ","Ț","Ⱦ","ᴛ","ᵀ","Ṫ","Ṭ","Ṯ","Ṱ","Ｔ"],u:["u","ù","ú","û","ü","ũ","ū","ŭ","ů","ű","ų","ư","ǔ","ǖ","ǘ","ǚ","ǜ","ȕ","ȗ","ͧ","ߎ","ᵘ","ᵤ","ṳ","ṵ","ṷ","ṹ","ṻ","ụ","ủ","ứ","ừ","ử","ữ","ự","ｕ"],U:["U","Ù","Ú","Û","Ü","Ũ","Ū","Ŭ","Ů","Ű","Ų","Ư","Ǔ","Ǖ","Ǘ","Ǚ","Ǜ","Ȕ","Ȗ","Ʉ","ᴜ","ᵁ","ᵾ","Ṳ","Ṵ","Ṷ","Ṹ","Ṻ","Ụ","Ủ","Ứ","Ừ","Ử","Ữ","Ự","Ｕ"],v:["v","ʋ","ͮ","ᵛ","ᵥ","ᶹ","ṽ","ṿ","ⱱ","ｖ","ⱴ"],V:["V","Ʋ","Ʌ","ʌ","ᴠ","ᶌ","Ṽ","Ṿ","Ｖ"],w:["w","ŵ","ʷ","ᵂ","ẁ","ẃ","ẅ","ẇ","ẉ","ẘ","ⱳ","ｗ"],W:["W","Ŵ","ʍ","ᴡ","Ẁ","Ẃ","Ẅ","Ẇ","Ẉ","Ⱳ","Ｗ"],x:["x","̽","͓","ᶍ","ͯ","ẋ","ẍ","ₓ","ｘ"],X:["X","ˣ","ͯ","Ẋ","Ẍ","☒","✕","✖","✗","✘","Ｘ"],y:["y","ý","ÿ","ŷ","ȳ","ɏ","ʸ","ẏ","ỳ","ỵ","ỷ","ỹ","ｙ"],Y:["Y","Ý","Ŷ","Ÿ","Ƴ","ƴ","Ȳ","Ɏ","ʎ","ʏ","Ẏ","Ỳ","Ỵ","Ỷ","Ỹ","Ｙ"],z:["z","ź","ż","ž","ƶ","ȥ","ɀ","ʐ","ʑ","ᙆ","ᙇ","ᶻ","ᶼ","ᶽ","ẑ","ẓ","ẕ","ⱬ","ｚ"],Z:["Z","Ź","Ż","Ž","Ƶ","Ȥ","ᴢ","ᵶ","Ẑ","Ẓ","Ẕ","Ⱬ","Ｚ"]},rt=function(t){for(var e=[],n=0;n<t.length;n++){var r=t.charAt(n),a=!1;for(var o in nt){if(-1!==nt[o].indexOf(r)){e.push(o),a=!0;break}}a||e.push(r)}return e.join("")},at=function(t){return t.replace(/[\\^$*+?.()|[\]{}]/g,"\\$&")},ot={format:function(t){return t},filterPredicate:function(t,e){var n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3&&void 0!==arguments[3]&&arguments[3];if(null==t)return!1;var a=n?String(t).toLowerCase():rt(at(String(t)).toLowerCase()),o=n?e.toLowerCase():rt(at(e).toLowerCase());return r?a===o:a.indexOf(o)>-1},compare:function(t,e){function n(t){return null==t?"":rt(t.toLowerCase())}return(t=n(t))<(e=n(e))?-1:t>e?1:0}};function it(t,e,n,r,a,o,i,s,u,l){"boolean"!=typeof i&&(u=s,s=i,i=!1);const c="function"==typeof n?n.options:n;let d;if(t&&t.render&&(c.render=t.render,c.staticRenderFns=t.staticRenderFns,c._compiled=!0,a&&(c.functional=!0)),r&&(c._scopeId=r),o?(d=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),e&&e.call(this,u(t)),t&&t._registeredComponents&&t._registeredComponents.add(o)},c._ssrRegister=d):e&&(d=i?function(t){e.call(this,l(t,this.$root.$options.shadowRoot))}:function(t){e.call(this,s(t))}),d)if(c.functional){const t=c.render;c.render=function(e,n){return d.call(n),t(e,n)}}else{const t=c.beforeCreate;c.beforeCreate=t?[].concat(t,d):[d]}return n}var st=[10,20,30,40,50],ut=it({render:function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"vgt-wrap__footer vgt-clearfix"},[n("div",{staticClass:"footer__row-count vgt-pull-left"},[n("span",{staticClass:"footer__row-count__label"},[t._v(t._s(t.rowsPerPageText))]),t._v(" "),n("select",{directives:[{name:"model",rawName:"v-model",value:t.currentPerPage,expression:"currentPerPage"}],staticClass:"footer__row-count__select",attrs:{autocomplete:"off",name:"perPageSelect"},on:{change:[function(e){var n=Array.prototype.filter.call(e.target.options,(function(t){return t.selected})).map((function(t){return"_value"in t?t._value:t.value}));t.currentPerPage=e.target.multiple?n:n[0]},t.perPageChanged]}},[t._l(t.rowsPerPageOptions,(function(e,r){return n("option",{key:"rows-dropdown-option-"+r,domProps:{value:e}},[t._v("\n        "+t._s(e)+"\n      ")])})),t._v(" "),t.paginateDropdownAllowAll?n("option",{domProps:{value:t.total}},[t._v(t._s(t.allText))]):t._e()],2)]),t._v(" "),n("div",{staticClass:"footer__navigation vgt-pull-right"},[n("a",{staticClass:"footer__navigation__page-btn",class:{disabled:!t.prevIsPossible},attrs:{href:"javascript:undefined",tabindex:"0"},on:{click:function(e){return e.preventDefault(),e.stopPropagation(),t.previousPage(e)}}},[n("span",{staticClass:"chevron",class:{left:!t.rtl,right:t.rtl}}),t._v(" "),n("span",[t._v(t._s(t.prevText))])]),t._v(" "),"pages"===t.mode?n("pagination-page-info",{attrs:{totalRecords:t.total,lastPage:t.pagesCount,currentPage:t.currentPage,ofText:t.ofText,pageText:t.pageText},on:{"page-changed":t.changePage}}):n("div",{staticClass:"footer__navigation__info"},[t._v(t._s(t.paginatedInfo))]),t._v(" "),n("a",{staticClass:"footer__navigation__page-btn",class:{disabled:!t.nextIsPossible},attrs:{href:"javascript:undefined",tabindex:"0"},on:{click:function(e){return e.preventDefault(),e.stopPropagation(),t.nextPage(e)}}},[n("span",[t._v(t._s(t.nextText))]),t._v(" "),n("span",{staticClass:"chevron",class:{right:!t.rtl,left:t.rtl}})])],1)])},staticRenderFns:[]},undefined,{name:"VgtPagination",props:{styleClass:{default:"table table-bordered"},total:{default:null},perPage:{},rtl:{default:!1},customRowsPerPageDropdown:{default:function(){return[]}},paginateDropdownAllowAll:{default:!0},mode:{default:"records"},nextText:{default:"Next"},prevText:{default:"Prev"},rowsPerPageText:{default:"Rows per page:"},ofText:{default:"of"},pageText:{default:"page"},allText:{default:"All"}},data:function(){return{currentPage:1,prevPage:0,currentPerPage:10,rowsPerPageOptions:[]}},watch:{perPage:{handler:function(t,e){this.handlePerPage(),this.perPageChanged(e)},immediate:!0},customRowsPerPageDropdown:function(){this.handlePerPage()},total:{handler:function(t,e){-1===this.rowsPerPageOptions.indexOf(this.currentPerPage)&&(this.currentPerPage=t)}}},computed:{pagesCount:function(){var t=Math.floor(this.total/this.currentPerPage);return 0===this.total%this.currentPerPage?t:t+1},paginatedInfo:function(){var t=(this.currentPage-1)*this.currentPerPage+1,e=Math.min(this.total,this.currentPage*this.currentPerPage);return 0===e&&(t=0),"".concat(t," - ").concat(e," ").concat(this.ofText," ").concat(this.total)},nextIsPossible:function(){return this.currentPage<this.pagesCount},prevIsPossible:function(){return this.currentPage>1}},methods:{changePage:function(t){var e=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];t>0&&this.total>this.currentPerPage*(t-1)&&(this.prevPage=this.currentPage,this.currentPage=t,e&&this.pageChanged())},nextPage:function(){this.nextIsPossible&&(this.prevPage=this.currentPage,++this.currentPage,this.pageChanged())},previousPage:function(){this.prevIsPossible&&(this.prevPage=this.currentPage,--this.currentPage,this.pageChanged())},pageChanged:function(){this.$emit("page-changed",{currentPage:this.currentPage,prevPage:this.prevPage})},perPageChanged:function(t){t&&this.$emit("per-page-changed",{currentPerPage:this.currentPerPage}),this.changePage(1,!1)},handlePerPage:function(){if(null!==this.customRowsPerPageDropdown&&Array.isArray(this.customRowsPerPageDropdown)&&0!==this.customRowsPerPageDropdown.length?this.rowsPerPageOptions=Z(this.customRowsPerPageDropdown):this.rowsPerPageOptions=Z(st),this.perPage){this.currentPerPage=this.perPage;for(var t=!1,e=0;e<this.rowsPerPageOptions.length;e++)this.rowsPerPageOptions[e]===this.perPage&&(t=!0);t||-1===this.perPage||this.rowsPerPageOptions.unshift(this.perPage)}else this.currentPerPage=10}},mounted:function(){},components:{"pagination-page-info":it({render:function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"footer__navigation__page-info"},[t._v("\n  "+t._s(t.pageText)+" "),n("input",{staticClass:"footer__navigation__page-info__current-entry",attrs:{type:"text"},domProps:{value:t.currentPage},on:{keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"enter",13,e.key,"Enter")?null:(e.stopPropagation(),t.changePage(e))}}}),t._v(" "+t._s(t.pageInfo)+"\n")])},staticRenderFns:[]},undefined,{name:"VgtPaginationPageInfo",props:{currentPage:{default:1},lastPage:{default:1},totalRecords:{default:0},ofText:{default:"of",type:String},pageText:{default:"page",type:String}},data:function(){return{}},computed:{pageInfo:function(){return"".concat(this.ofText," ").concat(this.lastPage)}},methods:{changePage:function(t){var e=parseInt(t.target.value,10);
-//! invalid number
-if(Number.isNaN(e)||e>this.lastPage||e<1)return t.target.value=this.currentPage,!1;t.target.value=e,this.$emit("page-changed",e)}},mounted:function(){},components:{}},"data-v-9a8cd1f4",false,undefined,!1,void 0,void 0,void 0)}},undefined,false,undefined,!1,void 0,void 0,void 0),lt=it({render:function(){var t=this,e=t.$createElement,n=t._self._c||e;return t.showControlBar?n("div",{staticClass:"vgt-global-search vgt-clearfix"},[n("div",{staticClass:"vgt-global-search__input vgt-pull-left"},[t.searchEnabled?n("span",{staticClass:"input__icon"},[n("div",{staticClass:"magnifying-glass"})]):t._e(),t._v(" "),t.searchEnabled?n("input",{staticClass:"vgt-input vgt-pull-left",attrs:{type:"text",placeholder:t.globalSearchPlaceholder},domProps:{value:t.value},on:{input:function(e){return t.updateValue(e.target.value)},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"enter",13,e.key,"Enter")?null:t.entered(e.target.value)}}}):t._e()]),t._v(" "),n("div",{staticClass:"vgt-global-search__actions vgt-pull-right"},[t._t("internal-table-actions")],2)]):t._e()},staticRenderFns:[]},undefined,{name:"VgtGlobalSearch",props:["value","searchEnabled","globalSearchPlaceholder"],data:function(){return{globalSearchTerm:null}},computed:{showControlBar:function(){return!!this.searchEnabled||!(!this.$slots||!this.$slots["internal-table-actions"])}},methods:{updateValue:function(t){this.$emit("input",t),this.$emit("on-keyup",t)},entered:function(t){this.$emit("on-enter",t)}}},undefined,false,undefined,!1,void 0,void 0,void 0);function ct(t){return t.firstSortType||"asc"}function dt(t){return"asc"===t?"desc":"asc"}var ft=it({render:function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("thead",[n("tr",[t.lineNumbers?n("th",{staticClass:"line-numbers"}):t._e(),t._v(" "),t.selectable?n("th",{staticClass:"vgt-checkbox-col"},[n("input",{attrs:{type:"checkbox"},domProps:{checked:t.allSelected,indeterminate:t.allSelectedIndeterminate},on:{change:t.toggleSelectAll}})]):t._e(),t._v(" "),t._l(t.columns,(function(e,r){return e.hidden?t._e():n("th",{key:r,class:t.getHeaderClasses(e,r),style:t.columnStyles[r],on:{click:function(n){return t.sort(n,e)}}},[t._t("table-column",[n("span",[t._v(t._s(e.label))])],{column:e})],2)}))],2),t._v(" "),n("vgt-filter-row",{ref:"filter-row",tag:"tr",attrs:{"global-search-enabled":t.searchEnabled,"line-numbers":t.lineNumbers,selectable:t.selectable,columns:t.columns,mode:t.mode,"typed-columns":t.typedColumns},on:{"filter-changed":t.filterRows},scopedSlots:t._u([{key:"column-filter",fn:function(e){return[t._t("column-filter",null,{column:e.column,updateFilters:e.updateFilters})]}}],null,!0)})],1)},staticRenderFns:[]},undefined,{name:"VgtTableHeader",props:{lineNumbers:{default:!1,type:Boolean},selectable:{default:!1,type:Boolean},allSelected:{default:!1,type:Boolean},allSelectedIndeterminate:{default:!1,type:Boolean},columns:{type:Array},mode:{type:String},typedColumns:{},sortable:{type:Boolean},getClasses:{type:Function},searchEnabled:{type:Boolean},tableRef:{},paginated:{}},watch:{columns:{handler:function(){this.setColumnStyles()},immediate:!0},tableRef:{handler:function(){this.setColumnStyles()},immediate:!0},paginated:{handler:function(){this.tableRef&&this.setColumnStyles()},deep:!0}},data:function(){return{checkBoxThStyle:{},lineNumberThStyle:{},columnStyles:[],sorts:[],ro:null}},computed:{},methods:{reset:function(){this.$refs["filter-row"].reset(!0)},toggleSelectAll:function(){this.$emit("on-toggle-select-all")},isSortableColumn:function(t){var e=t.sortable;return"boolean"==typeof e?e:this.sortable},sort:function(t,e){this.isSortableColumn(e)&&(t.shiftKey?this.sorts=function(t,e){var n=function(t,e){for(var n=0;n<t.length;n++)if(e.field===t[n].field)return n;return-1}(t,e);return-1===n?t.push({field:e.field,type:ct(e)}):t[n].type=dt(t[n].type),t}(this.sorts,e):this.sorts=function(t,e){var n=function(t,e){return 1===t.length&&t[0].field===e.field?t[0].type:void 0}(t,e);return[{field:e.field,type:n?dt(n):ct(e)}]}(this.sorts,e),this.$emit("on-sort-change",this.sorts))},setInitialSort:function(t){this.sorts=t,this.$emit("on-sort-change",this.sorts)},getColumnSort:function(t){for(var e=0;e<this.sorts.length;e+=1)if(this.sorts[e].field===t.field)return this.sorts[e].type||"asc";return null},getHeaderClasses:function(t,e){return K({},this.getClasses(e,"th"),{sortable:this.isSortableColumn(t),"sorting sorting-desc":"desc"===this.getColumnSort(t),"sorting sorting-asc":"asc"===this.getColumnSort(t)})},filterRows:function(t){this.$emit("filter-changed",t)},getWidthStyle:function(t){return window&&window.getComputedStyle&&t?{width:window.getComputedStyle(t,null).width}:{width:"auto"}},setColumnStyles:function(){for(var t=[],e=0;e<this.columns.length;e++)if(this.tableRef){var n=0;this.selectable&&n++,this.lineNumbers&&n++;var r=this.tableRef.rows[0].cells[e+n];t.push(this.getWidthStyle(r))}else t.push({minWidth:this.columns[e].width?this.columns[e].width:"auto",maxWidth:this.columns[e].width?this.columns[e].width:"auto",width:this.columns[e].width?this.columns[e].width:"auto"});this.columnStyles=t},getColumnStyle:function(t,e){var n={minWidth:t.width?t.width:"auto",maxWidth:t.width?t.width:"auto",width:t.width?t.width:"auto"};if(this.tableRef){this.selectable&&e++,this.lineNumbers&&e++;var r=this.tableRef.rows[0].cells[e],a=window.getComputedStyle(r,null);n.width=a.width}return n}},mounted:function(){var t=this;this.$nextTick((function(){t.ro=new ResizeObserver((function(){t.setColumnStyles()})),t.ro.observe(t.$parent.$el),t.tableRef&&Array.from(t.$parent.$refs["table-header-primary"].$el.children[0].children).forEach((function(e){t.ro.observe(e)}))}))},beforeDestroy:function(){this.ro.disconnect()},components:{"vgt-filter-row":it({render:function(){var t=this,e=t.$createElement,n=t._self._c||e;return t.hasFilterRow?n("tr",[t.lineNumbers?n("th"):t._e(),t._v(" "),t.selectable?n("th"):t._e(),t._v(" "),t._l(t.columns,(function(e,r){return e.hidden?t._e():n("th",{key:r,staticClass:"filter-th"},[t._t("column-filter",[t.isFilterable(e)?n("div",[t.isDropdown(e)?t._e():n("input",{staticClass:"vgt-input",attrs:{type:"text",placeholder:t.getPlaceholder(e)},domProps:{value:t.columnFilters[e.field]},on:{keyup:function(n){return!n.type.indexOf("key")&&t._k(n.keyCode,"enter",13,n.key,"Enter")?null:t.updateFiltersOnEnter(e,n.target.value)},input:function(n){return t.updateFiltersOnKeyup(e,n.target.value)}}}),t._v(" "),t.isDropdownArray(e)?n("select",{staticClass:"vgt-select",domProps:{value:t.columnFilters[e.field]},on:{change:function(n){return t.updateFilters(e,n.target.value)}}},[n("option",{key:"-1",attrs:{value:""}},[t._v(t._s(t.getPlaceholder(e)))]),t._v(" "),t._l(e.filterOptions.filterDropdownItems,(function(e,r){return n("option",{key:r,domProps:{value:e}},[t._v("\n              "+t._s(e)+"\n            ")])}))],2):t._e(),t._v(" "),t.isDropdownObjects(e)?n("select",{staticClass:"vgt-select",domProps:{value:t.columnFilters[e.field]},on:{change:function(n){return t.updateFilters(e,n.target.value,!0)}}},[n("option",{key:"-1",attrs:{value:""}},[t._v(t._s(t.getPlaceholder(e)))]),t._v(" "),t._l(e.filterOptions.filterDropdownItems,(function(e,r){return n("option",{key:r,domProps:{value:e.value}},[t._v(t._s(e.text))])}))],2):t._e()]):t._e()],{column:e,updateFilters:t.updateSlotFilter})],2)}))],2):t._e()},staticRenderFns:[]},undefined,{name:"VgtFilterRow",props:["lineNumbers","columns","typedColumns","globalSearchEnabled","selectable","mode"],watch:{columns:{handler:function(t,e){this.populateInitialFilters()},deep:!0,immediate:!0}},data:function(){return{columnFilters:{},timer:null}},computed:{hasFilterRow:function(){for(var t=0;t<this.columns.length;t++){var e=this.columns[t];if(e.filterOptions&&e.filterOptions.enabled)return!0}return!1}},methods:{reset:function(){var t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this.columnFilters={},t&&this.$emit("filter-changed",this.columnFilters)},isFilterable:function(t){return t.filterOptions&&t.filterOptions.enabled},isDropdown:function(t){return this.isFilterable(t)&&t.filterOptions.filterDropdownItems&&t.filterOptions.filterDropdownItems.length},isDropdownObjects:function(e){return this.isDropdown(e)&&"object"===t(e.filterOptions.filterDropdownItems[0])},isDropdownArray:function(e){return this.isDropdown(e)&&"object"!==t(e.filterOptions.filterDropdownItems[0])},getPlaceholder:function(t){return this.isFilterable(t)&&t.filterOptions.placeholder||"Filter ".concat(t.label)},updateFiltersOnEnter:function(t,e){this.timer&&clearTimeout(this.timer),this.updateFiltersImmediately(t.field,e)},updateFiltersOnKeyup:function(t,e){"enter"!==t.filterOptions.trigger&&this.updateFilters(t,e)},updateSlotFilter:function(t,e){var n=t.filterOptions.slotFilterField||t.field;"function"==typeof t.filterOptions.formatValue&&(e=t.filterOptions.formatValue(e)),this.updateFiltersImmediately(n,e)},updateFilters:function(t,e){var n=this;this.timer&&clearTimeout(this.timer),this.timer=setTimeout((function(){n.updateFiltersImmediately(t.field,e)}),400)},updateFiltersImmediately:function(t,e){this.$set(this.columnFilters,t,e),this.$emit("filter-changed",this.columnFilters)},populateInitialFilters:function(){for(var t=0;t<this.columns.length;t++){var e=this.columns[t];this.isFilterable(e)&&void 0!==e.filterOptions.filterValue&&null!==e.filterOptions.filterValue&&this.$set(this.columnFilters,e.field,e.filterOptions.filterValue)}this.$emit("filter-changed",this.columnFilters)}}},"data-v-1c6bfd21",false,undefined,!1,void 0,void 0,void 0)}},undefined,false,undefined,!1,void 0,void 0,void 0),ht=it({render:function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("tr",["span"===t.headerRow.mode?n("th",{staticClass:"vgt-left-align vgt-row-header",attrs:{colspan:t.fullColspan}},[t.selectAllByGroup?[t._t("table-header-group-select",[n("input",{attrs:{type:"checkbox"},domProps:{checked:t.allSelected},on:{change:function(e){return t.toggleSelectGroup(e)}}})],{columns:t.columns,row:t.headerRow})]:t._e(),t._v(" "),n("span",{on:{click:function(e){t.collapsable&&t.$emit("vgtExpand",!t.headerRow.vgtIsExpanded)}}},[t.collapsable?n("span",{staticClass:"triangle",class:{expand:t.headerRow.vgtIsExpanded}}):t._e(),t._v(" "),t._t("table-header-row",[t.headerRow.html?n("span",{domProps:{innerHTML:t._s(t.headerRow.label)}}):n("span",[t._v("\n          "+t._s(t.headerRow.label)+"\n        ")])],{row:t.headerRow})],2)],2):t._e(),t._v(" "),"span"!==t.headerRow.mode&&t.lineNumbers?n("th",{staticClass:"vgt-row-header"}):t._e(),t._v(" "),"span"!==t.headerRow.mode&&t.selectable?n("th",{staticClass:"vgt-row-header"},[t.selectAllByGroup?[t._t("table-header-group-select",[n("input",{attrs:{type:"checkbox"},domProps:{checked:t.allSelected},on:{change:function(e){return t.toggleSelectGroup(e)}}})],{columns:t.columns,row:t.headerRow})]:t._e()],2):t._e(),t._v(" "),t._l(t.columns,(function(e,r){return"span"===t.headerRow.mode||e.hidden?t._e():n("th",{key:r,staticClass:"vgt-row-header",class:t.getClasses(r,"td"),on:{click:function(e){t.columnCollapsable(r)&&t.$emit("vgtExpand",!t.headerRow.vgtIsExpanded)}}},[t.columnCollapsable(r)?n("span",{staticClass:"triangle",class:{expand:t.headerRow.vgtIsExpanded}}):t._e(),t._v(" "),t._t("table-header-row",[e.html?t._e():n("span",[t._v("\n        "+t._s(t.collectFormatted(t.headerRow,e,!0))+"\n      ")]),t._v(" "),e.html?n("span",{domProps:{innerHTML:t._s(t.collectFormatted(t.headerRow,e,!0))}}):t._e()],{row:t.headerRow,column:e,formattedRow:t.formattedRow(t.headerRow,!0)})],2)}))],2)},staticRenderFns:[]},undefined,{name:"VgtHeaderRow",props:{headerRow:{type:Object},columns:{type:Array},lineNumbers:{type:Boolean},selectable:{type:Boolean},selectAllByGroup:{type:Boolean},collapsable:{type:[Boolean,Number],default:!1},collectFormatted:{type:Function},formattedRow:{type:Function},getClasses:{type:Function},fullColspan:{type:Number},groupIndex:{type:Number}},data:function(){return{}},computed:{allSelected:function(){var t=this.headerRow;return this.groupChildObject,t.children.filter((function(t){return t.vgtSelected})).length===t.children.length}},methods:{columnCollapsable:function(t){return!0===this.collapsable?0===t:t===this.collapsable},toggleSelectGroup:function(t){this.$emit("on-select-group-change",{groupIndex:this.groupIndex,checked:t.target.checked})}},mounted:function(){},components:{}},undefined,false,undefined,!1,void 0,void 0,void 0);function pt(t){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var e=Object.prototype.toString.call(t);return t instanceof Date||"object"==typeof t&&"[object Date]"===e?new Date(t.getTime()):"number"==typeof t||"[object Number]"===e?new Date(t):("string"!=typeof t&&"[object String]"!==e||"undefined"==typeof console||(console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as arguments. Please use `parseISO` to parse strings. See: https://git.io/fjule"),console.warn((new Error).stack)),new Date(NaN))}function gt(t){if(null===t||!0===t||!1===t)return NaN;var e=Number(t);return isNaN(e)?e:e<0?Math.ceil(e):Math.floor(e)}function mt(t,e){if(arguments.length<2)throw new TypeError("2 arguments required, but only "+arguments.length+" present");var n=pt(t).getTime(),r=gt(e);return new Date(n+r)}function vt(t){var e=new Date(t.getTime()),n=e.getTimezoneOffset();return e.setSeconds(0,0),6e4*n+e.getTime()%6e4}function wt(t){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var e=pt(t);return!isNaN(e)}var bt={lessThanXSeconds:{one:"less than a second",other:"less than {{count}} seconds"},xSeconds:{one:"1 second",other:"{{count}} seconds"},halfAMinute:"half a minute",lessThanXMinutes:{one:"less than a minute",other:"less than {{count}} minutes"},xMinutes:{one:"1 minute",other:"{{count}} minutes"},aboutXHours:{one:"about 1 hour",other:"about {{count}} hours"},xHours:{one:"1 hour",other:"{{count}} hours"},xDays:{one:"1 day",other:"{{count}} days"},aboutXMonths:{one:"about 1 month",other:"about {{count}} months"},xMonths:{one:"1 month",other:"{{count}} months"},aboutXYears:{one:"about 1 year",other:"about {{count}} years"},xYears:{one:"1 year",other:"{{count}} years"},overXYears:{one:"over 1 year",other:"over {{count}} years"},almostXYears:{one:"almost 1 year",other:"almost {{count}} years"}};function yt(t){return function(e){var n=e||{},r=n.width?String(n.width):t.defaultWidth;return t.formats[r]||t.formats[t.defaultWidth]}}var _t={date:yt({formats:{full:"EEEE, MMMM do, y",long:"MMMM do, y",medium:"MMM d, y",short:"MM/dd/yyyy"},defaultWidth:"full"}),time:yt({formats:{full:"h:mm:ss a zzzz",long:"h:mm:ss a z",medium:"h:mm:ss a",short:"h:mm a"},defaultWidth:"full"}),dateTime:yt({formats:{full:"{{date}} 'at' {{time}}",long:"{{date}} 'at' {{time}}",medium:"{{date}}, {{time}}",short:"{{date}}, {{time}}"},defaultWidth:"full"})},Tt={lastWeek:"'last' eeee 'at' p",yesterday:"'yesterday at' p",today:"'today at' p",tomorrow:"'tomorrow at' p",nextWeek:"eeee 'at' p",other:"P"};function Pt(t){return function(e,n){var r,a=n||{};if("formatting"===(a.context?String(a.context):"standalone")&&t.formattingValues){var o=t.defaultFormattingWidth||t.defaultWidth,i=a.width?String(a.width):o;r=t.formattingValues[i]||t.formattingValues[o]}else{var s=t.defaultWidth,u=a.width?String(a.width):t.defaultWidth;r=t.values[u]||t.values[s]}return r[t.argumentCallback?t.argumentCallback(e):e]}}function Ct(t){return function(e,n){var r=String(e),a=n||{},o=a.width,i=o&&t.matchPatterns[o]||t.matchPatterns[t.defaultMatchWidth],s=r.match(i);if(!s)return null;var u,l=s[0],c=o&&t.parsePatterns[o]||t.parsePatterns[t.defaultParseWidth];return u="[object Array]"===Object.prototype.toString.call(c)?c.findIndex((function(t){return t.test(r)})):function(t,e){for(var n in t)if(t.hasOwnProperty(n)&&e(t[n]))return n}(c,(function(t){return t.test(r)})),u=t.valueCallback?t.valueCallback(u):u,{value:u=a.valueCallback?a.valueCallback(u):u,rest:r.slice(l.length)}}}var xt,St={formatDistance:function(t,e,n){var r;return n=n||{},r="string"==typeof bt[t]?bt[t]:1===e?bt[t].one:bt[t].other.replace("{{count}}",e),n.addSuffix?n.comparison>0?"in "+r:r+" ago":r},formatLong:_t,formatRelative:function(t,e,n,r){return Tt[t]},localize:{ordinalNumber:function(t,e){var n=Number(t),r=n%100;if(r>20||r<10)switch(r%10){case 1:return n+"st";case 2:return n+"nd";case 3:return n+"rd"}return n+"th"},era:Pt({values:{narrow:["B","A"],abbreviated:["BC","AD"],wide:["Before Christ","Anno Domini"]},defaultWidth:"wide"}),quarter:Pt({values:{narrow:["1","2","3","4"],abbreviated:["Q1","Q2","Q3","Q4"],wide:["1st quarter","2nd quarter","3rd quarter","4th quarter"]},defaultWidth:"wide",argumentCallback:function(t){return Number(t)-1}}),month:Pt({values:{narrow:["J","F","M","A","M","J","J","A","S","O","N","D"],abbreviated:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],wide:["January","February","March","April","May","June","July","August","September","October","November","December"]},defaultWidth:"wide"}),day:Pt({values:{narrow:["S","M","T","W","T","F","S"],short:["Su","Mo","Tu","We","Th","Fr","Sa"],abbreviated:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],wide:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]},defaultWidth:"wide"}),dayPeriod:Pt({values:{narrow:{am:"a",pm:"p",midnight:"mi",noon:"n",morning:"morning",afternoon:"afternoon",evening:"evening",night:"night"},abbreviated:{am:"AM",pm:"PM",midnight:"midnight",noon:"noon",morning:"morning",afternoon:"afternoon",evening:"evening",night:"night"},wide:{am:"a.m.",pm:"p.m.",midnight:"midnight",noon:"noon",morning:"morning",afternoon:"afternoon",evening:"evening",night:"night"}},defaultWidth:"wide",formattingValues:{narrow:{am:"a",pm:"p",midnight:"mi",noon:"n",morning:"in the morning",afternoon:"in the afternoon",evening:"in the evening",night:"at night"},abbreviated:{am:"AM",pm:"PM",midnight:"midnight",noon:"noon",morning:"in the morning",afternoon:"in the afternoon",evening:"in the evening",night:"at night"},wide:{am:"a.m.",pm:"p.m.",midnight:"midnight",noon:"noon",morning:"in the morning",afternoon:"in the afternoon",evening:"in the evening",night:"at night"}},defaultFormattingWidth:"wide"})},match:{ordinalNumber:(xt={matchPattern:/^(\d+)(th|st|nd|rd)?/i,parsePattern:/\d+/i,valueCallback:function(t){return parseInt(t,10)}},function(t,e){var n=String(t),r=e||{},a=n.match(xt.matchPattern);if(!a)return null;var o=a[0],i=n.match(xt.parsePattern);if(!i)return null;var s=xt.valueCallback?xt.valueCallback(i[0]):i[0];return{value:s=r.valueCallback?r.valueCallback(s):s,rest:n.slice(o.length)}}),era:Ct({matchPatterns:{narrow:/^(b|a)/i,abbreviated:/^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,wide:/^(before christ|before common era|anno domini|common era)/i},defaultMatchWidth:"wide",parsePatterns:{any:[/^b/i,/^(a|c)/i]},defaultParseWidth:"any"}),quarter:Ct({matchPatterns:{narrow:/^[1234]/i,abbreviated:/^q[1234]/i,wide:/^[1234](th|st|nd|rd)? quarter/i},defaultMatchWidth:"wide",parsePatterns:{any:[/1/i,/2/i,/3/i,/4/i]},defaultParseWidth:"any",valueCallback:function(t){return t+1}}),month:Ct({matchPatterns:{narrow:/^[jfmasond]/i,abbreviated:/^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,wide:/^(january|february|march|april|may|june|july|august|september|october|november|december)/i},defaultMatchWidth:"wide",parsePatterns:{narrow:[/^j/i,/^f/i,/^m/i,/^a/i,/^m/i,/^j/i,/^j/i,/^a/i,/^s/i,/^o/i,/^n/i,/^d/i],any:[/^ja/i,/^f/i,/^mar/i,/^ap/i,/^may/i,/^jun/i,/^jul/i,/^au/i,/^s/i,/^o/i,/^n/i,/^d/i]},defaultParseWidth:"any"}),day:Ct({matchPatterns:{narrow:/^[smtwf]/i,short:/^(su|mo|tu|we|th|fr|sa)/i,abbreviated:/^(sun|mon|tue|wed|thu|fri|sat)/i,wide:/^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i},defaultMatchWidth:"wide",parsePatterns:{narrow:[/^s/i,/^m/i,/^t/i,/^w/i,/^t/i,/^f/i,/^s/i],any:[/^su/i,/^m/i,/^tu/i,/^w/i,/^th/i,/^f/i,/^sa/i]},defaultParseWidth:"any"}),dayPeriod:Ct({matchPatterns:{narrow:/^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,any:/^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i},defaultMatchWidth:"any",parsePatterns:{any:{am:/^a/i,pm:/^p/i,midnight:/^mi/i,noon:/^no/i,morning:/morning/i,afternoon:/afternoon/i,evening:/evening/i,night:/night/i}},defaultParseWidth:"any"})},options:{weekStartsOn:0,firstWeekContainsDate:1}};function kt(t,e){if(arguments.length<2)throw new TypeError("2 arguments required, but only "+arguments.length+" present");var n=gt(e);return mt(t,-n)}function Ot(t,e){for(var n=t<0?"-":"",r=Math.abs(t).toString();r.length<e;)r="0"+r;return n+r}var Rt=function(t,e){var n=t.getUTCFullYear(),r=n>0?n:1-n;return Ot("yy"===e?r%100:r,e.length)},jt=function(t,e){var n=t.getUTCMonth();return"M"===e?String(n+1):Ot(n+1,2)},Et=function(t,e){return Ot(t.getUTCDate(),e.length)},Dt=function(t,e){return Ot(t.getUTCHours()%12||12,e.length)},At=function(t,e){return Ot(t.getUTCHours(),e.length)},Ft=function(t,e){return Ot(t.getUTCMinutes(),e.length)},Mt=function(t,e){return Ot(t.getUTCSeconds(),e.length)},$t=function(t,e){var n=e.length,r=t.getUTCMilliseconds();return Ot(Math.floor(r*Math.pow(10,n-3)),e.length)},It=864e5;function Ut(t){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var e=1,n=pt(t),r=n.getUTCDay(),a=(r<e?7:0)+r-e;return n.setUTCDate(n.getUTCDate()-a),n.setUTCHours(0,0,0,0),n}function Nt(t){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var e=pt(t),n=e.getUTCFullYear(),r=new Date(0);r.setUTCFullYear(n+1,0,4),r.setUTCHours(0,0,0,0);var a=Ut(r),o=new Date(0);o.setUTCFullYear(n,0,4),o.setUTCHours(0,0,0,0);var i=Ut(o);return e.getTime()>=a.getTime()?n+1:e.getTime()>=i.getTime()?n:n-1}function Lt(t){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var e=Nt(t),n=new Date(0);n.setUTCFullYear(e,0,4),n.setUTCHours(0,0,0,0);var r=Ut(n);return r}var qt=6048e5;function Bt(t){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var e=pt(t),n=Ut(e).getTime()-Lt(e).getTime();return Math.round(n/qt)+1}function Ht(t,e){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var n=e||{},r=n.locale,a=r&&r.options&&r.options.weekStartsOn,o=null==a?0:gt(a),i=null==n.weekStartsOn?o:gt(n.weekStartsOn);if(!(i>=0&&i<=6))throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");var s=pt(t),u=s.getUTCDay(),l=(u<i?7:0)+u-i;return s.setUTCDate(s.getUTCDate()-l),s.setUTCHours(0,0,0,0),s}function Yt(t,e){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var n=pt(t,e),r=n.getUTCFullYear(),a=e||{},o=a.locale,i=o&&o.options&&o.options.firstWeekContainsDate,s=null==i?1:gt(i),u=null==a.firstWeekContainsDate?s:gt(a.firstWeekContainsDate);if(!(u>=1&&u<=7))throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");var l=new Date(0);l.setUTCFullYear(r+1,0,u),l.setUTCHours(0,0,0,0);var c=Ht(l,e),d=new Date(0);d.setUTCFullYear(r,0,u),d.setUTCHours(0,0,0,0);var f=Ht(d,e);return n.getTime()>=c.getTime()?r+1:n.getTime()>=f.getTime()?r:r-1}function zt(t,e){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var n=e||{},r=n.locale,a=r&&r.options&&r.options.firstWeekContainsDate,o=null==a?1:gt(a),i=null==n.firstWeekContainsDate?o:gt(n.firstWeekContainsDate),s=Yt(t,e),u=new Date(0);u.setUTCFullYear(s,0,i),u.setUTCHours(0,0,0,0);var l=Ht(u,e);return l}var Wt=6048e5;function Qt(t,e){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var n=pt(t),r=Ht(n,e).getTime()-zt(n,e).getTime();return Math.round(r/Wt)+1}var Gt="midnight",Xt="noon",Kt="morning",Vt="afternoon",Jt="evening",Zt="night",te={G:function(t,e,n){var r=t.getUTCFullYear()>0?1:0;switch(e){case"G":case"GG":case"GGG":return n.era(r,{width:"abbreviated"});case"GGGGG":return n.era(r,{width:"narrow"});case"GGGG":default:return n.era(r,{width:"wide"})}},y:function(t,e,n){if("yo"===e){var r=t.getUTCFullYear(),a=r>0?r:1-r;return n.ordinalNumber(a,{unit:"year"})}return Rt(t,e)},Y:function(t,e,n,r){var a=Yt(t,r),o=a>0?a:1-a;return"YY"===e?Ot(o%100,2):"Yo"===e?n.ordinalNumber(o,{unit:"year"}):Ot(o,e.length)},R:function(t,e){return Ot(Nt(t),e.length)},u:function(t,e){return Ot(t.getUTCFullYear(),e.length)},Q:function(t,e,n){var r=Math.ceil((t.getUTCMonth()+1)/3);switch(e){case"Q":return String(r);case"QQ":return Ot(r,2);case"Qo":return n.ordinalNumber(r,{unit:"quarter"});case"QQQ":return n.quarter(r,{width:"abbreviated",context:"formatting"});case"QQQQQ":return n.quarter(r,{width:"narrow",context:"formatting"});case"QQQQ":default:return n.quarter(r,{width:"wide",context:"formatting"})}},q:function(t,e,n){var r=Math.ceil((t.getUTCMonth()+1)/3);switch(e){case"q":return String(r);case"qq":return Ot(r,2);case"qo":return n.ordinalNumber(r,{unit:"quarter"});case"qqq":return n.quarter(r,{width:"abbreviated",context:"standalone"});case"qqqqq":return n.quarter(r,{width:"narrow",context:"standalone"});case"qqqq":default:return n.quarter(r,{width:"wide",context:"standalone"})}},M:function(t,e,n){var r=t.getUTCMonth();switch(e){case"M":case"MM":return jt(t,e);case"Mo":return n.ordinalNumber(r+1,{unit:"month"});case"MMM":return n.month(r,{width:"abbreviated",context:"formatting"});case"MMMMM":return n.month(r,{width:"narrow",context:"formatting"});case"MMMM":default:return n.month(r,{width:"wide",context:"formatting"})}},L:function(t,e,n){var r=t.getUTCMonth();switch(e){case"L":return String(r+1);case"LL":return Ot(r+1,2);case"Lo":return n.ordinalNumber(r+1,{unit:"month"});case"LLL":return n.month(r,{width:"abbreviated",context:"standalone"});case"LLLLL":return n.month(r,{width:"narrow",context:"standalone"});case"LLLL":default:return n.month(r,{width:"wide",context:"standalone"})}},w:function(t,e,n,r){var a=Qt(t,r);return"wo"===e?n.ordinalNumber(a,{unit:"week"}):Ot(a,e.length)},I:function(t,e,n){var r=Bt(t);return"Io"===e?n.ordinalNumber(r,{unit:"week"}):Ot(r,e.length)},d:function(t,e,n){return"do"===e?n.ordinalNumber(t.getUTCDate(),{unit:"date"}):Et(t,e)},D:function(t,e,n){var r=function(t){if(arguments.length<1)throw new TypeError("1 argument required, but only "+arguments.length+" present");var e=pt(t),n=e.getTime();e.setUTCMonth(0,1),e.setUTCHours(0,0,0,0);var r=e.getTime(),a=n-r;return Math.floor(a/It)+1}(t);return"Do"===e?n.ordinalNumber(r,{unit:"dayOfYear"}):Ot(r,e.length)},E:function(t,e,n){var r=t.getUTCDay();switch(e){case"E":case"EE":case"EEE":return n.day(r,{width:"abbreviated",context:"formatting"});case"EEEEE":return n.day(r,{width:"narrow",context:"formatting"});case"EEEEEE":return n.day(r,{width:"short",context:"formatting"});case"EEEE":default:return n.day(r,{width:"wide",context:"formatting"})}},e:function(t,e,n,r){var a=t.getUTCDay(),o=(a-r.weekStartsOn+8)%7||7;switch(e){case"e":return String(o);case"ee":return Ot(o,2);case"eo":return n.ordinalNumber(o,{unit:"day"});case"eee":return n.day(a,{width:"abbreviated",context:"formatting"});case"eeeee":return n.day(a,{width:"narrow",context:"formatting"});case"eeeeee":return n.day(a,{width:"short",context:"formatting"});case"eeee":default:return n.day(a,{width:"wide",context:"formatting"})}},c:function(t,e,n,r){var a=t.getUTCDay(),o=(a-r.weekStartsOn+8)%7||7;switch(e){case"c":return String(o);case"cc":return Ot(o,e.length);case"co":return n.ordinalNumber(o,{unit:"day"});case"ccc":return n.day(a,{width:"abbreviated",context:"standalone"});case"ccccc":return n.day(a,{width:"narrow",context:"standalone"});case"cccccc":return n.day(a,{width:"short",context:"standalone"});case"cccc":default:return n.day(a,{width:"wide",context:"standalone"})}},i:function(t,e,n){var r=t.getUTCDay(),a=0===r?7:r;switch(e){case"i":return String(a);case"ii":return Ot(a,e.length);case"io":return n.ordinalNumber(a,{unit:"day"});case"iii":return n.day(r,{width:"abbreviated",context:"formatting"});case"iiiii":return n.day(r,{width:"narrow",context:"formatting"});case"iiiiii":return n.day(r,{width:"short",context:"formatting"});case"iiii":default:return n.day(r,{width:"wide",context:"formatting"})}},a:function(t,e,n){var r=t.getUTCHours()/12>=1?"pm":"am";switch(e){case"a":case"aa":case"aaa":return n.dayPeriod(r,{width:"abbreviated",context:"formatting"});case"aaaaa":return n.dayPeriod(r,{width:"narrow",context:"formatting"});case"aaaa":default:return n.dayPeriod(r,{width:"wide",context:"formatting"})}},b:function(t,e,n){var r,a=t.getUTCHours();switch(r=12===a?Xt:0===a?Gt:a/12>=1?"pm":"am",e){case"b":case"bb":case"bbb":return n.dayPeriod(r,{width:"abbreviated",context:"formatting"});case"bbbbb":return n.dayPeriod(r,{width:"narrow",context:"formatting"});case"bbbb":default:return n.dayPeriod(r,{width:"wide",context:"formatting"})}},B:function(t,e,n){var r,a=t.getUTCHours();switch(r=a>=17?Jt:a>=12?Vt:a>=4?Kt:Zt,e){case"B":case"BB":case"BBB":return n.dayPeriod(r,{width:"abbreviated",context:"formatting"});case"BBBBB":return n.dayPeriod(r,{width:"narrow",context:"formatting"});case"BBBB":default:return n.dayPeriod(r,{width:"wide",context:"formatting"})}},h:function(t,e,n){if("ho"===e){var r=t.getUTCHours()%12;return 0===r&&(r=12),n.ordinalNumber(r,{unit:"hour"})}return Dt(t,e)},H:function(t,e,n){return"Ho"===e?n.ordinalNumber(t.getUTCHours(),{unit:"hour"}):At(t,e)},K:function(t,e,n){var r=t.getUTCHours()%12;return"Ko"===e?n.ordinalNumber(r,{unit:"hour"}):Ot(r,e.length)},k:function(t,e,n){var r=t.getUTCHours();return 0===r&&(r=24),"ko"===e?n.ordinalNumber(r,{unit:"hour"}):Ot(r,e.length)},m:function(t,e,n){return"mo"===e?n.ordinalNumber(t.getUTCMinutes(),{unit:"minute"}):Ft(t,e)},s:function(t,e,n){return"so"===e?n.ordinalNumber(t.getUTCSeconds(),{unit:"second"}):Mt(t,e)},S:function(t,e){return $t(t,e)},X:function(t,e,n,r){var a=(r._originalDate||t).getTimezoneOffset();if(0===a)return"Z";switch(e){case"X":return ne(a);case"XXXX":case"XX":return re(a);case"XXXXX":case"XXX":default:return re(a,":")}},x:function(t,e,n,r){var a=(r._originalDate||t).getTimezoneOffset();switch(e){case"x":return ne(a);case"xxxx":case"xx":return re(a);case"xxxxx":case"xxx":default:return re(a,":")}},O:function(t,e,n,r){var a=(r._originalDate||t).getTimezoneOffset();switch(e){case"O":case"OO":case"OOO":return"GMT"+ee(a,":");case"OOOO":default:return"GMT"+re(a,":")}},z:function(t,e,n,r){var a=(r._originalDate||t).getTimezoneOffset();switch(e){case"z":case"zz":case"zzz":return"GMT"+ee(a,":");case"zzzz":default:return"GMT"+re(a,":")}},t:function(t,e,n,r){var a=r._originalDate||t;return Ot(Math.floor(a.getTime()/1e3),e.length)},T:function(t,e,n,r){return Ot((r._originalDate||t).getTime(),e.length)}};function ee(t,e){var n=t>0?"-":"+",r=Math.abs(t),a=Math.floor(r/60),o=r%60;if(0===o)return n+String(a);var i=e||"";return n+String(a)+i+Ot(o,2)}function ne(t,e){return t%60==0?(t>0?"-":"+")+Ot(Math.abs(t)/60,2):re(t,e)}function re(t,e){var n=e||"",r=t>0?"-":"+",a=Math.abs(t);return r+Ot(Math.floor(a/60),2)+n+Ot(a%60,2)}function ae(t,e){switch(t){case"P":return e.date({width:"short"});case"PP":return e.date({width:"medium"});case"PPP":return e.date({width:"long"});case"PPPP":default:return e.date({width:"full"})}}function oe(t,e){switch(t){case"p":return e.time({width:"short"});case"pp":return e.time({width:"medium"});case"ppp":return e.time({width:"long"});case"pppp":default:return e.time({width:"full"})}}var ie={p:oe,P:function(t,e){var n,r=t.match(/(P+)(p+)?/),a=r[1],o=r[2];if(!o)return ae(t,e);switch(a){case"P":n=e.dateTime({width:"short"});break;case"PP":n=e.dateTime({width:"medium"});break;case"PPP":n=e.dateTime({width:"long"});break;case"PPPP":default:n=e.dateTime({width:"full"})}return n.replace("{{date}}",ae(a,e)).replace("{{time}}",oe(o,e))}},se=["D","DD"],ue=["YY","YYYY"];function le(t){return-1!==se.indexOf(t)}function ce(t){return-1!==ue.indexOf(t)}function de(t){if("YYYY"===t)throw new RangeError("Use `yyyy` instead of `YYYY` for formatting years; see: https://git.io/fxCyr");if("YY"===t)throw new RangeError("Use `yy` instead of `YY` for formatting years; see: https://git.io/fxCyr");if("D"===t)throw new RangeError("Use `d` instead of `D` for formatting days of the month; see: https://git.io/fxCyr");if("DD"===t)throw new RangeError("Use `dd` instead of `DD` for formatting days of the month; see: https://git.io/fxCyr")}var fe=/[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,he=/P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,pe=/^'(.*?)'?$/,ge=/''/g,me=/[a-zA-Z]/;function ve(t){return t.match(pe)[1].replace(ge,"'")}function we(t,e){if(null==t)throw new TypeError("assign requires that input parameter not be null or undefined");for(var n in e=e||{})e.hasOwnProperty(n)&&(t[n]=e[n]);return t}function be(t,e,n){if(arguments.length<2)throw new TypeError("2 arguments required, but only "+arguments.length+" present");var r=n||{},a=r.locale,o=a&&a.options&&a.options.weekStartsOn,i=null==o?0:gt(o),s=null==r.weekStartsOn?i:gt(r.weekStartsOn);if(!(s>=0&&s<=6))throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");var u=pt(t),l=gt(e),c=u.getUTCDay(),d=l%7,f=(d+7)%7,h=(f<s?7:0)+l-c;return u.setUTCDate(u.getUTCDate()+h),u}var ye=/^(1[0-2]|0?\d)/,_e=/^(3[0-1]|[0-2]?\d)/,Te=/^(36[0-6]|3[0-5]\d|[0-2]?\d?\d)/,Pe=/^(5[0-3]|[0-4]?\d)/,Ce=/^(2[0-3]|[0-1]?\d)/,xe=/^(2[0-4]|[0-1]?\d)/,Se=/^(1[0-1]|0?\d)/,ke=/^(1[0-2]|0?\d)/,Oe=/^[0-5]?\d/,Re=/^[0-5]?\d/,je=/^\d/,Ee=/^\d{1,2}/,De=/^\d{1,3}/,Ae=/^\d{1,4}/,Fe=/^-?\d+/,Me=/^-?\d/,$e=/^-?\d{1,2}/,Ie=/^-?\d{1,3}/,Ue=/^-?\d{1,4}/,Ne=/^([+-])(\d{2})(\d{2})?|Z/,Le=/^([+-])(\d{2})(\d{2})|Z/,qe=/^([+-])(\d{2})(\d{2})((\d{2}))?|Z/,Be=/^([+-])(\d{2}):(\d{2})|Z/,He=/^([+-])(\d{2}):(\d{2})(:(\d{2}))?|Z/;function Ye(t,e,n){var r=e.match(t);if(!r)return null;var a=parseInt(r[0],10);return{value:n?n(a):a,rest:e.slice(r[0].length)}}function ze(t,e){var n=e.match(t);return n?"Z"===n[0]?{value:0,rest:e.slice(1)}:{value:("+"===n[1]?1:-1)*(36e5*(n[2]?parseInt(n[2],10):0)+6e4*(n[3]?parseInt(n[3],10):0)+1e3*(n[5]?parseInt(n[5],10):0)),rest:e.slice(n[0].length)}:null}function We(t,e){return Ye(Fe,t,e)}function Qe(t,e,n){switch(t){case 1:return Ye(je,e,n);case 2:return Ye(Ee,e,n);case 3:return Ye(De,e,n);case 4:return Ye(Ae,e,n);default:return Ye(new RegExp("^\\d{1,"+t+"}"),e,n)}}function Ge(t,e,n){switch(t){case 1:return Ye(Me,e,n);case 2:return Ye($e,e,n);case 3:return Ye(Ie,e,n);case 4:return Ye(Ue,e,n);default:return Ye(new RegExp("^-?\\d{1,"+t+"}"),e,n)}}function Xe(t){switch(t){case"morning":return 4;case"evening":return 17;case"pm":case"noon":case"afternoon":return 12;case"am":case"midnight":case"night":default:return 0}}function Ke(t,e){var n,r=e>0,a=r?e:1-e;if(a<=50)n=t||100;else{var o=a+50;n=t+100*Math.floor(o/100)-(t>=o%100?100:0)}return r?n:1-n}var Ve=[31,28,31,30,31,30,31,31,30,31,30,31],Je=[31,29,31,30,31,30,31,31,30,31,30,31];function Ze(t){return t%400==0||t%4==0&&t%100!=0}var tn={G:{priority:140,parse:function(t,e,n,r){switch(e){case"G":case"GG":case"GGG":return n.era(t,{width:"abbreviated"})||n.era(t,{width:"narrow"});case"GGGGG":return n.era(t,{width:"narrow"});case"GGGG":default:return n.era(t,{width:"wide"})||n.era(t,{width:"abbreviated"})||n.era(t,{width:"narrow"})}},set:function(t,e,n,r){return e.era=n,t.setUTCFullYear(n,0,1),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["R","u","t","T"]},y:{priority:130,parse:function(t,e,n,r){var a=function(t){return{year:t,isTwoDigitYear:"yy"===e}};switch(e){case"y":return Qe(4,t,a);case"yo":return n.ordinalNumber(t,{unit:"year",valueCallback:a});default:return Qe(e.length,t,a)}},validate:function(t,e,n){return e.isTwoDigitYear||e.year>0},set:function(t,e,n,r){var a=t.getUTCFullYear();if(n.isTwoDigitYear){var o=Ke(n.year,a);return t.setUTCFullYear(o,0,1),t.setUTCHours(0,0,0,0),t}var i="era"in e&&1!==e.era?1-n.year:n.year;return t.setUTCFullYear(i,0,1),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["Y","R","u","w","I","i","e","c","t","T"]},Y:{priority:130,parse:function(t,e,n,r){var a=function(t){return{year:t,isTwoDigitYear:"YY"===e}};switch(e){case"Y":return Qe(4,t,a);case"Yo":return n.ordinalNumber(t,{unit:"year",valueCallback:a});default:return Qe(e.length,t,a)}},validate:function(t,e,n){return e.isTwoDigitYear||e.year>0},set:function(t,e,n,r){var a=Yt(t,r);if(n.isTwoDigitYear){var o=Ke(n.year,a);return t.setUTCFullYear(o,0,r.firstWeekContainsDate),t.setUTCHours(0,0,0,0),Ht(t,r)}var i="era"in e&&1!==e.era?1-n.year:n.year;return t.setUTCFullYear(i,0,r.firstWeekContainsDate),t.setUTCHours(0,0,0,0),Ht(t,r)},incompatibleTokens:["y","R","u","Q","q","M","L","I","d","D","i","t","T"]},R:{priority:130,parse:function(t,e,n,r){return Ge("R"===e?4:e.length,t)},set:function(t,e,n,r){var a=new Date(0);return a.setUTCFullYear(n,0,4),a.setUTCHours(0,0,0,0),Ut(a)},incompatibleTokens:["G","y","Y","u","Q","q","M","L","w","d","D","e","c","t","T"]},u:{priority:130,parse:function(t,e,n,r){return Ge("u"===e?4:e.length,t)},set:function(t,e,n,r){return t.setUTCFullYear(n,0,1),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["G","y","Y","R","w","I","i","e","c","t","T"]},Q:{priority:120,parse:function(t,e,n,r){switch(e){case"Q":case"QQ":return Qe(e.length,t);case"Qo":return n.ordinalNumber(t,{unit:"quarter"});case"QQQ":return n.quarter(t,{width:"abbreviated",context:"formatting"})||n.quarter(t,{width:"narrow",context:"formatting"});case"QQQQQ":return n.quarter(t,{width:"narrow",context:"formatting"});case"QQQQ":default:return n.quarter(t,{width:"wide",context:"formatting"})||n.quarter(t,{width:"abbreviated",context:"formatting"})||n.quarter(t,{width:"narrow",context:"formatting"})}},validate:function(t,e,n){return e>=1&&e<=4},set:function(t,e,n,r){return t.setUTCMonth(3*(n-1),1),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["Y","R","q","M","L","w","I","d","D","i","e","c","t","T"]},q:{priority:120,parse:function(t,e,n,r){switch(e){case"q":case"qq":return Qe(e.length,t);case"qo":return n.ordinalNumber(t,{unit:"quarter"});case"qqq":return n.quarter(t,{width:"abbreviated",context:"standalone"})||n.quarter(t,{width:"narrow",context:"standalone"});case"qqqqq":return n.quarter(t,{width:"narrow",context:"standalone"});case"qqqq":default:return n.quarter(t,{width:"wide",context:"standalone"})||n.quarter(t,{width:"abbreviated",context:"standalone"})||n.quarter(t,{width:"narrow",context:"standalone"})}},validate:function(t,e,n){return e>=1&&e<=4},set:function(t,e,n,r){return t.setUTCMonth(3*(n-1),1),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["Y","R","Q","M","L","w","I","d","D","i","e","c","t","T"]},M:{priority:110,parse:function(t,e,n,r){var a=function(t){return t-1};switch(e){case"M":return Ye(ye,t,a);case"MM":return Qe(2,t,a);case"Mo":return n.ordinalNumber(t,{unit:"month",valueCallback:a});case"MMM":return n.month(t,{width:"abbreviated",context:"formatting"})||n.month(t,{width:"narrow",context:"formatting"});case"MMMMM":return n.month(t,{width:"narrow",context:"formatting"});case"MMMM":default:return n.month(t,{width:"wide",context:"formatting"})||n.month(t,{width:"abbreviated",context:"formatting"})||n.month(t,{width:"narrow",context:"formatting"})}},validate:function(t,e,n){return e>=0&&e<=11},set:function(t,e,n,r){return t.setUTCMonth(n,1),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["Y","R","q","Q","L","w","I","D","i","e","c","t","T"]},L:{priority:110,parse:function(t,e,n,r){var a=function(t){return t-1};switch(e){case"L":return Ye(ye,t,a);case"LL":return Qe(2,t,a);case"Lo":return n.ordinalNumber(t,{unit:"month",valueCallback:a});case"LLL":return n.month(t,{width:"abbreviated",context:"standalone"})||n.month(t,{width:"narrow",context:"standalone"});case"LLLLL":return n.month(t,{width:"narrow",context:"standalone"});case"LLLL":default:return n.month(t,{width:"wide",context:"standalone"})||n.month(t,{width:"abbreviated",context:"standalone"})||n.month(t,{width:"narrow",context:"standalone"})}},validate:function(t,e,n){return e>=0&&e<=11},set:function(t,e,n,r){return t.setUTCMonth(n,1),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["Y","R","q","Q","M","w","I","D","i","e","c","t","T"]},w:{priority:100,parse:function(t,e,n,r){switch(e){case"w":return Ye(Pe,t);case"wo":return n.ordinalNumber(t,{unit:"week"});default:return Qe(e.length,t)}},validate:function(t,e,n){return e>=1&&e<=53},set:function(t,e,n,r){return Ht(function(t,e,n){if(arguments.length<2)throw new TypeError("2 arguments required, but only "+arguments.length+" present");var r=pt(t),a=gt(e),o=Qt(r,n)-a;return r.setUTCDate(r.getUTCDate()-7*o),r}(t,n,r),r)},incompatibleTokens:["y","R","u","q","Q","M","L","I","d","D","i","t","T"]},I:{priority:100,parse:function(t,e,n,r){switch(e){case"I":return Ye(Pe,t);case"Io":return n.ordinalNumber(t,{unit:"week"});default:return Qe(e.length,t)}},validate:function(t,e,n){return e>=1&&e<=53},set:function(t,e,n,r){return Ut(function(t,e){if(arguments.length<2)throw new TypeError("2 arguments required, but only "+arguments.length+" present");var n=pt(t),r=gt(e),a=Bt(n)-r;return n.setUTCDate(n.getUTCDate()-7*a),n}(t,n,r),r)},incompatibleTokens:["y","Y","u","q","Q","M","L","w","d","D","e","c","t","T"]},d:{priority:90,parse:function(t,e,n,r){switch(e){case"d":return Ye(_e,t);case"do":return n.ordinalNumber(t,{unit:"date"});default:return Qe(e.length,t)}},validate:function(t,e,n){var r=Ze(t.getUTCFullYear()),a=t.getUTCMonth();return r?e>=1&&e<=Je[a]:e>=1&&e<=Ve[a]},set:function(t,e,n,r){return t.setUTCDate(n),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["Y","R","q","Q","w","I","D","i","e","c","t","T"]},D:{priority:90,parse:function(t,e,n,r){switch(e){case"D":case"DD":return Ye(Te,t);case"Do":return n.ordinalNumber(t,{unit:"date"});default:return Qe(e.length,t)}},validate:function(t,e,n){return Ze(t.getUTCFullYear())?e>=1&&e<=366:e>=1&&e<=365},set:function(t,e,n,r){return t.setUTCMonth(0,n),t.setUTCHours(0,0,0,0),t},incompatibleTokens:["Y","R","q","Q","M","L","w","I","d","E","i","e","c","t","T"]},E:{priority:90,parse:function(t,e,n,r){switch(e){case"E":case"EE":case"EEE":return n.day(t,{width:"abbreviated",context:"formatting"})||n.day(t,{width:"short",context:"formatting"})||n.day(t,{width:"narrow",context:"formatting"});case"EEEEE":return n.day(t,{width:"narrow",context:"formatting"});case"EEEEEE":return n.day(t,{width:"short",context:"formatting"})||n.day(t,{width:"narrow",context:"formatting"});case"EEEE":default:return n.day(t,{width:"wide",context:"formatting"})||n.day(t,{width:"abbreviated",context:"formatting"})||n.day(t,{width:"short",context:"formatting"})||n.day(t,{width:"narrow",context:"formatting"})}},validate:function(t,e,n){return e>=0&&e<=6},set:function(t,e,n,r){return(t=be(t,n,r)).setUTCHours(0,0,0,0),t},incompatibleTokens:["D","i","e","c","t","T"]},e:{priority:90,parse:function(t,e,n,r){var a=function(t){var e=7*Math.floor((t-1)/7);return(t+r.weekStartsOn+6)%7+e};switch(e){case"e":case"ee":return Qe(e.length,t,a);case"eo":return n.ordinalNumber(t,{unit:"day",valueCallback:a});case"eee":return n.day(t,{width:"abbreviated",context:"formatting"})||n.day(t,{width:"short",context:"formatting"})||n.day(t,{width:"narrow",context:"formatting"});case"eeeee":return n.day(t,{width:"narrow",context:"formatting"});case"eeeeee":return n.day(t,{width:"short",context:"formatting"})||n.day(t,{width:"narrow",context:"formatting"});case"eeee":default:return n.day(t,{width:"wide",context:"formatting"})||n.day(t,{width:"abbreviated",context:"formatting"})||n.day(t,{width:"short",context:"formatting"})||n.day(t,{width:"narrow",context:"formatting"})}},validate:function(t,e,n){return e>=0&&e<=6},set:function(t,e,n,r){return(t=be(t,n,r)).setUTCHours(0,0,0,0),t},incompatibleTokens:["y","R","u","q","Q","M","L","I","d","D","E","i","c","t","T"]},c:{priority:90,parse:function(t,e,n,r){var a=function(t){var e=7*Math.floor((t-1)/7);return(t+r.weekStartsOn+6)%7+e};switch(e){case"c":case"cc":return Qe(e.length,t,a);case"co":return n.ordinalNumber(t,{unit:"day",valueCallback:a});case"ccc":return n.day(t,{width:"abbreviated",context:"standalone"})||n.day(t,{width:"short",context:"standalone"})||n.day(t,{width:"narrow",context:"standalone"});case"ccccc":return n.day(t,{width:"narrow",context:"standalone"});case"cccccc":return n.day(t,{width:"short",context:"standalone"})||n.day(t,{width:"narrow",context:"standalone"});case"cccc":default:return n.day(t,{width:"wide",context:"standalone"})||n.day(t,{width:"abbreviated",context:"standalone"})||n.day(t,{width:"short",context:"standalone"})||n.day(t,{width:"narrow",context:"standalone"})}},validate:function(t,e,n){return e>=0&&e<=6},set:function(t,e,n,r){return(t=be(t,n,r)).setUTCHours(0,0,0,0),t},incompatibleTokens:["y","R","u","q","Q","M","L","I","d","D","E","i","e","t","T"]},i:{priority:90,parse:function(t,e,n,r){var a=function(t){return 0===t?7:t};switch(e){case"i":case"ii":return Qe(e.length,t);case"io":return n.ordinalNumber(t,{unit:"day"});case"iii":return n.day(t,{width:"abbreviated",context:"formatting",valueCallback:a})||n.day(t,{width:"short",context:"formatting",valueCallback:a})||n.day(t,{width:"narrow",context:"formatting",valueCallback:a});case"iiiii":return n.day(t,{width:"narrow",context:"formatting",valueCallback:a});case"iiiiii":return n.day(t,{width:"short",context:"formatting",valueCallback:a})||n.day(t,{width:"narrow",context:"formatting",valueCallback:a});case"iiii":default:return n.day(t,{width:"wide",context:"formatting",valueCallback:a})||n.day(t,{width:"abbreviated",context:"formatting",valueCallback:a})||n.day(t,{width:"short",context:"formatting",valueCallback:a})||n.day(t,{width:"narrow",context:"formatting",valueCallback:a})}},validate:function(t,e,n){return e>=1&&e<=7},set:function(t,e,n,r){return(t=function(t,e){if(arguments.length<2)throw new TypeError("2 arguments required, but only "+arguments.length+" present");var n=gt(e);n%7==0&&(n-=7);var r=1,a=pt(t),o=a.getUTCDay(),i=((n%7+7)%7<r?7:0)+n-o;return a.setUTCDate(a.getUTCDate()+i),a}(t,n,r)).setUTCHours(0,0,0,0),t},incompatibleTokens:["y","Y","u","q","Q","M","L","w","d","D","E","e","c","t","T"]},a:{priority:80,parse:function(t,e,n,r){switch(e){case"a":case"aa":case"aaa":return n.dayPeriod(t,{width:"abbreviated",context:"formatting"})||n.dayPeriod(t,{width:"narrow",context:"formatting"});case"aaaaa":return n.dayPeriod(t,{width:"narrow",context:"formatting"});case"aaaa":default:return n.dayPeriod(t,{width:"wide",context:"formatting"})||n.dayPeriod(t,{width:"abbreviated",context:"formatting"})||n.dayPeriod(t,{width:"narrow",context:"formatting"})}},set:function(t,e,n,r){return t.setUTCHours(Xe(n),0,0,0),t},incompatibleTokens:["b","B","H","K","k","t","T"]},b:{priority:80,parse:function(t,e,n,r){switch(e){case"b":case"bb":case"bbb":return n.dayPeriod(t,{width:"abbreviated",context:"formatting"})||n.dayPeriod(t,{width:"narrow",context:"formatting"});case"bbbbb":return n.dayPeriod(t,{width:"narrow",context:"formatting"});case"bbbb":default:return n.dayPeriod(t,{width:"wide",context:"formatting"})||n.dayPeriod(t,{width:"abbreviated",context:"formatting"})||n.dayPeriod(t,{width:"narrow",context:"formatting"})}},set:function(t,e,n,r){return t.setUTCHours(Xe(n),0,0,0),t},incompatibleTokens:["a","B","H","K","k","t","T"]},B:{priority:80,parse:function(t,e,n,r){switch(e){case"B":case"BB":case"BBB":return n.dayPeriod(t,{width:"abbreviated",context:"formatting"})||n.dayPeriod(t,{width:"narrow",context:"formatting"});case"BBBBB":return n.dayPeriod(t,{width:"narrow",context:"formatting"});case"BBBB":default:return n.dayPeriod(t,{width:"wide",context:"formatting"})||n.dayPeriod(t,{width:"abbreviated",context:"formatting"})||n.dayPeriod(t,{width:"narrow",context:"formatting"})}},set:function(t,e,n,r){return t.setUTCHours(Xe(n),0,0,0),t},incompatibleTokens:["a","b","t","T"]},h:{priority:70,parse:function(t,e,n,r){switch(e){case"h":return Ye(ke,t);case"ho":return n.ordinalNumber(t,{unit:"hour"});default:return Qe(e.length,t)}},validate:function(t,e,n){return e>=1&&e<=12},set:function(t,e,n,r){var a=t.getUTCHours()>=12;return a&&n<12?t.setUTCHours(n+12,0,0,0):a||12!==n?t.setUTCHours(n,0,0,0):t.setUTCHours(0,0,0,0),t},incompatibleTokens:["H","K","k","t","T"]},H:{priority:70,parse:function(t,e,n,r){switch(e){case"H":return Ye(Ce,t);case"Ho":return n.ordinalNumber(t,{unit:"hour"});default:return Qe(e.length,t)}},validate:function(t,e,n){return e>=0&&e<=23},set:function(t,e,n,r){return t.setUTCHours(n,0,0,0),t},incompatibleTokens:["a","b","h","K","k","t","T"]},K:{priority:70,parse:function(t,e,n,r){switch(e){case"K":return Ye(Se,t);case"Ko":return n.ordinalNumber(t,{unit:"hour"});default:return Qe(e.length,t)}},validate:function(t,e,n){return e>=0&&e<=11},set:function(t,e,n,r){return t.getUTCHours()>=12&&n<12?t.setUTCHours(n+12,0,0,0):t.setUTCHours(n,0,0,0),t},incompatibleTokens:["a","b","h","H","k","t","T"]},k:{priority:70,parse:function(t,e,n,r){switch(e){case"k":return Ye(xe,t);case"ko":return n.ordinalNumber(t,{unit:"hour"});default:return Qe(e.length,t)}},validate:function(t,e,n){return e>=1&&e<=24},set:function(t,e,n,r){var a=n<=24?n%24:n;return t.setUTCHours(a,0,0,0),t},incompatibleTokens:["a","b","h","H","K","t","T"]},m:{priority:60,parse:function(t,e,n,r){switch(e){case"m":return Ye(Oe,t);case"mo":return n.ordinalNumber(t,{unit:"minute"});default:return Qe(e.length,t)}},validate:function(t,e,n){return e>=0&&e<=59},set:function(t,e,n,r){return t.setUTCMinutes(n,0,0),t},incompatibleTokens:["t","T"]},s:{priority:50,parse:function(t,e,n,r){switch(e){case"s":return Ye(Re,t);case"so":return n.ordinalNumber(t,{unit:"second"});default:return Qe(e.length,t)}},validate:function(t,e,n){return e>=0&&e<=59},set:function(t,e,n,r){return t.setUTCSeconds(n,0),t},incompatibleTokens:["t","T"]},S:{priority:30,parse:function(t,e,n,r){return Qe(e.length,t,(function(t){return Math.floor(t*Math.pow(10,3-e.length))}))},set:function(t,e,n,r){return t.setUTCMilliseconds(n),t},incompatibleTokens:["t","T"]},X:{priority:10,parse:function(t,e,n,r){switch(e){case"X":return ze(Ne,t);case"XX":return ze(Le,t);case"XXXX":return ze(qe,t);case"XXXXX":return ze(He,t);case"XXX":default:return ze(Be,t)}},set:function(t,e,n,r){return e.timestampIsSet?t:new Date(t.getTime()-n)},incompatibleTokens:["t","T","x"]},x:{priority:10,parse:function(t,e,n,r){switch(e){case"x":return ze(Ne,t);case"xx":return ze(Le,t);case"xxxx":return ze(qe,t);case"xxxxx":return ze(He,t);case"xxx":default:return ze(Be,t)}},set:function(t,e,n,r){return e.timestampIsSet?t:new Date(t.getTime()-n)},incompatibleTokens:["t","T","X"]},t:{priority:40,parse:function(t,e,n,r){return We(t)},set:function(t,e,n,r){return[new Date(1e3*n),{timestampIsSet:!0}]},incompatibleTokens:"*"},T:{priority:20,parse:function(t,e,n,r){return We(t)},set:function(t,e,n,r){return[new Date(n),{timestampIsSet:!0}]},incompatibleTokens:"*"}},en=/[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,nn=/P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,rn=/^'(.*?)'?$/,an=/''/g,on=/\S/,sn=/[a-zA-Z]/;function un(t,e,n,r){if(arguments.length<3)throw new TypeError("3 arguments required, but only "+arguments.length+" present");var a=String(t),o=String(e),i=r||{},s=i.locale||St;if(!s.match)throw new RangeError("locale must contain match property");var u=s.options&&s.options.firstWeekContainsDate,l=null==u?1:gt(u),c=null==i.firstWeekContainsDate?l:gt(i.firstWeekContainsDate);if(!(c>=1&&c<=7))throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");var d=s.options&&s.options.weekStartsOn,f=null==d?0:gt(d),h=null==i.weekStartsOn?f:gt(i.weekStartsOn);if(!(h>=0&&h<=6))throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");if(""===o)return""===a?pt(n):new Date(NaN);var p,g={firstWeekContainsDate:c,weekStartsOn:h,locale:s},m=[{priority:10,set:ln,index:0}],v=o.match(nn).map((function(t){var e=t[0];return"p"===e||"P"===e?(0,ie[e])(t,s.formatLong,g):t})).join("").match(en),w=[];for(p=0;p<v.length;p++){var b=v[p];!i.useAdditionalWeekYearTokens&&ce(b)&&de(b),!i.useAdditionalDayOfYearTokens&&le(b)&&de(b);var y=b[0],_=tn[y];if(_){var T=_.incompatibleTokens;if(Array.isArray(T)){for(var P=void 0,C=0;C<w.length;C++){var x=w[C].token;if(-1!==T.indexOf(x)||x===y){P=w[C];break}}if(P)throw new RangeError("The format string mustn't contain `".concat(P.fullToken,"` and `").concat(b,"` at the same time"))}else if("*"===_.incompatibleTokens&&w.length)throw new RangeError("The format string mustn't contain `".concat(b,"` and any other token at the same time"));w.push({token:y,fullToken:b});var S=_.parse(a,b,s.match,g);if(!S)return new Date(NaN);m.push({priority:_.priority,set:_.set,validate:_.validate,value:S.value,index:m.length}),a=S.rest}else{if(y.match(sn))throw new RangeError("Format string contains an unescaped latin alphabet character `"+y+"`");if("''"===b?b="'":"'"===y&&(b=cn(b)),0!==a.indexOf(b))return new Date(NaN);a=a.slice(b.length)}}if(a.length>0&&on.test(a))return new Date(NaN);var k=m.map((function(t){return t.priority})).sort((function(t,e){return e-t})).filter((function(t,e,n){return n.indexOf(t)===e})).map((function(t){return m.filter((function(e){return e.priority===t})).reverse()})).map((function(t){return t[0]})),O=pt(n);if(isNaN(O))return new Date(NaN);var R=kt(O,vt(O)),j={};for(p=0;p<k.length;p++){var E=k[p];if(E.validate&&!E.validate(R,E.value,g))return new Date(NaN);var D=E.set(R,j,E.value,g);D[0]?(R=D[0],we(j,D[1])):R=D}return R}function ln(t,e){if(e.timestampIsSet)return t;var n=new Date(0);return n.setFullYear(t.getUTCFullYear(),t.getUTCMonth(),t.getUTCDate()),n.setHours(t.getUTCHours(),t.getUTCMinutes(),t.getUTCSeconds(),t.getUTCMilliseconds()),n}function cn(t){return t.match(rn)[1].replace(an,"'")}var dn=Z(ot);dn.isRight=!0,dn.compare=function(t,e,n){function r(t){return n&&n.dateInputFormat?un("".concat(t),"".concat(n.dateInputFormat),new Date):t}return t=r(t),e=r(e),wt(t)?wt(e)?function(t,e){if(arguments.length<2)throw new TypeError("2 arguments required, but only "+arguments.length+" present");var n=pt(t),r=pt(e),a=n.getTime()-r.getTime();return a<0?-1:a>0?1:a}(t,e):1:-1},dn.format=function(t,e){if(null==t)return"";var n=un(t,e.dateInputFormat,new Date);return wt(n)?function(t,e,n){if(arguments.length<2)throw new TypeError("2 arguments required, but only "+arguments.length+" present");var r=String(e),a=n||{},o=a.locale||St,i=o.options&&o.options.firstWeekContainsDate,s=null==i?1:gt(i),u=null==a.firstWeekContainsDate?s:gt(a.firstWeekContainsDate);if(!(u>=1&&u<=7))throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");var l=o.options&&o.options.weekStartsOn,c=null==l?0:gt(l),d=null==a.weekStartsOn?c:gt(a.weekStartsOn);if(!(d>=0&&d<=6))throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");if(!o.localize)throw new RangeError("locale must contain localize property");if(!o.formatLong)throw new RangeError("locale must contain formatLong property");var f=pt(t);if(!wt(f))throw new RangeError("Invalid time value");var h=vt(f),p=kt(f,h),g={firstWeekContainsDate:u,weekStartsOn:d,locale:o,_originalDate:f};return r.match(he).map((function(t){var e=t[0];return"p"===e||"P"===e?(0,ie[e])(t,o.formatLong,g):t})).join("").match(fe).map((function(t){if("''"===t)return"'";var e=t[0];if("'"===e)return ve(t);var n=te[e];if(n)return!a.useAdditionalWeekYearTokens&&ce(t)&&de(t),!a.useAdditionalDayOfYearTokens&&le(t)&&de(t),n(p,t,o.localize,g);if(e.match(me))throw new RangeError("Format string contains an unescaped latin alphabet character `"+e+"`");return t})).join("")}(n,e.dateOutputFormat):(console.error('Not a valid date: "'.concat(t,'"')),null)};var fn=Object.freeze({default:dn}),hn=Z(ot);hn.isRight=!0,hn.filterPredicate=function(t,e){return 0===hn.compare(t,e)},hn.compare=function(t,e){function n(t){return null==t?-1/0:t.indexOf(".")>=0?parseFloat(t):parseInt(t,10)}return(t="number"==typeof t?t:n(t))<(e="number"==typeof e?e:n(e))?-1:t>e?1:0};var pn=Object.freeze({default:hn}),gn=Z(hn);gn.format=function(t){return null==t?"":parseFloat(Math.round(100*t)/100).toFixed(2)};var mn=Object.freeze({default:gn}),vn=Z(hn);vn.format=function(t){return null==t?"":"".concat(parseFloat(100*t).toFixed(2),"%")};var wn=Object.freeze({default:vn}),bn=Z(ot);bn.isRight=!0,bn.filterPredicate=function(t,e){return 0===bn.compare(t,e)},bn.compare=function(t,e){function n(t){return"boolean"==typeof t?t?1:0:"string"==typeof t?"true"===t?1:0:-1/0}return(t=n(t))<(e=n(e))?-1:t>e?1:0};var yn={},_n={date:fn,decimal:mn,number:pn,percentage:wn,boolean:Object.freeze({default:bn})};k(Object.keys(_n),(function(t){var e=t.replace(/^\.\//,"").replace(/\.js/,"");yn[e]=_n[t].default}));var Tn=it({render:function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{class:t.wrapStyleClasses},[t.isLoading?n("div",{staticClass:"vgt-loading vgt-center-align"},[t._t("loadingContent",[n("span",{staticClass:"vgt-loading__content"},[t._v("\n        Loading...\n      ")])])],2):t._e(),t._v(" "),n("div",{staticClass:"vgt-inner-wrap",class:{"is-loading":t.isLoading}},[t.paginate&&t.paginateOnTop?t._t("pagination-top",[n("vgt-pagination",{ref:"paginationTop",attrs:{perPage:t.perPage,rtl:t.rtl,total:t.totalRows||t.totalRowCount,mode:t.paginationMode,nextText:t.nextText,prevText:t.prevText,rowsPerPageText:t.rowsPerPageText,customRowsPerPageDropdown:t.customRowsPerPageDropdown,paginateDropdownAllowAll:t.paginateDropdownAllowAll,ofText:t.ofText,pageText:t.pageText,allText:t.allText},on:{"page-changed":t.pageChanged,"per-page-changed":t.perPageChanged}})],{pageChanged:t.pageChanged,perPageChanged:t.perPageChanged,total:t.totalRows||t.totalRowCount}):t._e(),t._v(" "),n("vgt-global-search",{attrs:{"search-enabled":t.searchEnabled&&null==t.externalSearchQuery,"global-search-placeholder":t.searchPlaceholder},on:{"on-keyup":t.searchTableOnKeyUp,"on-enter":t.searchTableOnEnter},model:{value:t.globalSearchTerm,callback:function(e){t.globalSearchTerm=e},expression:"globalSearchTerm"}},[n("template",{slot:"internal-table-actions"},[t._t("table-actions")],2)],2),t._v(" "),t.selectedRowCount&&!t.disableSelectInfo?n("div",{staticClass:"vgt-selection-info-row clearfix",class:t.selectionInfoClass},[t._v("\n      "+t._s(t.selectionInfo)+"\n      "),n("a",{attrs:{href:""},on:{click:function(e){return e.preventDefault(),t.unselectAllInternal(!0)}}},[t._v("\n        "+t._s(t.clearSelectionText)+"\n      ")]),t._v(" "),n("div",{staticClass:"vgt-selection-info-row__actions vgt-pull-right"},[t._t("selected-row-actions")],2)]):t._e(),t._v(" "),n("div",{staticClass:"vgt-fixed-header"},[t.fixedHeader?n("table",{class:t.tableStyleClasses},[n("vgt-table-header",{ref:"table-header-secondary",tag:"thead",attrs:{columns:t.columns,"line-numbers":t.lineNumbers,selectable:t.selectable,"all-selected":t.allSelected,"all-selected-indeterminate":t.allSelectedIndeterminate,mode:t.mode,sortable:t.sortable,"typed-columns":t.typedColumns,getClasses:t.getClasses,searchEnabled:t.searchEnabled,paginated:t.paginated,"table-ref":t.$refs.table},on:{"on-toggle-select-all":t.toggleSelectAll,"on-sort-change":t.changeSort,"filter-changed":t.filterRows},scopedSlots:t._u([{key:"table-column",fn:function(e){return[t._t("table-column",[n("span",[t._v(t._s(e.column.label))])],{column:e.column})]}}],null,!0)})],1):t._e()]),t._v(" "),n("div",{class:{"vgt-responsive":t.responsive},style:t.wrapperStyles},[n("table",{ref:"table",class:t.tableStyles},[n("vgt-table-header",{ref:"table-header-primary",tag:"thead",attrs:{columns:t.columns,"line-numbers":t.lineNumbers,selectable:t.selectable,"all-selected":t.allSelected,"all-selected-indeterminate":t.allSelectedIndeterminate,mode:t.mode,sortable:t.sortable,"typed-columns":t.typedColumns,getClasses:t.getClasses,searchEnabled:t.searchEnabled},on:{"on-toggle-select-all":t.toggleSelectAll,"on-sort-change":t.changeSort,"filter-changed":t.filterRows},scopedSlots:t._u([{key:"table-column",fn:function(e){return[t._t("table-column",[n("span",[t._v(t._s(e.column.label))])],{column:e.column})]}},{key:"column-filter",fn:function(e){return[t._t("column-filter",null,{column:e.column,updateFilters:e.updateFilters})]}}],null,!0)}),t._v(" "),t._l(t.paginated,(function(e,r){return n("tbody",{key:r},[t.groupHeaderOnTop?n("vgt-header-row",{class:t.getRowStyleClass(e),attrs:{"header-row":e,columns:t.columns,"line-numbers":t.lineNumbers,selectable:t.selectable,"select-all-by-group":t.selectAllByGroup,collapsable:t.groupOptions.collapsable,"collect-formatted":t.collectFormatted,"formatted-row":t.formattedRow,"get-classes":t.getClasses,"full-colspan":t.fullColspan,groupIndex:r},on:{vgtExpand:function(n){return t.toggleExpand(e[t.rowKeyField])},"on-select-group-change":function(n){return t.toggleSelectGroup(n,e)}},scopedSlots:t._u([{key:"table-header-row",fn:function(e){return t.hasHeaderRowTemplate?[t._t("table-header-row",null,{column:e.column,formattedRow:e.formattedRow,row:e.row})]:void 0}}],null,!0)}):t._e(),t._v(" "),t._l(e.children,(function(r,a){return!t.groupOptions.collapsable||e.vgtIsExpanded?n("tr",{key:r.originalIndex,class:t.getRowStyleClass(r),on:{mouseenter:function(e){return t.onMouseenter(r,a)},mouseleave:function(e){return t.onMouseleave(r,a)},dblclick:function(e){return t.onRowDoubleClicked(r,a,e)},click:function(e){return t.onRowClicked(r,a,e)},auxclick:function(e){return t.onRowAuxClicked(r,a,e)}}},[t.lineNumbers?n("th",{staticClass:"line-numbers"},[t._v("\n              "+t._s(t.getCurrentIndex(a))+"\n            ")]):t._e(),t._v(" "),t.selectable?n("th",{staticClass:"vgt-checkbox-col",on:{click:function(e){return e.stopPropagation(),t.onCheckboxClicked(r,a,e)}}},[n("input",{attrs:{type:"checkbox"},domProps:{checked:r.vgtSelected}})]):t._e(),t._v(" "),t._l(t.columns,(function(e,o){return!e.hidden&&e.field?n("td",{key:o,class:t.getClasses(o,"td",r),attrs:{"data-label":t.compactMode?e.label:void 0},on:{click:function(n){return t.onCellClicked(r,e,a,n)}}},[t._t("table-row",[e.html?t._e():n("span",[t._v("\n                  "+t._s(t.collectFormatted(r,e))+"\n                ")]),t._v(" "),e.html?n("span",{domProps:{innerHTML:t._s(t.collect(r,e.field))}}):t._e()],{row:r,column:e,formattedRow:t.formattedRow(r),index:a})],2):t._e()}))],2):t._e()})),t._v(" "),t.groupHeaderOnBottom?n("vgt-header-row",{attrs:{"header-row":e,columns:t.columns,"line-numbers":t.lineNumbers,selectable:t.selectable,"select-all-by-group":t.selectAllByGroup,"collect-formatted":t.collectFormatted,"formatted-row":t.formattedRow,"get-classes":t.getClasses,"full-colspan":t.fullColspan,groupIndex:r},on:{"on-select-group-change":function(n){return t.toggleSelectGroup(n,e)}},scopedSlots:t._u([{key:"table-header-row",fn:function(e){return t.hasHeaderRowTemplate?[t._t("table-header-row",null,{column:e.column,formattedRow:e.formattedRow,row:e.row})]:void 0}}],null,!0)}):t._e()],2)})),t._v(" "),t.showEmptySlot?n("tbody",[n("tr",[n("td",{attrs:{colspan:t.fullColspan}},[t._t("emptystate",[n("div",{staticClass:"vgt-center-align vgt-text-disabled"},[t._v("\n                  No data for table\n                ")])])],2)])]):t._e()],2)]),t._v(" "),t.hasFooterSlot?n("div",{staticClass:"vgt-wrap__actions-footer"},[t._t("table-actions-bottom")],2):t._e(),t._v(" "),t.paginate&&t.paginateOnBottom?t._t("pagination-bottom",[n("vgt-pagination",{ref:"paginationBottom",attrs:{perPage:t.perPage,rtl:t.rtl,total:t.totalRows||t.totalRowCount,mode:t.paginationMode,nextText:t.nextText,prevText:t.prevText,rowsPerPageText:t.rowsPerPageText,customRowsPerPageDropdown:t.customRowsPerPageDropdown,paginateDropdownAllowAll:t.paginateDropdownAllowAll,ofText:t.ofText,pageText:t.pageText,allText:t.allText},on:{"page-changed":t.pageChanged,"per-page-changed":t.perPageChanged}})],{pageChanged:t.pageChanged,perPageChanged:t.perPageChanged,total:t.totalRows||t.totalRowCount}):t._e()],2)])},staticRenderFns:[]},undefined,{name:"vue-good-table",props:{isLoading:{default:null,type:Boolean},maxHeight:{default:null,type:String},fixedHeader:Boolean,theme:{default:""},mode:{default:"local"},totalRows:{},styleClass:{default:"vgt-table bordered"},columns:{},rows:{},lineNumbers:Boolean,responsive:{default:!0,type:Boolean},rtl:Boolean,rowStyleClass:{default:null,type:[Function,String]},compactMode:Boolean,groupOptions:{default:function(){return{enabled:!1,collapsable:!1,rowKey:null}}},selectOptions:{default:function(){return{enabled:!1,selectionInfoClass:"",selectionText:"rows selected",clearSelectionText:"clear",disableSelectInfo:!1,selectAllByGroup:!1}}},sortOptions:{default:function(){return{enabled:!0,initialSortBy:{}}}},paginationOptions:{default:function(){return{enabled:!1,perPage:10,perPageDropdown:null,position:"bottom",dropdownAllowAll:!0,mode:"records"}}},searchOptions:{default:function(){return{enabled:!1,trigger:null,externalQuery:null,searchFn:null,placeholder:"Search Table"}}}},data:function(){return{tableLoading:!1,nextText:"Next",prevText:"Prev",rowsPerPageText:"Rows per page",ofText:"of",allText:"All",pageText:"page",selectable:!1,selectOnCheckboxOnly:!1,selectAllByPage:!0,disableSelectInfo:!1,selectionInfoClass:"",selectionText:"rows selected",clearSelectionText:"clear",maintainExpanded:!0,expandedRowKeys:new Set,sortable:!0,defaultSortBy:null,searchEnabled:!1,searchTrigger:null,externalSearchQuery:null,searchFn:null,searchPlaceholder:"Search Table",searchSkipDiacritics:!1,perPage:null,paginate:!1,paginateOnTop:!1,paginateOnBottom:!0,customRowsPerPageDropdown:[],paginateDropdownAllowAll:!0,paginationMode:"records",currentPage:1,currentPerPage:10,sorts:[],globalSearchTerm:"",filteredRows:[],columnFilters:{},forceSearch:!1,sortChanged:!1,dataTypes:yn||{}}},watch:{rows:{handler:function(){this.$emit("update:isLoading",!1),this.filterRows(this.columnFilters,!1)},deep:!0,immediate:!0},selectOptions:{handler:function(){this.initializeSelect()},deep:!0,immediate:!0},paginationOptions:{handler:function(t,e){et(t,e)||this.initializePagination()},deep:!0,immediate:!0},searchOptions:{handler:function(){void 0!==this.searchOptions.externalQuery&&this.searchOptions.externalQuery!==this.searchTerm&&(this.externalSearchQuery=this.searchOptions.externalQuery,this.handleSearch()),this.initializeSearch()},deep:!0,immediate:!0},sortOptions:{handler:function(t,e){et(t,e)||this.initializeSort()},deep:!0},selectedRows:function(t,e){et(t,e)||this.$emit("on-selected-rows-change",{selectedRows:this.selectedRows})}},computed:{tableStyles:function(){return this.compactMode?this.tableStyleClasses+"vgt-compact":this.tableStyleClasses},hasFooterSlot:function(){return!!this.$slots["table-actions-bottom"]},wrapperStyles:function(){return{overflow:"scroll-y",maxHeight:this.maxHeight?this.maxHeight:"auto"}},rowKeyField:function(){return this.groupOptions.rowKey||"vgt_header_id"},hasHeaderRowTemplate:function(){return!!this.$slots["table-header-row"]||!!this.$scopedSlots["table-header-row"]},showEmptySlot:function(){return!this.paginated.length||"no groups"===this.paginated[0].label&&!this.paginated[0].children.length},allSelected:function(){return this.selectedRowCount>0&&(this.selectAllByPage&&this.selectedPageRowsCount===this.totalPageRowCount||!this.selectAllByPage&&this.selectedRowCount===this.totalRowCount)},allSelectedIndeterminate:function(){return!this.allSelected&&(this.selectAllByPage&&this.selectedPageRowsCount>0||!this.selectAllByPage&&this.selectedRowCount>0)},selectionInfo:function(){return"".concat(this.selectedRowCount," ").concat(this.selectionText)},selectedRowCount:function(){return this.selectedRows.length},selectedPageRowsCount:function(){return this.selectedPageRows.length},selectedPageRows:function(){var t=[];return k(this.paginated,(function(e){k(e.children,(function(e){e.vgtSelected&&t.push(e)}))})),t},selectedRows:function(){var t=[];return k(this.processedRows,(function(e){k(e.children,(function(e){e.vgtSelected&&t.push(e)}))})),t.sort((function(t,e){return t.originalIndex-e.originalIndex}))},fullColspan:function(){for(var t=0,e=0;e<this.columns.length;e+=1)this.columns[e].hidden||(t+=1);return this.lineNumbers&&t++,this.selectable&&t++,t},groupHeaderOnTop:function(){return!(this.groupOptions&&this.groupOptions.enabled&&this.groupOptions.headerPosition&&"bottom"===this.groupOptions.headerPosition)&&!(!this.groupOptions||!this.groupOptions.enabled)},groupHeaderOnBottom:function(){return!!(this.groupOptions&&this.groupOptions.enabled&&this.groupOptions.headerPosition&&"bottom"===this.groupOptions.headerPosition)},totalRowCount:function(){var t=0;return k(this.processedRows,(function(e){t+=e.children?e.children.length:0})),t},totalPageRowCount:function(){var t=0;return k(this.paginated,(function(e){t+=e.children?e.children.length:0})),t},wrapStyleClasses:function(){var t="vgt-wrap";return this.rtl&&(t+=" rtl"),t+=" ".concat(this.theme)},tableStyleClasses:function(){var t=this.styleClass;return t+=" ".concat(this.theme)},searchTerm:function(){return null!=this.externalSearchQuery?this.externalSearchQuery:this.globalSearchTerm},globalSearchAllowed:function(){return!(!this.searchEnabled||!this.globalSearchTerm||"enter"===this.searchTrigger)||(null!=this.externalSearchQuery&&"enter"!==this.searchTrigger||!!this.forceSearch&&(this.forceSearch=!1,!0))},processedRows:function(){var t=this,e=this.filteredRows;if("remote"===this.mode)return e;if(this.globalSearchAllowed){var r=[];k(this.filteredRows,(function(t){r.push.apply(r,n(t.children))}));var a=[];k(r,(function(e){k(t.columns,(function(n){if(!n.globalSearchDisabled)if(t.searchFn){if(t.searchFn(e,n,t.collectFormatted(e,n),t.searchTerm))return a.push(e),!1}else if(ot.filterPredicate(t.collectFormatted(e,n),t.searchTerm,t.searchSkipDiacritics))return a.push(e),!1}))})),this.$emit("on-search",{searchTerm:this.searchTerm,rowCount:a.length}),e=[],k(this.filteredRows,(function(t){var n=t.vgt_header_id,r=tt(a,["vgt_id",n]);if(r.length){var o=Z(t);o.children=r,e.push(o)}}))}return this.sorts.length&&e.forEach((function(e){e.children.sort((function(e,n){for(var r,a=0;a<t.sorts.length;a+=1){var o=t.getColumnForField(t.sorts[a].field),i=t.collect(e,t.sorts[a].field),s=t.collect(n,t.sorts[a].field),u=o.sortFn;r=u&&"function"==typeof u?r||u(i,s,o,e,n)*("desc"===t.sorts[a].type?-1:1):r||o.typeDef.compare(i,s,o)*("desc"===t.sorts[a].type?-1:1)}return r}))})),"enter"===this.searchTrigger&&(this.filteredRows=e),e},paginated:function(){var t=this;if(!this.processedRows.length)return[];if("remote"===this.mode)return this.processedRows;var e=[];if(k(this.processedRows,(function(r){var a;t.groupOptions.enabled&&e.push(r),(a=e).push.apply(a,n(r.children))})),this.paginate){var r=(this.currentPage-1)*this.currentPerPage;(r>=e.length||-1===this.currentPerPage)&&(this.currentPage=1,r=0);var a=e.length+1;-1!==this.currentPerPage&&(a=this.currentPage*this.currentPerPage),e=e.slice(r,a)}var o=[];return e.forEach((function(e){if(void 0!==e.vgt_header_id){t.handleExpanded(e);var n=Z(e);n.children=[],o.push(n)}else{var r=o.find((function(t){return t.vgt_header_id===e.vgt_id}));r||(r=t.processedRows.find((function(t){return t.vgt_header_id===e.vgt_id})))&&((r=Z(r)).children=[],o.push(r)),r.children.push(e)}})),o},originalRows:function(){var t=Z(this.rows),e=[];e=this.groupOptions.enabled?this.handleGrouped(t):this.handleGrouped([{label:"no groups",children:t}]);var n=0;return k(e,(function(t,e){k(t.children,(function(t,e){t.originalIndex=n++}))})),e},typedColumns:function(){for(var t=K(this.columns,[]),e=0;e<this.columns.length;e++){var n=t[e];n.typeDef=this.dataTypes[n.type]||ot}return t},hasRowClickListener:function(){return this.$listeners&&this.$listeners["on-row-click"]}},methods:{handleExpanded:function(t){this.maintainExpanded&&this.expandedRowKeys.has(t[this.rowKeyField])?this.$set(t,"vgtIsExpanded",!0):this.$set(t,"vgtIsExpanded",!1)},toggleExpand:function(t){var e=this,n=this.filteredRows.find((function(n){return n[e.rowKeyField]===t}));n&&this.$set(n,"vgtIsExpanded",!n.vgtIsExpanded),this.maintainExpanded&&n.vgtIsExpanded?this.expandedRowKeys.add(n[this.rowKeyField]):this.expandedRowKeys.delete(n[this.rowKeyField])},expandAll:function(){var t=this;this.filteredRows.forEach((function(e){t.$set(e,"vgtIsExpanded",!0),t.maintainExpanded&&t.expandedRowKeys.add(e[t.rowKeyField])}))},collapseAll:function(){var t=this;this.filteredRows.forEach((function(e){t.$set(e,"vgtIsExpanded",!1),t.expandedRowKeys.clear()}))},getColumnForField:function(t){for(var e=0;e<this.typedColumns.length;e+=1)if(this.typedColumns[e].field===t)return this.typedColumns[e]},handleSearch:function(){this.resetTable(),"remote"===this.mode&&this.$emit("on-search",{searchTerm:this.searchTerm})},reset:function(){this.initializeSort(),this.changePage(1),this.$refs["table-header-primary"].reset(!0),this.$refs["table-header-secondary"]&&this.$refs["table-header-secondary"].reset(!0)},emitSelectedRows:function(){this.$emit("on-select-all",{selected:this.selectedRowCount===this.totalRowCount,selectedRows:this.selectedRows})},unselectAllInternal:function(t){var e=this,n=this.selectAllByPage&&!t?this.paginated:this.filteredRows;k(n,(function(t,n){k(t.children,(function(t,n){e.$set(t,"vgtSelected",!1)}))})),this.emitSelectedRows()},toggleSelectAll:function(){var t=this;if(this.allSelected)this.unselectAllInternal();else{var e=this.selectAllByPage?this.paginated:this.filteredRows;k(e,(function(e){k(e.children,(function(e){t.$set(e,"vgtSelected",!0)}))})),this.emitSelectedRows()}},toggleSelectGroup:function(t,e){var n=this;k(e.children,(function(e){n.$set(e,"vgtSelected",t.checked)}))},changePage:function(t){if(this.paginationOptions.enabled){var e=this.$refs.paginationBottom;"top"===this.paginationOptions.position&&(e=this.$refs.paginationTop),e&&(e.currentPage=t,this.currentPage=t)}},pageChangedEvent:function(){return{currentPage:this.currentPage,currentPerPage:this.currentPerPage,total:Math.floor(this.totalRowCount/this.currentPerPage)}},pageChanged:function(t){this.currentPage=t.currentPage;var e=this.pageChangedEvent();e.prevPage=t.prevPage,this.$emit("on-page-change",e),"remote"===this.mode&&this.$emit("update:isLoading",!0)},perPageChanged:function(t){this.currentPerPage=t.currentPerPage;var e=this.pageChangedEvent();this.$emit("on-per-page-change",e),"remote"===this.mode&&this.$emit("update:isLoading",!0)},changeSort:function(t){this.sorts=t,this.$emit("on-sort-change",t),this.changePage(1),"remote"!==this.mode?this.sortChanged=!0:this.$emit("update:isLoading",!0)},onCheckboxClicked:function(t,e,n){this.$set(t,"vgtSelected",!t.vgtSelected),this.$emit("on-row-click",{row:t,pageIndex:e,selected:!!t.vgtSelected,event:n})},onRowDoubleClicked:function(t,e,n){this.$emit("on-row-dblclick",{row:t,pageIndex:e,selected:!!t.vgtSelected,event:n})},onRowClicked:function(t,e,n){this.selectable&&!this.selectOnCheckboxOnly&&this.$set(t,"vgtSelected",!t.vgtSelected),this.$emit("on-row-click",{row:t,pageIndex:e,selected:!!t.vgtSelected,event:n})},onRowAuxClicked:function(t,e,n){this.$emit("on-row-aux-click",{row:t,pageIndex:e,selected:!!t.vgtSelected,event:n})},onCellClicked:function(t,e,n,r){this.$emit("on-cell-click",{row:t,column:e,rowIndex:n,event:r})},onMouseenter:function(t,e){this.$emit("on-row-mouseenter",{row:t,pageIndex:e})},onMouseleave:function(t,e){this.$emit("on-row-mouseleave",{row:t,pageIndex:e})},searchTableOnEnter:function(){"enter"===this.searchTrigger&&(this.handleSearch(),this.filteredRows=Z(this.originalRows),this.forceSearch=!0,this.sortChanged=!0)},searchTableOnKeyUp:function(){"enter"!==this.searchTrigger&&this.handleSearch()},resetTable:function(){this.unselectAllInternal(!0),this.changePage(1)},collect:function(t,e){return"function"==typeof e?e(t):"string"==typeof e?function(t,e){for(var n=t,r=e.split("."),a=0;a<r.length;a++){if(null==n)return;n=n[r[a]]}return n}(t,e):void 0},collectFormatted:function(t,e){var n,r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(void 0===(n=r&&e.headerField?this.collect(t,e.headerField):this.collect(t,e.field)))return"";if(e.formatFn&&"function"==typeof e.formatFn)return e.formatFn(n,t);var a=e.typeDef;a||(a=this.dataTypes[e.type]||ot);var o=a.format(n,e);return!this.compactMode||""!=o&&null!=o?o:"-"},formattedRow:function(t){for(var e=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n={},r=0;r<this.typedColumns.length;r++){var a=this.typedColumns[r];a.field&&(n[a.field]=this.collectFormatted(t,a,e))}return n},getClasses:function(t,e,n){var r=this.typedColumns[t],a=r.typeDef,o=r["".concat(e,"Class")],i=a.isRight;this.rtl&&(i=!0);var s={"vgt-right-align":i,"vgt-left-align":!i};return"function"==typeof o?s[o(n)]=!0:"string"==typeof o&&(s[o]=!0),s},filterRows:function(e){var n=this,r=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];this.columnFilters=e;var a=Z(this.originalRows);if(this.columnFilters&&Object.keys(this.columnFilters).length){if(("remote"!==this.mode||r)&&this.changePage(1),r&&this.$emit("on-column-filter",{columnFilters:this.columnFilters}),"remote"===this.mode)return void(r?this.$emit("update:isLoading",!0):this.filteredRows=a);for(var o=function(e){var r=n.typedColumns[e];n.columnFilters[r.field]&&(a=k(a,(function(e){var a=e.children.filter((function(e){return r.filterOptions&&"function"==typeof r.filterOptions.filterFn?r.filterOptions.filterFn(n.collect(e,r.field),n.columnFilters[r.field]):r.typeDef.filterPredicate(n.collect(e,r.field),n.columnFilters[r.field],!1,r.filterOptions&&"object"===t(r.filterOptions.filterDropdownItems))}));e.children=a})))},i=0;i<this.typedColumns.length;i++)o(i)}this.filteredRows=a},getCurrentIndex:function(t){return(this.currentPage-1)*this.currentPerPage+t+1},getRowStyleClass:function(t){var e,n="";return this.hasRowClickListener&&(n+="clickable"),(e="function"==typeof this.rowStyleClass?this.rowStyleClass(t):this.rowStyleClass)&&(n+=" ".concat(e)),n},handleGrouped:function(t){var e=this;return k(t,(function(t,n){t.vgt_header_id=n,e.groupOptions.maintainExpanded&&e.expandedRowKeys.has(t[e.groupOptions.rowKey])&&e.$set(t,"vgtIsExpanded",!0),k(t.children,(function(t){t.vgt_id=n}))})),t},initializePagination:function(){var t=this,n=this.paginationOptions,r=n.enabled,a=n.perPage,o=n.position,i=n.perPageDropdown,s=n.dropdownAllowAll,u=n.nextLabel,l=n.prevLabel,c=n.rowsPerPageLabel,d=n.ofLabel,f=n.pageLabel,h=n.allLabel,p=n.setCurrentPage,g=n.mode;if("boolean"==typeof r&&(this.paginate=r),"number"==typeof a&&(this.perPage=a),"top"===o?(this.paginateOnTop=!0,this.paginateOnBottom=!1):"both"===o&&(this.paginateOnTop=!0,this.paginateOnBottom=!0),Array.isArray(i)&&i.length&&(this.customRowsPerPageDropdown=i,!this.perPage)){var m=e(i,1);this.perPage=m[0]}"boolean"==typeof s&&(this.paginateDropdownAllowAll=s),"string"==typeof g&&(this.paginationMode=g),"string"==typeof u&&(this.nextText=u),"string"==typeof l&&(this.prevText=l),"string"==typeof c&&(this.rowsPerPageText=c),"string"==typeof d&&(this.ofText=d),"string"==typeof f&&(this.pageText=f),"string"==typeof h&&(this.allText=h),"number"==typeof p&&setTimeout((function(){t.changePage(p)}),500)},initializeSearch:function(){var t=this.searchOptions,e=t.enabled,n=t.trigger,r=t.externalQuery,a=t.searchFn,o=t.placeholder,i=t.skipDiacritics;"boolean"==typeof e&&(this.searchEnabled=e),"enter"===n&&(this.searchTrigger=n),"string"==typeof r&&(this.externalSearchQuery=r),"function"==typeof a&&(this.searchFn=a),"string"==typeof o&&(this.searchPlaceholder=o),"boolean"==typeof i&&(this.searchSkipDiacritics=i)},initializeSort:function(){var e=this.sortOptions,n=e.enabled,r=e.initialSortBy;if("boolean"==typeof n&&(this.sortable=n),"object"===t(r)){var a=this.fixedHeader?this.$refs["table-header-secondary"]:this.$refs["table-header-primary"];if(Array.isArray(r))a.setInitialSort(r);else Object.prototype.hasOwnProperty.call(r,"field")&&a.setInitialSort([r])}},initializeSelect:function(){var t=this.selectOptions,e=t.enabled,n=t.selectionInfoClass,r=t.selectionText,a=t.clearSelectionText,o=t.selectOnCheckboxOnly,i=t.selectAllByPage,s=t.disableSelectInfo,u=t.selectAllByGroup;"boolean"==typeof e&&(this.selectable=e),"boolean"==typeof o&&(this.selectOnCheckboxOnly=o),"boolean"==typeof i&&(this.selectAllByPage=i),"boolean"==typeof u&&(this.selectAllByGroup=u),"boolean"==typeof s&&(this.disableSelectInfo=s),"string"==typeof n&&(this.selectionInfoClass=n),"string"==typeof r&&(this.selectionText=r),"string"==typeof a&&(this.clearSelectionText=a)}},mounted:function(){this.perPage&&(this.currentPerPage=this.perPage),this.initializeSort()},components:{"vgt-pagination":ut,"vgt-global-search":lt,"vgt-header-row":ht,"vgt-table-header":ft}},undefined,false,undefined,!1,void 0,void 0,void 0),Pn={install:function(t,e){t.component(Tn.name,Tn)}};"undefined"!=typeof window&&window.Vue&&window.Vue.use(Pn);function Cn(t,e,n,r,a,o,i,s){var u,l="function"==typeof t?t.options:t;if(e&&(l.render=e,l.staticRenderFns=n,l._compiled=!0),r&&(l.functional=!0),o&&(l._scopeId="data-v-"+o),i?(u=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),a&&a.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(i)},l._ssrRegister=u):a&&(u=s?function(){a.call(this,(l.functional?this.parent:this).$root.$options.shadowRoot)}:a),u)if(l.functional){l._injectStyles=u;var c=l.render;l.render=function(t,e){return u.call(e),c(t,e)}}else{var d=l.beforeCreate;l.beforeCreate=d?[].concat(d,u):[u]}return{exports:t,options:l}}const xn={};var Sn=Cn({extends:"k-pages-section",components:{VueGoodTable:Tn},data(){return{columns:[],rows:[],searchTerm:"",showReset:!1,error:null,isLoading:!1,storedState:{searchTerm:void 0,sort:void 0,page:void 0},options:{empty:null,headline:null,layout:"list",link:null,max:null,min:null,size:null,sortable:null,limit:10,limitOptions:[],search:!0,showImage:!0,showStatus:!0,showActions:!0},translations:{rowsPerPage:this.$t("pagetable.rowsPerPage"),of:this.$t("pagetable.of"),all:this.$t("pagetable.all"),empty:this.$t("pages.empty"),filter:this.$t("pagetable.filter-pages"),reset:this.$t("pagetable.reset"),loading:this.$t("pagetable.loading")}}},props:{parent:String,blueprint:String,name:String},computed:{searchOptions(){return{enabled:!0,externalQuery:this.searchTerm}},sortOptions(){return{enabled:!0,initialSortBy:this.storedState.sort||!1}},storedPerPage(){return this.storedState.page&&this.storedState.page.currentPerPage||this.options.limit},storedPage(){return this.storedState.page&&this.storedState.page.currentPage||!1},paginationOptions(){return{enabled:!0,perPage:this.storedPerPage,setCurrentPage:this.storedPage,perPageDropdown:this.options.limitOptions,nextLabel:this.$t("next"),prevLabel:this.$t("prev"),rowsPerPageLabel:this.translations.rowsPerPage,ofLabel:this.$t("pagetable.of"),allLabel:this.translations.all}},showSearch(){return this.columns.filter((t=>0==t.globalSearchDisabled)).length>0&&this.options.search&&this.rows.length},storeName(){return"kirby$plugin$pagetable"+this.parent+"-"+this.name},showOptions(){return this.options.showStatus||this.options.showActions}},watch:{language(){this.reload()}},created(){this.load(),this.loadStoredState()},methods:{replaceInvalidDate:t=>t.replace("Invalid Date","-"),load(t){t||(this.isLoading=!0),this.$api.get(this.parent+"/sections/"+this.name).then((t=>{this.isLoading=!1,this.options=t.options,this.columns=t.data.columns,this.rows=this.items(t.data.rows);let e=t.translations;Object.keys(e).forEach((t=>{null==e[t]&&delete e[t]})),this.translations=Object.assign({},this.translations,e)})).catch((t=>{this.isLoading=!1,this.error=t.message}))},openRef(t){this.$refs[t].toggle()},onSearch(t){this.storeCurrentState(),this.checkReset()},onPerPageChange(t){this.$refs.table&&this.$refs.table.changePage(1)},onPageChange(t){this.storeCurrentState(),this.checkReset()},onSortChange(t){this.storeCurrentState(),this.checkReset()},checkReset(){this.showReset=this.rows.length&&(this.searchTerm.length>0||this.$refs.table&&this.$refs.table.sorts.length||this.$refs.table&&1!=this.$refs.table.currentPage)},loadStoredState(){let t=JSON.parse(sessionStorage.getItem(this.storeName));null!==t&&(this.storedState=t,t.searchTerm&&t.searchTerm.length>0&&(this.searchTerm=t.searchTerm))},storeCurrentState(){if(this.$refs.table){let t={};t.page={currentPage:this.$refs.table.currentPage,currentPerPage:this.$refs.table.currentPerPage},this.$refs.table.sorts[0]&&(t.sort={field:this.$refs.table.sorts[0].field,type:this.$refs.table.sorts[0].type}),t.searchTerm=this.searchTerm,sessionStorage.setItem(this.storeName,JSON.stringify(t))}},resetTable(){this.$refs.table.changeSort([]),document.querySelectorAll(".sorting").forEach((t=>{"TH"==t.tagName&&t.classList.remove("sorting","sorting-asc","sorting-desc")})),this.searchTerm="",this.$refs.table.currentPerPage=this.options.limit,this.$refs.table.perPage=this.options.limit,this.$refs.table.changePage(1),this.storeCurrentState()}}},(function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("section",{staticClass:"k-pagetable-section"},[n("header",{staticClass:"k-section-header"},[n("k-headline",{attrs:{link:t.options.link}},[t.isLoading?n("span",[t._v("…")]):n("span",[t._v(t._s(t.headline))])]),n("k-button-group",[t.showReset?n("button",{staticClass:"pagetable-reset-button",domProps:{innerHTML:t._s(t.translations.reset)},on:{click:t.resetTable}}):t._e(),t.showSearch?n("input",{directives:[{name:"model",rawName:"v-model",value:t.searchTerm,expression:"searchTerm"}],staticClass:"pagetable-search-input",attrs:{type:"text",placeholder:t.translations.filter},domProps:{value:t.searchTerm},on:{input:function(e){e.target.composing||(t.searchTerm=e.target.value)}}}):t._e(),t.add?n("k-button",{attrs:{icon:"add"},on:{click:t.create}},[t._v(t._s(t.$t("add")))]):t._e()],1)],1),t.rows.length&&!t.isLoading?n("vue-good-table",{ref:"table",attrs:{columns:t.columns,rows:t.rows,"sort-options":t.sortOptions,"search-options":t.searchOptions,"pagination-options":t.paginationOptions},on:{"on-search":t.onSearch,"on-sort-change":t.onSortChange,"on-page-change":t.onPageChange,"on-per-page-change":t.onPerPageChange},scopedSlots:t._u([{key:"table-row",fn:function(e){return["p-cover-image"==e.column.field&&t.options.showImage?n("span",[n("k-link",{attrs:{to:e.row.link}},[e.row.image?n("k-item-image",{attrs:{image:e.row.image}}):t._e()],1)],1):"p-options"==e.column.field&&t.showOptions?n("span",[n("div",{staticClass:"k-list-item-options"},[t._t("options",(function(){return[e.row.flag&&t.options.showStatus?n("k-status-icon",t._b({},"k-status-icon",e.row.flag,!1)):t._e(),e.row.options&&t.options.showActions?n("k-options-dropdown",{staticClass:"k-item-options-dropdown",attrs:{options:e.row.options}}):t._e()]}))],2)]):n("k-link",{attrs:{to:e.row.link},domProps:{innerHTML:t._s(t.replaceInvalidDate(e.formattedRow[e.column.field]))}})]}}],null,!1,1687883122)}):t.rows.length||t.isLoading?t.isLoading?n("div",{staticClass:"loading"},[n("k-empty",{attrs:{layout:t.options.layout,icon:"pagetableLoader"}},[t._v(" "+t._s(t.translations.loading)+" ")])],1):t._e():[n("k-empty",{attrs:{layout:t.options.layout,"data-invalid":t.isInvalid,icon:"page"},on:{click:t.create}},[t._v(" "+t._s(t.translations.empty)+" ")]),n("footer",{staticClass:"k-collection-footer"},[t.help?n("k-text",{staticClass:"k-collection-help",attrs:{theme:"help"},domProps:{innerHTML:t._s(t.help)}}):t._e()],1)]],2)}),[],!1,kn,null,null,null);function kn(t){for(let e in xn)this[e]=xn[e]}var On=function(){return Sn.exports}();panel.plugin("sylvainjule/pagetable",{sections:{pagetable:On},icons:{pagetableLoader:'<g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="1.75"><circle cx="7" cy="7" r="7.2" stroke="#000" stroke-opacity=".2"/><path d="M14.2,7c0-4-3.2-7.2-7.2-7.2" stroke="#000"><animateTransform attributeName="transform" type="rotate" from="0 7 7" to="360 7 7" dur="1s" repeatCount="indefinite"/></path></g></g>'}})}();
+(function() {
+  "use strict";
+  function _typeof(obj) {
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+      _typeof = function(obj2) {
+        return typeof obj2;
+      };
+    } else {
+      _typeof = function(obj2) {
+        return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
+      };
+    }
+    return _typeof(obj);
+  }
+  function _slicedToArray(arr, i) {
+    return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  }
+  function _toConsumableArray(arr) {
+    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  }
+  function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) {
+      for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++)
+        arr2[i] = arr[i];
+      return arr2;
+    }
+  }
+  function _arrayWithHoles(arr) {
+    if (Array.isArray(arr))
+      return arr;
+  }
+  function _iterableToArray(iter) {
+    if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]")
+      return Array.from(iter);
+  }
+  function _iterableToArrayLimit(arr, i) {
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = void 0;
+    try {
+      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);
+        if (i && _arr.length === i)
+          break;
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"] != null)
+          _i["return"]();
+      } finally {
+        if (_d)
+          throw _e;
+      }
+    }
+    return _arr;
+  }
+  function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance");
+  }
+  function _nonIterableRest() {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  }
+  var MAX_SAFE_INTEGER = 9007199254740991;
+  var argsTag = "[object Arguments]", funcTag = "[object Function]", genTag = "[object GeneratorFunction]";
+  var reIsUint = /^(?:0|[1-9]\d*)$/;
+  function arrayEach(array, iteratee) {
+    var index2 = -1, length = array ? array.length : 0;
+    while (++index2 < length) {
+      if (iteratee(array[index2], index2, array) === false) {
+        break;
+      }
+    }
+    return array;
+  }
+  function baseTimes(n, iteratee) {
+    var index2 = -1, result = Array(n);
+    while (++index2 < n) {
+      result[index2] = iteratee(index2);
+    }
+    return result;
+  }
+  function overArg(func, transform) {
+    return function(arg) {
+      return func(transform(arg));
+    };
+  }
+  var objectProto = Object.prototype;
+  var hasOwnProperty = objectProto.hasOwnProperty;
+  var objectToString = objectProto.toString;
+  var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+  var nativeKeys = overArg(Object.keys, Object);
+  function arrayLikeKeys(value, inherited) {
+    var result = isArray(value) || isArguments(value) ? baseTimes(value.length, String) : [];
+    var length = result.length, skipIndexes = !!length;
+    for (var key in value) {
+      if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && (key == "length" || isIndex(key, length)))) {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  var baseEach = createBaseEach(baseForOwn);
+  var baseFor = createBaseFor();
+  function baseForOwn(object, iteratee) {
+    return object && baseFor(object, iteratee, keys);
+  }
+  function baseKeys(object) {
+    if (!isPrototype(object)) {
+      return nativeKeys(object);
+    }
+    var result = [];
+    for (var key in Object(object)) {
+      if (hasOwnProperty.call(object, key) && key != "constructor") {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  function createBaseEach(eachFunc, fromRight) {
+    return function(collection, iteratee) {
+      if (collection == null) {
+        return collection;
+      }
+      if (!isArrayLike(collection)) {
+        return eachFunc(collection, iteratee);
+      }
+      var length = collection.length, index2 = fromRight ? length : -1, iterable = Object(collection);
+      while (fromRight ? index2-- : ++index2 < length) {
+        if (iteratee(iterable[index2], index2, iterable) === false) {
+          break;
+        }
+      }
+      return collection;
+    };
+  }
+  function createBaseFor(fromRight) {
+    return function(object, iteratee, keysFunc) {
+      var index2 = -1, iterable = Object(object), props = keysFunc(object), length = props.length;
+      while (length--) {
+        var key = props[fromRight ? length : ++index2];
+        if (iteratee(iterable[key], key, iterable) === false) {
+          break;
+        }
+      }
+      return object;
+    };
+  }
+  function isIndex(value, length) {
+    length = length == null ? MAX_SAFE_INTEGER : length;
+    return !!length && (typeof value == "number" || reIsUint.test(value)) && (value > -1 && value % 1 == 0 && value < length);
+  }
+  function isPrototype(value) {
+    var Ctor = value && value.constructor, proto = typeof Ctor == "function" && Ctor.prototype || objectProto;
+    return value === proto;
+  }
+  function forEach(collection, iteratee) {
+    var func = isArray(collection) ? arrayEach : baseEach;
+    return func(collection, typeof iteratee == "function" ? iteratee : identity);
+  }
+  function isArguments(value) {
+    return isArrayLikeObject(value) && hasOwnProperty.call(value, "callee") && (!propertyIsEnumerable.call(value, "callee") || objectToString.call(value) == argsTag);
+  }
+  var isArray = Array.isArray;
+  function isArrayLike(value) {
+    return value != null && isLength(value.length) && !isFunction(value);
+  }
+  function isArrayLikeObject(value) {
+    return isObjectLike(value) && isArrayLike(value);
+  }
+  function isFunction(value) {
+    var tag = isObject(value) ? objectToString.call(value) : "";
+    return tag == funcTag || tag == genTag;
+  }
+  function isLength(value) {
+    return typeof value == "number" && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+  }
+  function isObject(value) {
+    var type = typeof value;
+    return !!value && (type == "object" || type == "function");
+  }
+  function isObjectLike(value) {
+    return !!value && typeof value == "object";
+  }
+  function keys(object) {
+    return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+  }
+  function identity(value) {
+    return value;
+  }
+  var lodash_foreach = forEach;
+  var MAX_SAFE_INTEGER$1 = 9007199254740991;
+  var argsTag$1 = "[object Arguments]", funcTag$1 = "[object Function]", genTag$1 = "[object GeneratorFunction]";
+  var reIsUint$1 = /^(?:0|[1-9]\d*)$/;
+  function apply(func, thisArg, args) {
+    switch (args.length) {
+      case 0:
+        return func.call(thisArg);
+      case 1:
+        return func.call(thisArg, args[0]);
+      case 2:
+        return func.call(thisArg, args[0], args[1]);
+      case 3:
+        return func.call(thisArg, args[0], args[1], args[2]);
+    }
+    return func.apply(thisArg, args);
+  }
+  function baseTimes$1(n, iteratee) {
+    var index2 = -1, result = Array(n);
+    while (++index2 < n) {
+      result[index2] = iteratee(index2);
+    }
+    return result;
+  }
+  function overArg$1(func, transform) {
+    return function(arg) {
+      return func(transform(arg));
+    };
+  }
+  var objectProto$1 = Object.prototype;
+  var hasOwnProperty$1 = objectProto$1.hasOwnProperty;
+  var objectToString$1 = objectProto$1.toString;
+  var propertyIsEnumerable$1 = objectProto$1.propertyIsEnumerable;
+  var nativeKeys$1 = overArg$1(Object.keys, Object), nativeMax = Math.max;
+  var nonEnumShadows = !propertyIsEnumerable$1.call({ "valueOf": 1 }, "valueOf");
+  function arrayLikeKeys$1(value, inherited) {
+    var result = isArray$1(value) || isArguments$1(value) ? baseTimes$1(value.length, String) : [];
+    var length = result.length, skipIndexes = !!length;
+    for (var key in value) {
+      if ((inherited || hasOwnProperty$1.call(value, key)) && !(skipIndexes && (key == "length" || isIndex$1(key, length)))) {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  function assignValue(object, key, value) {
+    var objValue = object[key];
+    if (!(hasOwnProperty$1.call(object, key) && eq(objValue, value)) || value === void 0 && !(key in object)) {
+      object[key] = value;
+    }
+  }
+  function baseKeys$1(object) {
+    if (!isPrototype$1(object)) {
+      return nativeKeys$1(object);
+    }
+    var result = [];
+    for (var key in Object(object)) {
+      if (hasOwnProperty$1.call(object, key) && key != "constructor") {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  function baseRest(func, start) {
+    start = nativeMax(start === void 0 ? func.length - 1 : start, 0);
+    return function() {
+      var args = arguments, index2 = -1, length = nativeMax(args.length - start, 0), array = Array(length);
+      while (++index2 < length) {
+        array[index2] = args[start + index2];
+      }
+      index2 = -1;
+      var otherArgs = Array(start + 1);
+      while (++index2 < start) {
+        otherArgs[index2] = args[index2];
+      }
+      otherArgs[start] = array;
+      return apply(func, this, otherArgs);
+    };
+  }
+  function copyObject(source, props, object, customizer) {
+    object || (object = {});
+    var index2 = -1, length = props.length;
+    while (++index2 < length) {
+      var key = props[index2];
+      var newValue = customizer ? customizer(object[key], source[key], key, object, source) : void 0;
+      assignValue(object, key, newValue === void 0 ? source[key] : newValue);
+    }
+    return object;
+  }
+  function createAssigner(assigner) {
+    return baseRest(function(object, sources) {
+      var index2 = -1, length = sources.length, customizer = length > 1 ? sources[length - 1] : void 0, guard = length > 2 ? sources[2] : void 0;
+      customizer = assigner.length > 3 && typeof customizer == "function" ? (length--, customizer) : void 0;
+      if (guard && isIterateeCall(sources[0], sources[1], guard)) {
+        customizer = length < 3 ? void 0 : customizer;
+        length = 1;
+      }
+      object = Object(object);
+      while (++index2 < length) {
+        var source = sources[index2];
+        if (source) {
+          assigner(object, source, index2, customizer);
+        }
+      }
+      return object;
+    });
+  }
+  function isIndex$1(value, length) {
+    length = length == null ? MAX_SAFE_INTEGER$1 : length;
+    return !!length && (typeof value == "number" || reIsUint$1.test(value)) && (value > -1 && value % 1 == 0 && value < length);
+  }
+  function isIterateeCall(value, index2, object) {
+    if (!isObject$1(object)) {
+      return false;
+    }
+    var type = typeof index2;
+    if (type == "number" ? isArrayLike$1(object) && isIndex$1(index2, object.length) : type == "string" && index2 in object) {
+      return eq(object[index2], value);
+    }
+    return false;
+  }
+  function isPrototype$1(value) {
+    var Ctor = value && value.constructor, proto = typeof Ctor == "function" && Ctor.prototype || objectProto$1;
+    return value === proto;
+  }
+  function eq(value, other) {
+    return value === other || value !== value && other !== other;
+  }
+  function isArguments$1(value) {
+    return isArrayLikeObject$1(value) && hasOwnProperty$1.call(value, "callee") && (!propertyIsEnumerable$1.call(value, "callee") || objectToString$1.call(value) == argsTag$1);
+  }
+  var isArray$1 = Array.isArray;
+  function isArrayLike$1(value) {
+    return value != null && isLength$1(value.length) && !isFunction$1(value);
+  }
+  function isArrayLikeObject$1(value) {
+    return isObjectLike$1(value) && isArrayLike$1(value);
+  }
+  function isFunction$1(value) {
+    var tag = isObject$1(value) ? objectToString$1.call(value) : "";
+    return tag == funcTag$1 || tag == genTag$1;
+  }
+  function isLength$1(value) {
+    return typeof value == "number" && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$1;
+  }
+  function isObject$1(value) {
+    var type = typeof value;
+    return !!value && (type == "object" || type == "function");
+  }
+  function isObjectLike$1(value) {
+    return !!value && typeof value == "object";
+  }
+  var assign = createAssigner(function(object, source) {
+    if (nonEnumShadows || isPrototype$1(source) || isArrayLike$1(source)) {
+      copyObject(source, keys$1(source), object);
+      return;
+    }
+    for (var key in source) {
+      if (hasOwnProperty$1.call(source, key)) {
+        assignValue(object, key, source[key]);
+      }
+    }
+  });
+  function keys$1(object) {
+    return isArrayLike$1(object) ? arrayLikeKeys$1(object) : baseKeys$1(object);
+  }
+  var lodash_assign = assign;
+  var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
+  function createCommonjsModule(fn, module) {
+    return module = { exports: {} }, fn(module, module.exports), module.exports;
+  }
+  var lodash_clonedeep = createCommonjsModule(function(module, exports) {
+    var LARGE_ARRAY_SIZE = 200;
+    var HASH_UNDEFINED = "__lodash_hash_undefined__";
+    var MAX_SAFE_INTEGER2 = 9007199254740991;
+    var argsTag2 = "[object Arguments]", arrayTag = "[object Array]", boolTag = "[object Boolean]", dateTag = "[object Date]", errorTag = "[object Error]", funcTag2 = "[object Function]", genTag2 = "[object GeneratorFunction]", mapTag = "[object Map]", numberTag = "[object Number]", objectTag = "[object Object]", promiseTag = "[object Promise]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", symbolTag = "[object Symbol]", weakMapTag = "[object WeakMap]";
+    var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]", float32Tag = "[object Float32Array]", float64Tag = "[object Float64Array]", int8Tag = "[object Int8Array]", int16Tag = "[object Int16Array]", int32Tag = "[object Int32Array]", uint8Tag = "[object Uint8Array]", uint8ClampedTag = "[object Uint8ClampedArray]", uint16Tag = "[object Uint16Array]", uint32Tag = "[object Uint32Array]";
+    var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+    var reFlags = /\w*$/;
+    var reIsHostCtor = /^\[object .+?Constructor\]$/;
+    var reIsUint2 = /^(?:0|[1-9]\d*)$/;
+    var cloneableTags = {};
+    cloneableTags[argsTag2] = cloneableTags[arrayTag] = cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] = cloneableTags[boolTag] = cloneableTags[dateTag] = cloneableTags[float32Tag] = cloneableTags[float64Tag] = cloneableTags[int8Tag] = cloneableTags[int16Tag] = cloneableTags[int32Tag] = cloneableTags[mapTag] = cloneableTags[numberTag] = cloneableTags[objectTag] = cloneableTags[regexpTag] = cloneableTags[setTag] = cloneableTags[stringTag] = cloneableTags[symbolTag] = cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] = cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
+    cloneableTags[errorTag] = cloneableTags[funcTag2] = cloneableTags[weakMapTag] = false;
+    var freeGlobal = typeof commonjsGlobal == "object" && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
+    var freeSelf = typeof self == "object" && self && self.Object === Object && self;
+    var root = freeGlobal || freeSelf || Function("return this")();
+    var freeExports = exports && !exports.nodeType && exports;
+    var freeModule = freeExports && true && module && !module.nodeType && module;
+    var moduleExports = freeModule && freeModule.exports === freeExports;
+    function addMapEntry(map, pair) {
+      map.set(pair[0], pair[1]);
+      return map;
+    }
+    function addSetEntry(set, value) {
+      set.add(value);
+      return set;
+    }
+    function arrayEach2(array, iteratee) {
+      var index2 = -1, length = array ? array.length : 0;
+      while (++index2 < length) {
+        if (iteratee(array[index2], index2, array) === false) {
+          break;
+        }
+      }
+      return array;
+    }
+    function arrayPush(array, values) {
+      var index2 = -1, length = values.length, offset = array.length;
+      while (++index2 < length) {
+        array[offset + index2] = values[index2];
+      }
+      return array;
+    }
+    function arrayReduce(array, iteratee, accumulator, initAccum) {
+      var index2 = -1, length = array ? array.length : 0;
+      if (initAccum && length) {
+        accumulator = array[++index2];
+      }
+      while (++index2 < length) {
+        accumulator = iteratee(accumulator, array[index2], index2, array);
+      }
+      return accumulator;
+    }
+    function baseTimes2(n, iteratee) {
+      var index2 = -1, result = Array(n);
+      while (++index2 < n) {
+        result[index2] = iteratee(index2);
+      }
+      return result;
+    }
+    function getValue(object, key) {
+      return object == null ? void 0 : object[key];
+    }
+    function isHostObject(value) {
+      var result = false;
+      if (value != null && typeof value.toString != "function") {
+        try {
+          result = !!(value + "");
+        } catch (e) {
+        }
+      }
+      return result;
+    }
+    function mapToArray(map) {
+      var index2 = -1, result = Array(map.size);
+      map.forEach(function(value, key) {
+        result[++index2] = [key, value];
+      });
+      return result;
+    }
+    function overArg2(func, transform) {
+      return function(arg) {
+        return func(transform(arg));
+      };
+    }
+    function setToArray(set) {
+      var index2 = -1, result = Array(set.size);
+      set.forEach(function(value) {
+        result[++index2] = value;
+      });
+      return result;
+    }
+    var arrayProto = Array.prototype, funcProto = Function.prototype, objectProto2 = Object.prototype;
+    var coreJsData = root["__core-js_shared__"];
+    var maskSrcKey = function() {
+      var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || "");
+      return uid ? "Symbol(src)_1." + uid : "";
+    }();
+    var funcToString = funcProto.toString;
+    var hasOwnProperty2 = objectProto2.hasOwnProperty;
+    var objectToString2 = objectProto2.toString;
+    var reIsNative = RegExp("^" + funcToString.call(hasOwnProperty2).replace(reRegExpChar, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+    var Buffer = moduleExports ? root.Buffer : void 0, Symbol2 = root.Symbol, Uint8Array = root.Uint8Array, getPrototype = overArg2(Object.getPrototypeOf, Object), objectCreate = Object.create, propertyIsEnumerable2 = objectProto2.propertyIsEnumerable, splice = arrayProto.splice;
+    var nativeGetSymbols = Object.getOwnPropertySymbols, nativeIsBuffer = Buffer ? Buffer.isBuffer : void 0, nativeKeys2 = overArg2(Object.keys, Object);
+    var DataView = getNative(root, "DataView"), Map = getNative(root, "Map"), Promise = getNative(root, "Promise"), Set2 = getNative(root, "Set"), WeakMap = getNative(root, "WeakMap"), nativeCreate = getNative(Object, "create");
+    var dataViewCtorString = toSource(DataView), mapCtorString = toSource(Map), promiseCtorString = toSource(Promise), setCtorString = toSource(Set2), weakMapCtorString = toSource(WeakMap);
+    var symbolProto = Symbol2 ? Symbol2.prototype : void 0, symbolValueOf = symbolProto ? symbolProto.valueOf : void 0;
+    function Hash(entries) {
+      var index2 = -1, length = entries ? entries.length : 0;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function hashClear() {
+      this.__data__ = nativeCreate ? nativeCreate(null) : {};
+    }
+    function hashDelete(key) {
+      return this.has(key) && delete this.__data__[key];
+    }
+    function hashGet(key) {
+      var data = this.__data__;
+      if (nativeCreate) {
+        var result = data[key];
+        return result === HASH_UNDEFINED ? void 0 : result;
+      }
+      return hasOwnProperty2.call(data, key) ? data[key] : void 0;
+    }
+    function hashHas(key) {
+      var data = this.__data__;
+      return nativeCreate ? data[key] !== void 0 : hasOwnProperty2.call(data, key);
+    }
+    function hashSet(key, value) {
+      var data = this.__data__;
+      data[key] = nativeCreate && value === void 0 ? HASH_UNDEFINED : value;
+      return this;
+    }
+    Hash.prototype.clear = hashClear;
+    Hash.prototype["delete"] = hashDelete;
+    Hash.prototype.get = hashGet;
+    Hash.prototype.has = hashHas;
+    Hash.prototype.set = hashSet;
+    function ListCache(entries) {
+      var index2 = -1, length = entries ? entries.length : 0;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function listCacheClear() {
+      this.__data__ = [];
+    }
+    function listCacheDelete(key) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      if (index2 < 0) {
+        return false;
+      }
+      var lastIndex = data.length - 1;
+      if (index2 == lastIndex) {
+        data.pop();
+      } else {
+        splice.call(data, index2, 1);
+      }
+      return true;
+    }
+    function listCacheGet(key) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      return index2 < 0 ? void 0 : data[index2][1];
+    }
+    function listCacheHas(key) {
+      return assocIndexOf(this.__data__, key) > -1;
+    }
+    function listCacheSet(key, value) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      if (index2 < 0) {
+        data.push([key, value]);
+      } else {
+        data[index2][1] = value;
+      }
+      return this;
+    }
+    ListCache.prototype.clear = listCacheClear;
+    ListCache.prototype["delete"] = listCacheDelete;
+    ListCache.prototype.get = listCacheGet;
+    ListCache.prototype.has = listCacheHas;
+    ListCache.prototype.set = listCacheSet;
+    function MapCache(entries) {
+      var index2 = -1, length = entries ? entries.length : 0;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function mapCacheClear() {
+      this.__data__ = {
+        "hash": new Hash(),
+        "map": new (Map || ListCache)(),
+        "string": new Hash()
+      };
+    }
+    function mapCacheDelete(key) {
+      return getMapData(this, key)["delete"](key);
+    }
+    function mapCacheGet(key) {
+      return getMapData(this, key).get(key);
+    }
+    function mapCacheHas(key) {
+      return getMapData(this, key).has(key);
+    }
+    function mapCacheSet(key, value) {
+      getMapData(this, key).set(key, value);
+      return this;
+    }
+    MapCache.prototype.clear = mapCacheClear;
+    MapCache.prototype["delete"] = mapCacheDelete;
+    MapCache.prototype.get = mapCacheGet;
+    MapCache.prototype.has = mapCacheHas;
+    MapCache.prototype.set = mapCacheSet;
+    function Stack(entries) {
+      this.__data__ = new ListCache(entries);
+    }
+    function stackClear() {
+      this.__data__ = new ListCache();
+    }
+    function stackDelete(key) {
+      return this.__data__["delete"](key);
+    }
+    function stackGet(key) {
+      return this.__data__.get(key);
+    }
+    function stackHas(key) {
+      return this.__data__.has(key);
+    }
+    function stackSet(key, value) {
+      var cache = this.__data__;
+      if (cache instanceof ListCache) {
+        var pairs = cache.__data__;
+        if (!Map || pairs.length < LARGE_ARRAY_SIZE - 1) {
+          pairs.push([key, value]);
+          return this;
+        }
+        cache = this.__data__ = new MapCache(pairs);
+      }
+      cache.set(key, value);
+      return this;
+    }
+    Stack.prototype.clear = stackClear;
+    Stack.prototype["delete"] = stackDelete;
+    Stack.prototype.get = stackGet;
+    Stack.prototype.has = stackHas;
+    Stack.prototype.set = stackSet;
+    function arrayLikeKeys2(value, inherited) {
+      var result = isArray2(value) || isArguments2(value) ? baseTimes2(value.length, String) : [];
+      var length = result.length, skipIndexes = !!length;
+      for (var key in value) {
+        if ((inherited || hasOwnProperty2.call(value, key)) && !(skipIndexes && (key == "length" || isIndex2(key, length)))) {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+    function assignValue2(object, key, value) {
+      var objValue = object[key];
+      if (!(hasOwnProperty2.call(object, key) && eq2(objValue, value)) || value === void 0 && !(key in object)) {
+        object[key] = value;
+      }
+    }
+    function assocIndexOf(array, key) {
+      var length = array.length;
+      while (length--) {
+        if (eq2(array[length][0], key)) {
+          return length;
+        }
+      }
+      return -1;
+    }
+    function baseAssign(object, source) {
+      return object && copyObject2(source, keys2(source), object);
+    }
+    function baseClone(value, isDeep, isFull, customizer, key, object, stack) {
+      var result;
+      if (customizer) {
+        result = object ? customizer(value, key, object, stack) : customizer(value);
+      }
+      if (result !== void 0) {
+        return result;
+      }
+      if (!isObject2(value)) {
+        return value;
+      }
+      var isArr = isArray2(value);
+      if (isArr) {
+        result = initCloneArray(value);
+        if (!isDeep) {
+          return copyArray(value, result);
+        }
+      } else {
+        var tag = getTag(value), isFunc = tag == funcTag2 || tag == genTag2;
+        if (isBuffer(value)) {
+          return cloneBuffer(value, isDeep);
+        }
+        if (tag == objectTag || tag == argsTag2 || isFunc && !object) {
+          if (isHostObject(value)) {
+            return object ? value : {};
+          }
+          result = initCloneObject(isFunc ? {} : value);
+          if (!isDeep) {
+            return copySymbols(value, baseAssign(result, value));
+          }
+        } else {
+          if (!cloneableTags[tag]) {
+            return object ? value : {};
+          }
+          result = initCloneByTag(value, tag, baseClone, isDeep);
+        }
+      }
+      stack || (stack = new Stack());
+      var stacked = stack.get(value);
+      if (stacked) {
+        return stacked;
+      }
+      stack.set(value, result);
+      if (!isArr) {
+        var props = isFull ? getAllKeys(value) : keys2(value);
+      }
+      arrayEach2(props || value, function(subValue, key2) {
+        if (props) {
+          key2 = subValue;
+          subValue = value[key2];
+        }
+        assignValue2(result, key2, baseClone(subValue, isDeep, isFull, customizer, key2, value, stack));
+      });
+      return result;
+    }
+    function baseCreate(proto) {
+      return isObject2(proto) ? objectCreate(proto) : {};
+    }
+    function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+      var result = keysFunc(object);
+      return isArray2(object) ? result : arrayPush(result, symbolsFunc(object));
+    }
+    function baseGetTag(value) {
+      return objectToString2.call(value);
+    }
+    function baseIsNative(value) {
+      if (!isObject2(value) || isMasked(value)) {
+        return false;
+      }
+      var pattern = isFunction2(value) || isHostObject(value) ? reIsNative : reIsHostCtor;
+      return pattern.test(toSource(value));
+    }
+    function baseKeys2(object) {
+      if (!isPrototype2(object)) {
+        return nativeKeys2(object);
+      }
+      var result = [];
+      for (var key in Object(object)) {
+        if (hasOwnProperty2.call(object, key) && key != "constructor") {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+    function cloneBuffer(buffer, isDeep) {
+      if (isDeep) {
+        return buffer.slice();
+      }
+      var result = new buffer.constructor(buffer.length);
+      buffer.copy(result);
+      return result;
+    }
+    function cloneArrayBuffer(arrayBuffer) {
+      var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+      new Uint8Array(result).set(new Uint8Array(arrayBuffer));
+      return result;
+    }
+    function cloneDataView(dataView, isDeep) {
+      var buffer = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer;
+      return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
+    }
+    function cloneMap(map, isDeep, cloneFunc) {
+      var array = isDeep ? cloneFunc(mapToArray(map), true) : mapToArray(map);
+      return arrayReduce(array, addMapEntry, new map.constructor());
+    }
+    function cloneRegExp(regexp) {
+      var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));
+      result.lastIndex = regexp.lastIndex;
+      return result;
+    }
+    function cloneSet(set, isDeep, cloneFunc) {
+      var array = isDeep ? cloneFunc(setToArray(set), true) : setToArray(set);
+      return arrayReduce(array, addSetEntry, new set.constructor());
+    }
+    function cloneSymbol(symbol) {
+      return symbolValueOf ? Object(symbolValueOf.call(symbol)) : {};
+    }
+    function cloneTypedArray(typedArray, isDeep) {
+      var buffer = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer;
+      return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
+    }
+    function copyArray(source, array) {
+      var index2 = -1, length = source.length;
+      array || (array = Array(length));
+      while (++index2 < length) {
+        array[index2] = source[index2];
+      }
+      return array;
+    }
+    function copyObject2(source, props, object, customizer) {
+      object || (object = {});
+      var index2 = -1, length = props.length;
+      while (++index2 < length) {
+        var key = props[index2];
+        var newValue = customizer ? customizer(object[key], source[key], key, object, source) : void 0;
+        assignValue2(object, key, newValue === void 0 ? source[key] : newValue);
+      }
+      return object;
+    }
+    function copySymbols(source, object) {
+      return copyObject2(source, getSymbols(source), object);
+    }
+    function getAllKeys(object) {
+      return baseGetAllKeys(object, keys2, getSymbols);
+    }
+    function getMapData(map, key) {
+      var data = map.__data__;
+      return isKeyable(key) ? data[typeof key == "string" ? "string" : "hash"] : data.map;
+    }
+    function getNative(object, key) {
+      var value = getValue(object, key);
+      return baseIsNative(value) ? value : void 0;
+    }
+    var getSymbols = nativeGetSymbols ? overArg2(nativeGetSymbols, Object) : stubArray;
+    var getTag = baseGetTag;
+    if (DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag || Map && getTag(new Map()) != mapTag || Promise && getTag(Promise.resolve()) != promiseTag || Set2 && getTag(new Set2()) != setTag || WeakMap && getTag(new WeakMap()) != weakMapTag) {
+      getTag = function(value) {
+        var result = objectToString2.call(value), Ctor = result == objectTag ? value.constructor : void 0, ctorString = Ctor ? toSource(Ctor) : void 0;
+        if (ctorString) {
+          switch (ctorString) {
+            case dataViewCtorString:
+              return dataViewTag;
+            case mapCtorString:
+              return mapTag;
+            case promiseCtorString:
+              return promiseTag;
+            case setCtorString:
+              return setTag;
+            case weakMapCtorString:
+              return weakMapTag;
+          }
+        }
+        return result;
+      };
+    }
+    function initCloneArray(array) {
+      var length = array.length, result = array.constructor(length);
+      if (length && typeof array[0] == "string" && hasOwnProperty2.call(array, "index")) {
+        result.index = array.index;
+        result.input = array.input;
+      }
+      return result;
+    }
+    function initCloneObject(object) {
+      return typeof object.constructor == "function" && !isPrototype2(object) ? baseCreate(getPrototype(object)) : {};
+    }
+    function initCloneByTag(object, tag, cloneFunc, isDeep) {
+      var Ctor = object.constructor;
+      switch (tag) {
+        case arrayBufferTag:
+          return cloneArrayBuffer(object);
+        case boolTag:
+        case dateTag:
+          return new Ctor(+object);
+        case dataViewTag:
+          return cloneDataView(object, isDeep);
+        case float32Tag:
+        case float64Tag:
+        case int8Tag:
+        case int16Tag:
+        case int32Tag:
+        case uint8Tag:
+        case uint8ClampedTag:
+        case uint16Tag:
+        case uint32Tag:
+          return cloneTypedArray(object, isDeep);
+        case mapTag:
+          return cloneMap(object, isDeep, cloneFunc);
+        case numberTag:
+        case stringTag:
+          return new Ctor(object);
+        case regexpTag:
+          return cloneRegExp(object);
+        case setTag:
+          return cloneSet(object, isDeep, cloneFunc);
+        case symbolTag:
+          return cloneSymbol(object);
+      }
+    }
+    function isIndex2(value, length) {
+      length = length == null ? MAX_SAFE_INTEGER2 : length;
+      return !!length && (typeof value == "number" || reIsUint2.test(value)) && (value > -1 && value % 1 == 0 && value < length);
+    }
+    function isKeyable(value) {
+      var type = typeof value;
+      return type == "string" || type == "number" || type == "symbol" || type == "boolean" ? value !== "__proto__" : value === null;
+    }
+    function isMasked(func) {
+      return !!maskSrcKey && maskSrcKey in func;
+    }
+    function isPrototype2(value) {
+      var Ctor = value && value.constructor, proto = typeof Ctor == "function" && Ctor.prototype || objectProto2;
+      return value === proto;
+    }
+    function toSource(func) {
+      if (func != null) {
+        try {
+          return funcToString.call(func);
+        } catch (e) {
+        }
+        try {
+          return func + "";
+        } catch (e) {
+        }
+      }
+      return "";
+    }
+    function cloneDeep(value) {
+      return baseClone(value, true, true);
+    }
+    function eq2(value, other) {
+      return value === other || value !== value && other !== other;
+    }
+    function isArguments2(value) {
+      return isArrayLikeObject2(value) && hasOwnProperty2.call(value, "callee") && (!propertyIsEnumerable2.call(value, "callee") || objectToString2.call(value) == argsTag2);
+    }
+    var isArray2 = Array.isArray;
+    function isArrayLike2(value) {
+      return value != null && isLength2(value.length) && !isFunction2(value);
+    }
+    function isArrayLikeObject2(value) {
+      return isObjectLike2(value) && isArrayLike2(value);
+    }
+    var isBuffer = nativeIsBuffer || stubFalse;
+    function isFunction2(value) {
+      var tag = isObject2(value) ? objectToString2.call(value) : "";
+      return tag == funcTag2 || tag == genTag2;
+    }
+    function isLength2(value) {
+      return typeof value == "number" && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER2;
+    }
+    function isObject2(value) {
+      var type = typeof value;
+      return !!value && (type == "object" || type == "function");
+    }
+    function isObjectLike2(value) {
+      return !!value && typeof value == "object";
+    }
+    function keys2(object) {
+      return isArrayLike2(object) ? arrayLikeKeys2(object) : baseKeys2(object);
+    }
+    function stubArray() {
+      return [];
+    }
+    function stubFalse() {
+      return false;
+    }
+    module.exports = cloneDeep;
+  });
+  var lodash_filter = createCommonjsModule(function(module, exports) {
+    var LARGE_ARRAY_SIZE = 200;
+    var FUNC_ERROR_TEXT = "Expected a function";
+    var HASH_UNDEFINED = "__lodash_hash_undefined__";
+    var UNORDERED_COMPARE_FLAG = 1, PARTIAL_COMPARE_FLAG = 2;
+    var INFINITY = 1 / 0, MAX_SAFE_INTEGER2 = 9007199254740991;
+    var argsTag2 = "[object Arguments]", arrayTag = "[object Array]", boolTag = "[object Boolean]", dateTag = "[object Date]", errorTag = "[object Error]", funcTag2 = "[object Function]", genTag2 = "[object GeneratorFunction]", mapTag = "[object Map]", numberTag = "[object Number]", objectTag = "[object Object]", promiseTag = "[object Promise]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", symbolTag = "[object Symbol]", weakMapTag = "[object WeakMap]";
+    var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]", float32Tag = "[object Float32Array]", float64Tag = "[object Float64Array]", int8Tag = "[object Int8Array]", int16Tag = "[object Int16Array]", int32Tag = "[object Int32Array]", uint8Tag = "[object Uint8Array]", uint8ClampedTag = "[object Uint8ClampedArray]", uint16Tag = "[object Uint16Array]", uint32Tag = "[object Uint32Array]";
+    var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, reIsPlainProp = /^\w*$/, reLeadingDot = /^\./, rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+    var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+    var reEscapeChar = /\\(\\)?/g;
+    var reIsHostCtor = /^\[object .+?Constructor\]$/;
+    var reIsUint2 = /^(?:0|[1-9]\d*)$/;
+    var typedArrayTags = {};
+    typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
+    typedArrayTags[argsTag2] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag2] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
+    var freeGlobal = typeof commonjsGlobal == "object" && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
+    var freeSelf = typeof self == "object" && self && self.Object === Object && self;
+    var root = freeGlobal || freeSelf || Function("return this")();
+    var freeExports = exports && !exports.nodeType && exports;
+    var freeModule = freeExports && true && module && !module.nodeType && module;
+    var moduleExports = freeModule && freeModule.exports === freeExports;
+    var freeProcess = moduleExports && freeGlobal.process;
+    var nodeUtil = function() {
+      try {
+        return freeProcess && freeProcess.binding("util");
+      } catch (e) {
+      }
+    }();
+    var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+    function arrayFilter(array, predicate) {
+      var index2 = -1, length = array ? array.length : 0, resIndex = 0, result = [];
+      while (++index2 < length) {
+        var value = array[index2];
+        if (predicate(value, index2, array)) {
+          result[resIndex++] = value;
+        }
+      }
+      return result;
+    }
+    function arraySome(array, predicate) {
+      var index2 = -1, length = array ? array.length : 0;
+      while (++index2 < length) {
+        if (predicate(array[index2], index2, array)) {
+          return true;
+        }
+      }
+      return false;
+    }
+    function baseProperty(key) {
+      return function(object) {
+        return object == null ? void 0 : object[key];
+      };
+    }
+    function baseTimes2(n, iteratee) {
+      var index2 = -1, result = Array(n);
+      while (++index2 < n) {
+        result[index2] = iteratee(index2);
+      }
+      return result;
+    }
+    function baseUnary(func) {
+      return function(value) {
+        return func(value);
+      };
+    }
+    function getValue(object, key) {
+      return object == null ? void 0 : object[key];
+    }
+    function isHostObject(value) {
+      var result = false;
+      if (value != null && typeof value.toString != "function") {
+        try {
+          result = !!(value + "");
+        } catch (e) {
+        }
+      }
+      return result;
+    }
+    function mapToArray(map) {
+      var index2 = -1, result = Array(map.size);
+      map.forEach(function(value, key) {
+        result[++index2] = [key, value];
+      });
+      return result;
+    }
+    function overArg2(func, transform) {
+      return function(arg) {
+        return func(transform(arg));
+      };
+    }
+    function setToArray(set) {
+      var index2 = -1, result = Array(set.size);
+      set.forEach(function(value) {
+        result[++index2] = value;
+      });
+      return result;
+    }
+    var arrayProto = Array.prototype, funcProto = Function.prototype, objectProto2 = Object.prototype;
+    var coreJsData = root["__core-js_shared__"];
+    var maskSrcKey = function() {
+      var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || "");
+      return uid ? "Symbol(src)_1." + uid : "";
+    }();
+    var funcToString = funcProto.toString;
+    var hasOwnProperty2 = objectProto2.hasOwnProperty;
+    var objectToString2 = objectProto2.toString;
+    var reIsNative = RegExp("^" + funcToString.call(hasOwnProperty2).replace(reRegExpChar, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+    var Symbol2 = root.Symbol, Uint8Array = root.Uint8Array, propertyIsEnumerable2 = objectProto2.propertyIsEnumerable, splice = arrayProto.splice;
+    var nativeKeys2 = overArg2(Object.keys, Object);
+    var DataView = getNative(root, "DataView"), Map = getNative(root, "Map"), Promise = getNative(root, "Promise"), Set2 = getNative(root, "Set"), WeakMap = getNative(root, "WeakMap"), nativeCreate = getNative(Object, "create");
+    var dataViewCtorString = toSource(DataView), mapCtorString = toSource(Map), promiseCtorString = toSource(Promise), setCtorString = toSource(Set2), weakMapCtorString = toSource(WeakMap);
+    var symbolProto = Symbol2 ? Symbol2.prototype : void 0, symbolValueOf = symbolProto ? symbolProto.valueOf : void 0, symbolToString = symbolProto ? symbolProto.toString : void 0;
+    function Hash(entries) {
+      var index2 = -1, length = entries ? entries.length : 0;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function hashClear() {
+      this.__data__ = nativeCreate ? nativeCreate(null) : {};
+    }
+    function hashDelete(key) {
+      return this.has(key) && delete this.__data__[key];
+    }
+    function hashGet(key) {
+      var data = this.__data__;
+      if (nativeCreate) {
+        var result = data[key];
+        return result === HASH_UNDEFINED ? void 0 : result;
+      }
+      return hasOwnProperty2.call(data, key) ? data[key] : void 0;
+    }
+    function hashHas(key) {
+      var data = this.__data__;
+      return nativeCreate ? data[key] !== void 0 : hasOwnProperty2.call(data, key);
+    }
+    function hashSet(key, value) {
+      var data = this.__data__;
+      data[key] = nativeCreate && value === void 0 ? HASH_UNDEFINED : value;
+      return this;
+    }
+    Hash.prototype.clear = hashClear;
+    Hash.prototype["delete"] = hashDelete;
+    Hash.prototype.get = hashGet;
+    Hash.prototype.has = hashHas;
+    Hash.prototype.set = hashSet;
+    function ListCache(entries) {
+      var index2 = -1, length = entries ? entries.length : 0;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function listCacheClear() {
+      this.__data__ = [];
+    }
+    function listCacheDelete(key) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      if (index2 < 0) {
+        return false;
+      }
+      var lastIndex = data.length - 1;
+      if (index2 == lastIndex) {
+        data.pop();
+      } else {
+        splice.call(data, index2, 1);
+      }
+      return true;
+    }
+    function listCacheGet(key) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      return index2 < 0 ? void 0 : data[index2][1];
+    }
+    function listCacheHas(key) {
+      return assocIndexOf(this.__data__, key) > -1;
+    }
+    function listCacheSet(key, value) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      if (index2 < 0) {
+        data.push([key, value]);
+      } else {
+        data[index2][1] = value;
+      }
+      return this;
+    }
+    ListCache.prototype.clear = listCacheClear;
+    ListCache.prototype["delete"] = listCacheDelete;
+    ListCache.prototype.get = listCacheGet;
+    ListCache.prototype.has = listCacheHas;
+    ListCache.prototype.set = listCacheSet;
+    function MapCache(entries) {
+      var index2 = -1, length = entries ? entries.length : 0;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function mapCacheClear() {
+      this.__data__ = {
+        "hash": new Hash(),
+        "map": new (Map || ListCache)(),
+        "string": new Hash()
+      };
+    }
+    function mapCacheDelete(key) {
+      return getMapData(this, key)["delete"](key);
+    }
+    function mapCacheGet(key) {
+      return getMapData(this, key).get(key);
+    }
+    function mapCacheHas(key) {
+      return getMapData(this, key).has(key);
+    }
+    function mapCacheSet(key, value) {
+      getMapData(this, key).set(key, value);
+      return this;
+    }
+    MapCache.prototype.clear = mapCacheClear;
+    MapCache.prototype["delete"] = mapCacheDelete;
+    MapCache.prototype.get = mapCacheGet;
+    MapCache.prototype.has = mapCacheHas;
+    MapCache.prototype.set = mapCacheSet;
+    function SetCache(values) {
+      var index2 = -1, length = values ? values.length : 0;
+      this.__data__ = new MapCache();
+      while (++index2 < length) {
+        this.add(values[index2]);
+      }
+    }
+    function setCacheAdd(value) {
+      this.__data__.set(value, HASH_UNDEFINED);
+      return this;
+    }
+    function setCacheHas(value) {
+      return this.__data__.has(value);
+    }
+    SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+    SetCache.prototype.has = setCacheHas;
+    function Stack(entries) {
+      this.__data__ = new ListCache(entries);
+    }
+    function stackClear() {
+      this.__data__ = new ListCache();
+    }
+    function stackDelete(key) {
+      return this.__data__["delete"](key);
+    }
+    function stackGet(key) {
+      return this.__data__.get(key);
+    }
+    function stackHas(key) {
+      return this.__data__.has(key);
+    }
+    function stackSet(key, value) {
+      var cache = this.__data__;
+      if (cache instanceof ListCache) {
+        var pairs = cache.__data__;
+        if (!Map || pairs.length < LARGE_ARRAY_SIZE - 1) {
+          pairs.push([key, value]);
+          return this;
+        }
+        cache = this.__data__ = new MapCache(pairs);
+      }
+      cache.set(key, value);
+      return this;
+    }
+    Stack.prototype.clear = stackClear;
+    Stack.prototype["delete"] = stackDelete;
+    Stack.prototype.get = stackGet;
+    Stack.prototype.has = stackHas;
+    Stack.prototype.set = stackSet;
+    function arrayLikeKeys2(value, inherited) {
+      var result = isArray2(value) || isArguments2(value) ? baseTimes2(value.length, String) : [];
+      var length = result.length, skipIndexes = !!length;
+      for (var key in value) {
+        if ((inherited || hasOwnProperty2.call(value, key)) && !(skipIndexes && (key == "length" || isIndex2(key, length)))) {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+    function assocIndexOf(array, key) {
+      var length = array.length;
+      while (length--) {
+        if (eq2(array[length][0], key)) {
+          return length;
+        }
+      }
+      return -1;
+    }
+    var baseEach2 = createBaseEach2(baseForOwn2);
+    function baseFilter(collection, predicate) {
+      var result = [];
+      baseEach2(collection, function(value, index2, collection2) {
+        if (predicate(value, index2, collection2)) {
+          result.push(value);
+        }
+      });
+      return result;
+    }
+    var baseFor2 = createBaseFor2();
+    function baseForOwn2(object, iteratee) {
+      return object && baseFor2(object, iteratee, keys2);
+    }
+    function baseGet(object, path) {
+      path = isKey(path, object) ? [path] : castPath(path);
+      var index2 = 0, length = path.length;
+      while (object != null && index2 < length) {
+        object = object[toKey(path[index2++])];
+      }
+      return index2 && index2 == length ? object : void 0;
+    }
+    function baseGetTag(value) {
+      return objectToString2.call(value);
+    }
+    function baseHasIn(object, key) {
+      return object != null && key in Object(object);
+    }
+    function baseIsEqual(value, other, customizer, bitmask, stack) {
+      if (value === other) {
+        return true;
+      }
+      if (value == null || other == null || !isObject2(value) && !isObjectLike2(other)) {
+        return value !== value && other !== other;
+      }
+      return baseIsEqualDeep(value, other, baseIsEqual, customizer, bitmask, stack);
+    }
+    function baseIsEqualDeep(object, other, equalFunc, customizer, bitmask, stack) {
+      var objIsArr = isArray2(object), othIsArr = isArray2(other), objTag = arrayTag, othTag = arrayTag;
+      if (!objIsArr) {
+        objTag = getTag(object);
+        objTag = objTag == argsTag2 ? objectTag : objTag;
+      }
+      if (!othIsArr) {
+        othTag = getTag(other);
+        othTag = othTag == argsTag2 ? objectTag : othTag;
+      }
+      var objIsObj = objTag == objectTag && !isHostObject(object), othIsObj = othTag == objectTag && !isHostObject(other), isSameTag = objTag == othTag;
+      if (isSameTag && !objIsObj) {
+        stack || (stack = new Stack());
+        return objIsArr || isTypedArray(object) ? equalArrays(object, other, equalFunc, customizer, bitmask, stack) : equalByTag(object, other, objTag, equalFunc, customizer, bitmask, stack);
+      }
+      if (!(bitmask & PARTIAL_COMPARE_FLAG)) {
+        var objIsWrapped = objIsObj && hasOwnProperty2.call(object, "__wrapped__"), othIsWrapped = othIsObj && hasOwnProperty2.call(other, "__wrapped__");
+        if (objIsWrapped || othIsWrapped) {
+          var objUnwrapped = objIsWrapped ? object.value() : object, othUnwrapped = othIsWrapped ? other.value() : other;
+          stack || (stack = new Stack());
+          return equalFunc(objUnwrapped, othUnwrapped, customizer, bitmask, stack);
+        }
+      }
+      if (!isSameTag) {
+        return false;
+      }
+      stack || (stack = new Stack());
+      return equalObjects(object, other, equalFunc, customizer, bitmask, stack);
+    }
+    function baseIsMatch(object, source, matchData, customizer) {
+      var index2 = matchData.length, length = index2, noCustomizer = !customizer;
+      if (object == null) {
+        return !length;
+      }
+      object = Object(object);
+      while (index2--) {
+        var data = matchData[index2];
+        if (noCustomizer && data[2] ? data[1] !== object[data[0]] : !(data[0] in object)) {
+          return false;
+        }
+      }
+      while (++index2 < length) {
+        data = matchData[index2];
+        var key = data[0], objValue = object[key], srcValue = data[1];
+        if (noCustomizer && data[2]) {
+          if (objValue === void 0 && !(key in object)) {
+            return false;
+          }
+        } else {
+          var stack = new Stack();
+          if (customizer) {
+            var result = customizer(objValue, srcValue, key, object, source, stack);
+          }
+          if (!(result === void 0 ? baseIsEqual(srcValue, objValue, customizer, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG, stack) : result)) {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+    function baseIsNative(value) {
+      if (!isObject2(value) || isMasked(value)) {
+        return false;
+      }
+      var pattern = isFunction2(value) || isHostObject(value) ? reIsNative : reIsHostCtor;
+      return pattern.test(toSource(value));
+    }
+    function baseIsTypedArray(value) {
+      return isObjectLike2(value) && isLength2(value.length) && !!typedArrayTags[objectToString2.call(value)];
+    }
+    function baseIteratee(value) {
+      if (typeof value == "function") {
+        return value;
+      }
+      if (value == null) {
+        return identity2;
+      }
+      if (typeof value == "object") {
+        return isArray2(value) ? baseMatchesProperty(value[0], value[1]) : baseMatches(value);
+      }
+      return property(value);
+    }
+    function baseKeys2(object) {
+      if (!isPrototype2(object)) {
+        return nativeKeys2(object);
+      }
+      var result = [];
+      for (var key in Object(object)) {
+        if (hasOwnProperty2.call(object, key) && key != "constructor") {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+    function baseMatches(source) {
+      var matchData = getMatchData(source);
+      if (matchData.length == 1 && matchData[0][2]) {
+        return matchesStrictComparable(matchData[0][0], matchData[0][1]);
+      }
+      return function(object) {
+        return object === source || baseIsMatch(object, source, matchData);
+      };
+    }
+    function baseMatchesProperty(path, srcValue) {
+      if (isKey(path) && isStrictComparable(srcValue)) {
+        return matchesStrictComparable(toKey(path), srcValue);
+      }
+      return function(object) {
+        var objValue = get(object, path);
+        return objValue === void 0 && objValue === srcValue ? hasIn(object, path) : baseIsEqual(srcValue, objValue, void 0, UNORDERED_COMPARE_FLAG | PARTIAL_COMPARE_FLAG);
+      };
+    }
+    function basePropertyDeep(path) {
+      return function(object) {
+        return baseGet(object, path);
+      };
+    }
+    function baseToString(value) {
+      if (typeof value == "string") {
+        return value;
+      }
+      if (isSymbol(value)) {
+        return symbolToString ? symbolToString.call(value) : "";
+      }
+      var result = value + "";
+      return result == "0" && 1 / value == -INFINITY ? "-0" : result;
+    }
+    function castPath(value) {
+      return isArray2(value) ? value : stringToPath(value);
+    }
+    function createBaseEach2(eachFunc, fromRight) {
+      return function(collection, iteratee) {
+        if (collection == null) {
+          return collection;
+        }
+        if (!isArrayLike2(collection)) {
+          return eachFunc(collection, iteratee);
+        }
+        var length = collection.length, index2 = fromRight ? length : -1, iterable = Object(collection);
+        while (fromRight ? index2-- : ++index2 < length) {
+          if (iteratee(iterable[index2], index2, iterable) === false) {
+            break;
+          }
+        }
+        return collection;
+      };
+    }
+    function createBaseFor2(fromRight) {
+      return function(object, iteratee, keysFunc) {
+        var index2 = -1, iterable = Object(object), props = keysFunc(object), length = props.length;
+        while (length--) {
+          var key = props[fromRight ? length : ++index2];
+          if (iteratee(iterable[key], key, iterable) === false) {
+            break;
+          }
+        }
+        return object;
+      };
+    }
+    function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
+      var isPartial = bitmask & PARTIAL_COMPARE_FLAG, arrLength = array.length, othLength = other.length;
+      if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+        return false;
+      }
+      var stacked = stack.get(array);
+      if (stacked && stack.get(other)) {
+        return stacked == other;
+      }
+      var index2 = -1, result = true, seen = bitmask & UNORDERED_COMPARE_FLAG ? new SetCache() : void 0;
+      stack.set(array, other);
+      stack.set(other, array);
+      while (++index2 < arrLength) {
+        var arrValue = array[index2], othValue = other[index2];
+        if (customizer) {
+          var compared = isPartial ? customizer(othValue, arrValue, index2, other, array, stack) : customizer(arrValue, othValue, index2, array, other, stack);
+        }
+        if (compared !== void 0) {
+          if (compared) {
+            continue;
+          }
+          result = false;
+          break;
+        }
+        if (seen) {
+          if (!arraySome(other, function(othValue2, othIndex) {
+            if (!seen.has(othIndex) && (arrValue === othValue2 || equalFunc(arrValue, othValue2, customizer, bitmask, stack))) {
+              return seen.add(othIndex);
+            }
+          })) {
+            result = false;
+            break;
+          }
+        } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack))) {
+          result = false;
+          break;
+        }
+      }
+      stack["delete"](array);
+      stack["delete"](other);
+      return result;
+    }
+    function equalByTag(object, other, tag, equalFunc, customizer, bitmask, stack) {
+      switch (tag) {
+        case dataViewTag:
+          if (object.byteLength != other.byteLength || object.byteOffset != other.byteOffset) {
+            return false;
+          }
+          object = object.buffer;
+          other = other.buffer;
+        case arrayBufferTag:
+          if (object.byteLength != other.byteLength || !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+            return false;
+          }
+          return true;
+        case boolTag:
+        case dateTag:
+        case numberTag:
+          return eq2(+object, +other);
+        case errorTag:
+          return object.name == other.name && object.message == other.message;
+        case regexpTag:
+        case stringTag:
+          return object == other + "";
+        case mapTag:
+          var convert = mapToArray;
+        case setTag:
+          var isPartial = bitmask & PARTIAL_COMPARE_FLAG;
+          convert || (convert = setToArray);
+          if (object.size != other.size && !isPartial) {
+            return false;
+          }
+          var stacked = stack.get(object);
+          if (stacked) {
+            return stacked == other;
+          }
+          bitmask |= UNORDERED_COMPARE_FLAG;
+          stack.set(object, other);
+          var result = equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
+          stack["delete"](object);
+          return result;
+        case symbolTag:
+          if (symbolValueOf) {
+            return symbolValueOf.call(object) == symbolValueOf.call(other);
+          }
+      }
+      return false;
+    }
+    function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
+      var isPartial = bitmask & PARTIAL_COMPARE_FLAG, objProps = keys2(object), objLength = objProps.length, othProps = keys2(other), othLength = othProps.length;
+      if (objLength != othLength && !isPartial) {
+        return false;
+      }
+      var index2 = objLength;
+      while (index2--) {
+        var key = objProps[index2];
+        if (!(isPartial ? key in other : hasOwnProperty2.call(other, key))) {
+          return false;
+        }
+      }
+      var stacked = stack.get(object);
+      if (stacked && stack.get(other)) {
+        return stacked == other;
+      }
+      var result = true;
+      stack.set(object, other);
+      stack.set(other, object);
+      var skipCtor = isPartial;
+      while (++index2 < objLength) {
+        key = objProps[index2];
+        var objValue = object[key], othValue = other[key];
+        if (customizer) {
+          var compared = isPartial ? customizer(othValue, objValue, key, other, object, stack) : customizer(objValue, othValue, key, object, other, stack);
+        }
+        if (!(compared === void 0 ? objValue === othValue || equalFunc(objValue, othValue, customizer, bitmask, stack) : compared)) {
+          result = false;
+          break;
+        }
+        skipCtor || (skipCtor = key == "constructor");
+      }
+      if (result && !skipCtor) {
+        var objCtor = object.constructor, othCtor = other.constructor;
+        if (objCtor != othCtor && ("constructor" in object && "constructor" in other) && !(typeof objCtor == "function" && objCtor instanceof objCtor && typeof othCtor == "function" && othCtor instanceof othCtor)) {
+          result = false;
+        }
+      }
+      stack["delete"](object);
+      stack["delete"](other);
+      return result;
+    }
+    function getMapData(map, key) {
+      var data = map.__data__;
+      return isKeyable(key) ? data[typeof key == "string" ? "string" : "hash"] : data.map;
+    }
+    function getMatchData(object) {
+      var result = keys2(object), length = result.length;
+      while (length--) {
+        var key = result[length], value = object[key];
+        result[length] = [key, value, isStrictComparable(value)];
+      }
+      return result;
+    }
+    function getNative(object, key) {
+      var value = getValue(object, key);
+      return baseIsNative(value) ? value : void 0;
+    }
+    var getTag = baseGetTag;
+    if (DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag || Map && getTag(new Map()) != mapTag || Promise && getTag(Promise.resolve()) != promiseTag || Set2 && getTag(new Set2()) != setTag || WeakMap && getTag(new WeakMap()) != weakMapTag) {
+      getTag = function(value) {
+        var result = objectToString2.call(value), Ctor = result == objectTag ? value.constructor : void 0, ctorString = Ctor ? toSource(Ctor) : void 0;
+        if (ctorString) {
+          switch (ctorString) {
+            case dataViewCtorString:
+              return dataViewTag;
+            case mapCtorString:
+              return mapTag;
+            case promiseCtorString:
+              return promiseTag;
+            case setCtorString:
+              return setTag;
+            case weakMapCtorString:
+              return weakMapTag;
+          }
+        }
+        return result;
+      };
+    }
+    function hasPath(object, path, hasFunc) {
+      path = isKey(path, object) ? [path] : castPath(path);
+      var result, index2 = -1, length = path.length;
+      while (++index2 < length) {
+        var key = toKey(path[index2]);
+        if (!(result = object != null && hasFunc(object, key))) {
+          break;
+        }
+        object = object[key];
+      }
+      if (result) {
+        return result;
+      }
+      var length = object ? object.length : 0;
+      return !!length && isLength2(length) && isIndex2(key, length) && (isArray2(object) || isArguments2(object));
+    }
+    function isIndex2(value, length) {
+      length = length == null ? MAX_SAFE_INTEGER2 : length;
+      return !!length && (typeof value == "number" || reIsUint2.test(value)) && (value > -1 && value % 1 == 0 && value < length);
+    }
+    function isKey(value, object) {
+      if (isArray2(value)) {
+        return false;
+      }
+      var type = typeof value;
+      if (type == "number" || type == "symbol" || type == "boolean" || value == null || isSymbol(value)) {
+        return true;
+      }
+      return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+    }
+    function isKeyable(value) {
+      var type = typeof value;
+      return type == "string" || type == "number" || type == "symbol" || type == "boolean" ? value !== "__proto__" : value === null;
+    }
+    function isMasked(func) {
+      return !!maskSrcKey && maskSrcKey in func;
+    }
+    function isPrototype2(value) {
+      var Ctor = value && value.constructor, proto = typeof Ctor == "function" && Ctor.prototype || objectProto2;
+      return value === proto;
+    }
+    function isStrictComparable(value) {
+      return value === value && !isObject2(value);
+    }
+    function matchesStrictComparable(key, srcValue) {
+      return function(object) {
+        if (object == null) {
+          return false;
+        }
+        return object[key] === srcValue && (srcValue !== void 0 || key in Object(object));
+      };
+    }
+    var stringToPath = memoize(function(string) {
+      string = toString(string);
+      var result = [];
+      if (reLeadingDot.test(string)) {
+        result.push("");
+      }
+      string.replace(rePropName, function(match2, number2, quote, string2) {
+        result.push(quote ? string2.replace(reEscapeChar, "$1") : number2 || match2);
+      });
+      return result;
+    });
+    function toKey(value) {
+      if (typeof value == "string" || isSymbol(value)) {
+        return value;
+      }
+      var result = value + "";
+      return result == "0" && 1 / value == -INFINITY ? "-0" : result;
+    }
+    function toSource(func) {
+      if (func != null) {
+        try {
+          return funcToString.call(func);
+        } catch (e) {
+        }
+        try {
+          return func + "";
+        } catch (e) {
+        }
+      }
+      return "";
+    }
+    function filter(collection, predicate) {
+      var func = isArray2(collection) ? arrayFilter : baseFilter;
+      return func(collection, baseIteratee(predicate));
+    }
+    function memoize(func, resolver) {
+      if (typeof func != "function" || resolver && typeof resolver != "function") {
+        throw new TypeError(FUNC_ERROR_TEXT);
+      }
+      var memoized = function() {
+        var args = arguments, key = resolver ? resolver.apply(this, args) : args[0], cache = memoized.cache;
+        if (cache.has(key)) {
+          return cache.get(key);
+        }
+        var result = func.apply(this, args);
+        memoized.cache = cache.set(key, result);
+        return result;
+      };
+      memoized.cache = new (memoize.Cache || MapCache)();
+      return memoized;
+    }
+    memoize.Cache = MapCache;
+    function eq2(value, other) {
+      return value === other || value !== value && other !== other;
+    }
+    function isArguments2(value) {
+      return isArrayLikeObject2(value) && hasOwnProperty2.call(value, "callee") && (!propertyIsEnumerable2.call(value, "callee") || objectToString2.call(value) == argsTag2);
+    }
+    var isArray2 = Array.isArray;
+    function isArrayLike2(value) {
+      return value != null && isLength2(value.length) && !isFunction2(value);
+    }
+    function isArrayLikeObject2(value) {
+      return isObjectLike2(value) && isArrayLike2(value);
+    }
+    function isFunction2(value) {
+      var tag = isObject2(value) ? objectToString2.call(value) : "";
+      return tag == funcTag2 || tag == genTag2;
+    }
+    function isLength2(value) {
+      return typeof value == "number" && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER2;
+    }
+    function isObject2(value) {
+      var type = typeof value;
+      return !!value && (type == "object" || type == "function");
+    }
+    function isObjectLike2(value) {
+      return !!value && typeof value == "object";
+    }
+    function isSymbol(value) {
+      return typeof value == "symbol" || isObjectLike2(value) && objectToString2.call(value) == symbolTag;
+    }
+    var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+    function toString(value) {
+      return value == null ? "" : baseToString(value);
+    }
+    function get(object, path, defaultValue) {
+      var result = object == null ? void 0 : baseGet(object, path);
+      return result === void 0 ? defaultValue : result;
+    }
+    function hasIn(object, path) {
+      return object != null && hasPath(object, path, baseHasIn);
+    }
+    function keys2(object) {
+      return isArrayLike2(object) ? arrayLikeKeys2(object) : baseKeys2(object);
+    }
+    function identity2(value) {
+      return value;
+    }
+    function property(path) {
+      return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+    }
+    module.exports = filter;
+  });
+  var lodash_isequal = createCommonjsModule(function(module, exports) {
+    var LARGE_ARRAY_SIZE = 200;
+    var HASH_UNDEFINED = "__lodash_hash_undefined__";
+    var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+    var MAX_SAFE_INTEGER2 = 9007199254740991;
+    var argsTag2 = "[object Arguments]", arrayTag = "[object Array]", asyncTag = "[object AsyncFunction]", boolTag = "[object Boolean]", dateTag = "[object Date]", errorTag = "[object Error]", funcTag2 = "[object Function]", genTag2 = "[object GeneratorFunction]", mapTag = "[object Map]", numberTag = "[object Number]", nullTag = "[object Null]", objectTag = "[object Object]", promiseTag = "[object Promise]", proxyTag = "[object Proxy]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", symbolTag = "[object Symbol]", undefinedTag = "[object Undefined]", weakMapTag = "[object WeakMap]";
+    var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]", float32Tag = "[object Float32Array]", float64Tag = "[object Float64Array]", int8Tag = "[object Int8Array]", int16Tag = "[object Int16Array]", int32Tag = "[object Int32Array]", uint8Tag = "[object Uint8Array]", uint8ClampedTag = "[object Uint8ClampedArray]", uint16Tag = "[object Uint16Array]", uint32Tag = "[object Uint32Array]";
+    var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+    var reIsHostCtor = /^\[object .+?Constructor\]$/;
+    var reIsUint2 = /^(?:0|[1-9]\d*)$/;
+    var typedArrayTags = {};
+    typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
+    typedArrayTags[argsTag2] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag2] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
+    var freeGlobal = typeof commonjsGlobal == "object" && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
+    var freeSelf = typeof self == "object" && self && self.Object === Object && self;
+    var root = freeGlobal || freeSelf || Function("return this")();
+    var freeExports = exports && !exports.nodeType && exports;
+    var freeModule = freeExports && true && module && !module.nodeType && module;
+    var moduleExports = freeModule && freeModule.exports === freeExports;
+    var freeProcess = moduleExports && freeGlobal.process;
+    var nodeUtil = function() {
+      try {
+        return freeProcess && freeProcess.binding && freeProcess.binding("util");
+      } catch (e) {
+      }
+    }();
+    var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+    function arrayFilter(array, predicate) {
+      var index2 = -1, length = array == null ? 0 : array.length, resIndex = 0, result = [];
+      while (++index2 < length) {
+        var value = array[index2];
+        if (predicate(value, index2, array)) {
+          result[resIndex++] = value;
+        }
+      }
+      return result;
+    }
+    function arrayPush(array, values) {
+      var index2 = -1, length = values.length, offset = array.length;
+      while (++index2 < length) {
+        array[offset + index2] = values[index2];
+      }
+      return array;
+    }
+    function arraySome(array, predicate) {
+      var index2 = -1, length = array == null ? 0 : array.length;
+      while (++index2 < length) {
+        if (predicate(array[index2], index2, array)) {
+          return true;
+        }
+      }
+      return false;
+    }
+    function baseTimes2(n, iteratee) {
+      var index2 = -1, result = Array(n);
+      while (++index2 < n) {
+        result[index2] = iteratee(index2);
+      }
+      return result;
+    }
+    function baseUnary(func) {
+      return function(value) {
+        return func(value);
+      };
+    }
+    function cacheHas(cache, key) {
+      return cache.has(key);
+    }
+    function getValue(object, key) {
+      return object == null ? void 0 : object[key];
+    }
+    function mapToArray(map) {
+      var index2 = -1, result = Array(map.size);
+      map.forEach(function(value, key) {
+        result[++index2] = [key, value];
+      });
+      return result;
+    }
+    function overArg2(func, transform) {
+      return function(arg) {
+        return func(transform(arg));
+      };
+    }
+    function setToArray(set) {
+      var index2 = -1, result = Array(set.size);
+      set.forEach(function(value) {
+        result[++index2] = value;
+      });
+      return result;
+    }
+    var arrayProto = Array.prototype, funcProto = Function.prototype, objectProto2 = Object.prototype;
+    var coreJsData = root["__core-js_shared__"];
+    var funcToString = funcProto.toString;
+    var hasOwnProperty2 = objectProto2.hasOwnProperty;
+    var maskSrcKey = function() {
+      var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || "");
+      return uid ? "Symbol(src)_1." + uid : "";
+    }();
+    var nativeObjectToString = objectProto2.toString;
+    var reIsNative = RegExp("^" + funcToString.call(hasOwnProperty2).replace(reRegExpChar, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+    var Buffer = moduleExports ? root.Buffer : void 0, Symbol2 = root.Symbol, Uint8Array = root.Uint8Array, propertyIsEnumerable2 = objectProto2.propertyIsEnumerable, splice = arrayProto.splice, symToStringTag = Symbol2 ? Symbol2.toStringTag : void 0;
+    var nativeGetSymbols = Object.getOwnPropertySymbols, nativeIsBuffer = Buffer ? Buffer.isBuffer : void 0, nativeKeys2 = overArg2(Object.keys, Object);
+    var DataView = getNative(root, "DataView"), Map = getNative(root, "Map"), Promise = getNative(root, "Promise"), Set2 = getNative(root, "Set"), WeakMap = getNative(root, "WeakMap"), nativeCreate = getNative(Object, "create");
+    var dataViewCtorString = toSource(DataView), mapCtorString = toSource(Map), promiseCtorString = toSource(Promise), setCtorString = toSource(Set2), weakMapCtorString = toSource(WeakMap);
+    var symbolProto = Symbol2 ? Symbol2.prototype : void 0, symbolValueOf = symbolProto ? symbolProto.valueOf : void 0;
+    function Hash(entries) {
+      var index2 = -1, length = entries == null ? 0 : entries.length;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function hashClear() {
+      this.__data__ = nativeCreate ? nativeCreate(null) : {};
+      this.size = 0;
+    }
+    function hashDelete(key) {
+      var result = this.has(key) && delete this.__data__[key];
+      this.size -= result ? 1 : 0;
+      return result;
+    }
+    function hashGet(key) {
+      var data = this.__data__;
+      if (nativeCreate) {
+        var result = data[key];
+        return result === HASH_UNDEFINED ? void 0 : result;
+      }
+      return hasOwnProperty2.call(data, key) ? data[key] : void 0;
+    }
+    function hashHas(key) {
+      var data = this.__data__;
+      return nativeCreate ? data[key] !== void 0 : hasOwnProperty2.call(data, key);
+    }
+    function hashSet(key, value) {
+      var data = this.__data__;
+      this.size += this.has(key) ? 0 : 1;
+      data[key] = nativeCreate && value === void 0 ? HASH_UNDEFINED : value;
+      return this;
+    }
+    Hash.prototype.clear = hashClear;
+    Hash.prototype["delete"] = hashDelete;
+    Hash.prototype.get = hashGet;
+    Hash.prototype.has = hashHas;
+    Hash.prototype.set = hashSet;
+    function ListCache(entries) {
+      var index2 = -1, length = entries == null ? 0 : entries.length;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function listCacheClear() {
+      this.__data__ = [];
+      this.size = 0;
+    }
+    function listCacheDelete(key) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      if (index2 < 0) {
+        return false;
+      }
+      var lastIndex = data.length - 1;
+      if (index2 == lastIndex) {
+        data.pop();
+      } else {
+        splice.call(data, index2, 1);
+      }
+      --this.size;
+      return true;
+    }
+    function listCacheGet(key) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      return index2 < 0 ? void 0 : data[index2][1];
+    }
+    function listCacheHas(key) {
+      return assocIndexOf(this.__data__, key) > -1;
+    }
+    function listCacheSet(key, value) {
+      var data = this.__data__, index2 = assocIndexOf(data, key);
+      if (index2 < 0) {
+        ++this.size;
+        data.push([key, value]);
+      } else {
+        data[index2][1] = value;
+      }
+      return this;
+    }
+    ListCache.prototype.clear = listCacheClear;
+    ListCache.prototype["delete"] = listCacheDelete;
+    ListCache.prototype.get = listCacheGet;
+    ListCache.prototype.has = listCacheHas;
+    ListCache.prototype.set = listCacheSet;
+    function MapCache(entries) {
+      var index2 = -1, length = entries == null ? 0 : entries.length;
+      this.clear();
+      while (++index2 < length) {
+        var entry = entries[index2];
+        this.set(entry[0], entry[1]);
+      }
+    }
+    function mapCacheClear() {
+      this.size = 0;
+      this.__data__ = {
+        "hash": new Hash(),
+        "map": new (Map || ListCache)(),
+        "string": new Hash()
+      };
+    }
+    function mapCacheDelete(key) {
+      var result = getMapData(this, key)["delete"](key);
+      this.size -= result ? 1 : 0;
+      return result;
+    }
+    function mapCacheGet(key) {
+      return getMapData(this, key).get(key);
+    }
+    function mapCacheHas(key) {
+      return getMapData(this, key).has(key);
+    }
+    function mapCacheSet(key, value) {
+      var data = getMapData(this, key), size = data.size;
+      data.set(key, value);
+      this.size += data.size == size ? 0 : 1;
+      return this;
+    }
+    MapCache.prototype.clear = mapCacheClear;
+    MapCache.prototype["delete"] = mapCacheDelete;
+    MapCache.prototype.get = mapCacheGet;
+    MapCache.prototype.has = mapCacheHas;
+    MapCache.prototype.set = mapCacheSet;
+    function SetCache(values) {
+      var index2 = -1, length = values == null ? 0 : values.length;
+      this.__data__ = new MapCache();
+      while (++index2 < length) {
+        this.add(values[index2]);
+      }
+    }
+    function setCacheAdd(value) {
+      this.__data__.set(value, HASH_UNDEFINED);
+      return this;
+    }
+    function setCacheHas(value) {
+      return this.__data__.has(value);
+    }
+    SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+    SetCache.prototype.has = setCacheHas;
+    function Stack(entries) {
+      var data = this.__data__ = new ListCache(entries);
+      this.size = data.size;
+    }
+    function stackClear() {
+      this.__data__ = new ListCache();
+      this.size = 0;
+    }
+    function stackDelete(key) {
+      var data = this.__data__, result = data["delete"](key);
+      this.size = data.size;
+      return result;
+    }
+    function stackGet(key) {
+      return this.__data__.get(key);
+    }
+    function stackHas(key) {
+      return this.__data__.has(key);
+    }
+    function stackSet(key, value) {
+      var data = this.__data__;
+      if (data instanceof ListCache) {
+        var pairs = data.__data__;
+        if (!Map || pairs.length < LARGE_ARRAY_SIZE - 1) {
+          pairs.push([key, value]);
+          this.size = ++data.size;
+          return this;
+        }
+        data = this.__data__ = new MapCache(pairs);
+      }
+      data.set(key, value);
+      this.size = data.size;
+      return this;
+    }
+    Stack.prototype.clear = stackClear;
+    Stack.prototype["delete"] = stackDelete;
+    Stack.prototype.get = stackGet;
+    Stack.prototype.has = stackHas;
+    Stack.prototype.set = stackSet;
+    function arrayLikeKeys2(value, inherited) {
+      var isArr = isArray2(value), isArg = !isArr && isArguments2(value), isBuff = !isArr && !isArg && isBuffer(value), isType = !isArr && !isArg && !isBuff && isTypedArray(value), skipIndexes = isArr || isArg || isBuff || isType, result = skipIndexes ? baseTimes2(value.length, String) : [], length = result.length;
+      for (var key in value) {
+        if ((inherited || hasOwnProperty2.call(value, key)) && !(skipIndexes && (key == "length" || isBuff && (key == "offset" || key == "parent") || isType && (key == "buffer" || key == "byteLength" || key == "byteOffset") || isIndex2(key, length)))) {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+    function assocIndexOf(array, key) {
+      var length = array.length;
+      while (length--) {
+        if (eq2(array[length][0], key)) {
+          return length;
+        }
+      }
+      return -1;
+    }
+    function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+      var result = keysFunc(object);
+      return isArray2(object) ? result : arrayPush(result, symbolsFunc(object));
+    }
+    function baseGetTag(value) {
+      if (value == null) {
+        return value === void 0 ? undefinedTag : nullTag;
+      }
+      return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString2(value);
+    }
+    function baseIsArguments(value) {
+      return isObjectLike2(value) && baseGetTag(value) == argsTag2;
+    }
+    function baseIsEqual(value, other, bitmask, customizer, stack) {
+      if (value === other) {
+        return true;
+      }
+      if (value == null || other == null || !isObjectLike2(value) && !isObjectLike2(other)) {
+        return value !== value && other !== other;
+      }
+      return baseIsEqualDeep(value, other, bitmask, customizer, baseIsEqual, stack);
+    }
+    function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
+      var objIsArr = isArray2(object), othIsArr = isArray2(other), objTag = objIsArr ? arrayTag : getTag(object), othTag = othIsArr ? arrayTag : getTag(other);
+      objTag = objTag == argsTag2 ? objectTag : objTag;
+      othTag = othTag == argsTag2 ? objectTag : othTag;
+      var objIsObj = objTag == objectTag, othIsObj = othTag == objectTag, isSameTag = objTag == othTag;
+      if (isSameTag && isBuffer(object)) {
+        if (!isBuffer(other)) {
+          return false;
+        }
+        objIsArr = true;
+        objIsObj = false;
+      }
+      if (isSameTag && !objIsObj) {
+        stack || (stack = new Stack());
+        return objIsArr || isTypedArray(object) ? equalArrays(object, other, bitmask, customizer, equalFunc, stack) : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
+      }
+      if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
+        var objIsWrapped = objIsObj && hasOwnProperty2.call(object, "__wrapped__"), othIsWrapped = othIsObj && hasOwnProperty2.call(other, "__wrapped__");
+        if (objIsWrapped || othIsWrapped) {
+          var objUnwrapped = objIsWrapped ? object.value() : object, othUnwrapped = othIsWrapped ? other.value() : other;
+          stack || (stack = new Stack());
+          return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
+        }
+      }
+      if (!isSameTag) {
+        return false;
+      }
+      stack || (stack = new Stack());
+      return equalObjects(object, other, bitmask, customizer, equalFunc, stack);
+    }
+    function baseIsNative(value) {
+      if (!isObject2(value) || isMasked(value)) {
+        return false;
+      }
+      var pattern = isFunction2(value) ? reIsNative : reIsHostCtor;
+      return pattern.test(toSource(value));
+    }
+    function baseIsTypedArray(value) {
+      return isObjectLike2(value) && isLength2(value.length) && !!typedArrayTags[baseGetTag(value)];
+    }
+    function baseKeys2(object) {
+      if (!isPrototype2(object)) {
+        return nativeKeys2(object);
+      }
+      var result = [];
+      for (var key in Object(object)) {
+        if (hasOwnProperty2.call(object, key) && key != "constructor") {
+          result.push(key);
+        }
+      }
+      return result;
+    }
+    function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
+      var isPartial = bitmask & COMPARE_PARTIAL_FLAG, arrLength = array.length, othLength = other.length;
+      if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+        return false;
+      }
+      var stacked = stack.get(array);
+      if (stacked && stack.get(other)) {
+        return stacked == other;
+      }
+      var index2 = -1, result = true, seen = bitmask & COMPARE_UNORDERED_FLAG ? new SetCache() : void 0;
+      stack.set(array, other);
+      stack.set(other, array);
+      while (++index2 < arrLength) {
+        var arrValue = array[index2], othValue = other[index2];
+        if (customizer) {
+          var compared = isPartial ? customizer(othValue, arrValue, index2, other, array, stack) : customizer(arrValue, othValue, index2, array, other, stack);
+        }
+        if (compared !== void 0) {
+          if (compared) {
+            continue;
+          }
+          result = false;
+          break;
+        }
+        if (seen) {
+          if (!arraySome(other, function(othValue2, othIndex) {
+            if (!cacheHas(seen, othIndex) && (arrValue === othValue2 || equalFunc(arrValue, othValue2, bitmask, customizer, stack))) {
+              return seen.push(othIndex);
+            }
+          })) {
+            result = false;
+            break;
+          }
+        } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
+          result = false;
+          break;
+        }
+      }
+      stack["delete"](array);
+      stack["delete"](other);
+      return result;
+    }
+    function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
+      switch (tag) {
+        case dataViewTag:
+          if (object.byteLength != other.byteLength || object.byteOffset != other.byteOffset) {
+            return false;
+          }
+          object = object.buffer;
+          other = other.buffer;
+        case arrayBufferTag:
+          if (object.byteLength != other.byteLength || !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+            return false;
+          }
+          return true;
+        case boolTag:
+        case dateTag:
+        case numberTag:
+          return eq2(+object, +other);
+        case errorTag:
+          return object.name == other.name && object.message == other.message;
+        case regexpTag:
+        case stringTag:
+          return object == other + "";
+        case mapTag:
+          var convert = mapToArray;
+        case setTag:
+          var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
+          convert || (convert = setToArray);
+          if (object.size != other.size && !isPartial) {
+            return false;
+          }
+          var stacked = stack.get(object);
+          if (stacked) {
+            return stacked == other;
+          }
+          bitmask |= COMPARE_UNORDERED_FLAG;
+          stack.set(object, other);
+          var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
+          stack["delete"](object);
+          return result;
+        case symbolTag:
+          if (symbolValueOf) {
+            return symbolValueOf.call(object) == symbolValueOf.call(other);
+          }
+      }
+      return false;
+    }
+    function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
+      var isPartial = bitmask & COMPARE_PARTIAL_FLAG, objProps = getAllKeys(object), objLength = objProps.length, othProps = getAllKeys(other), othLength = othProps.length;
+      if (objLength != othLength && !isPartial) {
+        return false;
+      }
+      var index2 = objLength;
+      while (index2--) {
+        var key = objProps[index2];
+        if (!(isPartial ? key in other : hasOwnProperty2.call(other, key))) {
+          return false;
+        }
+      }
+      var stacked = stack.get(object);
+      if (stacked && stack.get(other)) {
+        return stacked == other;
+      }
+      var result = true;
+      stack.set(object, other);
+      stack.set(other, object);
+      var skipCtor = isPartial;
+      while (++index2 < objLength) {
+        key = objProps[index2];
+        var objValue = object[key], othValue = other[key];
+        if (customizer) {
+          var compared = isPartial ? customizer(othValue, objValue, key, other, object, stack) : customizer(objValue, othValue, key, object, other, stack);
+        }
+        if (!(compared === void 0 ? objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack) : compared)) {
+          result = false;
+          break;
+        }
+        skipCtor || (skipCtor = key == "constructor");
+      }
+      if (result && !skipCtor) {
+        var objCtor = object.constructor, othCtor = other.constructor;
+        if (objCtor != othCtor && ("constructor" in object && "constructor" in other) && !(typeof objCtor == "function" && objCtor instanceof objCtor && typeof othCtor == "function" && othCtor instanceof othCtor)) {
+          result = false;
+        }
+      }
+      stack["delete"](object);
+      stack["delete"](other);
+      return result;
+    }
+    function getAllKeys(object) {
+      return baseGetAllKeys(object, keys2, getSymbols);
+    }
+    function getMapData(map, key) {
+      var data = map.__data__;
+      return isKeyable(key) ? data[typeof key == "string" ? "string" : "hash"] : data.map;
+    }
+    function getNative(object, key) {
+      var value = getValue(object, key);
+      return baseIsNative(value) ? value : void 0;
+    }
+    function getRawTag(value) {
+      var isOwn = hasOwnProperty2.call(value, symToStringTag), tag = value[symToStringTag];
+      try {
+        value[symToStringTag] = void 0;
+        var unmasked = true;
+      } catch (e) {
+      }
+      var result = nativeObjectToString.call(value);
+      if (unmasked) {
+        if (isOwn) {
+          value[symToStringTag] = tag;
+        } else {
+          delete value[symToStringTag];
+        }
+      }
+      return result;
+    }
+    var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+      if (object == null) {
+        return [];
+      }
+      object = Object(object);
+      return arrayFilter(nativeGetSymbols(object), function(symbol) {
+        return propertyIsEnumerable2.call(object, symbol);
+      });
+    };
+    var getTag = baseGetTag;
+    if (DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag || Map && getTag(new Map()) != mapTag || Promise && getTag(Promise.resolve()) != promiseTag || Set2 && getTag(new Set2()) != setTag || WeakMap && getTag(new WeakMap()) != weakMapTag) {
+      getTag = function(value) {
+        var result = baseGetTag(value), Ctor = result == objectTag ? value.constructor : void 0, ctorString = Ctor ? toSource(Ctor) : "";
+        if (ctorString) {
+          switch (ctorString) {
+            case dataViewCtorString:
+              return dataViewTag;
+            case mapCtorString:
+              return mapTag;
+            case promiseCtorString:
+              return promiseTag;
+            case setCtorString:
+              return setTag;
+            case weakMapCtorString:
+              return weakMapTag;
+          }
+        }
+        return result;
+      };
+    }
+    function isIndex2(value, length) {
+      length = length == null ? MAX_SAFE_INTEGER2 : length;
+      return !!length && (typeof value == "number" || reIsUint2.test(value)) && (value > -1 && value % 1 == 0 && value < length);
+    }
+    function isKeyable(value) {
+      var type = typeof value;
+      return type == "string" || type == "number" || type == "symbol" || type == "boolean" ? value !== "__proto__" : value === null;
+    }
+    function isMasked(func) {
+      return !!maskSrcKey && maskSrcKey in func;
+    }
+    function isPrototype2(value) {
+      var Ctor = value && value.constructor, proto = typeof Ctor == "function" && Ctor.prototype || objectProto2;
+      return value === proto;
+    }
+    function objectToString2(value) {
+      return nativeObjectToString.call(value);
+    }
+    function toSource(func) {
+      if (func != null) {
+        try {
+          return funcToString.call(func);
+        } catch (e) {
+        }
+        try {
+          return func + "";
+        } catch (e) {
+        }
+      }
+      return "";
+    }
+    function eq2(value, other) {
+      return value === other || value !== value && other !== other;
+    }
+    var isArguments2 = baseIsArguments(function() {
+      return arguments;
+    }()) ? baseIsArguments : function(value) {
+      return isObjectLike2(value) && hasOwnProperty2.call(value, "callee") && !propertyIsEnumerable2.call(value, "callee");
+    };
+    var isArray2 = Array.isArray;
+    function isArrayLike2(value) {
+      return value != null && isLength2(value.length) && !isFunction2(value);
+    }
+    var isBuffer = nativeIsBuffer || stubFalse;
+    function isEqual(value, other) {
+      return baseIsEqual(value, other);
+    }
+    function isFunction2(value) {
+      if (!isObject2(value)) {
+        return false;
+      }
+      var tag = baseGetTag(value);
+      return tag == funcTag2 || tag == genTag2 || tag == asyncTag || tag == proxyTag;
+    }
+    function isLength2(value) {
+      return typeof value == "number" && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER2;
+    }
+    function isObject2(value) {
+      var type = typeof value;
+      return value != null && (type == "object" || type == "function");
+    }
+    function isObjectLike2(value) {
+      return value != null && typeof value == "object";
+    }
+    var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+    function keys2(object) {
+      return isArrayLike2(object) ? arrayLikeKeys2(object) : baseKeys2(object);
+    }
+    function stubArray() {
+      return [];
+    }
+    function stubFalse() {
+      return false;
+    }
+    module.exports = isEqual;
+  });
+  var diacritics = {
+    "a": ["a", "\xE0", "\xE1", "\xE2", "\xE3", "\xE4", "\xE5", "\xE6", "\u0101", "\u0103", "\u0105", "\u01CE", "\u01DF", "\u01E1", "\u01FB", "\u0201", "\u0203", "\u0227", "\u0250", "\u0251", "\u0252", "\u0363", "\u0430", "\u04D1", "\u04D3", "\u1D43", "\u1D44", "\u1D8F", "\u1E01", "\u1E9A", "\u1EA1", "\u1EA3", "\u1EA5", "\u1EA7", "\u1EA9", "\u1EAB", "\u1EAD", "\u1EAF", "\u1EB1", "\u1EB3", "\u1EB5", "\u1EB7", "\u2090", "\u2C65", "\uFF41"],
+    "A": ["A", "\xC0", "\xC1", "\xC2", "\xC3", "\xC4", "\xC5", "\u0100", "\u0102", "\u0104", "\u01CD", "\u01DE", "\u01E0", "\u01FA", "\u0200", "\u0202", "\u0226", "\u023A", "\u0410", "\u04D0", "\u04D2", "\u1D00", "\u1D2C", "\u1E00", "\u1EA0", "\u1EA2", "\u1EA4", "\u1EA6", "\u1EA8", "\u1EAA", "\u1EAC", "\u1EAE", "\u1EB0", "\u1EB2", "\u1EB4", "\u1EB6", "\uFF21"],
+    "b": ["b", "\u0180", "\u0183", "\u0253", "\u15AF", "\u1D47", "\u1D6C", "\u1D80", "\u1E03", "\u1E05", "\u1E07", "\uFF42"],
+    "B": ["B", "\u0181", "\u0182", "\u0243", "\u0299", "\u16D2", "\u1D03", "\u1D2E", "\u1D2F", "\u1E02", "\u1E04", "\u1E06", "\uFF22"],
+    "c": ["c", "\xE7", "\u0107", "\u0109", "\u010B", "\u010D", "\u0188", "\u023C", "\u0255", "\u0368", "\u1D04", "\u1D9C", "\u1E09", "\u2184", "\uFF43"],
+    "C": ["C", "\xC7", "\u0106", "\u0108", "\u010A", "\u010C", "\u0187", "\u023B", "\u0297", "\u1E08", "\uFF23"],
+    "d": ["d", "\u010F", "\u0111", "\u018B", "\u018C", "\u0221", "\u0256", "\u0257", "\u0369", "\u1D48", "\u1D6D", "\u1D81", "\u1D91", "\u1E0B", "\u1E0D", "\u1E0F", "\u1E11", "\u1E13", "\uFF44"],
+    "D": ["D", "\u010E", "\u0110", "\u0189", "\u018A", "\u1D30", "\u1E0A", "\u1E0C", "\u1E0E", "\u1E10", "\u1E12", "\uFF24"],
+    "e": ["e", "\xE8", "\xE9", "\xEA", "\xEB", "\u0113", "\u0115", "\u0117", "\u0119", "\u011B", "\u01DD", "\u0205", "\u0207", "\u0229", "\u0247", "\u0258", "\u0364", "\u1D49", "\u1D92", "\u1E15", "\u1E17", "\u1E19", "\u1E1B", "\u1E1D", "\u1EB9", "\u1EBB", "\u1EBD", "\u1EBF", "\u1EC1", "\u1EC3", "\u1EC5", "\u1EC7", "\u2091", "\uFF45"],
+    "E": ["E", "\xC8", "\xC9", "\xCA", "\xCB", "\u0112", "\u0114", "\u0116", "\u0118", "\u011A", "\u0152", "\u018E", "\u0190", "\u0204", "\u0206", "\u0228", "\u0246", "\u025B", "\u025C", "\u0276", "\u0404", "\u042D", "\u044D", "\u0454", "\u04EC", "\u04ED", "\u1D07", "\u1D08", "\u1D31", "\u1D32", "\u1D4B", "\u1D4C", "\u1D93", "\u1D94", "\u1D9F", "\u1E14", "\u1E16", "\u1E18", "\u1E1A", "\u1E1C", "\u1EB8", "\u1EBA", "\u1EBC", "\u1EBE", "\u1EC0", "\u1EC2", "\u1EC4", "\u1EC6", "\uFF25", "\u{10401}", "\u{10429}"],
+    "f": ["f", "\u0192", "\u1D6E", "\u1D82", "\u1DA0", "\u1E1F", "\uFF46"],
+    "F": ["F", "\u0191", "\u1E1E", "\u214E", "\uFF26"],
+    "g": ["g", "\u011D", "\u011F", "\u0121", "\u0123", "\u01E5", "\u01E7", "\u01F5", "\u0260", "\u0261", "\u1D4D", "\u1D77", "\u1D79", "\u1D83", "\u1DA2", "\u1E21", "\uFF47"],
+    "G": ["G", "\u011C", "\u011E", "\u0120", "\u0122", "\u0193", "\u01E4", "\u01E6", "\u01F4", "\u0262", "\u029B", "\u1D33", "\u1E20", "\uFF27"],
+    "h": ["h", "\u0125", "\u0127", "\u0195", "\u021F", "\u0265", "\u0266", "\u02AE", "\u02AF", "\u02B0", "\u02B1", "\u036A", "\u04BA", "\u04BB", "\u144B", "\u1DA3", "\u1E23", "\u1E25", "\u1E27", "\u1E29", "\u1E2B", "\u2C68", "\uFF48"],
+    "H": ["H", "\u0124", "\u0126", "\u021E", "\u029C", "\u157C", "\u16BA", "\u16BB", "\u1D34", "\u1E22", "\u1E24", "\u1E26", "\u1E28", "\u1E2A", "\u2C67", "\uFF28"],
+    "i": ["i", "\xEC", "\xED", "\xEE", "\xEF", "\u0129", "\u012B", "\u012D", "\u012F", "\u01D0", "\u0209", "\u020B", "\u0268", "\u0365", "\u1D09", "\u1D4E", "\u1D62", "\u1D96", "\u1DA4", "\u1E2D", "\u1E2F", "\u1EC9", "\u1ECB", "\uFF49"],
+    "I": ["I", "\xCC", "\xCD", "\xCE", "\xCF", "\u0128", "\u012A", "\u012C", "\u012E", "\u0130", "\u01CF", "\u0208", "\u020A", "\u026A", "\u0406", "\u1D35", "\u1D7B", "\u1DA6", "\u1DA7", "\u1E2C", "\u1E2E", "\u1EC8", "\u1ECA", "\uFF29"],
+    "j": ["j", "\u0135", "\u01F0", "\u0249", "\u029D", "\u02B2", "\u1DA1", "\u1DA8", "\uFF4A"],
+    "J": ["J", "\u0134", "\u1D0A", "\u1D36", "\uFF2A"],
+    "k": ["k", "\u0137", "\u0199", "\u01E9", "\u029E", "\u1D4F", "\u1D84", "\u1E31", "\u1E33", "\u1E35", "\u2C6A", "\uFF4B"],
+    "K": ["K", "\u0136", "\u0198", "\u01E8", "\u1D37", "\u1E30", "\u1E32", "\u1E34", "\u2C69", "\uFF2B"],
+    "l": ["l", "\u013A", "\u013C", "\u013E", "\u0140", "\u0142", "\u019A", "\u0234", "\u026B", "\u026C", "\u026D", "\u02E1", "\u1D85", "\u1DA9", "\u1DAA", "\u1E37", "\u1E39", "\u1E3B", "\u1E3D", "\u2113", "\u2C61"],
+    "L": ["L", "\u0139", "\u013B", "\u013D", "\u013F", "\u0141", "\u023D", "\u029F", "\u1D0C", "\u1D38", "\u1DAB", "\u1E36", "\u1E38", "\u1E3A", "\u1E3C", "\u2C60", "\u2C62"],
+    "m": ["m", "\u026F", "\u0270", "\u0271", "\u036B", "\u1D1F", "\u1D50", "\u1D5A", "\u1D6F", "\u1D86", "\u1DAC", "\u1DAD", "\u1E3F", "\u1E41", "\u1E43", "\u33A1", "\u33A5", "\uFF4D"],
+    "M": ["M", "\u019C", "\u1D0D", "\u1D39", "\u1E3E", "\u1E40", "\u1E42", "\uFF2D"],
+    "n": ["n", "\xF1", "\u0144", "\u0146", "\u0148", "\u0149", "\u019E", "\u01F9", "\u0235", "\u0272", "\u0273", "\u1D70", "\u1D87", "\u1DAE", "\u1DAF", "\u1E45", "\u1E47", "\u1E49", "\u1E4B", "\u207F", "\uFF4E"],
+    "N": ["N", "\xD1", "\u0143", "\u0145", "\u0147", "\u019D", "\u01F8", "\u0220", "\u0274", "\u1D0E", "\u1D3A", "\u1D3B", "\u1DB0", "\u1E44", "\u1E46", "\u1E48", "\u1E4A", "\uFF2E"],
+    "o": ["o", "\xF2", "\xF3", "\xF4", "\xF5", "\xF6", "\xF8", "\u014D", "\u014F", "\u0151", "\u01A1", "\u01D2", "\u01EB", "\u01ED", "\u01FF", "\u020D", "\u020F", "\u022B", "\u022D", "\u022F", "\u0231", "\u0275", "\u0366", "\u043E", "\u04E7", "\u04E9", "\u1D0F", "\u1D11", "\u1D13", "\u1D3C", "\u1D52", "\u1DB1", "\u1E4D", "\u1E4F", "\u1E51", "\u1E53", "\u1ECD", "\u1ECF", "\u1ED1", "\u1ED3", "\u1ED5", "\u1ED7", "\u1ED9", "\u1EDB", "\u1EDD", "\u1EDF", "\u1EE1", "\u1EE3", "\u2092", "\uFF4F", "\u{1042C}"],
+    "O": ["O", "\xD2", "\xD3", "\xD4", "\xD5", "\xD6", "\xD8", "\u014C", "\u014E", "\u0150", "\u019F", "\u01A0", "\u01D1", "\u01EA", "\u01EC", "\u01FE", "\u020C", "\u020E", "\u022A", "\u022C", "\u022E", "\u0230", "\u041E", "\u04E6", "\u04E8", "\u1E4C", "\u1E4E", "\u1E50", "\u1E52", "\u1ECC", "\u1ECE", "\u1ED0", "\u1ED2", "\u1ED4", "\u1ED6", "\u1ED8", "\u1EDA", "\u1EDC", "\u1EDE", "\u1EE0", "\u1EE2", "\uFF2F", "\u{10404}"],
+    "p": ["p", "\u1D56", "\u1D71", "\u1D7D", "\u1D88", "\u1E55", "\u1E57", "\uFF50"],
+    "P": ["P", "\u01A4", "\u1D18", "\u1D3E", "\u1E54", "\u1E56", "\u2C63", "\uFF30"],
+    "q": ["q", "\u024B", "\u02A0", "\u16E9", "\uFF51"],
+    "Q": ["Q", "\u024A", "\uFF31"],
+    "r": ["r", "\u0155", "\u0157", "\u0159", "\u0211", "\u0213", "\u024D", "\u0279", "\u027B", "\u02B3", "\u02B4", "\u02B5", "\u036C", "\u1D63", "\u1D72", "\u1D89", "\u1E59", "\u1E5B", "\u1E5D", "\u1E5F"],
+    "R": ["R", "\u0154", "\u0156", "\u0158", "\u01A6", "\u0210", "\u0212", "\u024C", "\u0280", "\u0281", "\u02B6", "\u16B1", "\u1D19", "\u1D1A", "\u1D3F", "\u1E58", "\u1E5A", "\u1E5C", "\u1E5E", "\u2C64"],
+    "s": ["s", "\u015B", "\u015D", "\u015F", "\u0161", "\u0219", "\u0282", "\u1506", "\u1D8A", "\u1E61", "\u1E63", "\u1E65", "\u1E67", "\u1E69", "\uFF53"],
+    "S": ["S", "\u015A", "\u015C", "\u015E", "\u0160", "\u0218", "\u023F", "\u02E2", "\u1D74", "\u1E60", "\u1E62", "\u1E64", "\u1E66", "\u1E68", "\uFF33"],
+    "t": ["t", "\u0163", "\u0165", "\u0167", "\u01AB", "\u01AD", "\u021B", "\u0287", "\u036D", "\u1D40", "\u1D57", "\u1D75", "\u1DB5", "\u1E6B", "\u1E6D", "\u1E6F", "\u1E71", "\u1E97", "\uFF54"],
+    "T": ["T", "\u0162", "\u0164", "\u01AC", "\u01AE", "\u021A", "\u023E", "\u1D1B", "\u1D40", "\u1E6A", "\u1E6C", "\u1E6E", "\u1E70", "\uFF34"],
+    "u": ["u", "\xF9", "\xFA", "\xFB", "\xFC", "\u0169", "\u016B", "\u016D", "\u016F", "\u0171", "\u0173", "\u01B0", "\u01D4", "\u01D6", "\u01D8", "\u01DA", "\u01DC", "\u0215", "\u0217", "\u0367", "\u07CE", "\u1D58", "\u1D64", "\u1E73", "\u1E75", "\u1E77", "\u1E79", "\u1E7B", "\u1EE5", "\u1EE7", "\u1EE9", "\u1EEB", "\u1EED", "\u1EEF", "\u1EF1", "\uFF55"],
+    "U": ["U", "\xD9", "\xDA", "\xDB", "\xDC", "\u0168", "\u016A", "\u016C", "\u016E", "\u0170", "\u0172", "\u01AF", "\u01D3", "\u01D5", "\u01D7", "\u01D9", "\u01DB", "\u0214", "\u0216", "\u0244", "\u1D1C", "\u1D41", "\u1D7E", "\u1E72", "\u1E74", "\u1E76", "\u1E78", "\u1E7A", "\u1EE4", "\u1EE6", "\u1EE8", "\u1EEA", "\u1EEC", "\u1EEE", "\u1EF0", "\uFF35"],
+    "v": ["v", "\u028B", "\u036E", "\u1D5B", "\u1D65", "\u1DB9", "\u1E7D", "\u1E7F", "\u2C71", "\uFF56", "\u2C74"],
+    "V": ["V", "\u01B2", "\u0245", "\u028C", "\u1D20", "\u1D8C", "\u1E7C", "\u1E7E", "\uFF36"],
+    "w": ["w", "\u0175", "\u02B7", "\u1D42", "\u1E81", "\u1E83", "\u1E85", "\u1E87", "\u1E89", "\u1E98", "\u2C73", "\uFF57"],
+    "W": ["W", "\u0174", "\u028D", "\u1D21", "\u1E80", "\u1E82", "\u1E84", "\u1E86", "\u1E88", "\u2C72", "\uFF37"],
+    "x": ["x", "\u033D", "\u0353", "\u1D8D", "\u036F", "\u1E8B", "\u1E8D", "\u2093", "\uFF58"],
+    "X": ["X", "\u02E3", "\u036F", "\u1E8A", "\u1E8C", "\u2612", "\u2715", "\u2716", "\u2717", "\u2718", "\uFF38"],
+    "y": ["y", "\xFD", "\xFF", "\u0177", "\u0233", "\u024F", "\u02B8", "\u1E8F", "\u1EF3", "\u1EF5", "\u1EF7", "\u1EF9", "\uFF59"],
+    "Y": ["Y", "\xDD", "\u0176", "\u0178", "\u01B3", "\u01B4", "\u0232", "\u024E", "\u028E", "\u028F", "\u1E8E", "\u1EF2", "\u1EF4", "\u1EF6", "\u1EF8", "\uFF39"],
+    "z": ["z", "\u017A", "\u017C", "\u017E", "\u01B6", "\u0225", "\u0240", "\u0290", "\u0291", "\u1646", "\u1647", "\u1DBB", "\u1DBC", "\u1DBD", "\u1E91", "\u1E93", "\u1E95", "\u2C6C", "\uFF5A"],
+    "Z": ["Z", "\u0179", "\u017B", "\u017D", "\u01B5", "\u0224", "\u1D22", "\u1D76", "\u1E90", "\u1E92", "\u1E94", "\u2C6B", "\uFF3A"]
+  };
+  var diacriticless = function(text) {
+    var result = [];
+    for (var i = 0; i < text.length; i++) {
+      var searchChar = text.charAt(i);
+      var foundChar = false;
+      for (var key in diacritics) {
+        var indexChar = diacritics[key].indexOf(searchChar);
+        if (indexChar !== -1) {
+          result.push(key);
+          foundChar = true;
+          break;
+        }
+      }
+      if (!foundChar) {
+        result.push(searchChar);
+      }
+    }
+    return result.join("");
+  };
+  var escapeRegExp = function escapeRegExp2(str) {
+    return str.replace(/[\\^$*+?.()|[\]{}]/g, "\\$&");
+  };
+  var defaultType = {
+    format: function format2(x) {
+      return x;
+    },
+    filterPredicate: function filterPredicate(rowval, filter) {
+      var skipDiacritics = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : false;
+      var fromDropdown = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : false;
+      if (typeof rowval === "undefined" || rowval === null) {
+        return false;
+      }
+      var rowValue = skipDiacritics ? String(rowval).toLowerCase() : diacriticless(escapeRegExp(String(rowval)).toLowerCase());
+      var searchTerm = skipDiacritics ? filter.toLowerCase() : diacriticless(escapeRegExp(filter).toLowerCase());
+      return fromDropdown ? rowValue === searchTerm : rowValue.indexOf(searchTerm) > -1;
+    },
+    compare: function compare(x, y) {
+      function cook(d) {
+        if (typeof d === "undefined" || d === null)
+          return "";
+        return diacriticless(d.toLowerCase());
+      }
+      x = cook(x);
+      y = cook(y);
+      if (x < y)
+        return -1;
+      if (x > y)
+        return 1;
+      return 0;
+    }
+  };
+  var script = {
+    name: "VgtPaginationPageInfo",
+    props: {
+      currentPage: {
+        "default": 1
+      },
+      lastPage: {
+        "default": 1
+      },
+      totalRecords: {
+        "default": 0
+      },
+      ofText: {
+        "default": "of",
+        type: String
+      },
+      pageText: {
+        "default": "page",
+        type: String
+      }
+    },
+    data: function data() {
+      return {};
+    },
+    computed: {
+      pageInfo: function pageInfo() {
+        return "".concat(this.ofText, " ").concat(this.lastPage);
+      }
+    },
+    methods: {
+      changePage: function changePage(event) {
+        var value = parseInt(event.target.value, 10);
+        //! invalid number
+        if (Number.isNaN(value) || value > this.lastPage || value < 1) {
+          event.target.value = this.currentPage;
+          return false;
+        }
+        event.target.value = value;
+        this.$emit("page-changed", value);
+      }
+    },
+    mounted: function mounted() {
+    },
+    components: {}
+  };
+  function normalizeComponent$1(template, style, script2, scopeId, isFunctionalTemplate, moduleIdentifier, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
+    if (typeof shadowMode !== "boolean") {
+      createInjectorSSR = createInjector;
+      createInjector = shadowMode;
+      shadowMode = false;
+    }
+    const options = typeof script2 === "function" ? script2.options : script2;
+    if (template && template.render) {
+      options.render = template.render;
+      options.staticRenderFns = template.staticRenderFns;
+      options._compiled = true;
+      if (isFunctionalTemplate) {
+        options.functional = true;
+      }
+    }
+    if (scopeId) {
+      options._scopeId = scopeId;
+    }
+    let hook;
+    if (moduleIdentifier) {
+      hook = function(context) {
+        context = context || this.$vnode && this.$vnode.ssrContext || this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext;
+        if (!context && typeof __VUE_SSR_CONTEXT__ !== "undefined") {
+          context = __VUE_SSR_CONTEXT__;
+        }
+        if (style) {
+          style.call(this, createInjectorSSR(context));
+        }
+        if (context && context._registeredComponents) {
+          context._registeredComponents.add(moduleIdentifier);
+        }
+      };
+      options._ssrRegister = hook;
+    } else if (style) {
+      hook = shadowMode ? function(context) {
+        style.call(this, createInjectorShadow(context, this.$root.$options.shadowRoot));
+      } : function(context) {
+        style.call(this, createInjector(context));
+      };
+    }
+    if (hook) {
+      if (options.functional) {
+        const originalRender = options.render;
+        options.render = function renderWithStyleInjection(h, context) {
+          hook.call(context);
+          return originalRender(h, context);
+        };
+      } else {
+        const existing = options.beforeCreate;
+        options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+      }
+    }
+    return script2;
+  }
+  var __vue_script__ = script;
+  var __vue_render__ = function __vue_render__2() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", {
+      staticClass: "footer__navigation__page-info"
+    }, [_vm._v("\n  " + _vm._s(_vm.pageText) + " "), _c("input", {
+      staticClass: "footer__navigation__page-info__current-entry",
+      attrs: {
+        "type": "text"
+      },
+      domProps: {
+        "value": _vm.currentPage
+      },
+      on: {
+        "keyup": function keyup($event) {
+          if (!$event.type.indexOf("key") && _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")) {
+            return null;
+          }
+          $event.stopPropagation();
+          return _vm.changePage($event);
+        }
+      }
+    }), _vm._v(" " + _vm._s(_vm.pageInfo) + "\n")]);
+  };
+  var __vue_staticRenderFns__ = [];
+  var __vue_inject_styles__ = void 0;
+  var __vue_scope_id__ = "data-v-9a8cd1f4";
+  var __vue_module_identifier__ = void 0;
+  var __vue_is_functional_template__ = false;
+  var __vue_component__ = /* @__PURE__ */ normalizeComponent$1({
+    render: __vue_render__,
+    staticRenderFns: __vue_staticRenderFns__
+  }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, void 0, void 0, void 0);
+  var DEFAULT_ROWS_PER_PAGE_DROPDOWN = [10, 20, 30, 40, 50];
+  var script$1 = {
+    name: "VgtPagination",
+    props: {
+      styleClass: {
+        "default": "table table-bordered"
+      },
+      total: {
+        "default": null
+      },
+      perPage: {},
+      rtl: {
+        "default": false
+      },
+      customRowsPerPageDropdown: {
+        "default": function _default() {
+          return [];
+        }
+      },
+      paginateDropdownAllowAll: {
+        "default": true
+      },
+      mode: {
+        "default": "records"
+      },
+      nextText: {
+        "default": "Next"
+      },
+      prevText: {
+        "default": "Prev"
+      },
+      rowsPerPageText: {
+        "default": "Rows per page:"
+      },
+      ofText: {
+        "default": "of"
+      },
+      pageText: {
+        "default": "page"
+      },
+      allText: {
+        "default": "All"
+      }
+    },
+    data: function data() {
+      return {
+        currentPage: 1,
+        prevPage: 0,
+        currentPerPage: 10,
+        rowsPerPageOptions: []
+      };
+    },
+    watch: {
+      perPage: {
+        handler: function handler(newValue, oldValue) {
+          this.handlePerPage();
+          this.perPageChanged(oldValue);
+        },
+        immediate: true
+      },
+      customRowsPerPageDropdown: function customRowsPerPageDropdown() {
+        this.handlePerPage();
+      },
+      total: {
+        handler: function handler(newValue, oldValue) {
+          if (this.rowsPerPageOptions.indexOf(this.currentPerPage) === -1) {
+            this.currentPerPage = newValue;
+          }
+        }
+      }
+    },
+    computed: {
+      pagesCount: function pagesCount() {
+        var quotient = Math.floor(this.total / this.currentPerPage);
+        var remainder = this.total % this.currentPerPage;
+        return remainder === 0 ? quotient : quotient + 1;
+      },
+      paginatedInfo: function paginatedInfo() {
+        var first = (this.currentPage - 1) * this.currentPerPage + 1;
+        var last = Math.min(this.total, this.currentPage * this.currentPerPage);
+        if (last === 0) {
+          first = 0;
+        }
+        return "".concat(first, " - ").concat(last, " ").concat(this.ofText, " ").concat(this.total);
+      },
+      nextIsPossible: function nextIsPossible() {
+        return this.currentPage < this.pagesCount;
+      },
+      prevIsPossible: function prevIsPossible() {
+        return this.currentPage > 1;
+      }
+    },
+    methods: {
+      changePage: function changePage(pageNumber) {
+        var emit = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+        if (pageNumber > 0 && this.total > this.currentPerPage * (pageNumber - 1)) {
+          this.prevPage = this.currentPage;
+          this.currentPage = pageNumber;
+          if (emit)
+            this.pageChanged();
+        }
+      },
+      nextPage: function nextPage() {
+        if (this.nextIsPossible) {
+          this.prevPage = this.currentPage;
+          ++this.currentPage;
+          this.pageChanged();
+        }
+      },
+      previousPage: function previousPage() {
+        if (this.prevIsPossible) {
+          this.prevPage = this.currentPage;
+          --this.currentPage;
+          this.pageChanged();
+        }
+      },
+      pageChanged: function pageChanged() {
+        this.$emit("page-changed", {
+          currentPage: this.currentPage,
+          prevPage: this.prevPage
+        });
+      },
+      perPageChanged: function perPageChanged(oldValue) {
+        if (oldValue) {
+          this.$emit("per-page-changed", {
+            currentPerPage: this.currentPerPage
+          });
+        }
+        this.changePage(1, false);
+      },
+      handlePerPage: function handlePerPage() {
+        if (this.customRowsPerPageDropdown !== null && Array.isArray(this.customRowsPerPageDropdown) && this.customRowsPerPageDropdown.length !== 0) {
+          this.rowsPerPageOptions = lodash_clonedeep(this.customRowsPerPageDropdown);
+        } else {
+          this.rowsPerPageOptions = lodash_clonedeep(DEFAULT_ROWS_PER_PAGE_DROPDOWN);
+        }
+        if (this.perPage) {
+          this.currentPerPage = this.perPage;
+          var found = false;
+          for (var i = 0; i < this.rowsPerPageOptions.length; i++) {
+            if (this.rowsPerPageOptions[i] === this.perPage) {
+              found = true;
+            }
+          }
+          if (!found && this.perPage !== -1) {
+            this.rowsPerPageOptions.unshift(this.perPage);
+          }
+        } else {
+          this.currentPerPage = 10;
+        }
+      }
+    },
+    mounted: function mounted() {
+    },
+    components: {
+      "pagination-page-info": __vue_component__
+    }
+  };
+  var __vue_script__$1 = script$1;
+  var __vue_render__$1 = function __vue_render__2() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", {
+      staticClass: "vgt-wrap__footer vgt-clearfix"
+    }, [_c("div", {
+      staticClass: "footer__row-count vgt-pull-left"
+    }, [_c("span", {
+      staticClass: "footer__row-count__label"
+    }, [_vm._v(_vm._s(_vm.rowsPerPageText))]), _vm._v(" "), _c("select", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: _vm.currentPerPage,
+        expression: "currentPerPage"
+      }],
+      staticClass: "footer__row-count__select",
+      attrs: {
+        "autocomplete": "off",
+        "name": "perPageSelect"
+      },
+      on: {
+        "change": [function($event) {
+          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+            return o.selected;
+          }).map(function(o) {
+            var val = "_value" in o ? o._value : o.value;
+            return val;
+          });
+          _vm.currentPerPage = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+        }, _vm.perPageChanged]
+      }
+    }, [_vm._l(_vm.rowsPerPageOptions, function(option, idx) {
+      return _c("option", {
+        key: "rows-dropdown-option-" + idx,
+        domProps: {
+          "value": option
+        }
+      }, [_vm._v("\n        " + _vm._s(option) + "\n      ")]);
+    }), _vm._v(" "), _vm.paginateDropdownAllowAll ? _c("option", {
+      domProps: {
+        "value": _vm.total
+      }
+    }, [_vm._v(_vm._s(_vm.allText))]) : _vm._e()], 2)]), _vm._v(" "), _c("div", {
+      staticClass: "footer__navigation vgt-pull-right"
+    }, [_c("a", {
+      staticClass: "footer__navigation__page-btn",
+      "class": {
+        disabled: !_vm.prevIsPossible
+      },
+      attrs: {
+        "href": "javascript:undefined",
+        "tabindex": "0"
+      },
+      on: {
+        "click": function click($event) {
+          $event.preventDefault();
+          $event.stopPropagation();
+          return _vm.previousPage($event);
+        }
+      }
+    }, [_c("span", {
+      staticClass: "chevron",
+      "class": {
+        "left": !_vm.rtl,
+        "right": _vm.rtl
+      }
+    }), _vm._v(" "), _c("span", [_vm._v(_vm._s(_vm.prevText))])]), _vm._v(" "), _vm.mode === "pages" ? _c("pagination-page-info", {
+      attrs: {
+        "totalRecords": _vm.total,
+        "lastPage": _vm.pagesCount,
+        "currentPage": _vm.currentPage,
+        "ofText": _vm.ofText,
+        "pageText": _vm.pageText
+      },
+      on: {
+        "page-changed": _vm.changePage
+      }
+    }) : _c("div", {
+      staticClass: "footer__navigation__info"
+    }, [_vm._v(_vm._s(_vm.paginatedInfo))]), _vm._v(" "), _c("a", {
+      staticClass: "footer__navigation__page-btn",
+      "class": {
+        disabled: !_vm.nextIsPossible
+      },
+      attrs: {
+        "href": "javascript:undefined",
+        "tabindex": "0"
+      },
+      on: {
+        "click": function click($event) {
+          $event.preventDefault();
+          $event.stopPropagation();
+          return _vm.nextPage($event);
+        }
+      }
+    }, [_c("span", [_vm._v(_vm._s(_vm.nextText))]), _vm._v(" "), _c("span", {
+      staticClass: "chevron",
+      "class": {
+        "right": !_vm.rtl,
+        "left": _vm.rtl
+      }
+    })])], 1)]);
+  };
+  var __vue_staticRenderFns__$1 = [];
+  var __vue_inject_styles__$1 = void 0;
+  var __vue_scope_id__$1 = void 0;
+  var __vue_module_identifier__$1 = void 0;
+  var __vue_is_functional_template__$1 = false;
+  var __vue_component__$1 = /* @__PURE__ */ normalizeComponent$1({
+    render: __vue_render__$1,
+    staticRenderFns: __vue_staticRenderFns__$1
+  }, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, void 0, void 0, void 0);
+  var script$2 = {
+    name: "VgtGlobalSearch",
+    props: ["value", "searchEnabled", "globalSearchPlaceholder"],
+    data: function data() {
+      return {
+        globalSearchTerm: null
+      };
+    },
+    computed: {
+      showControlBar: function showControlBar() {
+        if (this.searchEnabled)
+          return true;
+        if (this.$slots && this.$slots["internal-table-actions"])
+          return true;
+        return false;
+      }
+    },
+    methods: {
+      updateValue: function updateValue(value) {
+        this.$emit("input", value);
+        this.$emit("on-keyup", value);
+      },
+      entered: function entered(value) {
+        this.$emit("on-enter", value);
+      }
+    }
+  };
+  var __vue_script__$2 = script$2;
+  var __vue_render__$2 = function __vue_render__2() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _vm.showControlBar ? _c("div", {
+      staticClass: "vgt-global-search vgt-clearfix"
+    }, [_c("div", {
+      staticClass: "vgt-global-search__input vgt-pull-left"
+    }, [_vm.searchEnabled ? _c("span", {
+      staticClass: "input__icon"
+    }, [_c("div", {
+      staticClass: "magnifying-glass"
+    })]) : _vm._e(), _vm._v(" "), _vm.searchEnabled ? _c("input", {
+      staticClass: "vgt-input vgt-pull-left",
+      attrs: {
+        "type": "text",
+        "placeholder": _vm.globalSearchPlaceholder
+      },
+      domProps: {
+        "value": _vm.value
+      },
+      on: {
+        "input": function input($event) {
+          return _vm.updateValue($event.target.value);
+        },
+        "keyup": function keyup($event) {
+          if (!$event.type.indexOf("key") && _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")) {
+            return null;
+          }
+          return _vm.entered($event.target.value);
+        }
+      }
+    }) : _vm._e()]), _vm._v(" "), _c("div", {
+      staticClass: "vgt-global-search__actions vgt-pull-right"
+    }, [_vm._t("internal-table-actions")], 2)]) : _vm._e();
+  };
+  var __vue_staticRenderFns__$2 = [];
+  var __vue_inject_styles__$2 = void 0;
+  var __vue_scope_id__$2 = void 0;
+  var __vue_module_identifier__$2 = void 0;
+  var __vue_is_functional_template__$2 = false;
+  var __vue_component__$2 = /* @__PURE__ */ normalizeComponent$1({
+    render: __vue_render__$2,
+    staticRenderFns: __vue_staticRenderFns__$2
+  }, __vue_inject_styles__$2, __vue_script__$2, __vue_scope_id__$2, __vue_is_functional_template__$2, __vue_module_identifier__$2, false, void 0, void 0, void 0);
+  var script$3 = {
+    name: "VgtFilterRow",
+    props: ["lineNumbers", "columns", "typedColumns", "globalSearchEnabled", "selectable", "mode"],
+    watch: {
+      columns: {
+        handler: function handler(newValue, oldValue) {
+          this.populateInitialFilters();
+        },
+        deep: true,
+        immediate: true
+      }
+    },
+    data: function data() {
+      return {
+        columnFilters: {},
+        timer: null
+      };
+    },
+    computed: {
+      hasFilterRow: function hasFilterRow() {
+        for (var i = 0; i < this.columns.length; i++) {
+          var col = this.columns[i];
+          if (col.filterOptions && col.filterOptions.enabled) {
+            return true;
+          }
+        }
+        return false;
+      }
+    },
+    methods: {
+      reset: function reset() {
+        var emitEvent = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : false;
+        this.columnFilters = {};
+        if (emitEvent) {
+          this.$emit("filter-changed", this.columnFilters);
+        }
+      },
+      isFilterable: function isFilterable(column) {
+        return column.filterOptions && column.filterOptions.enabled;
+      },
+      isDropdown: function isDropdown(column) {
+        return this.isFilterable(column) && column.filterOptions.filterDropdownItems && column.filterOptions.filterDropdownItems.length;
+      },
+      isDropdownObjects: function isDropdownObjects(column) {
+        return this.isDropdown(column) && _typeof(column.filterOptions.filterDropdownItems[0]) === "object";
+      },
+      isDropdownArray: function isDropdownArray(column) {
+        return this.isDropdown(column) && _typeof(column.filterOptions.filterDropdownItems[0]) !== "object";
+      },
+      getPlaceholder: function getPlaceholder(column) {
+        var placeholder = this.isFilterable(column) && column.filterOptions.placeholder || "Filter ".concat(column.label);
+        return placeholder;
+      },
+      updateFiltersOnEnter: function updateFiltersOnEnter(column, value) {
+        if (this.timer)
+          clearTimeout(this.timer);
+        this.updateFiltersImmediately(column.field, value);
+      },
+      updateFiltersOnKeyup: function updateFiltersOnKeyup(column, value) {
+        if (column.filterOptions.trigger === "enter")
+          return;
+        this.updateFilters(column, value);
+      },
+      updateSlotFilter: function updateSlotFilter(column, value) {
+        var fieldToFilter = column.filterOptions.slotFilterField || column.field;
+        if (typeof column.filterOptions.formatValue === "function") {
+          value = column.filterOptions.formatValue(value);
+        }
+        this.updateFiltersImmediately(fieldToFilter, value);
+      },
+      updateFilters: function updateFilters(column, value) {
+        var _this = this;
+        if (this.timer)
+          clearTimeout(this.timer);
+        this.timer = setTimeout(function() {
+          _this.updateFiltersImmediately(column.field, value);
+        }, 400);
+      },
+      updateFiltersImmediately: function updateFiltersImmediately(field, value) {
+        this.$set(this.columnFilters, field, value);
+        this.$emit("filter-changed", this.columnFilters);
+      },
+      populateInitialFilters: function populateInitialFilters() {
+        for (var i = 0; i < this.columns.length; i++) {
+          var col = this.columns[i];
+          if (this.isFilterable(col) && typeof col.filterOptions.filterValue !== "undefined" && col.filterOptions.filterValue !== null) {
+            this.$set(this.columnFilters, col.field, col.filterOptions.filterValue);
+          }
+        }
+        this.$emit("filter-changed", this.columnFilters);
+      }
+    }
+  };
+  var __vue_script__$3 = script$3;
+  var __vue_render__$3 = function __vue_render__2() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _vm.hasFilterRow ? _c("tr", [_vm.lineNumbers ? _c("th") : _vm._e(), _vm._v(" "), _vm.selectable ? _c("th") : _vm._e(), _vm._v(" "), _vm._l(_vm.columns, function(column, index2) {
+      return !column.hidden ? _c("th", {
+        key: index2,
+        staticClass: "filter-th"
+      }, [_vm._t("column-filter", [_vm.isFilterable(column) ? _c("div", [!_vm.isDropdown(column) ? _c("input", {
+        staticClass: "vgt-input",
+        attrs: {
+          "type": "text",
+          "placeholder": _vm.getPlaceholder(column)
+        },
+        domProps: {
+          "value": _vm.columnFilters[column.field]
+        },
+        on: {
+          "keyup": function keyup($event) {
+            if (!$event.type.indexOf("key") && _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")) {
+              return null;
+            }
+            return _vm.updateFiltersOnEnter(column, $event.target.value);
+          },
+          "input": function input($event) {
+            return _vm.updateFiltersOnKeyup(column, $event.target.value);
+          }
+        }
+      }) : _vm._e(), _vm._v(" "), _vm.isDropdownArray(column) ? _c("select", {
+        staticClass: "vgt-select",
+        domProps: {
+          "value": _vm.columnFilters[column.field]
+        },
+        on: {
+          "change": function change($event) {
+            return _vm.updateFilters(column, $event.target.value);
+          }
+        }
+      }, [_c("option", {
+        key: "-1",
+        attrs: {
+          "value": ""
+        }
+      }, [_vm._v(_vm._s(_vm.getPlaceholder(column)))]), _vm._v(" "), _vm._l(column.filterOptions.filterDropdownItems, function(option, i) {
+        return _c("option", {
+          key: i,
+          domProps: {
+            "value": option
+          }
+        }, [_vm._v("\n              " + _vm._s(option) + "\n            ")]);
+      })], 2) : _vm._e(), _vm._v(" "), _vm.isDropdownObjects(column) ? _c("select", {
+        staticClass: "vgt-select",
+        domProps: {
+          "value": _vm.columnFilters[column.field]
+        },
+        on: {
+          "change": function change($event) {
+            return _vm.updateFilters(column, $event.target.value, true);
+          }
+        }
+      }, [_c("option", {
+        key: "-1",
+        attrs: {
+          "value": ""
+        }
+      }, [_vm._v(_vm._s(_vm.getPlaceholder(column)))]), _vm._v(" "), _vm._l(column.filterOptions.filterDropdownItems, function(option, i) {
+        return _c("option", {
+          key: i,
+          domProps: {
+            "value": option.value
+          }
+        }, [_vm._v(_vm._s(option.text))]);
+      })], 2) : _vm._e()]) : _vm._e()], {
+        "column": column,
+        "updateFilters": _vm.updateSlotFilter
+      })], 2) : _vm._e();
+    })], 2) : _vm._e();
+  };
+  var __vue_staticRenderFns__$3 = [];
+  var __vue_inject_styles__$3 = void 0;
+  var __vue_scope_id__$3 = "data-v-1c6bfd21";
+  var __vue_module_identifier__$3 = void 0;
+  var __vue_is_functional_template__$3 = false;
+  var __vue_component__$3 = /* @__PURE__ */ normalizeComponent$1({
+    render: __vue_render__$3,
+    staticRenderFns: __vue_staticRenderFns__$3
+  }, __vue_inject_styles__$3, __vue_script__$3, __vue_scope_id__$3, __vue_is_functional_template__$3, __vue_module_identifier__$3, false, void 0, void 0, void 0);
+  var DEFAULT_SORT_TYPE = "asc";
+  function getColumnFirstSortType(column) {
+    return column.firstSortType || DEFAULT_SORT_TYPE;
+  }
+  function getCurrentPrimarySort(sortArray, column) {
+    return sortArray.length === 1 && sortArray[0].field === column.field ? sortArray[0].type : void 0;
+  }
+  function getNextSort(currentSort) {
+    return currentSort === "asc" ? "desc" : DEFAULT_SORT_TYPE;
+  }
+  function getIndex(sortArray, column) {
+    for (var i = 0; i < sortArray.length; i++) {
+      if (column.field === sortArray[i].field)
+        return i;
+    }
+    return -1;
+  }
+  var primarySort = function(sortArray, column) {
+    var currentPrimarySort = getCurrentPrimarySort(sortArray, column);
+    return [{
+      field: column.field,
+      type: currentPrimarySort ? getNextSort(currentPrimarySort) : getColumnFirstSortType(column)
+    }];
+  };
+  var secondarySort = function(sortArray, column) {
+    var index2 = getIndex(sortArray, column);
+    if (index2 === -1) {
+      sortArray.push({
+        field: column.field,
+        type: getColumnFirstSortType(column)
+      });
+    } else {
+      sortArray[index2].type = getNextSort(sortArray[index2].type);
+    }
+    return sortArray;
+  };
+  var script$4 = {
+    name: "VgtTableHeader",
+    props: {
+      lineNumbers: {
+        "default": false,
+        type: Boolean
+      },
+      selectable: {
+        "default": false,
+        type: Boolean
+      },
+      allSelected: {
+        "default": false,
+        type: Boolean
+      },
+      allSelectedIndeterminate: {
+        "default": false,
+        type: Boolean
+      },
+      columns: {
+        type: Array
+      },
+      mode: {
+        type: String
+      },
+      typedColumns: {},
+      sortable: {
+        type: Boolean
+      },
+      getClasses: {
+        type: Function
+      },
+      searchEnabled: {
+        type: Boolean
+      },
+      tableRef: {},
+      paginated: {}
+    },
+    watch: {
+      columns: {
+        handler: function handler() {
+          this.setColumnStyles();
+        },
+        immediate: true
+      },
+      tableRef: {
+        handler: function handler() {
+          this.setColumnStyles();
+        },
+        immediate: true
+      },
+      paginated: {
+        handler: function handler() {
+          if (this.tableRef) {
+            this.setColumnStyles();
+          }
+        },
+        deep: true
+      }
+    },
+    data: function data() {
+      return {
+        checkBoxThStyle: {},
+        lineNumberThStyle: {},
+        columnStyles: [],
+        sorts: [],
+        ro: null
+      };
+    },
+    computed: {},
+    methods: {
+      reset: function reset() {
+        this.$refs["filter-row"].reset(true);
+      },
+      toggleSelectAll: function toggleSelectAll() {
+        this.$emit("on-toggle-select-all");
+      },
+      isSortableColumn: function isSortableColumn(column) {
+        var sortable = column.sortable;
+        var isSortable = typeof sortable === "boolean" ? sortable : this.sortable;
+        return isSortable;
+      },
+      sort: function sort(e, column) {
+        if (!this.isSortableColumn(column))
+          return;
+        if (e.shiftKey) {
+          this.sorts = secondarySort(this.sorts, column);
+        } else {
+          this.sorts = primarySort(this.sorts, column);
+        }
+        this.$emit("on-sort-change", this.sorts);
+      },
+      setInitialSort: function setInitialSort(sorts) {
+        this.sorts = sorts;
+        this.$emit("on-sort-change", this.sorts);
+      },
+      getColumnSort: function getColumnSort(column) {
+        for (var i = 0; i < this.sorts.length; i += 1) {
+          if (this.sorts[i].field === column.field) {
+            return this.sorts[i].type || "asc";
+          }
+        }
+        return null;
+      },
+      getHeaderClasses: function getHeaderClasses(column, index2) {
+        var classes = lodash_assign({}, this.getClasses(index2, "th"), {
+          sortable: this.isSortableColumn(column),
+          "sorting sorting-desc": this.getColumnSort(column) === "desc",
+          "sorting sorting-asc": this.getColumnSort(column) === "asc"
+        });
+        return classes;
+      },
+      filterRows: function filterRows(columnFilters) {
+        this.$emit("filter-changed", columnFilters);
+      },
+      getWidthStyle: function getWidthStyle(dom) {
+        if (window && window.getComputedStyle && dom) {
+          var cellStyle = window.getComputedStyle(dom, null);
+          return {
+            width: cellStyle.width
+          };
+        }
+        return {
+          width: "auto"
+        };
+      },
+      setColumnStyles: function setColumnStyles() {
+        var colStyles = [];
+        for (var i = 0; i < this.columns.length; i++) {
+          if (this.tableRef) {
+            var skip = 0;
+            if (this.selectable)
+              skip++;
+            if (this.lineNumbers)
+              skip++;
+            var cell = this.tableRef.rows[0].cells[i + skip];
+            colStyles.push(this.getWidthStyle(cell));
+          } else {
+            colStyles.push({
+              minWidth: this.columns[i].width ? this.columns[i].width : "auto",
+              maxWidth: this.columns[i].width ? this.columns[i].width : "auto",
+              width: this.columns[i].width ? this.columns[i].width : "auto"
+            });
+          }
+        }
+        this.columnStyles = colStyles;
+      },
+      getColumnStyle: function getColumnStyle(column, index2) {
+        var styleObject = {
+          minWidth: column.width ? column.width : "auto",
+          maxWidth: column.width ? column.width : "auto",
+          width: column.width ? column.width : "auto"
+        };
+        if (this.tableRef) {
+          if (this.selectable)
+            index2++;
+          if (this.lineNumbers)
+            index2++;
+          var cell = this.tableRef.rows[0].cells[index2];
+          var cellStyle = window.getComputedStyle(cell, null);
+          styleObject.width = cellStyle.width;
+        }
+        return styleObject;
+      }
+    },
+    mounted: function mounted() {
+      var _this = this;
+      this.$nextTick(function() {
+        _this.ro = new ResizeObserver(function() {
+          _this.setColumnStyles();
+        });
+        _this.ro.observe(_this.$parent.$el);
+        if (_this.tableRef) {
+          Array.from(_this.$parent.$refs["table-header-primary"].$el.children[0].children).forEach(function(header) {
+            _this.ro.observe(header);
+          });
+        }
+      });
+    },
+    beforeDestroy: function beforeDestroy() {
+      this.ro.disconnect();
+    },
+    components: {
+      "vgt-filter-row": __vue_component__$3
+    }
+  };
+  var __vue_script__$4 = script$4;
+  var __vue_render__$4 = function __vue_render__2() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("thead", [_c("tr", [_vm.lineNumbers ? _c("th", {
+      staticClass: "line-numbers"
+    }) : _vm._e(), _vm._v(" "), _vm.selectable ? _c("th", {
+      staticClass: "vgt-checkbox-col"
+    }, [_c("input", {
+      attrs: {
+        "type": "checkbox"
+      },
+      domProps: {
+        "checked": _vm.allSelected,
+        "indeterminate": _vm.allSelectedIndeterminate
+      },
+      on: {
+        "change": _vm.toggleSelectAll
+      }
+    })]) : _vm._e(), _vm._v(" "), _vm._l(_vm.columns, function(column, index2) {
+      return !column.hidden ? _c("th", {
+        key: index2,
+        "class": _vm.getHeaderClasses(column, index2),
+        style: _vm.columnStyles[index2],
+        on: {
+          "click": function click($event) {
+            return _vm.sort($event, column);
+          }
+        }
+      }, [_vm._t("table-column", [_c("span", [_vm._v(_vm._s(column.label))])], {
+        "column": column
+      })], 2) : _vm._e();
+    })], 2), _vm._v(" "), _c("vgt-filter-row", {
+      ref: "filter-row",
+      tag: "tr",
+      attrs: {
+        "global-search-enabled": _vm.searchEnabled,
+        "line-numbers": _vm.lineNumbers,
+        "selectable": _vm.selectable,
+        "columns": _vm.columns,
+        "mode": _vm.mode,
+        "typed-columns": _vm.typedColumns
+      },
+      on: {
+        "filter-changed": _vm.filterRows
+      },
+      scopedSlots: _vm._u([{
+        key: "column-filter",
+        fn: function fn(props) {
+          return [_vm._t("column-filter", null, {
+            "column": props.column,
+            "updateFilters": props.updateFilters
+          })];
+        }
+      }], null, true)
+    })], 1);
+  };
+  var __vue_staticRenderFns__$4 = [];
+  var __vue_inject_styles__$4 = void 0;
+  var __vue_scope_id__$4 = void 0;
+  var __vue_module_identifier__$4 = void 0;
+  var __vue_is_functional_template__$4 = false;
+  var __vue_component__$4 = /* @__PURE__ */ normalizeComponent$1({
+    render: __vue_render__$4,
+    staticRenderFns: __vue_staticRenderFns__$4
+  }, __vue_inject_styles__$4, __vue_script__$4, __vue_scope_id__$4, __vue_is_functional_template__$4, __vue_module_identifier__$4, false, void 0, void 0, void 0);
+  var script$5 = {
+    name: "VgtHeaderRow",
+    props: {
+      headerRow: {
+        type: Object
+      },
+      columns: {
+        type: Array
+      },
+      lineNumbers: {
+        type: Boolean
+      },
+      selectable: {
+        type: Boolean
+      },
+      selectAllByGroup: {
+        type: Boolean
+      },
+      collapsable: {
+        type: [Boolean, Number],
+        "default": false
+      },
+      collectFormatted: {
+        type: Function
+      },
+      formattedRow: {
+        type: Function
+      },
+      getClasses: {
+        type: Function
+      },
+      fullColspan: {
+        type: Number
+      },
+      groupIndex: {
+        type: Number
+      }
+    },
+    data: function data() {
+      return {};
+    },
+    computed: {
+      allSelected: function allSelected() {
+        var headerRow = this.headerRow;
+        this.groupChildObject;
+        return headerRow.children.filter(function(row) {
+          return row.vgtSelected;
+        }).length === headerRow.children.length;
+      }
+    },
+    methods: {
+      columnCollapsable: function columnCollapsable(currentIndex) {
+        if (this.collapsable === true) {
+          return currentIndex === 0;
+        }
+        return currentIndex === this.collapsable;
+      },
+      toggleSelectGroup: function toggleSelectGroup(event) {
+        this.$emit("on-select-group-change", {
+          groupIndex: this.groupIndex,
+          checked: event.target.checked
+        });
+      }
+    },
+    mounted: function mounted() {
+    },
+    components: {}
+  };
+  var __vue_script__$5 = script$5;
+  var __vue_render__$5 = function __vue_render__2() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("tr", [_vm.headerRow.mode === "span" ? _c("th", {
+      staticClass: "vgt-left-align vgt-row-header",
+      attrs: {
+        "colspan": _vm.fullColspan
+      }
+    }, [_vm.selectAllByGroup ? [_vm._t("table-header-group-select", [_c("input", {
+      attrs: {
+        "type": "checkbox"
+      },
+      domProps: {
+        "checked": _vm.allSelected
+      },
+      on: {
+        "change": function change($event) {
+          return _vm.toggleSelectGroup($event);
+        }
+      }
+    })], {
+      "columns": _vm.columns,
+      "row": _vm.headerRow
+    })] : _vm._e(), _vm._v(" "), _c("span", {
+      on: {
+        "click": function click($event) {
+          _vm.collapsable ? _vm.$emit("vgtExpand", !_vm.headerRow.vgtIsExpanded) : function() {
+          };
+        }
+      }
+    }, [_vm.collapsable ? _c("span", {
+      staticClass: "triangle",
+      "class": {
+        "expand": _vm.headerRow.vgtIsExpanded
+      }
+    }) : _vm._e(), _vm._v(" "), _vm._t("table-header-row", [_vm.headerRow.html ? _c("span", {
+      domProps: {
+        "innerHTML": _vm._s(_vm.headerRow.label)
+      }
+    }) : _c("span", [_vm._v("\n          " + _vm._s(_vm.headerRow.label) + "\n        ")])], {
+      "row": _vm.headerRow
+    })], 2)], 2) : _vm._e(), _vm._v(" "), _vm.headerRow.mode !== "span" && _vm.lineNumbers ? _c("th", {
+      staticClass: "vgt-row-header"
+    }) : _vm._e(), _vm._v(" "), _vm.headerRow.mode !== "span" && _vm.selectable ? _c("th", {
+      staticClass: "vgt-row-header"
+    }, [_vm.selectAllByGroup ? [_vm._t("table-header-group-select", [_c("input", {
+      attrs: {
+        "type": "checkbox"
+      },
+      domProps: {
+        "checked": _vm.allSelected
+      },
+      on: {
+        "change": function change($event) {
+          return _vm.toggleSelectGroup($event);
+        }
+      }
+    })], {
+      "columns": _vm.columns,
+      "row": _vm.headerRow
+    })] : _vm._e()], 2) : _vm._e(), _vm._v(" "), _vm._l(_vm.columns, function(column, i) {
+      return _vm.headerRow.mode !== "span" && !column.hidden ? _c("th", {
+        key: i,
+        staticClass: "vgt-row-header",
+        "class": _vm.getClasses(i, "td"),
+        on: {
+          "click": function click($event) {
+            _vm.columnCollapsable(i) ? _vm.$emit("vgtExpand", !_vm.headerRow.vgtIsExpanded) : function() {
+            };
+          }
+        }
+      }, [_vm.columnCollapsable(i) ? _c("span", {
+        staticClass: "triangle",
+        "class": {
+          "expand": _vm.headerRow.vgtIsExpanded
+        }
+      }) : _vm._e(), _vm._v(" "), _vm._t("table-header-row", [!column.html ? _c("span", [_vm._v("\n        " + _vm._s(_vm.collectFormatted(_vm.headerRow, column, true)) + "\n      ")]) : _vm._e(), _vm._v(" "), column.html ? _c("span", {
+        domProps: {
+          "innerHTML": _vm._s(_vm.collectFormatted(_vm.headerRow, column, true))
+        }
+      }) : _vm._e()], {
+        "row": _vm.headerRow,
+        "column": column,
+        "formattedRow": _vm.formattedRow(_vm.headerRow, true)
+      })], 2) : _vm._e();
+    })], 2);
+  };
+  var __vue_staticRenderFns__$5 = [];
+  var __vue_inject_styles__$5 = void 0;
+  var __vue_scope_id__$5 = void 0;
+  var __vue_module_identifier__$5 = void 0;
+  var __vue_is_functional_template__$5 = false;
+  var __vue_component__$5 = /* @__PURE__ */ normalizeComponent$1({
+    render: __vue_render__$5,
+    staticRenderFns: __vue_staticRenderFns__$5
+  }, __vue_inject_styles__$5, __vue_script__$5, __vue_scope_id__$5, __vue_is_functional_template__$5, __vue_module_identifier__$5, false, void 0, void 0, void 0);
+  function toDate(argument) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var argStr = Object.prototype.toString.call(argument);
+    if (argument instanceof Date || typeof argument === "object" && argStr === "[object Date]") {
+      return new Date(argument.getTime());
+    } else if (typeof argument === "number" || argStr === "[object Number]") {
+      return new Date(argument);
+    } else {
+      if ((typeof argument === "string" || argStr === "[object String]") && typeof console !== "undefined") {
+        console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as arguments. Please use `parseISO` to parse strings. See: https://git.io/fjule");
+        console.warn(new Error().stack);
+      }
+      return new Date(NaN);
+    }
+  }
+  function toInteger(dirtyNumber) {
+    if (dirtyNumber === null || dirtyNumber === true || dirtyNumber === false) {
+      return NaN;
+    }
+    var number2 = Number(dirtyNumber);
+    if (isNaN(number2)) {
+      return number2;
+    }
+    return number2 < 0 ? Math.ceil(number2) : Math.floor(number2);
+  }
+  function addMilliseconds(dirtyDate, dirtyAmount) {
+    if (arguments.length < 2) {
+      throw new TypeError("2 arguments required, but only " + arguments.length + " present");
+    }
+    var timestamp = toDate(dirtyDate).getTime();
+    var amount = toInteger(dirtyAmount);
+    return new Date(timestamp + amount);
+  }
+  var MILLISECONDS_IN_MINUTE = 6e4;
+  function getTimezoneOffsetInMilliseconds(dirtyDate) {
+    var date2 = new Date(dirtyDate.getTime());
+    var baseTimezoneOffset = date2.getTimezoneOffset();
+    date2.setSeconds(0, 0);
+    var millisecondsPartOfTimezoneOffset = date2.getTime() % MILLISECONDS_IN_MINUTE;
+    return baseTimezoneOffset * MILLISECONDS_IN_MINUTE + millisecondsPartOfTimezoneOffset;
+  }
+  function compareAsc(dirtyDateLeft, dirtyDateRight) {
+    if (arguments.length < 2) {
+      throw new TypeError("2 arguments required, but only " + arguments.length + " present");
+    }
+    var dateLeft = toDate(dirtyDateLeft);
+    var dateRight = toDate(dirtyDateRight);
+    var diff = dateLeft.getTime() - dateRight.getTime();
+    if (diff < 0) {
+      return -1;
+    } else if (diff > 0) {
+      return 1;
+    } else {
+      return diff;
+    }
+  }
+  function isValid(dirtyDate) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var date2 = toDate(dirtyDate);
+    return !isNaN(date2);
+  }
+  var formatDistanceLocale = {
+    lessThanXSeconds: {
+      one: "less than a second",
+      other: "less than {{count}} seconds"
+    },
+    xSeconds: {
+      one: "1 second",
+      other: "{{count}} seconds"
+    },
+    halfAMinute: "half a minute",
+    lessThanXMinutes: {
+      one: "less than a minute",
+      other: "less than {{count}} minutes"
+    },
+    xMinutes: {
+      one: "1 minute",
+      other: "{{count}} minutes"
+    },
+    aboutXHours: {
+      one: "about 1 hour",
+      other: "about {{count}} hours"
+    },
+    xHours: {
+      one: "1 hour",
+      other: "{{count}} hours"
+    },
+    xDays: {
+      one: "1 day",
+      other: "{{count}} days"
+    },
+    aboutXMonths: {
+      one: "about 1 month",
+      other: "about {{count}} months"
+    },
+    xMonths: {
+      one: "1 month",
+      other: "{{count}} months"
+    },
+    aboutXYears: {
+      one: "about 1 year",
+      other: "about {{count}} years"
+    },
+    xYears: {
+      one: "1 year",
+      other: "{{count}} years"
+    },
+    overXYears: {
+      one: "over 1 year",
+      other: "over {{count}} years"
+    },
+    almostXYears: {
+      one: "almost 1 year",
+      other: "almost {{count}} years"
+    }
+  };
+  function formatDistance(token, count, options) {
+    options = options || {};
+    var result;
+    if (typeof formatDistanceLocale[token] === "string") {
+      result = formatDistanceLocale[token];
+    } else if (count === 1) {
+      result = formatDistanceLocale[token].one;
+    } else {
+      result = formatDistanceLocale[token].other.replace("{{count}}", count);
+    }
+    if (options.addSuffix) {
+      if (options.comparison > 0) {
+        return "in " + result;
+      } else {
+        return result + " ago";
+      }
+    }
+    return result;
+  }
+  function buildFormatLongFn(args) {
+    return function(dirtyOptions) {
+      var options = dirtyOptions || {};
+      var width = options.width ? String(options.width) : args.defaultWidth;
+      var format2 = args.formats[width] || args.formats[args.defaultWidth];
+      return format2;
+    };
+  }
+  var dateFormats = {
+    full: "EEEE, MMMM do, y",
+    long: "MMMM do, y",
+    medium: "MMM d, y",
+    short: "MM/dd/yyyy"
+  };
+  var timeFormats = {
+    full: "h:mm:ss a zzzz",
+    long: "h:mm:ss a z",
+    medium: "h:mm:ss a",
+    short: "h:mm a"
+  };
+  var dateTimeFormats = {
+    full: "{{date}} 'at' {{time}}",
+    long: "{{date}} 'at' {{time}}",
+    medium: "{{date}}, {{time}}",
+    short: "{{date}}, {{time}}"
+  };
+  var formatLong = {
+    date: buildFormatLongFn({
+      formats: dateFormats,
+      defaultWidth: "full"
+    }),
+    time: buildFormatLongFn({
+      formats: timeFormats,
+      defaultWidth: "full"
+    }),
+    dateTime: buildFormatLongFn({
+      formats: dateTimeFormats,
+      defaultWidth: "full"
+    })
+  };
+  var formatRelativeLocale = {
+    lastWeek: "'last' eeee 'at' p",
+    yesterday: "'yesterday at' p",
+    today: "'today at' p",
+    tomorrow: "'tomorrow at' p",
+    nextWeek: "eeee 'at' p",
+    other: "P"
+  };
+  function formatRelative(token, _date, _baseDate, _options) {
+    return formatRelativeLocale[token];
+  }
+  function buildLocalizeFn(args) {
+    return function(dirtyIndex, dirtyOptions) {
+      var options = dirtyOptions || {};
+      var context = options.context ? String(options.context) : "standalone";
+      var valuesArray;
+      if (context === "formatting" && args.formattingValues) {
+        var defaultWidth = args.defaultFormattingWidth || args.defaultWidth;
+        var width = options.width ? String(options.width) : defaultWidth;
+        valuesArray = args.formattingValues[width] || args.formattingValues[defaultWidth];
+      } else {
+        var _defaultWidth = args.defaultWidth;
+        var _width = options.width ? String(options.width) : args.defaultWidth;
+        valuesArray = args.values[_width] || args.values[_defaultWidth];
+      }
+      var index2 = args.argumentCallback ? args.argumentCallback(dirtyIndex) : dirtyIndex;
+      return valuesArray[index2];
+    };
+  }
+  var eraValues = {
+    narrow: ["B", "A"],
+    abbreviated: ["BC", "AD"],
+    wide: ["Before Christ", "Anno Domini"]
+  };
+  var quarterValues = {
+    narrow: ["1", "2", "3", "4"],
+    abbreviated: ["Q1", "Q2", "Q3", "Q4"],
+    wide: ["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"]
+  };
+  var monthValues = {
+    narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
+    abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    wide: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  };
+  var dayValues = {
+    narrow: ["S", "M", "T", "W", "T", "F", "S"],
+    short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+    abbreviated: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    wide: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  };
+  var dayPeriodValues = {
+    narrow: {
+      am: "a",
+      pm: "p",
+      midnight: "mi",
+      noon: "n",
+      morning: "morning",
+      afternoon: "afternoon",
+      evening: "evening",
+      night: "night"
+    },
+    abbreviated: {
+      am: "AM",
+      pm: "PM",
+      midnight: "midnight",
+      noon: "noon",
+      morning: "morning",
+      afternoon: "afternoon",
+      evening: "evening",
+      night: "night"
+    },
+    wide: {
+      am: "a.m.",
+      pm: "p.m.",
+      midnight: "midnight",
+      noon: "noon",
+      morning: "morning",
+      afternoon: "afternoon",
+      evening: "evening",
+      night: "night"
+    }
+  };
+  var formattingDayPeriodValues = {
+    narrow: {
+      am: "a",
+      pm: "p",
+      midnight: "mi",
+      noon: "n",
+      morning: "in the morning",
+      afternoon: "in the afternoon",
+      evening: "in the evening",
+      night: "at night"
+    },
+    abbreviated: {
+      am: "AM",
+      pm: "PM",
+      midnight: "midnight",
+      noon: "noon",
+      morning: "in the morning",
+      afternoon: "in the afternoon",
+      evening: "in the evening",
+      night: "at night"
+    },
+    wide: {
+      am: "a.m.",
+      pm: "p.m.",
+      midnight: "midnight",
+      noon: "noon",
+      morning: "in the morning",
+      afternoon: "in the afternoon",
+      evening: "in the evening",
+      night: "at night"
+    }
+  };
+  function ordinalNumber(dirtyNumber, _dirtyOptions) {
+    var number2 = Number(dirtyNumber);
+    var rem100 = number2 % 100;
+    if (rem100 > 20 || rem100 < 10) {
+      switch (rem100 % 10) {
+        case 1:
+          return number2 + "st";
+        case 2:
+          return number2 + "nd";
+        case 3:
+          return number2 + "rd";
+      }
+    }
+    return number2 + "th";
+  }
+  var localize = {
+    ordinalNumber,
+    era: buildLocalizeFn({
+      values: eraValues,
+      defaultWidth: "wide"
+    }),
+    quarter: buildLocalizeFn({
+      values: quarterValues,
+      defaultWidth: "wide",
+      argumentCallback: function(quarter) {
+        return Number(quarter) - 1;
+      }
+    }),
+    month: buildLocalizeFn({
+      values: monthValues,
+      defaultWidth: "wide"
+    }),
+    day: buildLocalizeFn({
+      values: dayValues,
+      defaultWidth: "wide"
+    }),
+    dayPeriod: buildLocalizeFn({
+      values: dayPeriodValues,
+      defaultWidth: "wide",
+      formattingValues: formattingDayPeriodValues,
+      defaultFormattingWidth: "wide"
+    })
+  };
+  function buildMatchPatternFn(args) {
+    return function(dirtyString, dirtyOptions) {
+      var string = String(dirtyString);
+      var options = dirtyOptions || {};
+      var matchResult = string.match(args.matchPattern);
+      if (!matchResult) {
+        return null;
+      }
+      var matchedString = matchResult[0];
+      var parseResult = string.match(args.parsePattern);
+      if (!parseResult) {
+        return null;
+      }
+      var value = args.valueCallback ? args.valueCallback(parseResult[0]) : parseResult[0];
+      value = options.valueCallback ? options.valueCallback(value) : value;
+      return {
+        value,
+        rest: string.slice(matchedString.length)
+      };
+    };
+  }
+  function buildMatchFn(args) {
+    return function(dirtyString, dirtyOptions) {
+      var string = String(dirtyString);
+      var options = dirtyOptions || {};
+      var width = options.width;
+      var matchPattern = width && args.matchPatterns[width] || args.matchPatterns[args.defaultMatchWidth];
+      var matchResult = string.match(matchPattern);
+      if (!matchResult) {
+        return null;
+      }
+      var matchedString = matchResult[0];
+      var parsePatterns = width && args.parsePatterns[width] || args.parsePatterns[args.defaultParseWidth];
+      var value;
+      if (Object.prototype.toString.call(parsePatterns) === "[object Array]") {
+        value = parsePatterns.findIndex(function(pattern) {
+          return pattern.test(string);
+        });
+      } else {
+        value = findKey(parsePatterns, function(pattern) {
+          return pattern.test(string);
+        });
+      }
+      value = args.valueCallback ? args.valueCallback(value) : value;
+      value = options.valueCallback ? options.valueCallback(value) : value;
+      return {
+        value,
+        rest: string.slice(matchedString.length)
+      };
+    };
+  }
+  function findKey(object, predicate) {
+    for (var key in object) {
+      if (object.hasOwnProperty(key) && predicate(object[key])) {
+        return key;
+      }
+    }
+  }
+  var matchOrdinalNumberPattern = /^(\d+)(th|st|nd|rd)?/i;
+  var parseOrdinalNumberPattern = /\d+/i;
+  var matchEraPatterns = {
+    narrow: /^(b|a)/i,
+    abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
+    wide: /^(before christ|before common era|anno domini|common era)/i
+  };
+  var parseEraPatterns = {
+    any: [/^b/i, /^(a|c)/i]
+  };
+  var matchQuarterPatterns = {
+    narrow: /^[1234]/i,
+    abbreviated: /^q[1234]/i,
+    wide: /^[1234](th|st|nd|rd)? quarter/i
+  };
+  var parseQuarterPatterns = {
+    any: [/1/i, /2/i, /3/i, /4/i]
+  };
+  var matchMonthPatterns = {
+    narrow: /^[jfmasond]/i,
+    abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
+    wide: /^(january|february|march|april|may|june|july|august|september|october|november|december)/i
+  };
+  var parseMonthPatterns = {
+    narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
+    any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
+  };
+  var matchDayPatterns = {
+    narrow: /^[smtwf]/i,
+    short: /^(su|mo|tu|we|th|fr|sa)/i,
+    abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
+    wide: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i
+  };
+  var parseDayPatterns = {
+    narrow: [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i],
+    any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i]
+  };
+  var matchDayPeriodPatterns = {
+    narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
+    any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i
+  };
+  var parseDayPeriodPatterns = {
+    any: {
+      am: /^a/i,
+      pm: /^p/i,
+      midnight: /^mi/i,
+      noon: /^no/i,
+      morning: /morning/i,
+      afternoon: /afternoon/i,
+      evening: /evening/i,
+      night: /night/i
+    }
+  };
+  var match = {
+    ordinalNumber: buildMatchPatternFn({
+      matchPattern: matchOrdinalNumberPattern,
+      parsePattern: parseOrdinalNumberPattern,
+      valueCallback: function(value) {
+        return parseInt(value, 10);
+      }
+    }),
+    era: buildMatchFn({
+      matchPatterns: matchEraPatterns,
+      defaultMatchWidth: "wide",
+      parsePatterns: parseEraPatterns,
+      defaultParseWidth: "any"
+    }),
+    quarter: buildMatchFn({
+      matchPatterns: matchQuarterPatterns,
+      defaultMatchWidth: "wide",
+      parsePatterns: parseQuarterPatterns,
+      defaultParseWidth: "any",
+      valueCallback: function(index2) {
+        return index2 + 1;
+      }
+    }),
+    month: buildMatchFn({
+      matchPatterns: matchMonthPatterns,
+      defaultMatchWidth: "wide",
+      parsePatterns: parseMonthPatterns,
+      defaultParseWidth: "any"
+    }),
+    day: buildMatchFn({
+      matchPatterns: matchDayPatterns,
+      defaultMatchWidth: "wide",
+      parsePatterns: parseDayPatterns,
+      defaultParseWidth: "any"
+    }),
+    dayPeriod: buildMatchFn({
+      matchPatterns: matchDayPeriodPatterns,
+      defaultMatchWidth: "any",
+      parsePatterns: parseDayPeriodPatterns,
+      defaultParseWidth: "any"
+    })
+  };
+  var locale = {
+    formatDistance,
+    formatLong,
+    formatRelative,
+    localize,
+    match,
+    options: {
+      weekStartsOn: 0,
+      firstWeekContainsDate: 1
+    }
+  };
+  function subMilliseconds(dirtyDate, dirtyAmount) {
+    if (arguments.length < 2) {
+      throw new TypeError("2 arguments required, but only " + arguments.length + " present");
+    }
+    var amount = toInteger(dirtyAmount);
+    return addMilliseconds(dirtyDate, -amount);
+  }
+  function addLeadingZeros(number2, targetLength) {
+    var sign = number2 < 0 ? "-" : "";
+    var output = Math.abs(number2).toString();
+    while (output.length < targetLength) {
+      output = "0" + output;
+    }
+    return sign + output;
+  }
+  var formatters = {
+    y: function(date2, token) {
+      var signedYear = date2.getUTCFullYear();
+      var year = signedYear > 0 ? signedYear : 1 - signedYear;
+      return addLeadingZeros(token === "yy" ? year % 100 : year, token.length);
+    },
+    M: function(date2, token) {
+      var month = date2.getUTCMonth();
+      return token === "M" ? String(month + 1) : addLeadingZeros(month + 1, 2);
+    },
+    d: function(date2, token) {
+      return addLeadingZeros(date2.getUTCDate(), token.length);
+    },
+    a: function(date2, token) {
+      var dayPeriodEnumValue = date2.getUTCHours() / 12 >= 1 ? "pm" : "am";
+      switch (token) {
+        case "a":
+        case "aa":
+        case "aaa":
+          return dayPeriodEnumValue.toUpperCase();
+        case "aaaaa":
+          return dayPeriodEnumValue[0];
+        case "aaaa":
+        default:
+          return dayPeriodEnumValue === "am" ? "a.m." : "p.m.";
+      }
+    },
+    h: function(date2, token) {
+      return addLeadingZeros(date2.getUTCHours() % 12 || 12, token.length);
+    },
+    H: function(date2, token) {
+      return addLeadingZeros(date2.getUTCHours(), token.length);
+    },
+    m: function(date2, token) {
+      return addLeadingZeros(date2.getUTCMinutes(), token.length);
+    },
+    s: function(date2, token) {
+      return addLeadingZeros(date2.getUTCSeconds(), token.length);
+    },
+    S: function(date2, token) {
+      var numberOfDigits = token.length;
+      var milliseconds = date2.getUTCMilliseconds();
+      var fractionalSeconds = Math.floor(milliseconds * Math.pow(10, numberOfDigits - 3));
+      return addLeadingZeros(fractionalSeconds, token.length);
+    }
+  };
+  var MILLISECONDS_IN_DAY = 864e5;
+  function getUTCDayOfYear(dirtyDate) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var date2 = toDate(dirtyDate);
+    var timestamp = date2.getTime();
+    date2.setUTCMonth(0, 1);
+    date2.setUTCHours(0, 0, 0, 0);
+    var startOfYearTimestamp = date2.getTime();
+    var difference = timestamp - startOfYearTimestamp;
+    return Math.floor(difference / MILLISECONDS_IN_DAY) + 1;
+  }
+  function startOfUTCISOWeek(dirtyDate) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var weekStartsOn = 1;
+    var date2 = toDate(dirtyDate);
+    var day = date2.getUTCDay();
+    var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
+    date2.setUTCDate(date2.getUTCDate() - diff);
+    date2.setUTCHours(0, 0, 0, 0);
+    return date2;
+  }
+  function getUTCISOWeekYear(dirtyDate) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var date2 = toDate(dirtyDate);
+    var year = date2.getUTCFullYear();
+    var fourthOfJanuaryOfNextYear = new Date(0);
+    fourthOfJanuaryOfNextYear.setUTCFullYear(year + 1, 0, 4);
+    fourthOfJanuaryOfNextYear.setUTCHours(0, 0, 0, 0);
+    var startOfNextYear = startOfUTCISOWeek(fourthOfJanuaryOfNextYear);
+    var fourthOfJanuaryOfThisYear = new Date(0);
+    fourthOfJanuaryOfThisYear.setUTCFullYear(year, 0, 4);
+    fourthOfJanuaryOfThisYear.setUTCHours(0, 0, 0, 0);
+    var startOfThisYear = startOfUTCISOWeek(fourthOfJanuaryOfThisYear);
+    if (date2.getTime() >= startOfNextYear.getTime()) {
+      return year + 1;
+    } else if (date2.getTime() >= startOfThisYear.getTime()) {
+      return year;
+    } else {
+      return year - 1;
+    }
+  }
+  function startOfUTCISOWeekYear(dirtyDate) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var year = getUTCISOWeekYear(dirtyDate);
+    var fourthOfJanuary = new Date(0);
+    fourthOfJanuary.setUTCFullYear(year, 0, 4);
+    fourthOfJanuary.setUTCHours(0, 0, 0, 0);
+    var date2 = startOfUTCISOWeek(fourthOfJanuary);
+    return date2;
+  }
+  var MILLISECONDS_IN_WEEK = 6048e5;
+  function getUTCISOWeek(dirtyDate) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var date2 = toDate(dirtyDate);
+    var diff = startOfUTCISOWeek(date2).getTime() - startOfUTCISOWeekYear(date2).getTime();
+    return Math.round(diff / MILLISECONDS_IN_WEEK) + 1;
+  }
+  function startOfUTCWeek(dirtyDate, dirtyOptions) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var options = dirtyOptions || {};
+    var locale2 = options.locale;
+    var localeWeekStartsOn = locale2 && locale2.options && locale2.options.weekStartsOn;
+    var defaultWeekStartsOn = localeWeekStartsOn == null ? 0 : toInteger(localeWeekStartsOn);
+    var weekStartsOn = options.weekStartsOn == null ? defaultWeekStartsOn : toInteger(options.weekStartsOn);
+    if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+      throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    }
+    var date2 = toDate(dirtyDate);
+    var day = date2.getUTCDay();
+    var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
+    date2.setUTCDate(date2.getUTCDate() - diff);
+    date2.setUTCHours(0, 0, 0, 0);
+    return date2;
+  }
+  function getUTCWeekYear(dirtyDate, dirtyOptions) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var date2 = toDate(dirtyDate, dirtyOptions);
+    var year = date2.getUTCFullYear();
+    var options = dirtyOptions || {};
+    var locale2 = options.locale;
+    var localeFirstWeekContainsDate = locale2 && locale2.options && locale2.options.firstWeekContainsDate;
+    var defaultFirstWeekContainsDate = localeFirstWeekContainsDate == null ? 1 : toInteger(localeFirstWeekContainsDate);
+    var firstWeekContainsDate = options.firstWeekContainsDate == null ? defaultFirstWeekContainsDate : toInteger(options.firstWeekContainsDate);
+    if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
+      throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+    }
+    var firstWeekOfNextYear = new Date(0);
+    firstWeekOfNextYear.setUTCFullYear(year + 1, 0, firstWeekContainsDate);
+    firstWeekOfNextYear.setUTCHours(0, 0, 0, 0);
+    var startOfNextYear = startOfUTCWeek(firstWeekOfNextYear, dirtyOptions);
+    var firstWeekOfThisYear = new Date(0);
+    firstWeekOfThisYear.setUTCFullYear(year, 0, firstWeekContainsDate);
+    firstWeekOfThisYear.setUTCHours(0, 0, 0, 0);
+    var startOfThisYear = startOfUTCWeek(firstWeekOfThisYear, dirtyOptions);
+    if (date2.getTime() >= startOfNextYear.getTime()) {
+      return year + 1;
+    } else if (date2.getTime() >= startOfThisYear.getTime()) {
+      return year;
+    } else {
+      return year - 1;
+    }
+  }
+  function startOfUTCWeekYear(dirtyDate, dirtyOptions) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var options = dirtyOptions || {};
+    var locale2 = options.locale;
+    var localeFirstWeekContainsDate = locale2 && locale2.options && locale2.options.firstWeekContainsDate;
+    var defaultFirstWeekContainsDate = localeFirstWeekContainsDate == null ? 1 : toInteger(localeFirstWeekContainsDate);
+    var firstWeekContainsDate = options.firstWeekContainsDate == null ? defaultFirstWeekContainsDate : toInteger(options.firstWeekContainsDate);
+    var year = getUTCWeekYear(dirtyDate, dirtyOptions);
+    var firstWeek = new Date(0);
+    firstWeek.setUTCFullYear(year, 0, firstWeekContainsDate);
+    firstWeek.setUTCHours(0, 0, 0, 0);
+    var date2 = startOfUTCWeek(firstWeek, dirtyOptions);
+    return date2;
+  }
+  var MILLISECONDS_IN_WEEK$1 = 6048e5;
+  function getUTCWeek(dirtyDate, options) {
+    if (arguments.length < 1) {
+      throw new TypeError("1 argument required, but only " + arguments.length + " present");
+    }
+    var date2 = toDate(dirtyDate);
+    var diff = startOfUTCWeek(date2, options).getTime() - startOfUTCWeekYear(date2, options).getTime();
+    return Math.round(diff / MILLISECONDS_IN_WEEK$1) + 1;
+  }
+  var dayPeriodEnum = {
+    am: "am",
+    pm: "pm",
+    midnight: "midnight",
+    noon: "noon",
+    morning: "morning",
+    afternoon: "afternoon",
+    evening: "evening",
+    night: "night"
+  };
+  var formatters$1 = {
+    G: function(date2, token, localize2) {
+      var era = date2.getUTCFullYear() > 0 ? 1 : 0;
+      switch (token) {
+        case "G":
+        case "GG":
+        case "GGG":
+          return localize2.era(era, {
+            width: "abbreviated"
+          });
+        case "GGGGG":
+          return localize2.era(era, {
+            width: "narrow"
+          });
+        case "GGGG":
+        default:
+          return localize2.era(era, {
+            width: "wide"
+          });
+      }
+    },
+    y: function(date2, token, localize2) {
+      if (token === "yo") {
+        var signedYear = date2.getUTCFullYear();
+        var year = signedYear > 0 ? signedYear : 1 - signedYear;
+        return localize2.ordinalNumber(year, {
+          unit: "year"
+        });
+      }
+      return formatters.y(date2, token);
+    },
+    Y: function(date2, token, localize2, options) {
+      var signedWeekYear = getUTCWeekYear(date2, options);
+      var weekYear = signedWeekYear > 0 ? signedWeekYear : 1 - signedWeekYear;
+      if (token === "YY") {
+        var twoDigitYear = weekYear % 100;
+        return addLeadingZeros(twoDigitYear, 2);
+      }
+      if (token === "Yo") {
+        return localize2.ordinalNumber(weekYear, {
+          unit: "year"
+        });
+      }
+      return addLeadingZeros(weekYear, token.length);
+    },
+    R: function(date2, token) {
+      var isoWeekYear = getUTCISOWeekYear(date2);
+      return addLeadingZeros(isoWeekYear, token.length);
+    },
+    u: function(date2, token) {
+      var year = date2.getUTCFullYear();
+      return addLeadingZeros(year, token.length);
+    },
+    Q: function(date2, token, localize2) {
+      var quarter = Math.ceil((date2.getUTCMonth() + 1) / 3);
+      switch (token) {
+        case "Q":
+          return String(quarter);
+        case "QQ":
+          return addLeadingZeros(quarter, 2);
+        case "Qo":
+          return localize2.ordinalNumber(quarter, {
+            unit: "quarter"
+          });
+        case "QQQ":
+          return localize2.quarter(quarter, {
+            width: "abbreviated",
+            context: "formatting"
+          });
+        case "QQQQQ":
+          return localize2.quarter(quarter, {
+            width: "narrow",
+            context: "formatting"
+          });
+        case "QQQQ":
+        default:
+          return localize2.quarter(quarter, {
+            width: "wide",
+            context: "formatting"
+          });
+      }
+    },
+    q: function(date2, token, localize2) {
+      var quarter = Math.ceil((date2.getUTCMonth() + 1) / 3);
+      switch (token) {
+        case "q":
+          return String(quarter);
+        case "qq":
+          return addLeadingZeros(quarter, 2);
+        case "qo":
+          return localize2.ordinalNumber(quarter, {
+            unit: "quarter"
+          });
+        case "qqq":
+          return localize2.quarter(quarter, {
+            width: "abbreviated",
+            context: "standalone"
+          });
+        case "qqqqq":
+          return localize2.quarter(quarter, {
+            width: "narrow",
+            context: "standalone"
+          });
+        case "qqqq":
+        default:
+          return localize2.quarter(quarter, {
+            width: "wide",
+            context: "standalone"
+          });
+      }
+    },
+    M: function(date2, token, localize2) {
+      var month = date2.getUTCMonth();
+      switch (token) {
+        case "M":
+        case "MM":
+          return formatters.M(date2, token);
+        case "Mo":
+          return localize2.ordinalNumber(month + 1, {
+            unit: "month"
+          });
+        case "MMM":
+          return localize2.month(month, {
+            width: "abbreviated",
+            context: "formatting"
+          });
+        case "MMMMM":
+          return localize2.month(month, {
+            width: "narrow",
+            context: "formatting"
+          });
+        case "MMMM":
+        default:
+          return localize2.month(month, {
+            width: "wide",
+            context: "formatting"
+          });
+      }
+    },
+    L: function(date2, token, localize2) {
+      var month = date2.getUTCMonth();
+      switch (token) {
+        case "L":
+          return String(month + 1);
+        case "LL":
+          return addLeadingZeros(month + 1, 2);
+        case "Lo":
+          return localize2.ordinalNumber(month + 1, {
+            unit: "month"
+          });
+        case "LLL":
+          return localize2.month(month, {
+            width: "abbreviated",
+            context: "standalone"
+          });
+        case "LLLLL":
+          return localize2.month(month, {
+            width: "narrow",
+            context: "standalone"
+          });
+        case "LLLL":
+        default:
+          return localize2.month(month, {
+            width: "wide",
+            context: "standalone"
+          });
+      }
+    },
+    w: function(date2, token, localize2, options) {
+      var week = getUTCWeek(date2, options);
+      if (token === "wo") {
+        return localize2.ordinalNumber(week, {
+          unit: "week"
+        });
+      }
+      return addLeadingZeros(week, token.length);
+    },
+    I: function(date2, token, localize2) {
+      var isoWeek = getUTCISOWeek(date2);
+      if (token === "Io") {
+        return localize2.ordinalNumber(isoWeek, {
+          unit: "week"
+        });
+      }
+      return addLeadingZeros(isoWeek, token.length);
+    },
+    d: function(date2, token, localize2) {
+      if (token === "do") {
+        return localize2.ordinalNumber(date2.getUTCDate(), {
+          unit: "date"
+        });
+      }
+      return formatters.d(date2, token);
+    },
+    D: function(date2, token, localize2) {
+      var dayOfYear = getUTCDayOfYear(date2);
+      if (token === "Do") {
+        return localize2.ordinalNumber(dayOfYear, {
+          unit: "dayOfYear"
+        });
+      }
+      return addLeadingZeros(dayOfYear, token.length);
+    },
+    E: function(date2, token, localize2) {
+      var dayOfWeek = date2.getUTCDay();
+      switch (token) {
+        case "E":
+        case "EE":
+        case "EEE":
+          return localize2.day(dayOfWeek, {
+            width: "abbreviated",
+            context: "formatting"
+          });
+        case "EEEEE":
+          return localize2.day(dayOfWeek, {
+            width: "narrow",
+            context: "formatting"
+          });
+        case "EEEEEE":
+          return localize2.day(dayOfWeek, {
+            width: "short",
+            context: "formatting"
+          });
+        case "EEEE":
+        default:
+          return localize2.day(dayOfWeek, {
+            width: "wide",
+            context: "formatting"
+          });
+      }
+    },
+    e: function(date2, token, localize2, options) {
+      var dayOfWeek = date2.getUTCDay();
+      var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
+      switch (token) {
+        case "e":
+          return String(localDayOfWeek);
+        case "ee":
+          return addLeadingZeros(localDayOfWeek, 2);
+        case "eo":
+          return localize2.ordinalNumber(localDayOfWeek, {
+            unit: "day"
+          });
+        case "eee":
+          return localize2.day(dayOfWeek, {
+            width: "abbreviated",
+            context: "formatting"
+          });
+        case "eeeee":
+          return localize2.day(dayOfWeek, {
+            width: "narrow",
+            context: "formatting"
+          });
+        case "eeeeee":
+          return localize2.day(dayOfWeek, {
+            width: "short",
+            context: "formatting"
+          });
+        case "eeee":
+        default:
+          return localize2.day(dayOfWeek, {
+            width: "wide",
+            context: "formatting"
+          });
+      }
+    },
+    c: function(date2, token, localize2, options) {
+      var dayOfWeek = date2.getUTCDay();
+      var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
+      switch (token) {
+        case "c":
+          return String(localDayOfWeek);
+        case "cc":
+          return addLeadingZeros(localDayOfWeek, token.length);
+        case "co":
+          return localize2.ordinalNumber(localDayOfWeek, {
+            unit: "day"
+          });
+        case "ccc":
+          return localize2.day(dayOfWeek, {
+            width: "abbreviated",
+            context: "standalone"
+          });
+        case "ccccc":
+          return localize2.day(dayOfWeek, {
+            width: "narrow",
+            context: "standalone"
+          });
+        case "cccccc":
+          return localize2.day(dayOfWeek, {
+            width: "short",
+            context: "standalone"
+          });
+        case "cccc":
+        default:
+          return localize2.day(dayOfWeek, {
+            width: "wide",
+            context: "standalone"
+          });
+      }
+    },
+    i: function(date2, token, localize2) {
+      var dayOfWeek = date2.getUTCDay();
+      var isoDayOfWeek = dayOfWeek === 0 ? 7 : dayOfWeek;
+      switch (token) {
+        case "i":
+          return String(isoDayOfWeek);
+        case "ii":
+          return addLeadingZeros(isoDayOfWeek, token.length);
+        case "io":
+          return localize2.ordinalNumber(isoDayOfWeek, {
+            unit: "day"
+          });
+        case "iii":
+          return localize2.day(dayOfWeek, {
+            width: "abbreviated",
+            context: "formatting"
+          });
+        case "iiiii":
+          return localize2.day(dayOfWeek, {
+            width: "narrow",
+            context: "formatting"
+          });
+        case "iiiiii":
+          return localize2.day(dayOfWeek, {
+            width: "short",
+            context: "formatting"
+          });
+        case "iiii":
+        default:
+          return localize2.day(dayOfWeek, {
+            width: "wide",
+            context: "formatting"
+          });
+      }
+    },
+    a: function(date2, token, localize2) {
+      var hours = date2.getUTCHours();
+      var dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
+      switch (token) {
+        case "a":
+        case "aa":
+        case "aaa":
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "abbreviated",
+            context: "formatting"
+          });
+        case "aaaaa":
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "narrow",
+            context: "formatting"
+          });
+        case "aaaa":
+        default:
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "wide",
+            context: "formatting"
+          });
+      }
+    },
+    b: function(date2, token, localize2) {
+      var hours = date2.getUTCHours();
+      var dayPeriodEnumValue;
+      if (hours === 12) {
+        dayPeriodEnumValue = dayPeriodEnum.noon;
+      } else if (hours === 0) {
+        dayPeriodEnumValue = dayPeriodEnum.midnight;
+      } else {
+        dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
+      }
+      switch (token) {
+        case "b":
+        case "bb":
+        case "bbb":
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "abbreviated",
+            context: "formatting"
+          });
+        case "bbbbb":
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "narrow",
+            context: "formatting"
+          });
+        case "bbbb":
+        default:
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "wide",
+            context: "formatting"
+          });
+      }
+    },
+    B: function(date2, token, localize2) {
+      var hours = date2.getUTCHours();
+      var dayPeriodEnumValue;
+      if (hours >= 17) {
+        dayPeriodEnumValue = dayPeriodEnum.evening;
+      } else if (hours >= 12) {
+        dayPeriodEnumValue = dayPeriodEnum.afternoon;
+      } else if (hours >= 4) {
+        dayPeriodEnumValue = dayPeriodEnum.morning;
+      } else {
+        dayPeriodEnumValue = dayPeriodEnum.night;
+      }
+      switch (token) {
+        case "B":
+        case "BB":
+        case "BBB":
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "abbreviated",
+            context: "formatting"
+          });
+        case "BBBBB":
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "narrow",
+            context: "formatting"
+          });
+        case "BBBB":
+        default:
+          return localize2.dayPeriod(dayPeriodEnumValue, {
+            width: "wide",
+            context: "formatting"
+          });
+      }
+    },
+    h: function(date2, token, localize2) {
+      if (token === "ho") {
+        var hours = date2.getUTCHours() % 12;
+        if (hours === 0)
+          hours = 12;
+        return localize2.ordinalNumber(hours, {
+          unit: "hour"
+        });
+      }
+      return formatters.h(date2, token);
+    },
+    H: function(date2, token, localize2) {
+      if (token === "Ho") {
+        return localize2.ordinalNumber(date2.getUTCHours(), {
+          unit: "hour"
+        });
+      }
+      return formatters.H(date2, token);
+    },
+    K: function(date2, token, localize2) {
+      var hours = date2.getUTCHours() % 12;
+      if (token === "Ko") {
+        return localize2.ordinalNumber(hours, {
+          unit: "hour"
+        });
+      }
+      return addLeadingZeros(hours, token.length);
+    },
+    k: function(date2, token, localize2) {
+      var hours = date2.getUTCHours();
+      if (hours === 0)
+        hours = 24;
+      if (token === "ko") {
+        return localize2.ordinalNumber(hours, {
+          unit: "hour"
+        });
+      }
+      return addLeadingZeros(hours, token.length);
+    },
+    m: function(date2, token, localize2) {
+      if (token === "mo") {
+        return localize2.ordinalNumber(date2.getUTCMinutes(), {
+          unit: "minute"
+        });
+      }
+      return formatters.m(date2, token);
+    },
+    s: function(date2, token, localize2) {
+      if (token === "so") {
+        return localize2.ordinalNumber(date2.getUTCSeconds(), {
+          unit: "second"
+        });
+      }
+      return formatters.s(date2, token);
+    },
+    S: function(date2, token) {
+      return formatters.S(date2, token);
+    },
+    X: function(date2, token, _localize, options) {
+      var originalDate = options._originalDate || date2;
+      var timezoneOffset = originalDate.getTimezoneOffset();
+      if (timezoneOffset === 0) {
+        return "Z";
+      }
+      switch (token) {
+        case "X":
+          return formatTimezoneWithOptionalMinutes(timezoneOffset);
+        case "XXXX":
+        case "XX":
+          return formatTimezone(timezoneOffset);
+        case "XXXXX":
+        case "XXX":
+        default:
+          return formatTimezone(timezoneOffset, ":");
+      }
+    },
+    x: function(date2, token, _localize, options) {
+      var originalDate = options._originalDate || date2;
+      var timezoneOffset = originalDate.getTimezoneOffset();
+      switch (token) {
+        case "x":
+          return formatTimezoneWithOptionalMinutes(timezoneOffset);
+        case "xxxx":
+        case "xx":
+          return formatTimezone(timezoneOffset);
+        case "xxxxx":
+        case "xxx":
+        default:
+          return formatTimezone(timezoneOffset, ":");
+      }
+    },
+    O: function(date2, token, _localize, options) {
+      var originalDate = options._originalDate || date2;
+      var timezoneOffset = originalDate.getTimezoneOffset();
+      switch (token) {
+        case "O":
+        case "OO":
+        case "OOO":
+          return "GMT" + formatTimezoneShort(timezoneOffset, ":");
+        case "OOOO":
+        default:
+          return "GMT" + formatTimezone(timezoneOffset, ":");
+      }
+    },
+    z: function(date2, token, _localize, options) {
+      var originalDate = options._originalDate || date2;
+      var timezoneOffset = originalDate.getTimezoneOffset();
+      switch (token) {
+        case "z":
+        case "zz":
+        case "zzz":
+          return "GMT" + formatTimezoneShort(timezoneOffset, ":");
+        case "zzzz":
+        default:
+          return "GMT" + formatTimezone(timezoneOffset, ":");
+      }
+    },
+    t: function(date2, token, _localize, options) {
+      var originalDate = options._originalDate || date2;
+      var timestamp = Math.floor(originalDate.getTime() / 1e3);
+      return addLeadingZeros(timestamp, token.length);
+    },
+    T: function(date2, token, _localize, options) {
+      var originalDate = options._originalDate || date2;
+      var timestamp = originalDate.getTime();
+      return addLeadingZeros(timestamp, token.length);
+    }
+  };
+  function formatTimezoneShort(offset, dirtyDelimiter) {
+    var sign = offset > 0 ? "-" : "+";
+    var absOffset = Math.abs(offset);
+    var hours = Math.floor(absOffset / 60);
+    var minutes = absOffset % 60;
+    if (minutes === 0) {
+      return sign + String(hours);
+    }
+    var delimiter = dirtyDelimiter || "";
+    return sign + String(hours) + delimiter + addLeadingZeros(minutes, 2);
+  }
+  function formatTimezoneWithOptionalMinutes(offset, dirtyDelimiter) {
+    if (offset % 60 === 0) {
+      var sign = offset > 0 ? "-" : "+";
+      return sign + addLeadingZeros(Math.abs(offset) / 60, 2);
+    }
+    return formatTimezone(offset, dirtyDelimiter);
+  }
+  function formatTimezone(offset, dirtyDelimiter) {
+    var delimiter = dirtyDelimiter || "";
+    var sign = offset > 0 ? "-" : "+";
+    var absOffset = Math.abs(offset);
+    var hours = addLeadingZeros(Math.floor(absOffset / 60), 2);
+    var minutes = addLeadingZeros(absOffset % 60, 2);
+    return sign + hours + delimiter + minutes;
+  }
+  function dateLongFormatter(pattern, formatLong2) {
+    switch (pattern) {
+      case "P":
+        return formatLong2.date({
+          width: "short"
+        });
+      case "PP":
+        return formatLong2.date({
+          width: "medium"
+        });
+      case "PPP":
+        return formatLong2.date({
+          width: "long"
+        });
+      case "PPPP":
+      default:
+        return formatLong2.date({
+          width: "full"
+        });
+    }
+  }
+  function timeLongFormatter(pattern, formatLong2) {
+    switch (pattern) {
+      case "p":
+        return formatLong2.time({
+          width: "short"
+        });
+      case "pp":
+        return formatLong2.time({
+          width: "medium"
+        });
+      case "ppp":
+        return formatLong2.time({
+          width: "long"
+        });
+      case "pppp":
+      default:
+        return formatLong2.time({
+          width: "full"
+        });
+    }
+  }
+  function dateTimeLongFormatter(pattern, formatLong2) {
+    var matchResult = pattern.match(/(P+)(p+)?/);
+    var datePattern = matchResult[1];
+    var timePattern = matchResult[2];
+    if (!timePattern) {
+      return dateLongFormatter(pattern, formatLong2);
+    }
+    var dateTimeFormat;
+    switch (datePattern) {
+      case "P":
+        dateTimeFormat = formatLong2.dateTime({
+          width: "short"
+        });
+        break;
+      case "PP":
+        dateTimeFormat = formatLong2.dateTime({
+          width: "medium"
+        });
+        break;
+      case "PPP":
+        dateTimeFormat = formatLong2.dateTime({
+          width: "long"
+        });
+        break;
+      case "PPPP":
+      default:
+        dateTimeFormat = formatLong2.dateTime({
+          width: "full"
+        });
+        break;
+    }
+    return dateTimeFormat.replace("{{date}}", dateLongFormatter(datePattern, formatLong2)).replace("{{time}}", timeLongFormatter(timePattern, formatLong2));
+  }
+  var longFormatters = {
+    p: timeLongFormatter,
+    P: dateTimeLongFormatter
+  };
+  var protectedDayOfYearTokens = ["D", "DD"];
+  var protectedWeekYearTokens = ["YY", "YYYY"];
+  function isProtectedDayOfYearToken(token) {
+    return protectedDayOfYearTokens.indexOf(token) !== -1;
+  }
+  function isProtectedWeekYearToken(token) {
+    return protectedWeekYearTokens.indexOf(token) !== -1;
+  }
+  function throwProtectedError(token) {
+    if (token === "YYYY") {
+      throw new RangeError("Use `yyyy` instead of `YYYY` for formatting years; see: https://git.io/fxCyr");
+    } else if (token === "YY") {
+      throw new RangeError("Use `yy` instead of `YY` for formatting years; see: https://git.io/fxCyr");
+    } else if (token === "D") {
+      throw new RangeError("Use `d` instead of `D` for formatting days of the month; see: https://git.io/fxCyr");
+    } else if (token === "DD") {
+      throw new RangeError("Use `dd` instead of `DD` for formatting days of the month; see: https://git.io/fxCyr");
+    }
+  }
+  var formattingTokensRegExp = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
+  var longFormattingTokensRegExp = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
+  var escapedStringRegExp = /^'(.*?)'?$/;
+  var doubleQuoteRegExp = /''/g;
+  var unescapedLatinCharacterRegExp = /[a-zA-Z]/;
+  function format(dirtyDate, dirtyFormatStr, dirtyOptions) {
+    if (arguments.length < 2) {
+      throw new TypeError("2 arguments required, but only " + arguments.length + " present");
+    }
+    var formatStr = String(dirtyFormatStr);
+    var options = dirtyOptions || {};
+    var locale$1 = options.locale || locale;
+    var localeFirstWeekContainsDate = locale$1.options && locale$1.options.firstWeekContainsDate;
+    var defaultFirstWeekContainsDate = localeFirstWeekContainsDate == null ? 1 : toInteger(localeFirstWeekContainsDate);
+    var firstWeekContainsDate = options.firstWeekContainsDate == null ? defaultFirstWeekContainsDate : toInteger(options.firstWeekContainsDate);
+    if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
+      throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+    }
+    var localeWeekStartsOn = locale$1.options && locale$1.options.weekStartsOn;
+    var defaultWeekStartsOn = localeWeekStartsOn == null ? 0 : toInteger(localeWeekStartsOn);
+    var weekStartsOn = options.weekStartsOn == null ? defaultWeekStartsOn : toInteger(options.weekStartsOn);
+    if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+      throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    }
+    if (!locale$1.localize) {
+      throw new RangeError("locale must contain localize property");
+    }
+    if (!locale$1.formatLong) {
+      throw new RangeError("locale must contain formatLong property");
+    }
+    var originalDate = toDate(dirtyDate);
+    if (!isValid(originalDate)) {
+      throw new RangeError("Invalid time value");
+    }
+    var timezoneOffset = getTimezoneOffsetInMilliseconds(originalDate);
+    var utcDate = subMilliseconds(originalDate, timezoneOffset);
+    var formatterOptions = {
+      firstWeekContainsDate,
+      weekStartsOn,
+      locale: locale$1,
+      _originalDate: originalDate
+    };
+    var result = formatStr.match(longFormattingTokensRegExp).map(function(substring) {
+      var firstCharacter = substring[0];
+      if (firstCharacter === "p" || firstCharacter === "P") {
+        var longFormatter = longFormatters[firstCharacter];
+        return longFormatter(substring, locale$1.formatLong, formatterOptions);
+      }
+      return substring;
+    }).join("").match(formattingTokensRegExp).map(function(substring) {
+      if (substring === "''") {
+        return "'";
+      }
+      var firstCharacter = substring[0];
+      if (firstCharacter === "'") {
+        return cleanEscapedString(substring);
+      }
+      var formatter = formatters$1[firstCharacter];
+      if (formatter) {
+        if (!options.useAdditionalWeekYearTokens && isProtectedWeekYearToken(substring)) {
+          throwProtectedError(substring);
+        }
+        if (!options.useAdditionalDayOfYearTokens && isProtectedDayOfYearToken(substring)) {
+          throwProtectedError(substring);
+        }
+        return formatter(utcDate, substring, locale$1.localize, formatterOptions);
+      }
+      if (firstCharacter.match(unescapedLatinCharacterRegExp)) {
+        throw new RangeError("Format string contains an unescaped latin alphabet character `" + firstCharacter + "`");
+      }
+      return substring;
+    }).join("");
+    return result;
+  }
+  function cleanEscapedString(input) {
+    return input.match(escapedStringRegExp)[1].replace(doubleQuoteRegExp, "'");
+  }
+  function assign$1(target, dirtyObject) {
+    if (target == null) {
+      throw new TypeError("assign requires that input parameter not be null or undefined");
+    }
+    dirtyObject = dirtyObject || {};
+    for (var property in dirtyObject) {
+      if (dirtyObject.hasOwnProperty(property)) {
+        target[property] = dirtyObject[property];
+      }
+    }
+    return target;
+  }
+  function setUTCDay(dirtyDate, dirtyDay, dirtyOptions) {
+    if (arguments.length < 2) {
+      throw new TypeError("2 arguments required, but only " + arguments.length + " present");
+    }
+    var options = dirtyOptions || {};
+    var locale2 = options.locale;
+    var localeWeekStartsOn = locale2 && locale2.options && locale2.options.weekStartsOn;
+    var defaultWeekStartsOn = localeWeekStartsOn == null ? 0 : toInteger(localeWeekStartsOn);
+    var weekStartsOn = options.weekStartsOn == null ? defaultWeekStartsOn : toInteger(options.weekStartsOn);
+    if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+      throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    }
+    var date2 = toDate(dirtyDate);
+    var day = toInteger(dirtyDay);
+    var currentDay = date2.getUTCDay();
+    var remainder = day % 7;
+    var dayIndex = (remainder + 7) % 7;
+    var diff = (dayIndex < weekStartsOn ? 7 : 0) + day - currentDay;
+    date2.setUTCDate(date2.getUTCDate() + diff);
+    return date2;
+  }
+  function setUTCISODay(dirtyDate, dirtyDay) {
+    if (arguments.length < 2) {
+      throw new TypeError("2 arguments required, but only " + arguments.length + " present");
+    }
+    var day = toInteger(dirtyDay);
+    if (day % 7 === 0) {
+      day = day - 7;
+    }
+    var weekStartsOn = 1;
+    var date2 = toDate(dirtyDate);
+    var currentDay = date2.getUTCDay();
+    var remainder = day % 7;
+    var dayIndex = (remainder + 7) % 7;
+    var diff = (dayIndex < weekStartsOn ? 7 : 0) + day - currentDay;
+    date2.setUTCDate(date2.getUTCDate() + diff);
+    return date2;
+  }
+  function setUTCISOWeek(dirtyDate, dirtyISOWeek) {
+    if (arguments.length < 2) {
+      throw new TypeError("2 arguments required, but only " + arguments.length + " present");
+    }
+    var date2 = toDate(dirtyDate);
+    var isoWeek = toInteger(dirtyISOWeek);
+    var diff = getUTCISOWeek(date2) - isoWeek;
+    date2.setUTCDate(date2.getUTCDate() - diff * 7);
+    return date2;
+  }
+  function setUTCWeek(dirtyDate, dirtyWeek, options) {
+    if (arguments.length < 2) {
+      throw new TypeError("2 arguments required, but only " + arguments.length + " present");
+    }
+    var date2 = toDate(dirtyDate);
+    var week = toInteger(dirtyWeek);
+    var diff = getUTCWeek(date2, options) - week;
+    date2.setUTCDate(date2.getUTCDate() - diff * 7);
+    return date2;
+  }
+  var MILLISECONDS_IN_HOUR = 36e5;
+  var MILLISECONDS_IN_MINUTE$1 = 6e4;
+  var MILLISECONDS_IN_SECOND = 1e3;
+  var numericPatterns = {
+    month: /^(1[0-2]|0?\d)/,
+    date: /^(3[0-1]|[0-2]?\d)/,
+    dayOfYear: /^(36[0-6]|3[0-5]\d|[0-2]?\d?\d)/,
+    week: /^(5[0-3]|[0-4]?\d)/,
+    hour23h: /^(2[0-3]|[0-1]?\d)/,
+    hour24h: /^(2[0-4]|[0-1]?\d)/,
+    hour11h: /^(1[0-1]|0?\d)/,
+    hour12h: /^(1[0-2]|0?\d)/,
+    minute: /^[0-5]?\d/,
+    second: /^[0-5]?\d/,
+    singleDigit: /^\d/,
+    twoDigits: /^\d{1,2}/,
+    threeDigits: /^\d{1,3}/,
+    fourDigits: /^\d{1,4}/,
+    anyDigitsSigned: /^-?\d+/,
+    singleDigitSigned: /^-?\d/,
+    twoDigitsSigned: /^-?\d{1,2}/,
+    threeDigitsSigned: /^-?\d{1,3}/,
+    fourDigitsSigned: /^-?\d{1,4}/
+  };
+  var timezonePatterns = {
+    basicOptionalMinutes: /^([+-])(\d{2})(\d{2})?|Z/,
+    basic: /^([+-])(\d{2})(\d{2})|Z/,
+    basicOptionalSeconds: /^([+-])(\d{2})(\d{2})((\d{2}))?|Z/,
+    extended: /^([+-])(\d{2}):(\d{2})|Z/,
+    extendedOptionalSeconds: /^([+-])(\d{2}):(\d{2})(:(\d{2}))?|Z/
+  };
+  function parseNumericPattern(pattern, string, valueCallback) {
+    var matchResult = string.match(pattern);
+    if (!matchResult) {
+      return null;
+    }
+    var value = parseInt(matchResult[0], 10);
+    return {
+      value: valueCallback ? valueCallback(value) : value,
+      rest: string.slice(matchResult[0].length)
+    };
+  }
+  function parseTimezonePattern(pattern, string) {
+    var matchResult = string.match(pattern);
+    if (!matchResult) {
+      return null;
+    }
+    if (matchResult[0] === "Z") {
+      return {
+        value: 0,
+        rest: string.slice(1)
+      };
+    }
+    var sign = matchResult[1] === "+" ? 1 : -1;
+    var hours = matchResult[2] ? parseInt(matchResult[2], 10) : 0;
+    var minutes = matchResult[3] ? parseInt(matchResult[3], 10) : 0;
+    var seconds = matchResult[5] ? parseInt(matchResult[5], 10) : 0;
+    return {
+      value: sign * (hours * MILLISECONDS_IN_HOUR + minutes * MILLISECONDS_IN_MINUTE$1 + seconds * MILLISECONDS_IN_SECOND),
+      rest: string.slice(matchResult[0].length)
+    };
+  }
+  function parseAnyDigitsSigned(string, valueCallback) {
+    return parseNumericPattern(numericPatterns.anyDigitsSigned, string, valueCallback);
+  }
+  function parseNDigits(n, string, valueCallback) {
+    switch (n) {
+      case 1:
+        return parseNumericPattern(numericPatterns.singleDigit, string, valueCallback);
+      case 2:
+        return parseNumericPattern(numericPatterns.twoDigits, string, valueCallback);
+      case 3:
+        return parseNumericPattern(numericPatterns.threeDigits, string, valueCallback);
+      case 4:
+        return parseNumericPattern(numericPatterns.fourDigits, string, valueCallback);
+      default:
+        return parseNumericPattern(new RegExp("^\\d{1," + n + "}"), string, valueCallback);
+    }
+  }
+  function parseNDigitsSigned(n, string, valueCallback) {
+    switch (n) {
+      case 1:
+        return parseNumericPattern(numericPatterns.singleDigitSigned, string, valueCallback);
+      case 2:
+        return parseNumericPattern(numericPatterns.twoDigitsSigned, string, valueCallback);
+      case 3:
+        return parseNumericPattern(numericPatterns.threeDigitsSigned, string, valueCallback);
+      case 4:
+        return parseNumericPattern(numericPatterns.fourDigitsSigned, string, valueCallback);
+      default:
+        return parseNumericPattern(new RegExp("^-?\\d{1," + n + "}"), string, valueCallback);
+    }
+  }
+  function dayPeriodEnumToHours(enumValue) {
+    switch (enumValue) {
+      case "morning":
+        return 4;
+      case "evening":
+        return 17;
+      case "pm":
+      case "noon":
+      case "afternoon":
+        return 12;
+      case "am":
+      case "midnight":
+      case "night":
+      default:
+        return 0;
+    }
+  }
+  function normalizeTwoDigitYear(twoDigitYear, currentYear) {
+    var isCommonEra = currentYear > 0;
+    var absCurrentYear = isCommonEra ? currentYear : 1 - currentYear;
+    var result;
+    if (absCurrentYear <= 50) {
+      result = twoDigitYear || 100;
+    } else {
+      var rangeEnd = absCurrentYear + 50;
+      var rangeEndCentury = Math.floor(rangeEnd / 100) * 100;
+      var isPreviousCentury = twoDigitYear >= rangeEnd % 100;
+      result = twoDigitYear + rangeEndCentury - (isPreviousCentury ? 100 : 0);
+    }
+    return isCommonEra ? result : 1 - result;
+  }
+  var DAYS_IN_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  var DAYS_IN_MONTH_LEAP_YEAR = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  function isLeapYearIndex(year) {
+    return year % 400 === 0 || year % 4 === 0 && year % 100 !== 0;
+  }
+  var parsers = {
+    G: {
+      priority: 140,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "G":
+          case "GG":
+          case "GGG":
+            return match2.era(string, {
+              width: "abbreviated"
+            }) || match2.era(string, {
+              width: "narrow"
+            });
+          case "GGGGG":
+            return match2.era(string, {
+              width: "narrow"
+            });
+          case "GGGG":
+          default:
+            return match2.era(string, {
+              width: "wide"
+            }) || match2.era(string, {
+              width: "abbreviated"
+            }) || match2.era(string, {
+              width: "narrow"
+            });
+        }
+      },
+      set: function(date2, flags, value, _options) {
+        flags.era = value;
+        date2.setUTCFullYear(value, 0, 1);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["R", "u", "t", "T"]
+    },
+    y: {
+      priority: 130,
+      parse: function(string, token, match2, _options) {
+        var valueCallback = function(year) {
+          return {
+            year,
+            isTwoDigitYear: token === "yy"
+          };
+        };
+        switch (token) {
+          case "y":
+            return parseNDigits(4, string, valueCallback);
+          case "yo":
+            return match2.ordinalNumber(string, {
+              unit: "year",
+              valueCallback
+            });
+          default:
+            return parseNDigits(token.length, string, valueCallback);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value.isTwoDigitYear || value.year > 0;
+      },
+      set: function(date2, flags, value, _options) {
+        var currentYear = date2.getUTCFullYear();
+        if (value.isTwoDigitYear) {
+          var normalizedTwoDigitYear = normalizeTwoDigitYear(value.year, currentYear);
+          date2.setUTCFullYear(normalizedTwoDigitYear, 0, 1);
+          date2.setUTCHours(0, 0, 0, 0);
+          return date2;
+        }
+        var year = !("era" in flags) || flags.era === 1 ? value.year : 1 - value.year;
+        date2.setUTCFullYear(year, 0, 1);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["Y", "R", "u", "w", "I", "i", "e", "c", "t", "T"]
+    },
+    Y: {
+      priority: 130,
+      parse: function(string, token, match2, _options) {
+        var valueCallback = function(year) {
+          return {
+            year,
+            isTwoDigitYear: token === "YY"
+          };
+        };
+        switch (token) {
+          case "Y":
+            return parseNDigits(4, string, valueCallback);
+          case "Yo":
+            return match2.ordinalNumber(string, {
+              unit: "year",
+              valueCallback
+            });
+          default:
+            return parseNDigits(token.length, string, valueCallback);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value.isTwoDigitYear || value.year > 0;
+      },
+      set: function(date2, flags, value, options) {
+        var currentYear = getUTCWeekYear(date2, options);
+        if (value.isTwoDigitYear) {
+          var normalizedTwoDigitYear = normalizeTwoDigitYear(value.year, currentYear);
+          date2.setUTCFullYear(normalizedTwoDigitYear, 0, options.firstWeekContainsDate);
+          date2.setUTCHours(0, 0, 0, 0);
+          return startOfUTCWeek(date2, options);
+        }
+        var year = !("era" in flags) || flags.era === 1 ? value.year : 1 - value.year;
+        date2.setUTCFullYear(year, 0, options.firstWeekContainsDate);
+        date2.setUTCHours(0, 0, 0, 0);
+        return startOfUTCWeek(date2, options);
+      },
+      incompatibleTokens: ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"]
+    },
+    R: {
+      priority: 130,
+      parse: function(string, token, _match, _options) {
+        if (token === "R") {
+          return parseNDigitsSigned(4, string);
+        }
+        return parseNDigitsSigned(token.length, string);
+      },
+      set: function(_date, _flags, value, _options) {
+        var firstWeekOfYear = new Date(0);
+        firstWeekOfYear.setUTCFullYear(value, 0, 4);
+        firstWeekOfYear.setUTCHours(0, 0, 0, 0);
+        return startOfUTCISOWeek(firstWeekOfYear);
+      },
+      incompatibleTokens: ["G", "y", "Y", "u", "Q", "q", "M", "L", "w", "d", "D", "e", "c", "t", "T"]
+    },
+    u: {
+      priority: 130,
+      parse: function(string, token, _match, _options) {
+        if (token === "u") {
+          return parseNDigitsSigned(4, string);
+        }
+        return parseNDigitsSigned(token.length, string);
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCFullYear(value, 0, 1);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"]
+    },
+    Q: {
+      priority: 120,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "Q":
+          case "QQ":
+            return parseNDigits(token.length, string);
+          case "Qo":
+            return match2.ordinalNumber(string, {
+              unit: "quarter"
+            });
+          case "QQQ":
+            return match2.quarter(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.quarter(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "QQQQQ":
+            return match2.quarter(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "QQQQ":
+          default:
+            return match2.quarter(string, {
+              width: "wide",
+              context: "formatting"
+            }) || match2.quarter(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.quarter(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 1 && value <= 4;
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCMonth((value - 1) * 3, 1);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["Y", "R", "q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"]
+    },
+    q: {
+      priority: 120,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "q":
+          case "qq":
+            return parseNDigits(token.length, string);
+          case "qo":
+            return match2.ordinalNumber(string, {
+              unit: "quarter"
+            });
+          case "qqq":
+            return match2.quarter(string, {
+              width: "abbreviated",
+              context: "standalone"
+            }) || match2.quarter(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "qqqqq":
+            return match2.quarter(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "qqqq":
+          default:
+            return match2.quarter(string, {
+              width: "wide",
+              context: "standalone"
+            }) || match2.quarter(string, {
+              width: "abbreviated",
+              context: "standalone"
+            }) || match2.quarter(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 1 && value <= 4;
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCMonth((value - 1) * 3, 1);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["Y", "R", "Q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"]
+    },
+    M: {
+      priority: 110,
+      parse: function(string, token, match2, _options) {
+        var valueCallback = function(value) {
+          return value - 1;
+        };
+        switch (token) {
+          case "M":
+            return parseNumericPattern(numericPatterns.month, string, valueCallback);
+          case "MM":
+            return parseNDigits(2, string, valueCallback);
+          case "Mo":
+            return match2.ordinalNumber(string, {
+              unit: "month",
+              valueCallback
+            });
+          case "MMM":
+            return match2.month(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.month(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "MMMMM":
+            return match2.month(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "MMMM":
+          default:
+            return match2.month(string, {
+              width: "wide",
+              context: "formatting"
+            }) || match2.month(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.month(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 11;
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCMonth(value, 1);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["Y", "R", "q", "Q", "L", "w", "I", "D", "i", "e", "c", "t", "T"]
+    },
+    L: {
+      priority: 110,
+      parse: function(string, token, match2, _options) {
+        var valueCallback = function(value) {
+          return value - 1;
+        };
+        switch (token) {
+          case "L":
+            return parseNumericPattern(numericPatterns.month, string, valueCallback);
+          case "LL":
+            return parseNDigits(2, string, valueCallback);
+          case "Lo":
+            return match2.ordinalNumber(string, {
+              unit: "month",
+              valueCallback
+            });
+          case "LLL":
+            return match2.month(string, {
+              width: "abbreviated",
+              context: "standalone"
+            }) || match2.month(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "LLLLL":
+            return match2.month(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "LLLL":
+          default:
+            return match2.month(string, {
+              width: "wide",
+              context: "standalone"
+            }) || match2.month(string, {
+              width: "abbreviated",
+              context: "standalone"
+            }) || match2.month(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 11;
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCMonth(value, 1);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["Y", "R", "q", "Q", "M", "w", "I", "D", "i", "e", "c", "t", "T"]
+    },
+    w: {
+      priority: 100,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "w":
+            return parseNumericPattern(numericPatterns.week, string);
+          case "wo":
+            return match2.ordinalNumber(string, {
+              unit: "week"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 1 && value <= 53;
+      },
+      set: function(date2, _flags, value, options) {
+        return startOfUTCWeek(setUTCWeek(date2, value, options), options);
+      },
+      incompatibleTokens: ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "i", "t", "T"]
+    },
+    I: {
+      priority: 100,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "I":
+            return parseNumericPattern(numericPatterns.week, string);
+          case "Io":
+            return match2.ordinalNumber(string, {
+              unit: "week"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 1 && value <= 53;
+      },
+      set: function(date2, _flags, value, options) {
+        return startOfUTCISOWeek(setUTCISOWeek(date2, value, options), options);
+      },
+      incompatibleTokens: ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"]
+    },
+    d: {
+      priority: 90,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "d":
+            return parseNumericPattern(numericPatterns.date, string);
+          case "do":
+            return match2.ordinalNumber(string, {
+              unit: "date"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(date2, value, _options) {
+        var year = date2.getUTCFullYear();
+        var isLeapYear = isLeapYearIndex(year);
+        var month = date2.getUTCMonth();
+        if (isLeapYear) {
+          return value >= 1 && value <= DAYS_IN_MONTH_LEAP_YEAR[month];
+        } else {
+          return value >= 1 && value <= DAYS_IN_MONTH[month];
+        }
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCDate(value);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["Y", "R", "q", "Q", "w", "I", "D", "i", "e", "c", "t", "T"]
+    },
+    D: {
+      priority: 90,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "D":
+          case "DD":
+            return parseNumericPattern(numericPatterns.dayOfYear, string);
+          case "Do":
+            return match2.ordinalNumber(string, {
+              unit: "date"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(date2, value, _options) {
+        var year = date2.getUTCFullYear();
+        var isLeapYear = isLeapYearIndex(year);
+        if (isLeapYear) {
+          return value >= 1 && value <= 366;
+        } else {
+          return value >= 1 && value <= 365;
+        }
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCMonth(0, value);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["Y", "R", "q", "Q", "M", "L", "w", "I", "d", "E", "i", "e", "c", "t", "T"]
+    },
+    E: {
+      priority: 90,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "E":
+          case "EE":
+          case "EEE":
+            return match2.day(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "short",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "EEEEE":
+            return match2.day(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "EEEEEE":
+            return match2.day(string, {
+              width: "short",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "EEEE":
+          default:
+            return match2.day(string, {
+              width: "wide",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "short",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 6;
+      },
+      set: function(date2, _flags, value, options) {
+        date2 = setUTCDay(date2, value, options);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["D", "i", "e", "c", "t", "T"]
+    },
+    e: {
+      priority: 90,
+      parse: function(string, token, match2, options) {
+        var valueCallback = function(value) {
+          var wholeWeekDays = Math.floor((value - 1) / 7) * 7;
+          return (value + options.weekStartsOn + 6) % 7 + wholeWeekDays;
+        };
+        switch (token) {
+          case "e":
+          case "ee":
+            return parseNDigits(token.length, string, valueCallback);
+          case "eo":
+            return match2.ordinalNumber(string, {
+              unit: "day",
+              valueCallback
+            });
+          case "eee":
+            return match2.day(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "short",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "eeeee":
+            return match2.day(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "eeeeee":
+            return match2.day(string, {
+              width: "short",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "eeee":
+          default:
+            return match2.day(string, {
+              width: "wide",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "short",
+              context: "formatting"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 6;
+      },
+      set: function(date2, _flags, value, options) {
+        date2 = setUTCDay(date2, value, options);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "c", "t", "T"]
+    },
+    c: {
+      priority: 90,
+      parse: function(string, token, match2, options) {
+        var valueCallback = function(value) {
+          var wholeWeekDays = Math.floor((value - 1) / 7) * 7;
+          return (value + options.weekStartsOn + 6) % 7 + wholeWeekDays;
+        };
+        switch (token) {
+          case "c":
+          case "cc":
+            return parseNDigits(token.length, string, valueCallback);
+          case "co":
+            return match2.ordinalNumber(string, {
+              unit: "day",
+              valueCallback
+            });
+          case "ccc":
+            return match2.day(string, {
+              width: "abbreviated",
+              context: "standalone"
+            }) || match2.day(string, {
+              width: "short",
+              context: "standalone"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "ccccc":
+            return match2.day(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "cccccc":
+            return match2.day(string, {
+              width: "short",
+              context: "standalone"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "cccc":
+          default:
+            return match2.day(string, {
+              width: "wide",
+              context: "standalone"
+            }) || match2.day(string, {
+              width: "abbreviated",
+              context: "standalone"
+            }) || match2.day(string, {
+              width: "short",
+              context: "standalone"
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "standalone"
+            });
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 6;
+      },
+      set: function(date2, _flags, value, options) {
+        date2 = setUTCDay(date2, value, options);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "e", "t", "T"]
+    },
+    i: {
+      priority: 90,
+      parse: function(string, token, match2, _options) {
+        var valueCallback = function(value) {
+          if (value === 0) {
+            return 7;
+          }
+          return value;
+        };
+        switch (token) {
+          case "i":
+          case "ii":
+            return parseNDigits(token.length, string);
+          case "io":
+            return match2.ordinalNumber(string, {
+              unit: "day"
+            });
+          case "iii":
+            return match2.day(string, {
+              width: "abbreviated",
+              context: "formatting",
+              valueCallback
+            }) || match2.day(string, {
+              width: "short",
+              context: "formatting",
+              valueCallback
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting",
+              valueCallback
+            });
+          case "iiiii":
+            return match2.day(string, {
+              width: "narrow",
+              context: "formatting",
+              valueCallback
+            });
+          case "iiiiii":
+            return match2.day(string, {
+              width: "short",
+              context: "formatting",
+              valueCallback
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting",
+              valueCallback
+            });
+          case "iiii":
+          default:
+            return match2.day(string, {
+              width: "wide",
+              context: "formatting",
+              valueCallback
+            }) || match2.day(string, {
+              width: "abbreviated",
+              context: "formatting",
+              valueCallback
+            }) || match2.day(string, {
+              width: "short",
+              context: "formatting",
+              valueCallback
+            }) || match2.day(string, {
+              width: "narrow",
+              context: "formatting",
+              valueCallback
+            });
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 1 && value <= 7;
+      },
+      set: function(date2, _flags, value, options) {
+        date2 = setUTCISODay(date2, value, options);
+        date2.setUTCHours(0, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "E", "e", "c", "t", "T"]
+    },
+    a: {
+      priority: 80,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "a":
+          case "aa":
+          case "aaa":
+            return match2.dayPeriod(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "aaaaa":
+            return match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "aaaa":
+          default:
+            return match2.dayPeriod(string, {
+              width: "wide",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+        }
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCHours(dayPeriodEnumToHours(value), 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["b", "B", "H", "K", "k", "t", "T"]
+    },
+    b: {
+      priority: 80,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "b":
+          case "bb":
+          case "bbb":
+            return match2.dayPeriod(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "bbbbb":
+            return match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "bbbb":
+          default:
+            return match2.dayPeriod(string, {
+              width: "wide",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+        }
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCHours(dayPeriodEnumToHours(value), 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["a", "B", "H", "K", "k", "t", "T"]
+    },
+    B: {
+      priority: 80,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "B":
+          case "BB":
+          case "BBB":
+            return match2.dayPeriod(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "BBBBB":
+            return match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "BBBB":
+          default:
+            return match2.dayPeriod(string, {
+              width: "wide",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "abbreviated",
+              context: "formatting"
+            }) || match2.dayPeriod(string, {
+              width: "narrow",
+              context: "formatting"
+            });
+        }
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCHours(dayPeriodEnumToHours(value), 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["a", "b", "t", "T"]
+    },
+    h: {
+      priority: 70,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "h":
+            return parseNumericPattern(numericPatterns.hour12h, string);
+          case "ho":
+            return match2.ordinalNumber(string, {
+              unit: "hour"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 1 && value <= 12;
+      },
+      set: function(date2, _flags, value, _options) {
+        var isPM = date2.getUTCHours() >= 12;
+        if (isPM && value < 12) {
+          date2.setUTCHours(value + 12, 0, 0, 0);
+        } else if (!isPM && value === 12) {
+          date2.setUTCHours(0, 0, 0, 0);
+        } else {
+          date2.setUTCHours(value, 0, 0, 0);
+        }
+        return date2;
+      },
+      incompatibleTokens: ["H", "K", "k", "t", "T"]
+    },
+    H: {
+      priority: 70,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "H":
+            return parseNumericPattern(numericPatterns.hour23h, string);
+          case "Ho":
+            return match2.ordinalNumber(string, {
+              unit: "hour"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 23;
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCHours(value, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["a", "b", "h", "K", "k", "t", "T"]
+    },
+    K: {
+      priority: 70,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "K":
+            return parseNumericPattern(numericPatterns.hour11h, string);
+          case "Ko":
+            return match2.ordinalNumber(string, {
+              unit: "hour"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 11;
+      },
+      set: function(date2, _flags, value, _options) {
+        var isPM = date2.getUTCHours() >= 12;
+        if (isPM && value < 12) {
+          date2.setUTCHours(value + 12, 0, 0, 0);
+        } else {
+          date2.setUTCHours(value, 0, 0, 0);
+        }
+        return date2;
+      },
+      incompatibleTokens: ["a", "b", "h", "H", "k", "t", "T"]
+    },
+    k: {
+      priority: 70,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "k":
+            return parseNumericPattern(numericPatterns.hour24h, string);
+          case "ko":
+            return match2.ordinalNumber(string, {
+              unit: "hour"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 1 && value <= 24;
+      },
+      set: function(date2, _flags, value, _options) {
+        var hours = value <= 24 ? value % 24 : value;
+        date2.setUTCHours(hours, 0, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["a", "b", "h", "H", "K", "t", "T"]
+    },
+    m: {
+      priority: 60,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "m":
+            return parseNumericPattern(numericPatterns.minute, string);
+          case "mo":
+            return match2.ordinalNumber(string, {
+              unit: "minute"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 59;
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCMinutes(value, 0, 0);
+        return date2;
+      },
+      incompatibleTokens: ["t", "T"]
+    },
+    s: {
+      priority: 50,
+      parse: function(string, token, match2, _options) {
+        switch (token) {
+          case "s":
+            return parseNumericPattern(numericPatterns.second, string);
+          case "so":
+            return match2.ordinalNumber(string, {
+              unit: "second"
+            });
+          default:
+            return parseNDigits(token.length, string);
+        }
+      },
+      validate: function(_date, value, _options) {
+        return value >= 0 && value <= 59;
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCSeconds(value, 0);
+        return date2;
+      },
+      incompatibleTokens: ["t", "T"]
+    },
+    S: {
+      priority: 30,
+      parse: function(string, token, _match, _options) {
+        var valueCallback = function(value) {
+          return Math.floor(value * Math.pow(10, -token.length + 3));
+        };
+        return parseNDigits(token.length, string, valueCallback);
+      },
+      set: function(date2, _flags, value, _options) {
+        date2.setUTCMilliseconds(value);
+        return date2;
+      },
+      incompatibleTokens: ["t", "T"]
+    },
+    X: {
+      priority: 10,
+      parse: function(string, token, _match, _options) {
+        switch (token) {
+          case "X":
+            return parseTimezonePattern(timezonePatterns.basicOptionalMinutes, string);
+          case "XX":
+            return parseTimezonePattern(timezonePatterns.basic, string);
+          case "XXXX":
+            return parseTimezonePattern(timezonePatterns.basicOptionalSeconds, string);
+          case "XXXXX":
+            return parseTimezonePattern(timezonePatterns.extendedOptionalSeconds, string);
+          case "XXX":
+          default:
+            return parseTimezonePattern(timezonePatterns.extended, string);
+        }
+      },
+      set: function(date2, flags, value, _options) {
+        if (flags.timestampIsSet) {
+          return date2;
+        }
+        return new Date(date2.getTime() - value);
+      },
+      incompatibleTokens: ["t", "T", "x"]
+    },
+    x: {
+      priority: 10,
+      parse: function(string, token, _match, _options) {
+        switch (token) {
+          case "x":
+            return parseTimezonePattern(timezonePatterns.basicOptionalMinutes, string);
+          case "xx":
+            return parseTimezonePattern(timezonePatterns.basic, string);
+          case "xxxx":
+            return parseTimezonePattern(timezonePatterns.basicOptionalSeconds, string);
+          case "xxxxx":
+            return parseTimezonePattern(timezonePatterns.extendedOptionalSeconds, string);
+          case "xxx":
+          default:
+            return parseTimezonePattern(timezonePatterns.extended, string);
+        }
+      },
+      set: function(date2, flags, value, _options) {
+        if (flags.timestampIsSet) {
+          return date2;
+        }
+        return new Date(date2.getTime() - value);
+      },
+      incompatibleTokens: ["t", "T", "X"]
+    },
+    t: {
+      priority: 40,
+      parse: function(string, _token, _match, _options) {
+        return parseAnyDigitsSigned(string);
+      },
+      set: function(_date, _flags, value, _options) {
+        return [new Date(value * 1e3), {
+          timestampIsSet: true
+        }];
+      },
+      incompatibleTokens: "*"
+    },
+    T: {
+      priority: 20,
+      parse: function(string, _token, _match, _options) {
+        return parseAnyDigitsSigned(string);
+      },
+      set: function(_date, _flags, value, _options) {
+        return [new Date(value), {
+          timestampIsSet: true
+        }];
+      },
+      incompatibleTokens: "*"
+    }
+  };
+  var TIMEZONE_UNIT_PRIORITY = 10;
+  var formattingTokensRegExp$1 = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
+  var longFormattingTokensRegExp$1 = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
+  var escapedStringRegExp$1 = /^'(.*?)'?$/;
+  var doubleQuoteRegExp$1 = /''/g;
+  var notWhitespaceRegExp = /\S/;
+  var unescapedLatinCharacterRegExp$1 = /[a-zA-Z]/;
+  function parse(dirtyDateString, dirtyFormatString, dirtyBackupDate, dirtyOptions) {
+    if (arguments.length < 3) {
+      throw new TypeError("3 arguments required, but only " + arguments.length + " present");
+    }
+    var dateString = String(dirtyDateString);
+    var formatString = String(dirtyFormatString);
+    var options = dirtyOptions || {};
+    var locale$1 = options.locale || locale;
+    if (!locale$1.match) {
+      throw new RangeError("locale must contain match property");
+    }
+    var localeFirstWeekContainsDate = locale$1.options && locale$1.options.firstWeekContainsDate;
+    var defaultFirstWeekContainsDate = localeFirstWeekContainsDate == null ? 1 : toInteger(localeFirstWeekContainsDate);
+    var firstWeekContainsDate = options.firstWeekContainsDate == null ? defaultFirstWeekContainsDate : toInteger(options.firstWeekContainsDate);
+    if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
+      throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+    }
+    var localeWeekStartsOn = locale$1.options && locale$1.options.weekStartsOn;
+    var defaultWeekStartsOn = localeWeekStartsOn == null ? 0 : toInteger(localeWeekStartsOn);
+    var weekStartsOn = options.weekStartsOn == null ? defaultWeekStartsOn : toInteger(options.weekStartsOn);
+    if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+      throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    }
+    if (formatString === "") {
+      if (dateString === "") {
+        return toDate(dirtyBackupDate);
+      } else {
+        return new Date(NaN);
+      }
+    }
+    var subFnOptions = {
+      firstWeekContainsDate,
+      weekStartsOn,
+      locale: locale$1
+    };
+    var setters = [{
+      priority: TIMEZONE_UNIT_PRIORITY,
+      set: dateToSystemTimezone,
+      index: 0
+    }];
+    var i;
+    var tokens = formatString.match(longFormattingTokensRegExp$1).map(function(substring) {
+      var firstCharacter2 = substring[0];
+      if (firstCharacter2 === "p" || firstCharacter2 === "P") {
+        var longFormatter = longFormatters[firstCharacter2];
+        return longFormatter(substring, locale$1.formatLong, subFnOptions);
+      }
+      return substring;
+    }).join("").match(formattingTokensRegExp$1);
+    var usedTokens = [];
+    for (i = 0; i < tokens.length; i++) {
+      var token = tokens[i];
+      if (!options.useAdditionalWeekYearTokens && isProtectedWeekYearToken(token)) {
+        throwProtectedError(token);
+      }
+      if (!options.useAdditionalDayOfYearTokens && isProtectedDayOfYearToken(token)) {
+        throwProtectedError(token);
+      }
+      var firstCharacter = token[0];
+      var parser = parsers[firstCharacter];
+      if (parser) {
+        var incompatibleTokens = parser.incompatibleTokens;
+        if (Array.isArray(incompatibleTokens)) {
+          var incompatibleToken = void 0;
+          for (var _i = 0; _i < usedTokens.length; _i++) {
+            var usedToken = usedTokens[_i].token;
+            if (incompatibleTokens.indexOf(usedToken) !== -1 || usedToken === firstCharacter) {
+              incompatibleToken = usedTokens[_i];
+              break;
+            }
+          }
+          if (incompatibleToken) {
+            throw new RangeError("The format string mustn't contain `".concat(incompatibleToken.fullToken, "` and `").concat(token, "` at the same time"));
+          }
+        } else if (parser.incompatibleTokens === "*" && usedTokens.length) {
+          throw new RangeError("The format string mustn't contain `".concat(token, "` and any other token at the same time"));
+        }
+        usedTokens.push({
+          token: firstCharacter,
+          fullToken: token
+        });
+        var parseResult = parser.parse(dateString, token, locale$1.match, subFnOptions);
+        if (!parseResult) {
+          return new Date(NaN);
+        }
+        setters.push({
+          priority: parser.priority,
+          set: parser.set,
+          validate: parser.validate,
+          value: parseResult.value,
+          index: setters.length
+        });
+        dateString = parseResult.rest;
+      } else {
+        if (firstCharacter.match(unescapedLatinCharacterRegExp$1)) {
+          throw new RangeError("Format string contains an unescaped latin alphabet character `" + firstCharacter + "`");
+        }
+        if (token === "''") {
+          token = "'";
+        } else if (firstCharacter === "'") {
+          token = cleanEscapedString$1(token);
+        }
+        if (dateString.indexOf(token) === 0) {
+          dateString = dateString.slice(token.length);
+        } else {
+          return new Date(NaN);
+        }
+      }
+    }
+    if (dateString.length > 0 && notWhitespaceRegExp.test(dateString)) {
+      return new Date(NaN);
+    }
+    var uniquePrioritySetters = setters.map(function(setter2) {
+      return setter2.priority;
+    }).sort(function(a, b) {
+      return b - a;
+    }).filter(function(priority, index2, array) {
+      return array.indexOf(priority) === index2;
+    }).map(function(priority) {
+      return setters.filter(function(setter2) {
+        return setter2.priority === priority;
+      }).reverse();
+    }).map(function(setterArray) {
+      return setterArray[0];
+    });
+    var date2 = toDate(dirtyBackupDate);
+    if (isNaN(date2)) {
+      return new Date(NaN);
+    }
+    var utcDate = subMilliseconds(date2, getTimezoneOffsetInMilliseconds(date2));
+    var flags = {};
+    for (i = 0; i < uniquePrioritySetters.length; i++) {
+      var setter = uniquePrioritySetters[i];
+      if (setter.validate && !setter.validate(utcDate, setter.value, subFnOptions)) {
+        return new Date(NaN);
+      }
+      var result = setter.set(utcDate, flags, setter.value, subFnOptions);
+      if (result[0]) {
+        utcDate = result[0];
+        assign$1(flags, result[1]);
+      } else {
+        utcDate = result;
+      }
+    }
+    return utcDate;
+  }
+  function dateToSystemTimezone(date2, flags) {
+    if (flags.timestampIsSet) {
+      return date2;
+    }
+    var convertedDate = new Date(0);
+    convertedDate.setFullYear(date2.getUTCFullYear(), date2.getUTCMonth(), date2.getUTCDate());
+    convertedDate.setHours(date2.getUTCHours(), date2.getUTCMinutes(), date2.getUTCSeconds(), date2.getUTCMilliseconds());
+    return convertedDate;
+  }
+  function cleanEscapedString$1(input) {
+    return input.match(escapedStringRegExp$1)[1].replace(doubleQuoteRegExp$1, "'");
+  }
+  var date = lodash_clonedeep(defaultType);
+  date.isRight = true;
+  date.compare = function(x, y, column) {
+    function cook(d) {
+      if (column && column.dateInputFormat) {
+        return parse("".concat(d), "".concat(column.dateInputFormat), new Date());
+      }
+      return d;
+    }
+    x = cook(x);
+    y = cook(y);
+    if (!isValid(x)) {
+      return -1;
+    }
+    if (!isValid(y)) {
+      return 1;
+    }
+    return compareAsc(x, y);
+  };
+  date.format = function(v, column) {
+    if (v === void 0 || v === null)
+      return "";
+    var date2 = parse(v, column.dateInputFormat, new Date());
+    if (isValid(date2)) {
+      return format(date2, column.dateOutputFormat);
+    }
+    console.error('Not a valid date: "'.concat(v, '"'));
+    return null;
+  };
+  var date$1 = /* @__PURE__ */ Object.freeze({
+    "default": date
+  });
+  var number = lodash_clonedeep(defaultType);
+  number.isRight = true;
+  number.filterPredicate = function(rowval, filter) {
+    return number.compare(rowval, filter) === 0;
+  };
+  number.compare = function(x, y) {
+    function cook(d) {
+      if (d === void 0 || d === null)
+        return -Infinity;
+      return d.indexOf(".") >= 0 ? parseFloat(d) : parseInt(d, 10);
+    }
+    x = typeof x === "number" ? x : cook(x);
+    y = typeof y === "number" ? y : cook(y);
+    if (x < y)
+      return -1;
+    if (x > y)
+      return 1;
+    return 0;
+  };
+  var number$1 = /* @__PURE__ */ Object.freeze({
+    "default": number
+  });
+  var decimal = lodash_clonedeep(number);
+  decimal.format = function(v) {
+    if (v === void 0 || v === null)
+      return "";
+    return parseFloat(Math.round(v * 100) / 100).toFixed(2);
+  };
+  var decimal$1 = /* @__PURE__ */ Object.freeze({
+    "default": decimal
+  });
+  var percentage = lodash_clonedeep(number);
+  percentage.format = function(v) {
+    if (v === void 0 || v === null)
+      return "";
+    return "".concat(parseFloat(v * 100).toFixed(2), "%");
+  };
+  var percentage$1 = /* @__PURE__ */ Object.freeze({
+    "default": percentage
+  });
+  var _boolean = lodash_clonedeep(defaultType);
+  _boolean.isRight = true;
+  _boolean.filterPredicate = function(rowval, filter) {
+    return _boolean.compare(rowval, filter) === 0;
+  };
+  _boolean.compare = function(x, y) {
+    function cook(d) {
+      if (typeof d === "boolean")
+        return d ? 1 : 0;
+      if (typeof d === "string")
+        return d === "true" ? 1 : 0;
+      return -Infinity;
+    }
+    x = cook(x);
+    y = cook(y);
+    if (x < y)
+      return -1;
+    if (x > y)
+      return 1;
+    return 0;
+  };
+  var _boolean$1 = /* @__PURE__ */ Object.freeze({
+    "default": _boolean
+  });
+  var index = {
+    date: date$1,
+    decimal: decimal$1,
+    number: number$1,
+    percentage: percentage$1,
+    "boolean": _boolean$1
+  };
+  var dataTypes = {};
+  var coreDataTypes = index;
+  lodash_foreach(Object.keys(coreDataTypes), function(key) {
+    var compName = key.replace(/^\.\//, "").replace(/\.js/, "");
+    dataTypes[compName] = coreDataTypes[key]["default"];
+  });
+  var script$6 = {
+    name: "vue-good-table",
+    props: {
+      isLoading: {
+        "default": null,
+        type: Boolean
+      },
+      maxHeight: {
+        "default": null,
+        type: String
+      },
+      fixedHeader: Boolean,
+      theme: {
+        "default": ""
+      },
+      mode: {
+        "default": "local"
+      },
+      totalRows: {},
+      styleClass: {
+        "default": "vgt-table bordered"
+      },
+      columns: {},
+      rows: {},
+      lineNumbers: Boolean,
+      responsive: {
+        "default": true,
+        type: Boolean
+      },
+      rtl: Boolean,
+      rowStyleClass: {
+        "default": null,
+        type: [Function, String]
+      },
+      compactMode: Boolean,
+      groupOptions: {
+        "default": function _default() {
+          return {
+            enabled: false,
+            collapsable: false,
+            rowKey: null
+          };
+        }
+      },
+      selectOptions: {
+        "default": function _default() {
+          return {
+            enabled: false,
+            selectionInfoClass: "",
+            selectionText: "rows selected",
+            clearSelectionText: "clear",
+            disableSelectInfo: false,
+            selectAllByGroup: false
+          };
+        }
+      },
+      sortOptions: {
+        "default": function _default() {
+          return {
+            enabled: true,
+            initialSortBy: {}
+          };
+        }
+      },
+      paginationOptions: {
+        "default": function _default() {
+          return {
+            enabled: false,
+            perPage: 10,
+            perPageDropdown: null,
+            position: "bottom",
+            dropdownAllowAll: true,
+            mode: "records"
+          };
+        }
+      },
+      searchOptions: {
+        "default": function _default() {
+          return {
+            enabled: false,
+            trigger: null,
+            externalQuery: null,
+            searchFn: null,
+            placeholder: "Search Table"
+          };
+        }
+      }
+    },
+    data: function data() {
+      return {
+        tableLoading: false,
+        nextText: "Next",
+        prevText: "Prev",
+        rowsPerPageText: "Rows per page",
+        ofText: "of",
+        allText: "All",
+        pageText: "page",
+        selectable: false,
+        selectOnCheckboxOnly: false,
+        selectAllByPage: true,
+        disableSelectInfo: false,
+        selectionInfoClass: "",
+        selectionText: "rows selected",
+        clearSelectionText: "clear",
+        maintainExpanded: true,
+        expandedRowKeys: /* @__PURE__ */ new Set(),
+        sortable: true,
+        defaultSortBy: null,
+        searchEnabled: false,
+        searchTrigger: null,
+        externalSearchQuery: null,
+        searchFn: null,
+        searchPlaceholder: "Search Table",
+        searchSkipDiacritics: false,
+        perPage: null,
+        paginate: false,
+        paginateOnTop: false,
+        paginateOnBottom: true,
+        customRowsPerPageDropdown: [],
+        paginateDropdownAllowAll: true,
+        paginationMode: "records",
+        currentPage: 1,
+        currentPerPage: 10,
+        sorts: [],
+        globalSearchTerm: "",
+        filteredRows: [],
+        columnFilters: {},
+        forceSearch: false,
+        sortChanged: false,
+        dataTypes: dataTypes || {}
+      };
+    },
+    watch: {
+      rows: {
+        handler: function handler() {
+          this.$emit("update:isLoading", false);
+          this.filterRows(this.columnFilters, false);
+        },
+        deep: true,
+        immediate: true
+      },
+      selectOptions: {
+        handler: function handler() {
+          this.initializeSelect();
+        },
+        deep: true,
+        immediate: true
+      },
+      paginationOptions: {
+        handler: function handler(newValue, oldValue) {
+          if (!lodash_isequal(newValue, oldValue)) {
+            this.initializePagination();
+          }
+        },
+        deep: true,
+        immediate: true
+      },
+      searchOptions: {
+        handler: function handler() {
+          if (this.searchOptions.externalQuery !== void 0 && this.searchOptions.externalQuery !== this.searchTerm) {
+            this.externalSearchQuery = this.searchOptions.externalQuery;
+            this.handleSearch();
+          }
+          this.initializeSearch();
+        },
+        deep: true,
+        immediate: true
+      },
+      sortOptions: {
+        handler: function handler(newValue, oldValue) {
+          if (!lodash_isequal(newValue, oldValue)) {
+            this.initializeSort();
+          }
+        },
+        deep: true
+      },
+      selectedRows: function selectedRows(newValue, oldValue) {
+        if (!lodash_isequal(newValue, oldValue)) {
+          this.$emit("on-selected-rows-change", {
+            selectedRows: this.selectedRows
+          });
+        }
+      }
+    },
+    computed: {
+      tableStyles: function tableStyles() {
+        if (this.compactMode)
+          return this.tableStyleClasses + "vgt-compact";
+        else
+          return this.tableStyleClasses;
+      },
+      hasFooterSlot: function hasFooterSlot() {
+        return !!this.$slots["table-actions-bottom"];
+      },
+      wrapperStyles: function wrapperStyles() {
+        return {
+          overflow: "scroll-y",
+          maxHeight: this.maxHeight ? this.maxHeight : "auto"
+        };
+      },
+      rowKeyField: function rowKeyField() {
+        return this.groupOptions.rowKey || "vgt_header_id";
+      },
+      hasHeaderRowTemplate: function hasHeaderRowTemplate() {
+        return !!this.$slots["table-header-row"] || !!this.$scopedSlots["table-header-row"];
+      },
+      showEmptySlot: function showEmptySlot() {
+        if (!this.paginated.length)
+          return true;
+        if (this.paginated[0].label === "no groups" && !this.paginated[0].children.length) {
+          return true;
+        }
+        return false;
+      },
+      allSelected: function allSelected() {
+        return this.selectedRowCount > 0 && (this.selectAllByPage && this.selectedPageRowsCount === this.totalPageRowCount || !this.selectAllByPage && this.selectedRowCount === this.totalRowCount);
+      },
+      allSelectedIndeterminate: function allSelectedIndeterminate() {
+        return !this.allSelected && (this.selectAllByPage && this.selectedPageRowsCount > 0 || !this.selectAllByPage && this.selectedRowCount > 0);
+      },
+      selectionInfo: function selectionInfo() {
+        return "".concat(this.selectedRowCount, " ").concat(this.selectionText);
+      },
+      selectedRowCount: function selectedRowCount() {
+        return this.selectedRows.length;
+      },
+      selectedPageRowsCount: function selectedPageRowsCount() {
+        return this.selectedPageRows.length;
+      },
+      selectedPageRows: function selectedPageRows() {
+        var selectedRows = [];
+        lodash_foreach(this.paginated, function(headerRow) {
+          lodash_foreach(headerRow.children, function(row) {
+            if (row.vgtSelected) {
+              selectedRows.push(row);
+            }
+          });
+        });
+        return selectedRows;
+      },
+      selectedRows: function selectedRows() {
+        var selectedRows2 = [];
+        lodash_foreach(this.processedRows, function(headerRow) {
+          lodash_foreach(headerRow.children, function(row) {
+            if (row.vgtSelected) {
+              selectedRows2.push(row);
+            }
+          });
+        });
+        return selectedRows2.sort(function(r1, r2) {
+          return r1.originalIndex - r2.originalIndex;
+        });
+      },
+      fullColspan: function fullColspan() {
+        var fullColspan2 = 0;
+        for (var i = 0; i < this.columns.length; i += 1) {
+          if (!this.columns[i].hidden) {
+            fullColspan2 += 1;
+          }
+        }
+        if (this.lineNumbers)
+          fullColspan2++;
+        if (this.selectable)
+          fullColspan2++;
+        return fullColspan2;
+      },
+      groupHeaderOnTop: function groupHeaderOnTop() {
+        if (this.groupOptions && this.groupOptions.enabled && this.groupOptions.headerPosition && this.groupOptions.headerPosition === "bottom") {
+          return false;
+        }
+        if (this.groupOptions && this.groupOptions.enabled)
+          return true;
+        return false;
+      },
+      groupHeaderOnBottom: function groupHeaderOnBottom() {
+        if (this.groupOptions && this.groupOptions.enabled && this.groupOptions.headerPosition && this.groupOptions.headerPosition === "bottom") {
+          return true;
+        }
+        return false;
+      },
+      totalRowCount: function totalRowCount() {
+        var total = 0;
+        lodash_foreach(this.processedRows, function(headerRow) {
+          total += headerRow.children ? headerRow.children.length : 0;
+        });
+        return total;
+      },
+      totalPageRowCount: function totalPageRowCount() {
+        var total = 0;
+        lodash_foreach(this.paginated, function(headerRow) {
+          total += headerRow.children ? headerRow.children.length : 0;
+        });
+        return total;
+      },
+      wrapStyleClasses: function wrapStyleClasses() {
+        var classes = "vgt-wrap";
+        if (this.rtl)
+          classes += " rtl";
+        classes += " ".concat(this.theme);
+        return classes;
+      },
+      tableStyleClasses: function tableStyleClasses() {
+        var classes = this.styleClass;
+        classes += " ".concat(this.theme);
+        return classes;
+      },
+      searchTerm: function searchTerm() {
+        return this.externalSearchQuery != null ? this.externalSearchQuery : this.globalSearchTerm;
+      },
+      globalSearchAllowed: function globalSearchAllowed() {
+        if (this.searchEnabled && !!this.globalSearchTerm && this.searchTrigger !== "enter") {
+          return true;
+        }
+        if (this.externalSearchQuery != null && this.searchTrigger !== "enter") {
+          return true;
+        }
+        if (this.forceSearch) {
+          this.forceSearch = false;
+          return true;
+        }
+        return false;
+      },
+      processedRows: function processedRows() {
+        var _this = this;
+        var computedRows = this.filteredRows;
+        if (this.mode === "remote") {
+          return computedRows;
+        }
+        if (this.globalSearchAllowed) {
+          var allRows = [];
+          lodash_foreach(this.filteredRows, function(headerRow) {
+            allRows.push.apply(allRows, _toConsumableArray(headerRow.children));
+          });
+          var filteredRows = [];
+          lodash_foreach(allRows, function(row) {
+            lodash_foreach(_this.columns, function(col) {
+              if (!col.globalSearchDisabled) {
+                if (_this.searchFn) {
+                  var foundMatch = _this.searchFn(row, col, _this.collectFormatted(row, col), _this.searchTerm);
+                  if (foundMatch) {
+                    filteredRows.push(row);
+                    return false;
+                  }
+                } else {
+                  var matched = defaultType.filterPredicate(_this.collectFormatted(row, col), _this.searchTerm, _this.searchSkipDiacritics);
+                  if (matched) {
+                    filteredRows.push(row);
+                    return false;
+                  }
+                }
+              }
+            });
+          });
+          this.$emit("on-search", {
+            searchTerm: this.searchTerm,
+            rowCount: filteredRows.length
+          });
+          computedRows = [];
+          lodash_foreach(this.filteredRows, function(headerRow) {
+            var i = headerRow.vgt_header_id;
+            var children = lodash_filter(filteredRows, ["vgt_id", i]);
+            if (children.length) {
+              var newHeaderRow = lodash_clonedeep(headerRow);
+              newHeaderRow.children = children;
+              computedRows.push(newHeaderRow);
+            }
+          });
+        }
+        if (this.sorts.length) {
+          computedRows.forEach(function(cRows) {
+            cRows.children.sort(function(xRow, yRow) {
+              var sortValue;
+              for (var i = 0; i < _this.sorts.length; i += 1) {
+                var column = _this.getColumnForField(_this.sorts[i].field);
+                var xvalue = _this.collect(xRow, _this.sorts[i].field);
+                var yvalue = _this.collect(yRow, _this.sorts[i].field);
+                var sortFn = column.sortFn;
+                if (sortFn && typeof sortFn === "function") {
+                  sortValue = sortValue || sortFn(xvalue, yvalue, column, xRow, yRow) * (_this.sorts[i].type === "desc" ? -1 : 1);
+                } else {
+                  sortValue = sortValue || column.typeDef.compare(xvalue, yvalue, column) * (_this.sorts[i].type === "desc" ? -1 : 1);
+                }
+              }
+              return sortValue;
+            });
+          });
+        }
+        if (this.searchTrigger === "enter") {
+          this.filteredRows = computedRows;
+        }
+        return computedRows;
+      },
+      paginated: function paginated() {
+        var _this2 = this;
+        if (!this.processedRows.length)
+          return [];
+        if (this.mode === "remote") {
+          return this.processedRows;
+        }
+        var paginatedRows = [];
+        lodash_foreach(this.processedRows, function(childRows) {
+          var _paginatedRows;
+          if (_this2.groupOptions.enabled) {
+            paginatedRows.push(childRows);
+          }
+          (_paginatedRows = paginatedRows).push.apply(_paginatedRows, _toConsumableArray(childRows.children));
+        });
+        if (this.paginate) {
+          var pageStart = (this.currentPage - 1) * this.currentPerPage;
+          if (pageStart >= paginatedRows.length || this.currentPerPage === -1) {
+            this.currentPage = 1;
+            pageStart = 0;
+          }
+          var pageEnd = paginatedRows.length + 1;
+          if (this.currentPerPage !== -1) {
+            pageEnd = this.currentPage * this.currentPerPage;
+          }
+          paginatedRows = paginatedRows.slice(pageStart, pageEnd);
+        }
+        var reconstructedRows = [];
+        paginatedRows.forEach(function(flatRow) {
+          if (flatRow.vgt_header_id !== void 0) {
+            _this2.handleExpanded(flatRow);
+            var newHeaderRow = lodash_clonedeep(flatRow);
+            newHeaderRow.children = [];
+            reconstructedRows.push(newHeaderRow);
+          } else {
+            var hRow = reconstructedRows.find(function(r) {
+              return r.vgt_header_id === flatRow.vgt_id;
+            });
+            if (!hRow) {
+              hRow = _this2.processedRows.find(function(r) {
+                return r.vgt_header_id === flatRow.vgt_id;
+              });
+              if (hRow) {
+                hRow = lodash_clonedeep(hRow);
+                hRow.children = [];
+                reconstructedRows.push(hRow);
+              }
+            }
+            hRow.children.push(flatRow);
+          }
+        });
+        return reconstructedRows;
+      },
+      originalRows: function originalRows() {
+        var rows = lodash_clonedeep(this.rows);
+        var nestedRows = [];
+        if (!this.groupOptions.enabled) {
+          nestedRows = this.handleGrouped([{
+            label: "no groups",
+            children: rows
+          }]);
+        } else {
+          nestedRows = this.handleGrouped(rows);
+        }
+        var index2 = 0;
+        lodash_foreach(nestedRows, function(headerRow, i) {
+          lodash_foreach(headerRow.children, function(row, j) {
+            row.originalIndex = index2++;
+          });
+        });
+        return nestedRows;
+      },
+      typedColumns: function typedColumns() {
+        var columns = lodash_assign(this.columns, []);
+        for (var i = 0; i < this.columns.length; i++) {
+          var column = columns[i];
+          column.typeDef = this.dataTypes[column.type] || defaultType;
+        }
+        return columns;
+      },
+      hasRowClickListener: function hasRowClickListener() {
+        return this.$listeners && this.$listeners["on-row-click"];
+      }
+    },
+    methods: {
+      handleExpanded: function handleExpanded(headerRow) {
+        if (this.maintainExpanded && this.expandedRowKeys.has(headerRow[this.rowKeyField])) {
+          this.$set(headerRow, "vgtIsExpanded", true);
+        } else {
+          this.$set(headerRow, "vgtIsExpanded", false);
+        }
+      },
+      toggleExpand: function toggleExpand(id) {
+        var _this3 = this;
+        var headerRow = this.filteredRows.find(function(r) {
+          return r[_this3.rowKeyField] === id;
+        });
+        if (headerRow) {
+          this.$set(headerRow, "vgtIsExpanded", !headerRow.vgtIsExpanded);
+        }
+        if (this.maintainExpanded && headerRow.vgtIsExpanded) {
+          this.expandedRowKeys.add(headerRow[this.rowKeyField]);
+        } else {
+          this.expandedRowKeys["delete"](headerRow[this.rowKeyField]);
+        }
+      },
+      expandAll: function expandAll() {
+        var _this4 = this;
+        this.filteredRows.forEach(function(row) {
+          _this4.$set(row, "vgtIsExpanded", true);
+          if (_this4.maintainExpanded) {
+            _this4.expandedRowKeys.add(row[_this4.rowKeyField]);
+          }
+        });
+      },
+      collapseAll: function collapseAll() {
+        var _this5 = this;
+        this.filteredRows.forEach(function(row) {
+          _this5.$set(row, "vgtIsExpanded", false);
+          _this5.expandedRowKeys.clear();
+        });
+      },
+      getColumnForField: function getColumnForField(field) {
+        for (var i = 0; i < this.typedColumns.length; i += 1) {
+          if (this.typedColumns[i].field === field)
+            return this.typedColumns[i];
+        }
+      },
+      handleSearch: function handleSearch() {
+        this.resetTable();
+        if (this.mode === "remote") {
+          this.$emit("on-search", {
+            searchTerm: this.searchTerm
+          });
+        }
+      },
+      reset: function reset() {
+        this.initializeSort();
+        this.changePage(1);
+        this.$refs["table-header-primary"].reset(true);
+        if (this.$refs["table-header-secondary"]) {
+          this.$refs["table-header-secondary"].reset(true);
+        }
+      },
+      emitSelectedRows: function emitSelectedRows() {
+        this.$emit("on-select-all", {
+          selected: this.selectedRowCount === this.totalRowCount,
+          selectedRows: this.selectedRows
+        });
+      },
+      unselectAllInternal: function unselectAllInternal(forceAll) {
+        var _this6 = this;
+        var rows = this.selectAllByPage && !forceAll ? this.paginated : this.filteredRows;
+        lodash_foreach(rows, function(headerRow, i) {
+          lodash_foreach(headerRow.children, function(row, j) {
+            _this6.$set(row, "vgtSelected", false);
+          });
+        });
+        this.emitSelectedRows();
+      },
+      toggleSelectAll: function toggleSelectAll() {
+        var _this7 = this;
+        if (this.allSelected) {
+          this.unselectAllInternal();
+          return;
+        }
+        var rows = this.selectAllByPage ? this.paginated : this.filteredRows;
+        lodash_foreach(rows, function(headerRow) {
+          lodash_foreach(headerRow.children, function(row) {
+            _this7.$set(row, "vgtSelected", true);
+          });
+        });
+        this.emitSelectedRows();
+      },
+      toggleSelectGroup: function toggleSelectGroup(event, headerRow) {
+        var _this8 = this;
+        lodash_foreach(headerRow.children, function(row) {
+          _this8.$set(row, "vgtSelected", event.checked);
+        });
+      },
+      changePage: function changePage(value) {
+        if (this.paginationOptions.enabled) {
+          var paginationWidget = this.$refs.paginationBottom;
+          if (this.paginationOptions.position === "top") {
+            paginationWidget = this.$refs.paginationTop;
+          }
+          if (paginationWidget) {
+            paginationWidget.currentPage = value;
+            this.currentPage = value;
+          }
+        }
+      },
+      pageChangedEvent: function pageChangedEvent() {
+        return {
+          currentPage: this.currentPage,
+          currentPerPage: this.currentPerPage,
+          total: Math.floor(this.totalRowCount / this.currentPerPage)
+        };
+      },
+      pageChanged: function pageChanged(pagination) {
+        this.currentPage = pagination.currentPage;
+        var pageChangedEvent = this.pageChangedEvent();
+        pageChangedEvent.prevPage = pagination.prevPage;
+        this.$emit("on-page-change", pageChangedEvent);
+        if (this.mode === "remote") {
+          this.$emit("update:isLoading", true);
+        }
+      },
+      perPageChanged: function perPageChanged(pagination) {
+        this.currentPerPage = pagination.currentPerPage;
+        var perPageChangedEvent = this.pageChangedEvent();
+        this.$emit("on-per-page-change", perPageChangedEvent);
+        if (this.mode === "remote") {
+          this.$emit("update:isLoading", true);
+        }
+      },
+      changeSort: function changeSort(sorts) {
+        this.sorts = sorts;
+        this.$emit("on-sort-change", sorts);
+        this.changePage(1);
+        if (this.mode === "remote") {
+          this.$emit("update:isLoading", true);
+          return;
+        }
+        this.sortChanged = true;
+      },
+      onCheckboxClicked: function onCheckboxClicked(row, index2, event) {
+        this.$set(row, "vgtSelected", !row.vgtSelected);
+        this.$emit("on-row-click", {
+          row,
+          pageIndex: index2,
+          selected: !!row.vgtSelected,
+          event
+        });
+      },
+      onRowDoubleClicked: function onRowDoubleClicked(row, index2, event) {
+        this.$emit("on-row-dblclick", {
+          row,
+          pageIndex: index2,
+          selected: !!row.vgtSelected,
+          event
+        });
+      },
+      onRowClicked: function onRowClicked(row, index2, event) {
+        if (this.selectable && !this.selectOnCheckboxOnly) {
+          this.$set(row, "vgtSelected", !row.vgtSelected);
+        }
+        this.$emit("on-row-click", {
+          row,
+          pageIndex: index2,
+          selected: !!row.vgtSelected,
+          event
+        });
+      },
+      onRowAuxClicked: function onRowAuxClicked(row, index2, event) {
+        this.$emit("on-row-aux-click", {
+          row,
+          pageIndex: index2,
+          selected: !!row.vgtSelected,
+          event
+        });
+      },
+      onCellClicked: function onCellClicked(row, column, rowIndex, event) {
+        this.$emit("on-cell-click", {
+          row,
+          column,
+          rowIndex,
+          event
+        });
+      },
+      onMouseenter: function onMouseenter(row, index2) {
+        this.$emit("on-row-mouseenter", {
+          row,
+          pageIndex: index2
+        });
+      },
+      onMouseleave: function onMouseleave(row, index2) {
+        this.$emit("on-row-mouseleave", {
+          row,
+          pageIndex: index2
+        });
+      },
+      searchTableOnEnter: function searchTableOnEnter() {
+        if (this.searchTrigger === "enter") {
+          this.handleSearch();
+          this.filteredRows = lodash_clonedeep(this.originalRows);
+          this.forceSearch = true;
+          this.sortChanged = true;
+        }
+      },
+      searchTableOnKeyUp: function searchTableOnKeyUp() {
+        if (this.searchTrigger !== "enter") {
+          this.handleSearch();
+        }
+      },
+      resetTable: function resetTable() {
+        this.unselectAllInternal(true);
+        this.changePage(1);
+      },
+      collect: function collect(obj, field) {
+        function dig(obj2, selector) {
+          var result = obj2;
+          var splitter = selector.split(".");
+          for (var i = 0; i < splitter.length; i++) {
+            if (typeof result === "undefined" || result === null) {
+              return void 0;
+            }
+            result = result[splitter[i]];
+          }
+          return result;
+        }
+        if (typeof field === "function")
+          return field(obj);
+        if (typeof field === "string")
+          return dig(obj, field);
+        return void 0;
+      },
+      collectFormatted: function collectFormatted(obj, column) {
+        var headerRow = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : false;
+        var value;
+        if (headerRow && column.headerField) {
+          value = this.collect(obj, column.headerField);
+        } else {
+          value = this.collect(obj, column.field);
+        }
+        if (value === void 0)
+          return "";
+        if (column.formatFn && typeof column.formatFn === "function") {
+          return column.formatFn(value, obj);
+        }
+        var type = column.typeDef;
+        if (!type) {
+          type = this.dataTypes[column.type] || defaultType;
+        }
+        var result = type.format(value, column);
+        if (this.compactMode && (result == "" || result == null))
+          return "-";
+        return result;
+      },
+      formattedRow: function formattedRow(row) {
+        var isHeaderRow = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : false;
+        var formattedRow2 = {};
+        for (var i = 0; i < this.typedColumns.length; i++) {
+          var col = this.typedColumns[i];
+          if (col.field) {
+            formattedRow2[col.field] = this.collectFormatted(row, col, isHeaderRow);
+          }
+        }
+        return formattedRow2;
+      },
+      getClasses: function getClasses(index2, element, row) {
+        var _this$typedColumns$in = this.typedColumns[index2], typeDef = _this$typedColumns$in.typeDef, custom = _this$typedColumns$in["".concat(element, "Class")];
+        var isRight = typeDef.isRight;
+        if (this.rtl)
+          isRight = true;
+        var classes = {
+          "vgt-right-align": isRight,
+          "vgt-left-align": !isRight
+        };
+        if (typeof custom === "function") {
+          classes[custom(row)] = true;
+        } else if (typeof custom === "string") {
+          classes[custom] = true;
+        }
+        return classes;
+      },
+      filterRows: function filterRows(columnFilters) {
+        var _this9 = this;
+        var fromFilter = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+        this.columnFilters = columnFilters;
+        var computedRows = lodash_clonedeep(this.originalRows);
+        if (this.columnFilters && Object.keys(this.columnFilters).length) {
+          if (this.mode !== "remote" || fromFilter) {
+            this.changePage(1);
+          }
+          if (fromFilter) {
+            this.$emit("on-column-filter", {
+              columnFilters: this.columnFilters
+            });
+          }
+          if (this.mode === "remote") {
+            if (fromFilter) {
+              this.$emit("update:isLoading", true);
+            } else {
+              this.filteredRows = computedRows;
+            }
+            return;
+          }
+          var _loop = function _loop2(i2) {
+            var col = _this9.typedColumns[i2];
+            if (_this9.columnFilters[col.field]) {
+              computedRows = lodash_foreach(computedRows, function(headerRow) {
+                var newChildren = headerRow.children.filter(function(row) {
+                  if (col.filterOptions && typeof col.filterOptions.filterFn === "function") {
+                    return col.filterOptions.filterFn(_this9.collect(row, col.field), _this9.columnFilters[col.field]);
+                  }
+                  var typeDef = col.typeDef;
+                  return typeDef.filterPredicate(_this9.collect(row, col.field), _this9.columnFilters[col.field], false, col.filterOptions && _typeof(col.filterOptions.filterDropdownItems) === "object");
+                });
+                headerRow.children = newChildren;
+              });
+            }
+          };
+          for (var i = 0; i < this.typedColumns.length; i++) {
+            _loop(i);
+          }
+        }
+        this.filteredRows = computedRows;
+      },
+      getCurrentIndex: function getCurrentIndex(index2) {
+        return (this.currentPage - 1) * this.currentPerPage + index2 + 1;
+      },
+      getRowStyleClass: function getRowStyleClass(row) {
+        var classes = "";
+        if (this.hasRowClickListener)
+          classes += "clickable";
+        var rowStyleClasses;
+        if (typeof this.rowStyleClass === "function") {
+          rowStyleClasses = this.rowStyleClass(row);
+        } else {
+          rowStyleClasses = this.rowStyleClass;
+        }
+        if (rowStyleClasses) {
+          classes += " ".concat(rowStyleClasses);
+        }
+        return classes;
+      },
+      handleGrouped: function handleGrouped(originalRows) {
+        var _this10 = this;
+        lodash_foreach(originalRows, function(headerRow, i) {
+          headerRow.vgt_header_id = i;
+          if (_this10.groupOptions.maintainExpanded && _this10.expandedRowKeys.has(headerRow[_this10.groupOptions.rowKey])) {
+            _this10.$set(headerRow, "vgtIsExpanded", true);
+          }
+          lodash_foreach(headerRow.children, function(childRow) {
+            childRow.vgt_id = i;
+          });
+        });
+        return originalRows;
+      },
+      initializePagination: function initializePagination() {
+        var _this11 = this;
+        var _this$paginationOptio = this.paginationOptions, enabled = _this$paginationOptio.enabled, perPage = _this$paginationOptio.perPage, position = _this$paginationOptio.position, perPageDropdown = _this$paginationOptio.perPageDropdown, dropdownAllowAll = _this$paginationOptio.dropdownAllowAll, nextLabel = _this$paginationOptio.nextLabel, prevLabel = _this$paginationOptio.prevLabel, rowsPerPageLabel = _this$paginationOptio.rowsPerPageLabel, ofLabel = _this$paginationOptio.ofLabel, pageLabel = _this$paginationOptio.pageLabel, allLabel = _this$paginationOptio.allLabel, setCurrentPage = _this$paginationOptio.setCurrentPage, mode = _this$paginationOptio.mode;
+        if (typeof enabled === "boolean") {
+          this.paginate = enabled;
+        }
+        if (typeof perPage === "number") {
+          this.perPage = perPage;
+        }
+        if (position === "top") {
+          this.paginateOnTop = true;
+          this.paginateOnBottom = false;
+        } else if (position === "both") {
+          this.paginateOnTop = true;
+          this.paginateOnBottom = true;
+        }
+        if (Array.isArray(perPageDropdown) && perPageDropdown.length) {
+          this.customRowsPerPageDropdown = perPageDropdown;
+          if (!this.perPage) {
+            var _perPageDropdown = _slicedToArray(perPageDropdown, 1);
+            this.perPage = _perPageDropdown[0];
+          }
+        }
+        if (typeof dropdownAllowAll === "boolean") {
+          this.paginateDropdownAllowAll = dropdownAllowAll;
+        }
+        if (typeof mode === "string") {
+          this.paginationMode = mode;
+        }
+        if (typeof nextLabel === "string") {
+          this.nextText = nextLabel;
+        }
+        if (typeof prevLabel === "string") {
+          this.prevText = prevLabel;
+        }
+        if (typeof rowsPerPageLabel === "string") {
+          this.rowsPerPageText = rowsPerPageLabel;
+        }
+        if (typeof ofLabel === "string") {
+          this.ofText = ofLabel;
+        }
+        if (typeof pageLabel === "string") {
+          this.pageText = pageLabel;
+        }
+        if (typeof allLabel === "string") {
+          this.allText = allLabel;
+        }
+        if (typeof setCurrentPage === "number") {
+          setTimeout(function() {
+            _this11.changePage(setCurrentPage);
+          }, 500);
+        }
+      },
+      initializeSearch: function initializeSearch() {
+        var _this$searchOptions = this.searchOptions, enabled = _this$searchOptions.enabled, trigger = _this$searchOptions.trigger, externalQuery = _this$searchOptions.externalQuery, searchFn = _this$searchOptions.searchFn, placeholder = _this$searchOptions.placeholder, skipDiacritics = _this$searchOptions.skipDiacritics;
+        if (typeof enabled === "boolean") {
+          this.searchEnabled = enabled;
+        }
+        if (trigger === "enter") {
+          this.searchTrigger = trigger;
+        }
+        if (typeof externalQuery === "string") {
+          this.externalSearchQuery = externalQuery;
+        }
+        if (typeof searchFn === "function") {
+          this.searchFn = searchFn;
+        }
+        if (typeof placeholder === "string") {
+          this.searchPlaceholder = placeholder;
+        }
+        if (typeof skipDiacritics === "boolean") {
+          this.searchSkipDiacritics = skipDiacritics;
+        }
+      },
+      initializeSort: function initializeSort() {
+        var _this$sortOptions = this.sortOptions, enabled = _this$sortOptions.enabled, initialSortBy = _this$sortOptions.initialSortBy;
+        if (typeof enabled === "boolean") {
+          this.sortable = enabled;
+        }
+        if (_typeof(initialSortBy) === "object") {
+          var ref = this.fixedHeader ? this.$refs["table-header-secondary"] : this.$refs["table-header-primary"];
+          if (Array.isArray(initialSortBy)) {
+            ref.setInitialSort(initialSortBy);
+          } else {
+            var hasField = Object.prototype.hasOwnProperty.call(initialSortBy, "field");
+            if (hasField)
+              ref.setInitialSort([initialSortBy]);
+          }
+        }
+      },
+      initializeSelect: function initializeSelect() {
+        var _this$selectOptions = this.selectOptions, enabled = _this$selectOptions.enabled, selectionInfoClass = _this$selectOptions.selectionInfoClass, selectionText = _this$selectOptions.selectionText, clearSelectionText = _this$selectOptions.clearSelectionText, selectOnCheckboxOnly = _this$selectOptions.selectOnCheckboxOnly, selectAllByPage = _this$selectOptions.selectAllByPage, disableSelectInfo = _this$selectOptions.disableSelectInfo, selectAllByGroup = _this$selectOptions.selectAllByGroup;
+        if (typeof enabled === "boolean") {
+          this.selectable = enabled;
+        }
+        if (typeof selectOnCheckboxOnly === "boolean") {
+          this.selectOnCheckboxOnly = selectOnCheckboxOnly;
+        }
+        if (typeof selectAllByPage === "boolean") {
+          this.selectAllByPage = selectAllByPage;
+        }
+        if (typeof selectAllByGroup === "boolean") {
+          this.selectAllByGroup = selectAllByGroup;
+        }
+        if (typeof disableSelectInfo === "boolean") {
+          this.disableSelectInfo = disableSelectInfo;
+        }
+        if (typeof selectionInfoClass === "string") {
+          this.selectionInfoClass = selectionInfoClass;
+        }
+        if (typeof selectionText === "string") {
+          this.selectionText = selectionText;
+        }
+        if (typeof clearSelectionText === "string") {
+          this.clearSelectionText = clearSelectionText;
+        }
+      }
+    },
+    mounted: function mounted() {
+      if (this.perPage) {
+        this.currentPerPage = this.perPage;
+      }
+      this.initializeSort();
+    },
+    components: {
+      "vgt-pagination": __vue_component__$1,
+      "vgt-global-search": __vue_component__$2,
+      "vgt-header-row": __vue_component__$5,
+      "vgt-table-header": __vue_component__$4
+    }
+  };
+  var __vue_script__$6 = script$6;
+  var __vue_render__$6 = function __vue_render__2() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", {
+      "class": _vm.wrapStyleClasses
+    }, [_vm.isLoading ? _c("div", {
+      staticClass: "vgt-loading vgt-center-align"
+    }, [_vm._t("loadingContent", [_c("span", {
+      staticClass: "vgt-loading__content"
+    }, [_vm._v("\n        Loading...\n      ")])])], 2) : _vm._e(), _vm._v(" "), _c("div", {
+      staticClass: "vgt-inner-wrap",
+      "class": {
+        "is-loading": _vm.isLoading
+      }
+    }, [_vm.paginate && _vm.paginateOnTop ? _vm._t("pagination-top", [_c("vgt-pagination", {
+      ref: "paginationTop",
+      attrs: {
+        "perPage": _vm.perPage,
+        "rtl": _vm.rtl,
+        "total": _vm.totalRows || _vm.totalRowCount,
+        "mode": _vm.paginationMode,
+        "nextText": _vm.nextText,
+        "prevText": _vm.prevText,
+        "rowsPerPageText": _vm.rowsPerPageText,
+        "customRowsPerPageDropdown": _vm.customRowsPerPageDropdown,
+        "paginateDropdownAllowAll": _vm.paginateDropdownAllowAll,
+        "ofText": _vm.ofText,
+        "pageText": _vm.pageText,
+        "allText": _vm.allText
+      },
+      on: {
+        "page-changed": _vm.pageChanged,
+        "per-page-changed": _vm.perPageChanged
+      }
+    })], {
+      "pageChanged": _vm.pageChanged,
+      "perPageChanged": _vm.perPageChanged,
+      "total": _vm.totalRows || _vm.totalRowCount
+    }) : _vm._e(), _vm._v(" "), _c("vgt-global-search", {
+      attrs: {
+        "search-enabled": _vm.searchEnabled && _vm.externalSearchQuery == null,
+        "global-search-placeholder": _vm.searchPlaceholder
+      },
+      on: {
+        "on-keyup": _vm.searchTableOnKeyUp,
+        "on-enter": _vm.searchTableOnEnter
+      },
+      model: {
+        value: _vm.globalSearchTerm,
+        callback: function callback($$v) {
+          _vm.globalSearchTerm = $$v;
+        },
+        expression: "globalSearchTerm"
+      }
+    }, [_c("template", {
+      slot: "internal-table-actions"
+    }, [_vm._t("table-actions")], 2)], 2), _vm._v(" "), _vm.selectedRowCount && !_vm.disableSelectInfo ? _c("div", {
+      staticClass: "vgt-selection-info-row clearfix",
+      "class": _vm.selectionInfoClass
+    }, [_vm._v("\n      " + _vm._s(_vm.selectionInfo) + "\n      "), _c("a", {
+      attrs: {
+        "href": ""
+      },
+      on: {
+        "click": function click($event) {
+          $event.preventDefault();
+          return _vm.unselectAllInternal(true);
+        }
+      }
+    }, [_vm._v("\n        " + _vm._s(_vm.clearSelectionText) + "\n      ")]), _vm._v(" "), _c("div", {
+      staticClass: "vgt-selection-info-row__actions vgt-pull-right"
+    }, [_vm._t("selected-row-actions")], 2)]) : _vm._e(), _vm._v(" "), _c("div", {
+      staticClass: "vgt-fixed-header"
+    }, [_vm.fixedHeader ? _c("table", {
+      "class": _vm.tableStyleClasses
+    }, [_c("vgt-table-header", {
+      ref: "table-header-secondary",
+      tag: "thead",
+      attrs: {
+        "columns": _vm.columns,
+        "line-numbers": _vm.lineNumbers,
+        "selectable": _vm.selectable,
+        "all-selected": _vm.allSelected,
+        "all-selected-indeterminate": _vm.allSelectedIndeterminate,
+        "mode": _vm.mode,
+        "sortable": _vm.sortable,
+        "typed-columns": _vm.typedColumns,
+        "getClasses": _vm.getClasses,
+        "searchEnabled": _vm.searchEnabled,
+        "paginated": _vm.paginated,
+        "table-ref": _vm.$refs.table
+      },
+      on: {
+        "on-toggle-select-all": _vm.toggleSelectAll,
+        "on-sort-change": _vm.changeSort,
+        "filter-changed": _vm.filterRows
+      },
+      scopedSlots: _vm._u([{
+        key: "table-column",
+        fn: function fn(props) {
+          return [_vm._t("table-column", [_c("span", [_vm._v(_vm._s(props.column.label))])], {
+            "column": props.column
+          })];
+        }
+      }], null, true)
+    })], 1) : _vm._e()]), _vm._v(" "), _c("div", {
+      "class": {
+        "vgt-responsive": _vm.responsive
+      },
+      style: _vm.wrapperStyles
+    }, [_c("table", {
+      ref: "table",
+      "class": _vm.tableStyles
+    }, [_c("vgt-table-header", {
+      ref: "table-header-primary",
+      tag: "thead",
+      attrs: {
+        "columns": _vm.columns,
+        "line-numbers": _vm.lineNumbers,
+        "selectable": _vm.selectable,
+        "all-selected": _vm.allSelected,
+        "all-selected-indeterminate": _vm.allSelectedIndeterminate,
+        "mode": _vm.mode,
+        "sortable": _vm.sortable,
+        "typed-columns": _vm.typedColumns,
+        "getClasses": _vm.getClasses,
+        "searchEnabled": _vm.searchEnabled
+      },
+      on: {
+        "on-toggle-select-all": _vm.toggleSelectAll,
+        "on-sort-change": _vm.changeSort,
+        "filter-changed": _vm.filterRows
+      },
+      scopedSlots: _vm._u([{
+        key: "table-column",
+        fn: function fn(props) {
+          return [_vm._t("table-column", [_c("span", [_vm._v(_vm._s(props.column.label))])], {
+            "column": props.column
+          })];
+        }
+      }, {
+        key: "column-filter",
+        fn: function fn(props) {
+          return [_vm._t("column-filter", null, {
+            "column": props.column,
+            "updateFilters": props.updateFilters
+          })];
+        }
+      }], null, true)
+    }), _vm._v(" "), _vm._l(_vm.paginated, function(headerRow, index2) {
+      return _c("tbody", {
+        key: index2
+      }, [_vm.groupHeaderOnTop ? _c("vgt-header-row", {
+        "class": _vm.getRowStyleClass(headerRow),
+        attrs: {
+          "header-row": headerRow,
+          "columns": _vm.columns,
+          "line-numbers": _vm.lineNumbers,
+          "selectable": _vm.selectable,
+          "select-all-by-group": _vm.selectAllByGroup,
+          "collapsable": _vm.groupOptions.collapsable,
+          "collect-formatted": _vm.collectFormatted,
+          "formatted-row": _vm.formattedRow,
+          "get-classes": _vm.getClasses,
+          "full-colspan": _vm.fullColspan,
+          "groupIndex": index2
+        },
+        on: {
+          "vgtExpand": function vgtExpand($event) {
+            return _vm.toggleExpand(headerRow[_vm.rowKeyField]);
+          },
+          "on-select-group-change": function onSelectGroupChange($event) {
+            return _vm.toggleSelectGroup($event, headerRow);
+          }
+        },
+        scopedSlots: _vm._u([{
+          key: "table-header-row",
+          fn: function fn(props) {
+            return _vm.hasHeaderRowTemplate ? [_vm._t("table-header-row", null, {
+              "column": props.column,
+              "formattedRow": props.formattedRow,
+              "row": props.row
+            })] : void 0;
+          }
+        }], null, true)
+      }) : _vm._e(), _vm._v(" "), _vm._l(headerRow.children, function(row, index3) {
+        return (_vm.groupOptions.collapsable ? headerRow.vgtIsExpanded : true) ? _c("tr", {
+          key: row.originalIndex,
+          "class": _vm.getRowStyleClass(row),
+          on: {
+            "mouseenter": function mouseenter($event) {
+              return _vm.onMouseenter(row, index3);
+            },
+            "mouseleave": function mouseleave($event) {
+              return _vm.onMouseleave(row, index3);
+            },
+            "dblclick": function dblclick($event) {
+              return _vm.onRowDoubleClicked(row, index3, $event);
+            },
+            "click": function click($event) {
+              return _vm.onRowClicked(row, index3, $event);
+            },
+            "auxclick": function auxclick($event) {
+              return _vm.onRowAuxClicked(row, index3, $event);
+            }
+          }
+        }, [_vm.lineNumbers ? _c("th", {
+          staticClass: "line-numbers"
+        }, [_vm._v("\n              " + _vm._s(_vm.getCurrentIndex(index3)) + "\n            ")]) : _vm._e(), _vm._v(" "), _vm.selectable ? _c("th", {
+          staticClass: "vgt-checkbox-col",
+          on: {
+            "click": function click($event) {
+              $event.stopPropagation();
+              return _vm.onCheckboxClicked(row, index3, $event);
+            }
+          }
+        }, [_c("input", {
+          attrs: {
+            "type": "checkbox"
+          },
+          domProps: {
+            "checked": row.vgtSelected
+          }
+        })]) : _vm._e(), _vm._v(" "), _vm._l(_vm.columns, function(column, i) {
+          return !column.hidden && column.field ? _c("td", {
+            key: i,
+            "class": _vm.getClasses(i, "td", row),
+            attrs: {
+              "data-label": _vm.compactMode ? column.label : void 0
+            },
+            on: {
+              "click": function click($event) {
+                return _vm.onCellClicked(row, column, index3, $event);
+              }
+            }
+          }, [_vm._t("table-row", [!column.html ? _c("span", [_vm._v("\n                  " + _vm._s(_vm.collectFormatted(row, column)) + "\n                ")]) : _vm._e(), _vm._v(" "), column.html ? _c("span", {
+            domProps: {
+              "innerHTML": _vm._s(_vm.collect(row, column.field))
+            }
+          }) : _vm._e()], {
+            "row": row,
+            "column": column,
+            "formattedRow": _vm.formattedRow(row),
+            "index": index3
+          })], 2) : _vm._e();
+        })], 2) : _vm._e();
+      }), _vm._v(" "), _vm.groupHeaderOnBottom ? _c("vgt-header-row", {
+        attrs: {
+          "header-row": headerRow,
+          "columns": _vm.columns,
+          "line-numbers": _vm.lineNumbers,
+          "selectable": _vm.selectable,
+          "select-all-by-group": _vm.selectAllByGroup,
+          "collect-formatted": _vm.collectFormatted,
+          "formatted-row": _vm.formattedRow,
+          "get-classes": _vm.getClasses,
+          "full-colspan": _vm.fullColspan,
+          "groupIndex": index2
+        },
+        on: {
+          "on-select-group-change": function onSelectGroupChange($event) {
+            return _vm.toggleSelectGroup($event, headerRow);
+          }
+        },
+        scopedSlots: _vm._u([{
+          key: "table-header-row",
+          fn: function fn(props) {
+            return _vm.hasHeaderRowTemplate ? [_vm._t("table-header-row", null, {
+              "column": props.column,
+              "formattedRow": props.formattedRow,
+              "row": props.row
+            })] : void 0;
+          }
+        }], null, true)
+      }) : _vm._e()], 2);
+    }), _vm._v(" "), _vm.showEmptySlot ? _c("tbody", [_c("tr", [_c("td", {
+      attrs: {
+        "colspan": _vm.fullColspan
+      }
+    }, [_vm._t("emptystate", [_c("div", {
+      staticClass: "vgt-center-align vgt-text-disabled"
+    }, [_vm._v("\n                  No data for table\n                ")])])], 2)])]) : _vm._e()], 2)]), _vm._v(" "), _vm.hasFooterSlot ? _c("div", {
+      staticClass: "vgt-wrap__actions-footer"
+    }, [_vm._t("table-actions-bottom")], 2) : _vm._e(), _vm._v(" "), _vm.paginate && _vm.paginateOnBottom ? _vm._t("pagination-bottom", [_c("vgt-pagination", {
+      ref: "paginationBottom",
+      attrs: {
+        "perPage": _vm.perPage,
+        "rtl": _vm.rtl,
+        "total": _vm.totalRows || _vm.totalRowCount,
+        "mode": _vm.paginationMode,
+        "nextText": _vm.nextText,
+        "prevText": _vm.prevText,
+        "rowsPerPageText": _vm.rowsPerPageText,
+        "customRowsPerPageDropdown": _vm.customRowsPerPageDropdown,
+        "paginateDropdownAllowAll": _vm.paginateDropdownAllowAll,
+        "ofText": _vm.ofText,
+        "pageText": _vm.pageText,
+        "allText": _vm.allText
+      },
+      on: {
+        "page-changed": _vm.pageChanged,
+        "per-page-changed": _vm.perPageChanged
+      }
+    })], {
+      "pageChanged": _vm.pageChanged,
+      "perPageChanged": _vm.perPageChanged,
+      "total": _vm.totalRows || _vm.totalRowCount
+    }) : _vm._e()], 2)]);
+  };
+  var __vue_staticRenderFns__$6 = [];
+  var __vue_inject_styles__$6 = void 0;
+  var __vue_scope_id__$6 = void 0;
+  var __vue_module_identifier__$6 = void 0;
+  var __vue_is_functional_template__$6 = false;
+  var __vue_component__$6 = /* @__PURE__ */ normalizeComponent$1({
+    render: __vue_render__$6,
+    staticRenderFns: __vue_staticRenderFns__$6
+  }, __vue_inject_styles__$6, __vue_script__$6, __vue_scope_id__$6, __vue_is_functional_template__$6, __vue_module_identifier__$6, false, void 0, void 0, void 0);
+  var VueGoodTablePlugin = {
+    install: function install(Vue, options) {
+      Vue.component(__vue_component__$6.name, __vue_component__$6);
+    }
+  };
+  if (typeof window !== "undefined" && window.Vue) {
+    window.Vue.use(VueGoodTablePlugin);
+  }
+  var render = function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("section", { staticClass: "k-pagetable-section" }, [_c("header", { staticClass: "k-section-header" }, [_c("k-headline", { attrs: { "link": _vm.options.link } }, [_vm.isLoading ? _c("span", [_vm._v("\u2026")]) : _c("span", [_vm._v(_vm._s(_vm.headline))])]), _c("k-button-group", [_vm.showReset ? _c("button", { staticClass: "pagetable-reset-button", domProps: { "innerHTML": _vm._s(_vm.translations.reset) }, on: { "click": _vm.resetTable } }) : _vm._e(), _vm.showSearch ? _c("input", { directives: [{ name: "model", rawName: "v-model", value: _vm.searchTerm, expression: "searchTerm" }], staticClass: "pagetable-search-input", attrs: { "type": "text", "placeholder": _vm.translations.filter }, domProps: { "value": _vm.searchTerm }, on: { "input": function($event) {
+      if ($event.target.composing) {
+        return;
+      }
+      _vm.searchTerm = $event.target.value;
+    } } }) : _vm._e(), _vm.add ? _c("k-button", { attrs: { "icon": "add" }, on: { "click": _vm.create } }, [_vm._v(_vm._s(_vm.$t("add")))]) : _vm._e()], 1)], 1), _vm.rows.length && !_vm.isLoading ? _c("vue-good-table", { ref: "table", attrs: { "columns": _vm.columns, "rows": _vm.rows, "sort-options": _vm.sortOptions, "search-options": _vm.searchOptions, "pagination-options": _vm.paginationOptions }, on: { "on-search": _vm.onSearch, "on-sort-change": _vm.onSortChange, "on-page-change": _vm.onPageChange, "on-per-page-change": _vm.onPerPageChange }, scopedSlots: _vm._u([{ key: "table-row", fn: function(props) {
+      return [props.column.field == "p-cover-image" && _vm.options.showImage ? _c("span", [_c("k-link", { attrs: { "to": props.row.link } }, [props.row.image ? _c("k-item-image", { attrs: { "image": props.row.image } }) : _vm._e()], 1)], 1) : props.column.field == "p-options" && _vm.showOptions ? _c("span", [_c("div", { staticClass: "k-list-item-options" }, [_vm._t("options", function() {
+        return [props.row.flag && _vm.options.showStatus ? _c("k-status-icon", _vm._b({}, "k-status-icon", props.row.flag, false)) : _vm._e(), props.row.options && _vm.options.showActions ? _c("k-options-dropdown", { staticClass: "k-item-options-dropdown", attrs: { "options": props.row.options } }) : _vm._e()];
+      })], 2)]) : _c("k-link", { attrs: { "to": props.row.link }, domProps: { "innerHTML": _vm._s(_vm.replaceInvalidDate(props.formattedRow[props.column.field])) } })];
+    } }], null, false, 1687883122) }) : !_vm.rows.length && !_vm.isLoading ? [_c("k-empty", { attrs: { "layout": _vm.options.layout, "data-invalid": _vm.isInvalid, "icon": "page" }, on: { "click": _vm.create } }, [_vm._v(" " + _vm._s(_vm.translations.empty) + " ")]), _c("footer", { staticClass: "k-collection-footer" }, [_vm.help ? _c("k-text", { staticClass: "k-collection-help", attrs: { "theme": "help" }, domProps: { "innerHTML": _vm._s(_vm.help) } }) : _vm._e()], 1)] : _vm.isLoading ? _c("div", { staticClass: "loading" }, [_c("k-empty", { attrs: { "layout": _vm.options.layout, "icon": "pagetableLoader" } }, [_vm._v(" " + _vm._s(_vm.translations.loading) + " ")])], 1) : _vm._e()], 2);
+  };
+  var staticRenderFns = [];
+  render._withStripped = true;
+  var PageTable_vue_vue_type_style_index_0_lang = "";
+  function normalizeComponent(scriptExports, render2, staticRenderFns2, functionalTemplate, injectStyles, scopeId, moduleIdentifier, shadowMode) {
+    var options = typeof scriptExports === "function" ? scriptExports.options : scriptExports;
+    if (render2) {
+      options.render = render2;
+      options.staticRenderFns = staticRenderFns2;
+      options._compiled = true;
+    }
+    if (functionalTemplate) {
+      options.functional = true;
+    }
+    if (scopeId) {
+      options._scopeId = "data-v-" + scopeId;
+    }
+    var hook;
+    if (moduleIdentifier) {
+      hook = function(context) {
+        context = context || this.$vnode && this.$vnode.ssrContext || this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext;
+        if (!context && typeof __VUE_SSR_CONTEXT__ !== "undefined") {
+          context = __VUE_SSR_CONTEXT__;
+        }
+        if (injectStyles) {
+          injectStyles.call(this, context);
+        }
+        if (context && context._registeredComponents) {
+          context._registeredComponents.add(moduleIdentifier);
+        }
+      };
+      options._ssrRegister = hook;
+    } else if (injectStyles) {
+      hook = shadowMode ? function() {
+        injectStyles.call(this, (options.functional ? this.parent : this).$root.$options.shadowRoot);
+      } : injectStyles;
+    }
+    if (hook) {
+      if (options.functional) {
+        options._injectStyles = hook;
+        var originalRender = options.render;
+        options.render = function renderWithStyleInjection(h, context) {
+          hook.call(context);
+          return originalRender(h, context);
+        };
+      } else {
+        var existing = options.beforeCreate;
+        options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+      }
+    }
+    return {
+      exports: scriptExports,
+      options
+    };
+  }
+  const __vue2_script = {
+    extends: "k-pages-section",
+    components: { VueGoodTable: __vue_component__$6 },
+    data() {
+      return {
+        columns: [],
+        rows: [],
+        searchTerm: "",
+        showReset: false,
+        error: null,
+        isLoading: false,
+        storedState: {
+          searchTerm: void 0,
+          sort: void 0,
+          page: void 0
+        },
+        options: {
+          empty: null,
+          headline: null,
+          layout: "list",
+          link: null,
+          max: null,
+          min: null,
+          size: null,
+          sortable: null,
+          limit: 10,
+          limitOptions: [],
+          search: true,
+          showImage: true,
+          showStatus: true,
+          showActions: true
+        },
+        translations: {
+          rowsPerPage: this.$t("pagetable.rowsPerPage"),
+          of: this.$t("pagetable.of"),
+          all: this.$t("pagetable.all"),
+          empty: this.$t("pages.empty"),
+          filter: this.$t("pagetable.filter-pages"),
+          reset: this.$t("pagetable.reset"),
+          loading: this.$t("pagetable.loading")
+        }
+      };
+    },
+    props: {
+      parent: String,
+      blueprint: String,
+      name: String
+    },
+    computed: {
+      searchOptions() {
+        return {
+          enabled: true,
+          externalQuery: this.searchTerm
+        };
+      },
+      sortOptions() {
+        return {
+          enabled: true,
+          initialSortBy: this.storedState.sort || false
+        };
+      },
+      storedPerPage() {
+        return this.storedState.page ? this.storedState.page.currentPerPage || this.options.limit : this.options.limit;
+      },
+      storedPage() {
+        return this.storedState.page ? this.storedState.page.currentPage || false : false;
+      },
+      paginationOptions() {
+        return {
+          enabled: true,
+          perPage: this.storedPerPage,
+          setCurrentPage: this.storedPage,
+          perPageDropdown: this.options.limitOptions,
+          nextLabel: this.$t("next"),
+          prevLabel: this.$t("prev"),
+          rowsPerPageLabel: this.translations.rowsPerPage,
+          ofLabel: this.$t("pagetable.of"),
+          allLabel: this.translations.all
+        };
+      },
+      showSearch() {
+        return this.columns.filter((el) => el.globalSearchDisabled == false).length > 0 && this.options.search && this.rows.length;
+      },
+      storeName() {
+        return "kirby$plugin$pagetable" + this.parent + "-" + this.name;
+      },
+      showOptions() {
+        return this.options.showStatus || this.options.showActions;
+      }
+    },
+    watch: {
+      language() {
+        this.reload();
+      }
+    },
+    created() {
+      this.load();
+      this.loadStoredState();
+    },
+    methods: {
+      replaceInvalidDate(str) {
+        return str.replace("Invalid Date", "-");
+      },
+      load(reload) {
+        if (!reload)
+          this.isLoading = true;
+        this.$api.get(this.parent + "/sections/" + this.name).then((response) => {
+          this.isLoading = false;
+          this.options = response.options;
+          this.columns = response.data.columns;
+          this.rows = this.items(response.data.rows);
+          let translations = response.translations;
+          Object.keys(translations).forEach((k) => {
+            if (translations[k] == null)
+              delete translations[k];
+          });
+          this.translations = Object.assign({}, this.translations, translations);
+        }).catch((error) => {
+          this.isLoading = false;
+          this.error = error.message;
+        });
+      },
+      openRef(id) {
+        this.$refs[id].toggle();
+      },
+      onSearch(params) {
+        this.storeCurrentState();
+        this.checkReset();
+      },
+      onPerPageChange(params) {
+        if (this.$refs["table"]) {
+          this.$refs["table"].changePage(1);
+        }
+      },
+      onPageChange(params) {
+        this.storeCurrentState();
+        this.checkReset();
+      },
+      onSortChange(params) {
+        this.storeCurrentState();
+        this.checkReset();
+      },
+      checkReset() {
+        this.showReset = this.rows.length && (this.searchTerm.length > 0 || this.$refs["table"] && this.$refs["table"].sorts.length || this.$refs["table"] && this.$refs["table"].currentPage != 1);
+      },
+      loadStoredState() {
+        let storedState = JSON.parse(sessionStorage.getItem(this.storeName));
+        if (storedState !== null) {
+          this.storedState = storedState;
+          if (storedState.searchTerm && storedState.searchTerm.length > 0) {
+            this.searchTerm = storedState.searchTerm;
+          }
+        }
+      },
+      storeCurrentState() {
+        if (this.$refs["table"]) {
+          let currentState = {};
+          currentState.page = {
+            currentPage: this.$refs["table"].currentPage,
+            currentPerPage: this.$refs["table"].currentPerPage
+          };
+          if (this.$refs["table"].sorts[0]) {
+            currentState.sort = {
+              field: this.$refs["table"].sorts[0].field,
+              type: this.$refs["table"].sorts[0].type
+            };
+          }
+          currentState.searchTerm = this.searchTerm;
+          sessionStorage.setItem(this.storeName, JSON.stringify(currentState));
+        }
+      },
+      resetTable() {
+        this.$refs["table"].changeSort([]);
+        let sorted = document.querySelectorAll(".sorting");
+        sorted.forEach((el) => {
+          if (el.tagName == "TH") {
+            el.classList.remove("sorting", "sorting-asc", "sorting-desc");
+          }
+        });
+        this.searchTerm = "";
+        this.$refs["table"].currentPerPage = this.options.limit;
+        this.$refs["table"].perPage = this.options.limit;
+        this.$refs["table"].changePage(1);
+        this.storeCurrentState();
+      }
+    }
+  };
+  const __cssModules = {};
+  var __component__ = /* @__PURE__ */ normalizeComponent(__vue2_script, render, staticRenderFns, false, __vue2_injectStyles, null, null, null);
+  function __vue2_injectStyles(context) {
+    for (let o in __cssModules) {
+      this[o] = __cssModules[o];
+    }
+  }
+  __component__.options.__file = "src/components/PageTable.vue";
+  var PageTable = /* @__PURE__ */ function() {
+    return __component__.exports;
+  }();
+  panel.plugin("sylvainjule/pagetable", {
+    sections: {
+      "pagetable": PageTable
+    },
+    icons: {
+      pagetableLoader: '<g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="1.75"><circle cx="7" cy="7" r="7.2" stroke="#000" stroke-opacity=".2"/><path d="M14.2,7c0-4-3.2-7.2-7.2-7.2" stroke="#000"><animateTransform attributeName="transform" type="rotate" from="0 7 7" to="360 7 7" dur="1s" repeatCount="indefinite"/></path></g></g>'
+    }
+  });
+})();
