@@ -46,7 +46,7 @@
                         </slot>
                     </div>
                 </span>
-                <k-link v-else :to="props.row.link" v-html="replaceInvalidDate(props.formattedRow[props.column.field])"/>
+                <k-link v-else :to="props.row.link" v-html="props.formattedRow[props.column.field]"/>
             </template>
         </vue-good-table>
 
@@ -179,9 +179,6 @@ export default {
         this.loadStoredState()
     },
     methods: {
-        replaceInvalidDate(str) {
-            return str.replace('Invalid Date', '-')
-        },
         load(reload) {
             if (!reload) this.isLoading = true
             this.$api
