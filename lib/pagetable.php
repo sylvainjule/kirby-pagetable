@@ -134,6 +134,19 @@ $options = A::merge($options, [
                 );
             }
 
+            // calculate width ratio
+            $calculateRatio = function (string $width) {
+                list($first, $second) = Str::split($width, '/');
+
+                if (empty($first) === true || empty($second) === true) {
+                    return '100%';
+                }
+
+                $result = (100 / (int)$second) * (int)$first;
+                $result = number_format($result, 2, '.', '');
+                return $result . '%';
+            };
+
             // loop through the user display choices
             foreach($this->columns as $key => $column) {
                 $sortable   = $column['sortable'] ?? true;
@@ -144,6 +157,7 @@ $options = A::merge($options, [
                 $label      = I18n::translate($label, $label);
                 $thClass    = '';
                 $tdClass    = '';
+                $width      = null;
 
                 $columnData = array(
                     'label'                => $label,
@@ -151,7 +165,8 @@ $options = A::merge($options, [
                     'type'                 => $type,
                     'sortable'             => $sortable,
                     'globalSearchDisabled' => !$searchable,
-                    'mobile'               => $mobile
+                    'mobile'               => $mobile,
+                    'width'                => $width
                 );
 
                 if($type == 'date') {
@@ -167,9 +182,7 @@ $options = A::merge($options, [
                     $columnData['dateOutputFormat'] = $dateOutputFormat;
                 }
                 if(array_key_exists('width', $column)) {
-                    $width   = 'col-width-'. str_replace('/', '-', $column['width']) .' ';
-                    $thClass = $width;
-                    $tdClass = $width;
+                    $width = $calculateRatio($column['width']);
                 }
                 if(array_key_exists('class', $column)) {
                     $thClass .= 'head-'. $column['class'];
@@ -181,8 +194,9 @@ $options = A::merge($options, [
                     $tdClass .= ' mobile-column';
                 }
 
-                $columnData['thClass'] = $thClass;
-                $columnData['tdClass'] = $tdClass;
+                $columnData['thClass'] = $thClass ?: null;
+                $columnData['tdClass'] = $tdClass ?: null;
+                $columnData['width']   = $width;
                 $data['columns'][]     = $columnData;
             }
 
