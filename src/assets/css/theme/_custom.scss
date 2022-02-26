@@ -17,7 +17,12 @@ $structure-item-height: 40px;
 	table-layout: fixed;
   	width: 100%;
   	max-width: 100%;
-  	user-select: none;
+
+    thead,
+    .cover-image,
+    .pagetable-options-container {
+        user-select: none;
+    }
 
 	th, td {
     	border-bottom: 2px solid $color-background;
