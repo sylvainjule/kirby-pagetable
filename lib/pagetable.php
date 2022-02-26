@@ -200,7 +200,10 @@ $options = A::merge($options, [
                 $permissions = $item->permissions();
                 $blueprint   = $item->blueprint();
                 $image       = $item->panelImage($this->image ?? []);
-                $url         = $item->panel()->url(true);
+                $url         = false;
+                if($this->url == 'panel') {
+                    $url = $item->panel()->url(true);
+                }
                 if($this->url == 'preview') {
                     $url = $item->url();
                 }

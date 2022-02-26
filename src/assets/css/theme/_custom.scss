@@ -132,7 +132,7 @@ $structure-item-height: 40px;
     	height: $structure-item-height;
     	padding: 0;
     	&:not(.cover-image) {
-	    	a {
+	    	a, span[data-disabled] {
 	    		display: block;
 	    		width: 100%;
 	    		padding: .5rem .75rem;
