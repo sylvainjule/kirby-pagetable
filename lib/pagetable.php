@@ -39,9 +39,6 @@ $options = A::merge($options, [
         'query' => function(string $query = '') {
             return $query;
         },
-        'mobileColumn' => function($mobileColumn = false) {
-            return $mobileColumn;
-        },
         'url' => function($url = 'panel') {
             return $url;
         }
@@ -224,7 +221,7 @@ $options = A::merge($options, [
                     $url = $item->panel()->url(true);
                 }
                 if($this->url == 'preview') {
-                    $url = $item->url();
+                    $url = $item->previewUrl();
                 }
 
                 $baseOptions = [
