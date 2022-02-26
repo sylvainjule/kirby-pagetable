@@ -39,6 +39,9 @@ $options = A::merge($options, [
         'query' => function(string $query = '') {
             return $query;
         },
+        'mobileColumn' => function($mobileColumn = false) {
+            return $mobileColumn;
+        },
         'url' => function($url = 'panel') {
             return $url;
         }
@@ -120,6 +123,7 @@ $options = A::merge($options, [
         },
         'data' => function () {
             $data = array();
+            $hasMobile = false;
 
             if($this->showImage) {
                 $data['columns'][] = array(
@@ -129,6 +133,7 @@ $options = A::merge($options, [
                     'globalSearchDisabled' => true,
                     'thClass' => 'cover-image',
                     'tdClass' => 'cover-image',
+                    'mobile'  => false,
                 );
             }
 
@@ -136,6 +141,7 @@ $options = A::merge($options, [
             foreach($this->columns as $key => $column) {
                 $sortable   = $column['sortable'] ?? true;
                 $searchable = $column['searchable'] ?? true;
+                $mobile     = $column['mobile'] ?? false;
                 $type       = $column['type'] ?? 'text';
                 $label      = $column['label'] ?? ucfirst($key);
                 $label      = I18n::translate($label, $label);
@@ -148,6 +154,7 @@ $options = A::merge($options, [
                     'type'                 => $type,
                     'sortable'             => $sortable,
                     'globalSearchDisabled' => !$searchable,
+                    'mobile'               => $mobile
                 );
 
                 if($type == 'date') {
@@ -171,10 +178,22 @@ $options = A::merge($options, [
                     $thClass .= 'head-'. $column['class'];
                     $tdClass .= 'row-'. $column['class'];
                 }
+                if($mobile && !$hasMobile) {
+                    $hasMobile = true;
+                    $thClass .= ' mobile-column';
+                    $tdClass .= ' mobile-column';
+                }
 
                 $columnData['thClass'] = $thClass;
                 $columnData['tdClass'] = $tdClass;
                 $data['columns'][]     = $columnData;
+            }
+
+            if(!$hasMobile) {
+                $index = $this->showImage ? 1 : 0;
+                $data['columns'][$index]['mobile'] = true;
+                $data['columns'][$index]['thClass'] .= ' mobile-column';
+                $data['columns'][$index]['tdClass'] .= ' mobile-column';
             }
 
             $optionsClass = 'pagetable-options-none';
@@ -256,7 +275,8 @@ $options = A::merge($options, [
                 'showImage'    => $this->showImage,
                 'showStatus'   => $this->showStatus,
                 'showActions'  => $this->showActions,
-                'min'          => $this->min
+                'min'          => $this->min,
+                'mobileColumn' => $this->mobileColumn
             ],
             'translations' => $this->translations,
             'pagination' => $this->pagination,

@@ -29,6 +29,7 @@ Display subpages in a flexible, sortable and searchable table.
   * [4.5. class](#45-class)
   * [4.6. sortable](#46-sortable)
   * [4.7. searchable](#47-searchable)
+  * [4.8. mobile](#48-mobile)
 - [5. Complete example](#5-complete-example)
 - [6. License](#6-license)
 - [7. Credits](#7-credits)
@@ -315,6 +316,20 @@ columns:
   title:
     searchable: true
 ```
+
+#### 4.8. `mobile`
+
+> type: `Boolean`, default: `false`
+
+By default, only the first column is shown on mobile viewports. You can change it for whichever column you'd like by setting this to `true`.
+
+```yaml
+columns:
+  title:
+    mobile: true
+```
+
+Note that only one column can have this option.
 
 <br/>
 

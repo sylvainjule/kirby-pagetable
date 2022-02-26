@@ -271,7 +271,8 @@ export default {
             this.$refs['table'].changePage(1)
             // store current state
             this.storeCurrentState()
-        }
+        },
+
     }
 };
 </script>
