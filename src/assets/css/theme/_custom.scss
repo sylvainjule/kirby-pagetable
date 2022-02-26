@@ -62,6 +62,7 @@ $structure-item-height: 40px;
             }
             &.pagetable-options-none {
                 width: 0px !important;
+                padding: 0;
             }
     	}
 		@media screen and (max-width: $breakpoint-medium) {
