@@ -27,7 +27,7 @@
 
             <template slot="table-row" slot-scope="props">
                 <span v-if="props.column.field == 'p-cover-image' && options.showImage">
-                    <k-link :to="props.row.link">
+                    <k-link :to="props.row.rowLink">
                         <k-item-image v-if="props.row.image" :image="props.row.image" />
                     </k-link>
                 </span>
@@ -46,7 +46,7 @@
                         </slot>
                     </div>
                 </span>
-                <k-link v-else :to="props.row.link" v-html="props.formattedRow[props.column.field]"/>
+                <k-link v-else :to="props.row.rowLink" v-html="props.formattedRow[props.column.field]"/>
             </template>
         </vue-good-table>
 
