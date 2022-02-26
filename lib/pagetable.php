@@ -38,6 +38,9 @@ $options = A::merge($options, [
         },
         'query' => function(string $query = '') {
             return $query;
+        },
+        'url' => function($url = 'panel') {
+            return $url;
         }
     ),
     'computed' => array(
@@ -197,6 +200,10 @@ $options = A::merge($options, [
                 $permissions = $item->permissions();
                 $blueprint   = $item->blueprint();
                 $image       = $item->panelImage($this->image ?? []);
+                $url         = $item->panel()->url(true);
+                if($this->url == 'preview') {
+                    $url = $item->url();
+                }
 
                 $baseOptions = [
                     'id'          => $item->id(),
@@ -206,7 +213,7 @@ $options = A::merge($options, [
                     'parent'      => $item->parentId(),
                     'icon'        => $item->panelIcon($image),
                     'image'       => $image,
-                    'link'        => $item->panelUrl(true),
+                    'link'        => $url,
                     'status'      => $item->status(),
                     'permissions' => [
                         'sort'         => $permissions->can('sort'),

@@ -20,6 +20,7 @@ Display subpages in a flexible, sortable and searchable table.
   * [3.3. Visibility options](#33-visibility-options)
   * [3.4. Query](#34-query)
   * [3.5. Custom strings](#35-custom-strings)
+  * [3.6. Panel / preview link](#36-panel-preview-link)
 - [4. Column options](#4-column-options)
   * [4.1. label](#41-label)
   * [4.2. text](#42-text)
@@ -148,6 +149,17 @@ sections:
       loading: Loading pages…
       filterPages: Filter pages…
       reset: Reset
+```
+
+### 3.6. Panel / preview link
+
+By default, each row will redirect to its panel page. You can however chose to redirect your editors to its preview page instead, by setting the `url` option.
+
+```yaml
+sections:
+  mypagetable:
+    type: pagetable
+    url: preview
 ```
 
 <br/>
