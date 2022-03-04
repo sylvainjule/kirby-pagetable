@@ -271,8 +271,7 @@ columns:
 
 > type: `string`, default: `auto`
 
-The width of the column in the table.
-Available widths: 1/6, 1/4, 1/3, 1/2, 2/3, 3/4
+The width of the column in the table, written as a fraction and automatically calculated (1/2, 1/3, 1/6, 32/94, etc.)
 
 ```yaml
 columns:
