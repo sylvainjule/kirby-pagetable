@@ -44,6 +44,9 @@ $options = A::merge($options, [
         }
     ),
     'computed' => array(
+        'columns' => function () {
+            return $this->columns;
+        },
         'translations' => function() {
             $translations = $this->translations;
             $keys         = array_keys($translations);
@@ -112,7 +115,6 @@ $options = A::merge($options, [
             if ($this->sortBy) {
                 $pages = $pages->sortBy(...Str::split($this->sortBy, ' '));
             }
-
             return $pages;
         },
         'total' => function () {
@@ -148,7 +150,7 @@ $options = A::merge($options, [
             };
 
             // loop through the user display choices
-            foreach($this->columns as $key => $column) {
+            foreach($this->columns() as $key => $column) {
                 $sortable   = $column['sortable'] ?? true;
                 $searchable = $column['searchable'] ?? true;
                 $mobile     = $column['mobile'] ?? false;
@@ -215,6 +217,7 @@ $options = A::merge($options, [
                 $optionsClass = 'pagetable-options-one';
             }
 
+
             // last column is always the options
             $data['columns'][] = array(
                 'label' => '',
@@ -228,11 +231,11 @@ $options = A::merge($options, [
 
             foreach ($this->pages as $item) {
                 $permissions = $item->permissions();
-                $blueprint   = $item->blueprint();
-                $image       = $item->panelImage($this->image ?? []);
+                $panel       = $item->panel();
+                $image       = $panel->image($this->image ?? []);
                 $url         = false;
                 if($this->url == 'panel') {
-                    $url = $item->panel()->url(true);
+                    $url = $panel->url(true);
                 }
                 if($this->url == 'preview') {
                     $url = $item->previewUrl();
@@ -240,13 +243,12 @@ $options = A::merge($options, [
 
                 $baseOptions = [
                     'id'          => $item->id(),
-                    'dragText'    => $item->dragText('auto', $this->dragTextType),
+                    'dragText'    => $panel->dragText('auto', $this->dragTextType),
                     'text'        => $item->toString($this->text),
                     'info'        => $item->toString($this->info ?? false),
                     'parent'      => $item->parentId(),
-                    'icon'        => $item->panelIcon($image),
                     'image'       => $image,
-                    'link'        => $item->panel()->url(true),
+                    'link'        => $panel->url(true),
                     'rowLink'     => $url,
                     'status'      => $item->status(),
                     'permissions' => [
@@ -257,7 +259,7 @@ $options = A::merge($options, [
 
                 $userOptions = [];
                 // loop through the user display choices
-                foreach($this->columns as $key => $column) {
+                foreach($this->columns() as $key => $column) {
                     $userOptions[$key] = $item->toString($column['text']);
                 }
 
@@ -265,6 +267,8 @@ $options = A::merge($options, [
 
                 $data['rows'][] = $options;
             }
+
+
             return $data;
         },
     ),
