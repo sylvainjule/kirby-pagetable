@@ -1,6 +1,6 @@
 <?php
 
-use Kirby\Toolkit\Query;
+use Kirby\Query\Query;
 use Kirby\Toolkit\Str;
 use Kirby\Toolkit\A;
 use Kirby\Toolkit\I18n;
@@ -89,13 +89,13 @@ $options = A::merge($options, [
                 }
             } else {
                 // added to support query
-                $q = new Query($this->query, [
+                $q = new Query($this->query);
+                $pages = $q->resolve([
                     'site' => site(),
                     'page' => $this->model(),
                     'pages' => site()->pages(),
                     'kirby' => kirby()
                 ]);
-                $pages = $q->result();
             }
 
             // loop for the best performance
