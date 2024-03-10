@@ -3,6 +3,7 @@
     "description": "Display subpages in a flexible table",
     "type": "kirby-plugin",
     "license": "MIT",
+    "version": "1.1.7",
     "authors": [
         {
             "name": "Sylvain Julé",
