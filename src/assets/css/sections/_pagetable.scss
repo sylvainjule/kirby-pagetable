@@ -6,13 +6,16 @@
 			padding: .35rem .6rem;
 			background: rgba($color-dark, .05);
 			border-radius: 2px;
-			margin-bottom: .65rem;
+			margin-bottom: .45rem;
 			margin-right: .75rem;
 			font-size: $font-size-small;
 			color: $color-dark-grey;
 			transition: color 0.2s ease-out;
 			&:hover {
 				color: $color-black;
+			}
+			&+ .pagetable-search-input {
+				margin-left: 0.25rem;
 			}
 		}
 		.pagetable-search-input {
@@ -28,9 +31,14 @@
 		    border-bottom: 1px solid darken(#eaeaea, 8%);
 		    font-size: $font-size-small;
 		    padding-bottom: .35rem;
-		    margin-bottom: .65rem;
+		    margin-bottom: .45rem;
 		    padding: .35rem .75rem .35rem .5rem;
 		    min-width: 150px;
+		    margin-left: 0.75rem;
+		    margin-right: 0.75rem;
+		    &+ .k-button {
+		    	margin-left: -0.25rem;
+		    }
 		    &::placeholder {
 		    	color: $color-light-grey;
 		    }
