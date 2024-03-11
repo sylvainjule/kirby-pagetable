@@ -1,3 +1,5 @@
+> This plugin is compatible with Kirby 3 for legacy projects, it won't be updated to Kirby 4 whose Pages sections offer a `layout: table` option.
+
 # Kirby 3 - Pagetable
 
 Display subpages in a flexible, sortable and searchable table.
